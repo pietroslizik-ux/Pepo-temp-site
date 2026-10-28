@@ -37,7 +37,48 @@
       line-height: 1.5;
     }
 
+    .decor {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .decor .sprite {
+      position: absolute;
+      width: 0;
+      height: 0;
+    }
+
+    .howie,
+    .rocket {
+      position: absolute;
+      display: block;
+      height: auto;
+      pointer-events: none;
+    }
+
+    .howie {
+      width: 78px;
+    }
+
+    .rocket {
+      width: 54px;
+    }
+
+    .howie-1 { top: 3%; left: 2%; opacity: 0.22; transform: rotate(-14deg); }
+    .rocket-1 { top: 5%; right: 3%; opacity: 0.2; transform: rotate(12deg); }
+    .howie-2 { bottom: 5%; left: 4%; opacity: 0.18; transform: rotate(9deg); }
+    .rocket-2 { bottom: 4%; right: 3%; opacity: 0.24; transform: rotate(-11deg); }
+    .howie-3 { top: 44%; left: 1%; opacity: 0.16; width: 60px; transform: rotate(-6deg); }
+    .rocket-3 { top: 38%; right: 1%; opacity: 0.17; transform: rotate(16deg); }
+    .howie-4 { top: 7%; left: 24%; opacity: 0.15; width: 56px; transform: rotate(8deg); }
+    .rocket-4 { bottom: 8%; right: 22%; opacity: 0.16; width: 44px; transform: rotate(-8deg); }
+
     main {
+      position: relative;
+      z-index: 1;
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -156,10 +197,77 @@
       .shop {
         display: block;
       }
+
+      .howie {
+        width: 50px;
+      }
+
+      .rocket {
+        width: 38px;
+      }
+
+      .howie-3,
+      .rocket-3,
+      .howie-4,
+      .rocket-4 {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Howie figures and folded-paper rockets, decorative only -->
+  <div class="decor" aria-hidden="true">
+    <svg class="sprite">
+      <symbol id="howie" viewBox="0 0 80 120">
+        <polygon points="30,50 16,4 40,46" fill="#f4bfd0"/>
+        <polygon points="27,44 21,14 34,42" fill="#e07b9b"/>
+        <polygon points="50,50 64,4 40,46" fill="#ffe3ec"/>
+        <polygon points="53,44 59,14 46,42" fill="#e48aab"/>
+        <polygon points="40,34 60,50 55,70 40,78 25,70 20,50" fill="#f8d4e1"/>
+        <polygon points="40,34 60,50 40,52 20,50" fill="#fff6f9"/>
+        <polygon points="40,52 55,70 40,78 25,70" fill="#efb7c9"/>
+        <circle cx="33" cy="56" r="1.7" fill="#6a3d4c"/>
+        <circle cx="47" cy="56" r="1.7" fill="#6a3d4c"/>
+        <polygon points="32,74 48,74 45,92 35,92" fill="#f6cddd"/>
+        <polygon points="40,74 48,74 45,92 40,92" fill="#e7b0c3"/>
+        <g transform="translate(40,98)" fill="#5aa4de">
+          <ellipse cy="-15" rx="5.5" ry="11"/>
+          <ellipse cy="-15" rx="5.5" ry="11" transform="rotate(45)"/>
+          <ellipse cy="-15" rx="5.5" ry="11" transform="rotate(90)" fill="#3d82bc"/>
+          <ellipse cy="-15" rx="5.5" ry="11" transform="rotate(135)"/>
+          <ellipse cy="-15" rx="5.5" ry="11" transform="rotate(180)"/>
+          <ellipse cy="-15" rx="5.5" ry="11" transform="rotate(225)" fill="#8ec8f0"/>
+          <ellipse cy="-15" rx="5.5" ry="11" transform="rotate(270)"/>
+          <ellipse cy="-15" rx="5.5" ry="11" transform="rotate(315)" fill="#8ec8f0"/>
+        </g>
+        <circle cx="40" cy="98" r="6.5" fill="#f0d15a"/>
+        <polygon points="40,93 44,98 40,99 36,98" fill="#fff4c2"/>
+      </symbol>
+      <symbol id="rocket" viewBox="0 0 70 110">
+        <polygon points="18,64 4,94 24,78" fill="#ff8d74"/>
+        <polygon points="18,64 4,94 14,82" fill="#e2553c"/>
+        <polygon points="52,64 66,94 46,78" fill="#c9412c"/>
+        <polygon points="52,64 66,94 58,80" fill="#e2553c"/>
+        <polygon points="22,34 48,34 45,84 25,84" fill="#fff8ee"/>
+        <polygon points="35,34 48,34 45,84 35,84" fill="#eadfcd"/>
+        <polygon points="35,6 51,36 35,30 19,36" fill="#e2553c"/>
+        <polygon points="35,6 51,36 35,30" fill="#ff9078"/>
+        <circle cx="35" cy="52" r="7" fill="#7ec0e8"/>
+        <polygon points="35,45 42,52 35,52" fill="#e9f6ff"/>
+        <polygon points="28,84 35,104 42,84" fill="#ffc44d"/>
+        <polygon points="31,84 35,96 39,84" fill="#fff1b8"/>
+      </symbol>
+    </svg>
+    <svg class="howie howie-1"><use href="#howie"/></svg>
+    <svg class="rocket rocket-1"><use href="#rocket"/></svg>
+    <svg class="howie howie-2"><use href="#howie"/></svg>
+    <svg class="rocket rocket-2"><use href="#rocket"/></svg>
+    <svg class="howie howie-3"><use href="#howie"/></svg>
+    <svg class="rocket rocket-3"><use href="#rocket"/></svg>
+    <svg class="howie howie-4"><use href="#howie"/></svg>
+    <svg class="rocket rocket-4"><use href="#rocket"/></svg>
+  </div>
   <main>
     <div class="card">
       <div class="mark" aria-hidden="true"></div>
