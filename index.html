@@ -4,15 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pepo Studios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&amp;family=Pacifico&amp;display=swap" rel="stylesheet">
   <style>
     :root {
       --yellow: #ffe56a;
-      --yellow-deep: #ffd23f;
+      --yellow-deep: #f0b429;
       --ink: #3a2a14;
-      --card: #fffdf6;
       --button: #e07a1f;
       --button-hover: #c86612;
       --link: #0b4f9c;
+      --line: #a85a12;
+      --title: "Pacifico", "Segoe Script", "Comic Sans MS", cursive;
+      --hand: "Kalam", "Segoe Print", "Comic Sans MS", cursive;
     }
 
     * {
@@ -23,22 +28,19 @@
     body {
       margin: 0;
       min-height: 100%;
+      background-color: var(--yellow);
     }
 
     body {
+      position: relative;
       font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
       color: var(--ink);
-      background-color: var(--yellow);
-      background-image:
-        radial-gradient(circle at 12% 18%, #fff4a8 0 18px, transparent 19px),
-        radial-gradient(circle at 88% 12%, #ffd56a 0 28px, transparent 29px),
-        radial-gradient(circle at 80% 82%, #fff1a0 0 22px, transparent 23px),
-        radial-gradient(circle at 8% 86%, #ffcc4d 0 16px, transparent 17px);
       line-height: 1.5;
+      overflow-x: hidden;
     }
 
     .decor {
-      position: fixed;
+      position: absolute;
       inset: 0;
       z-index: 0;
       overflow: hidden;
@@ -52,69 +54,91 @@
     }
 
     .howie,
-    .rocket {
+    .rocket,
+    .plane,
+    .boat,
+    .star,
+    .heart,
+    .pinwheel {
       position: absolute;
       display: block;
       height: auto;
       pointer-events: none;
     }
 
-    .howie {
-      width: 78px;
-    }
+    .howie { width: 74px; }
+    .rocket { width: 50px; }
+    .plane { width: 70px; }
+    .boat { width: 76px; }
+    .star { width: 44px; }
+    .heart { width: 42px; }
+    .pinwheel { width: 50px; }
 
-    .rocket {
-      width: 54px;
-    }
-
-    .howie-1 { top: 3%; left: 2%; opacity: 0.22; transform: rotate(-14deg); }
-    .rocket-1 { top: 5%; right: 3%; opacity: 0.2; transform: rotate(12deg); }
-    .howie-2 { bottom: 5%; left: 4%; opacity: 0.18; transform: rotate(9deg); }
-    .rocket-2 { bottom: 4%; right: 3%; opacity: 0.24; transform: rotate(-11deg); }
-    .howie-3 { top: 44%; left: 1%; opacity: 0.16; width: 60px; transform: rotate(-6deg); }
-    .rocket-3 { top: 38%; right: 1%; opacity: 0.17; transform: rotate(16deg); }
-    .howie-4 { top: 7%; left: 24%; opacity: 0.15; width: 56px; transform: rotate(8deg); }
-    .rocket-4 { bottom: 8%; right: 22%; opacity: 0.16; width: 44px; transform: rotate(-8deg); }
+    .howie-1 { top: 12px; left: 14px; opacity: 0.22; transform: rotate(-12deg); }
+    .rocket-1 { top: 16px; right: 16px; opacity: 0.2; transform: rotate(14deg); }
+    .star-1 { top: 108px; right: 22px; opacity: 0.22; transform: rotate(8deg); }
+    .plane-1 { top: 220px; left: 10px; opacity: 0.2; transform: rotate(-16deg); }
+    .howie-3 { top: 34%; left: 8px; opacity: 0.16; width: 58px; transform: rotate(-8deg); }
+    .rocket-3 { top: 42%; right: 10px; opacity: 0.17; transform: rotate(12deg); }
+    .boat-1 { top: 54%; right: 12px; opacity: 0.18; transform: rotate(7deg); }
+    .pinwheel-1 { top: 60%; left: 12px; opacity: 0.16; transform: rotate(18deg); }
+    .heart-1 { top: 72%; left: 18px; opacity: 0.18; transform: rotate(-10deg); }
+    .plane-2 { top: 78%; right: 8px; opacity: 0.15; transform: rotate(14deg); }
+    .star-2 { bottom: 132px; right: 26px; opacity: 0.2; transform: rotate(-12deg); }
+    .howie-2 { bottom: 18px; left: 18px; opacity: 0.2; transform: rotate(8deg); }
+    .rocket-2 { bottom: 14px; right: 16px; opacity: 0.22; transform: rotate(-10deg); }
+    .howie-4 { top: 48%; left: 6px; width: 52px; opacity: 0.15; transform: rotate(6deg); }
+    .rocket-4 { bottom: 28%; right: 8px; width: 42px; opacity: 0.16; transform: rotate(-8deg); }
 
     main {
       position: relative;
       z-index: 1;
       min-height: 100vh;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
-      padding: 32px 20px;
+      padding: 56px 24px 72px;
     }
 
     .card {
       width: min(640px, 100%);
-      background: var(--card);
-      border-radius: 28px;
-      padding: 48px 36px 40px;
+      background: transparent;
+      padding: 8px 8px 0;
       text-align: center;
-      box-shadow: 0 16px 0 #f0c43a, 0 18px 40px rgba(90, 55, 10, 0.12);
     }
 
     .mark {
       width: 72px;
       height: 72px;
       margin: 0 auto 20px;
-      background: var(--yellow-deep);
+      background: #ffc83d;
+      border: 3px solid var(--line);
       border-radius: 18px 18px 8px 18px;
-      box-shadow: inset -16px -16px 0 #f6b429;
+      box-shadow: inset -16px -16px 0 #e09a12;
     }
 
     h1 {
-      margin: 0 0 12px;
-      font-size: clamp(2.4rem, 6vw, 3.4rem);
-      letter-spacing: -0.03em;
-      line-height: 1.05;
+      margin: 0 0 8px;
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: clamp(3rem, 8vw, 4.2rem);
+      letter-spacing: 0;
+      line-height: 1.15;
+    }
+
+    .welcome,
+    .printables h2,
+    .support h2,
+    .pname {
+      font-family: var(--hand);
+      font-weight: 700;
     }
 
     .welcome {
       margin: 0 auto 28px;
       max-width: 34rem;
-      font-size: 1.2rem;
+      font-size: 1.35rem;
+      line-height: 1.45;
     }
 
     .shop {
@@ -122,12 +146,13 @@
       margin: 0;
       padding: 18px 28px;
       background: var(--button);
-      color: #fffdf8;
+      color: var(--ink);
       text-decoration: none;
       font-size: 1.25rem;
       font-weight: 700;
+      border: 3px solid #8d420c;
       border-radius: 999px;
-      box-shadow: 0 6px 0 #a35210;
+      box-shadow: 0 6px 0 #8d420c;
     }
 
     .shop:hover,
@@ -135,7 +160,10 @@
       background: var(--button-hover);
     }
 
-    .shop:focus {
+    .shop:focus,
+    .products a:focus,
+    .support a:focus,
+    .pcard:focus {
       outline: 3px solid var(--ink);
       outline-offset: 4px;
     }
@@ -147,23 +175,71 @@
       overflow-wrap: anywhere;
     }
 
-    .products a {
+    .products a,
+    .support a {
       color: var(--link);
       font-weight: 700;
     }
 
-    .products a:focus {
-      outline: 3px solid var(--ink);
-      outline-offset: 3px;
+    .printables {
+      margin: 32px auto 0;
+      text-align: left;
+    }
+
+    .printables h2 {
+      margin: 0 0 14px;
+      text-align: center;
+      font-size: clamp(1.7rem, 4vw, 2.15rem);
+      line-height: 1.3;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .pcard {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      min-height: 100%;
+      padding: 14px 14px 12px;
+      color: var(--ink);
+      text-decoration: none;
+      background: transparent;
+      border: 3px solid var(--line);
+      border-radius: 16px;
+    }
+
+    .pcard:hover,
+    .pcard:focus {
+      border-color: #8d420c;
+      background: #ffd23f;
+    }
+
+    .pname {
+      font-size: 1.12rem;
+      line-height: 1.35;
+    }
+
+    .pprice {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #7a3d0c;
     }
 
     .support {
       margin: 28px auto 0;
       max-width: 34rem;
-      padding: 18px 20px 16px;
+      padding: 16px 18px 14px;
       text-align: left;
-      background: #fff3b0;
-      border: 3px solid #f0b429;
+      background: transparent;
+      border: 3px solid var(--line);
       border-radius: 18px;
     }
 
@@ -178,45 +254,44 @@
       font-size: 1.02rem;
     }
 
-    .support a {
-      color: var(--link);
-      font-weight: 700;
-    }
-
-    .support a:focus {
-      outline: 3px solid var(--ink);
-      outline-offset: 3px;
+    @media (max-width: 980px) {
+      .plane,
+      .boat,
+      .star,
+      .heart,
+      .pinwheel,
+      .howie-3,
+      .howie-4,
+      .rocket-3,
+      .rocket-4 {
+        display: none;
+      }
     }
 
     @media (max-width: 520px) {
+      main {
+        padding: 78px 16px 86px;
+      }
+
       .card {
-        padding: 36px 22px 32px;
-        border-radius: 22px;
+        padding: 0;
       }
 
       .shop {
         display: block;
       }
 
-      .howie {
-        width: 50px;
+      .grid {
+        grid-template-columns: 1fr;
       }
 
-      .rocket {
-        width: 38px;
-      }
-
-      .howie-3,
-      .rocket-3,
-      .howie-4,
-      .rocket-4 {
-        display: none;
-      }
+      .howie { width: 48px; }
+      .rocket { width: 36px; }
     }
   </style>
 </head>
 <body>
-  <!-- Howie figures and folded-paper rockets, decorative only -->
+  <!-- Howie figures, paper rockets, planes, boats, stars and other folded-paper models -->
   <div class="decor" aria-hidden="true">
     <svg class="sprite">
       <symbol id="howie" viewBox="0 0 80 120">
@@ -258,15 +333,50 @@
         <polygon points="28,84 35,104 42,84" fill="#ffc44d"/>
         <polygon points="31,84 35,96 39,84" fill="#fff1b8"/>
       </symbol>
+      <symbol id="plane" viewBox="0 0 90 64">
+        <polygon points="4,30 86,8 34,56" fill="#f6e2b8"/>
+        <polygon points="4,30 86,8 46,34" fill="#e2c48a"/>
+        <polygon points="34,56 46,34 56,42" fill="#c9923e"/>
+        <polygon points="46,34 34,56 26,38" fill="#ffe7c2"/>
+      </symbol>
+      <symbol id="boat" viewBox="0 0 96 64">
+        <polygon points="10,30 48,8 86,30 48,24" fill="#f4e0b4"/>
+        <polygon points="10,30 48,24 48,52" fill="#e2b56a"/>
+        <polygon points="86,30 48,24 48,52" fill="#f0cf90"/>
+        <polygon points="20,30 48,52 76,30" fill="#c9842e"/>
+      </symbol>
+      <symbol id="star" viewBox="0 0 80 78">
+        <polygon points="40,4 49,28 74,28 54,44 62,70 40,54 18,70 26,44 6,28 31,28" fill="#f0b429"/>
+        <polygon points="40,4 49,28 40,34 31,28" fill="#ffe08a"/>
+        <polygon points="40,34 54,44 40,54 26,44" fill="#d4891a"/>
+      </symbol>
+      <symbol id="heart" viewBox="0 0 80 74">
+        <path d="M40 66 C40 66 12 42 12 28 C12 18 20 12 28 12 C34 12 38 16 40 22 C42 16 46 12 52 12 C60 12 68 18 68 28 C68 42 40 66 40 66 Z" fill="#f28b9a"/>
+        <path d="M40 66 C40 66 12 42 12 28 C12 18 20 12 28 12 C34 12 38 16 40 22 Z" fill="#e25b74"/>
+      </symbol>
+      <symbol id="pinwheel" viewBox="0 0 80 80">
+        <polygon points="40,40 40,6 64,40" fill="#7eb6e8"/>
+        <polygon points="40,40 74,40 40,64" fill="#f0b429"/>
+        <polygon points="40,40 40,74 16,40" fill="#e07a1f"/>
+        <polygon points="40,40 6,40 40,16" fill="#ef7aa0"/>
+        <circle cx="40" cy="40" r="5" fill="#ffe08a"/>
+      </symbol>
     </svg>
     <svg class="howie howie-1"><use href="#howie"/></svg>
     <svg class="rocket rocket-1"><use href="#rocket"/></svg>
-    <svg class="howie howie-2"><use href="#howie"/></svg>
-    <svg class="rocket rocket-2"><use href="#rocket"/></svg>
+    <svg class="star star-1"><use href="#star"/></svg>
+    <svg class="plane plane-1"><use href="#plane"/></svg>
     <svg class="howie howie-3"><use href="#howie"/></svg>
     <svg class="rocket rocket-3"><use href="#rocket"/></svg>
     <svg class="howie howie-4"><use href="#howie"/></svg>
+    <svg class="boat boat-1"><use href="#boat"/></svg>
+    <svg class="pinwheel pinwheel-1"><use href="#pinwheel"/></svg>
+    <svg class="heart heart-1"><use href="#heart"/></svg>
+    <svg class="plane plane-2"><use href="#plane"/></svg>
     <svg class="rocket rocket-4"><use href="#rocket"/></svg>
+    <svg class="star star-2"><use href="#star"/></svg>
+    <svg class="howie howie-2"><use href="#howie"/></svg>
+    <svg class="rocket rocket-2"><use href="#rocket"/></svg>
   </div>
   <main>
     <div class="card">
@@ -275,6 +385,47 @@
       <p class="welcome">Welcome! Fold, build and play with fun paper models from Pepo Studios.</p>
       <a class="shop" href="https://payhip.com/PepoStudios">Visit the Pepo Studios shop</a>
       <p class="products">Mr. Pepo paper products: <a href="https://payhip.com/PepoStudios">https://payhip.com/PepoStudios</a></p>
+      <section class="printables" aria-labelledby="printables-title">
+        <h2 id="printables-title">Shop Mr. Pepo printables</h2>
+        <ul class="grid">
+          <li>
+            <a class="pcard" href="https://payhip.com/PepoStudios">
+              <span class="pname">Personalised Morning Routine Chart for Kids with Name or Photo, Mr. Pepo Printable A4</span>
+              <span class="pprice">Free Watermarked Sample</span>
+            </a>
+          </li>
+          <li>
+            <a class="pcard" href="https://payhip.com/PepoStudios">
+              <span class="pname">Evening Routine Chart</span>
+              <span class="pprice">Free Watermarked Sample</span>
+            </a>
+          </li>
+          <li>
+            <a class="pcard" href="https://payhip.com/PepoStudios">
+              <span class="pname">After-School Routine Chart</span>
+              <span class="pprice">Free Watermarked Sample</span>
+            </a>
+          </li>
+          <li>
+            <a class="pcard" href="https://payhip.com/PepoStudios">
+              <span class="pname">Routine Chart Bundle - Morning, Evening and After-School</span>
+              <span class="pprice">Free Watermarked Sample</span>
+            </a>
+          </li>
+          <li>
+            <a class="pcard" href="https://payhip.com/PepoStudios">
+              <span class="pname">Pepo Studios Mr. Pepo Block Paper Model – Colour + Colour-In (A4 printable)</span>
+              <span class="pprice">Free</span>
+            </a>
+          </li>
+          <li>
+            <a class="pcard" href="https://payhip.com/PepoStudios">
+              <span class="pname">Mr. Pepo "This Belongs To" Name Labels</span>
+              <span class="pprice">Free Printable</span>
+            </a>
+          </li>
+        </ul>
+      </section>
       <aside class="support">
         <h2>Show your support!</h2>
         <p>Put a Mr. Pepo support flyer in your window, snap a photo and email it to <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a>. Then choose whichever Mr. Pepo practical printable paper product you like, worth up to $10, free!</p>
