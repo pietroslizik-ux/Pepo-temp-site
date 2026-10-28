@@ -624,9 +624,77 @@
         font-size: clamp(0.78rem, 1.45vh, 0.92rem);
       }
     }
+
+    .support-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+    }
+
+    .support-overlay:target {
+      display: flex;
+    }
+
+    .support-overlay img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: calc(100vw - 24px);
+      max-height: 100vh;
+      object-fit: contain;
+      border-radius: 16px;
+    }
+
+    .overlay-close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      color: #3a2a14;
+      font-size: 1.6rem;
+      line-height: 1;
+      text-decoration: none;
+      background: transparent;
+      border: 0;
+      border-radius: 999px;
+    }
+
+    .overlay-download {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      color: #3a2a14;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .overlay-close:focus-visible,
+    .overlay-download:focus-visible {
+      outline: 3px solid #3a2a14;
+      outline-offset: 3px;
+    }
   </style>
 </head>
 <body id="top">
+  <div id="support" class="support-overlay">
+    <a class="overlay-download" href="downloads/I-support-Mr-Pepo-flyer-A4-WHITE-border.pdf" download>Download PDF</a>
+    <a class="overlay-close" href="#top" aria-label="Close">×</a>
+    <img src="downloads/flyer-white-border.png" alt="I support Mr. Pepo. Pepo Studios. Scan to visit webpage.">
+  </div>
+  <script>
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && location.hash === "#support") {
+        location.hash = "top";
+      }
+    });
+  </script>
   <div class="decor" aria-hidden="true">
     <svg class="sprite">
       <symbol id="howie" viewBox="0 0 80 120">
@@ -749,7 +817,7 @@
         <a href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener noreferrer">YouTube</a>
         <a href="https://www.youtube.com/@MrPepoLifeHacks" target="_blank" rel="noopener noreferrer">Grown-ups</a>
         <a href="#printables">Free printables</a>
-        <a href="support.html">Support flyer</a>
+        <a href="#support">Support flyer</a>
       </nav>
     </div>
   </header>
@@ -830,7 +898,7 @@
         <aside class="support">
           <h2 id="support-title">Show your support!</h2>
           <p>Put a Mr. Pepo support flyer in your window, snap a photo and email it to <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a>. Then choose whichever Mr. Pepo practical printable paper product you like, worth up to $10, free!</p>
-          <a class="flyer" href="downloads/flyer-webpage-A4.pdf" download>Download the support flyer (free PDF)</a>
+          <a class="flyer" href="#support">Download the support flyer (free PDF)</a>
         </aside>
       </div>
     </section>
@@ -842,7 +910,7 @@
         <a href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener noreferrer">YouTube</a>
         <a href="https://www.youtube.com/@MrPepoLifeHacks" target="_blank" rel="noopener noreferrer">Grown-ups</a>
         <a href="#printables">Free printables</a>
-        <a href="support.html">Support flyer</a>
+        <a href="#support">Support flyer</a>
       </nav>
       <p><a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a></p>
       <p>© 2026 Pepo Studios</p>
