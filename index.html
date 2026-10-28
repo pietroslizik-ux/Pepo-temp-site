@@ -162,6 +162,7 @@
     .brand:focus-visible,
     .primary:focus-visible,
     .secondary:focus-visible,
+    .flyer:focus-visible,
     .pcard:focus-visible,
     .footer-links a:focus-visible,
     .site-footer a:focus-visible {
@@ -377,10 +378,27 @@
       font-size: 1.05rem;
     }
 
-    .support a,
+    .support p a,
     .site-footer a[href^="mailto"] {
       color: var(--link);
       font-weight: 700;
+    }
+
+    .flyer {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 16px;
+      background: var(--button);
+      color: var(--ink);
+      font-weight: 700;
+      text-decoration: none;
+      border: 3px solid #8d420c;
+      border-radius: 999px;
+      box-shadow: 0 4px 0 #8d420c;
+    }
+
+    .flyer:hover {
+      background: var(--button-hover);
     }
 
     .site-footer {
@@ -453,6 +471,158 @@
 
       .howie { width: 48px; }
       .rocket { width: 36px; }
+    }
+
+    @media (min-width: 1024px) {
+      body {
+        min-height: 100vh;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+      }
+
+      .site-nav .wrap {
+        min-height: 0;
+        padding: clamp(4px, 0.6vh, 8px) 0;
+      }
+
+      .nav-mark {
+        width: clamp(32px, 4.2vh, 42px);
+      }
+
+      .brand span {
+        font-size: clamp(1.25rem, 2.6vh, 1.6rem);
+      }
+
+      .hero {
+        flex: 0 0 auto;
+        padding: clamp(6px, 1.2vh, 20px) 0 clamp(2px, 0.4vh, 8px);
+      }
+
+      h1 {
+        font-size: clamp(2.3rem, 6.2vh, 4.4rem);
+      }
+
+      .tagline {
+        margin-top: clamp(2px, 0.4vh, 8px);
+        font-size: clamp(0.98rem, 2.1vh, 1.35rem);
+      }
+
+      .actions {
+        gap: clamp(6px, 0.9vh, 12px);
+        margin-top: clamp(8px, 1.3vh, 18px);
+      }
+
+      .primary {
+        padding: clamp(8px, 1.1vh, 16px) clamp(18px, 2vw, 36px);
+        font-size: clamp(1.02rem, 2.15vh, 1.45rem);
+        box-shadow: 0 clamp(3px, 0.5vh, 6px) 0 #8d420c;
+      }
+
+      .secondary {
+        padding: clamp(6px, 0.7vh, 10px) 14px;
+        font-size: clamp(0.86rem, 1.6vh, 1rem);
+      }
+
+      .printables {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        padding: clamp(4px, 0.8vh, 14px) 0 clamp(2px, 0.4vh, 8px);
+      }
+
+      .printables .wrap {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+      }
+
+      .section-head {
+        margin-bottom: clamp(6px, 0.8vh, 12px);
+      }
+
+      .section-head h2 {
+        font-size: clamp(1.35rem, 3vh, 2.1rem);
+      }
+
+      .free-note {
+        margin-top: 2px;
+        font-size: clamp(0.95rem, 1.9vh, 1.2rem);
+      }
+
+      .grid {
+        flex: 1 1 auto;
+        min-height: 0;
+        gap: clamp(6px, 0.9vh, 12px);
+        grid-template-rows: 1fr 1fr;
+      }
+
+      .pcard {
+        min-height: 0;
+        height: 100%;
+        gap: clamp(4px, 0.6vh, 10px);
+        padding: clamp(8px, 1vh, 12px) 12px;
+      }
+
+      .pname {
+        font-size: clamp(0.86rem, 1.65vh, 1.05rem);
+        line-height: 1.2;
+      }
+
+      .badge {
+        padding: 2px 8px;
+        font-size: clamp(0.72rem, 1.4vh, 0.85rem);
+      }
+
+      .support-band {
+        flex: 0 0 auto;
+        padding: clamp(4px, 0.7vh, 12px) 0;
+      }
+
+      .support {
+        padding: clamp(8px, 1vh, 14px) 16px;
+      }
+
+      .support h2 {
+        margin-bottom: 2px;
+        font-size: clamp(1.05rem, 2.2vh, 1.4rem);
+      }
+
+      .support p {
+        font-size: clamp(0.82rem, 1.55vh, 0.98rem);
+        line-height: 1.35;
+      }
+
+      .flyer {
+        margin-top: clamp(6px, 0.8vh, 10px);
+        padding: clamp(6px, 0.7vh, 8px) 14px;
+        font-size: clamp(0.82rem, 1.5vh, 0.95rem);
+      }
+
+      .site-footer {
+        flex: 0 0 auto;
+        padding: clamp(4px, 0.7vh, 10px) 0 clamp(6px, 0.8vh, 12px);
+      }
+
+      .footer-links {
+        gap: 4px 16px;
+        margin-bottom: 2px;
+        font-size: clamp(0.82rem, 1.5vh, 0.95rem);
+      }
+
+      .site-footer p {
+        margin: 1px 0;
+        font-size: clamp(0.78rem, 1.45vh, 0.92rem);
+      }
     }
   </style>
 </head>
@@ -579,6 +749,7 @@
         <a href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener noreferrer">YouTube</a>
         <a href="https://www.youtube.com/@MrPepoLifeHacks" target="_blank" rel="noopener noreferrer">Grown-ups</a>
         <a href="#printables">Free printables</a>
+        <a href="support.html">Support flyer</a>
       </nav>
     </div>
   </header>
@@ -659,6 +830,7 @@
         <aside class="support">
           <h2 id="support-title">Show your support!</h2>
           <p>Put a Mr. Pepo support flyer in your window, snap a photo and email it to <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a>. Then choose whichever Mr. Pepo practical printable paper product you like, worth up to $10, free!</p>
+          <a class="flyer" href="downloads/flyer-webpage-A4.pdf" download>Download the support flyer (free PDF)</a>
         </aside>
       </div>
     </section>
@@ -670,6 +842,7 @@
         <a href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener noreferrer">YouTube</a>
         <a href="https://www.youtube.com/@MrPepoLifeHacks" target="_blank" rel="noopener noreferrer">Grown-ups</a>
         <a href="#printables">Free printables</a>
+        <a href="support.html">Support flyer</a>
       </nav>
       <p><a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a></p>
       <p>© 2026 Pepo Studios</p>
