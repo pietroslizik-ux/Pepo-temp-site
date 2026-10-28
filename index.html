@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pepo Studios</title>
+  <style>
+    :root {
+      --yellow: #ffe56a;
+      --yellow-deep: #ffd23f;
+      --ink: #3a2a14;
+      --card: #fffdf6;
+      --button: #e07a1f;
+      --button-hover: #c86612;
+      --link: #0b4f9c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
+      color: var(--ink);
+      background-color: var(--yellow);
+      background-image:
+        radial-gradient(circle at 12% 18%, #fff4a8 0 18px, transparent 19px),
+        radial-gradient(circle at 88% 12%, #ffd56a 0 28px, transparent 29px),
+        radial-gradient(circle at 80% 82%, #fff1a0 0 22px, transparent 23px),
+        radial-gradient(circle at 8% 86%, #ffcc4d 0 16px, transparent 17px);
+      line-height: 1.5;
+    }
+
+    main {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+    }
+
+    .card {
+      width: min(640px, 100%);
+      background: var(--card);
+      border-radius: 28px;
+      padding: 48px 36px 40px;
+      text-align: center;
+      box-shadow: 0 16px 0 #f0c43a, 0 18px 40px rgba(90, 55, 10, 0.12);
+    }
+
+    .mark {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 20px;
+      background: var(--yellow-deep);
+      border-radius: 18px 18px 8px 18px;
+      box-shadow: inset -16px -16px 0 #f6b429;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.4rem, 6vw, 3.4rem);
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+    }
+
+    .welcome {
+      margin: 0 auto 28px;
+      max-width: 34rem;
+      font-size: 1.2rem;
+    }
+
+    .shop {
+      display: inline-block;
+      margin: 0;
+      padding: 18px 28px;
+      background: var(--button);
+      color: #fffdf8;
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: 700;
+      border-radius: 999px;
+      box-shadow: 0 6px 0 #a35210;
+    }
+
+    .shop:hover,
+    .shop:focus {
+      background: var(--button-hover);
+    }
+
+    .shop:focus {
+      outline: 3px solid var(--ink);
+      outline-offset: 4px;
+    }
+
+    .products {
+      margin: 22px auto 0;
+      max-width: 36rem;
+      font-size: 1.05rem;
+      overflow-wrap: anywhere;
+    }
+
+    .products a {
+      color: var(--link);
+      font-weight: 700;
+    }
+
+    .products a:focus {
+      outline: 3px solid var(--ink);
+      outline-offset: 3px;
+    }
+
+    .support {
+      margin: 28px auto 0;
+      max-width: 34rem;
+      padding: 18px 20px 16px;
+      text-align: left;
+      background: #fff3b0;
+      border: 3px solid #f0b429;
+      border-radius: 18px;
+    }
+
+    .support h2 {
+      margin: 0 0 6px;
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+
+    .support p {
+      margin: 0;
+      font-size: 1.02rem;
+    }
+
+    .support a {
+      color: var(--link);
+      font-weight: 700;
+    }
+
+    .support a:focus {
+      outline: 3px solid var(--ink);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 520px) {
+      .card {
+        padding: 36px 22px 32px;
+        border-radius: 22px;
+      }
+
+      .shop {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card">
+      <div class="mark" aria-hidden="true"></div>
+      <h1>Pepo Studios</h1>
+      <p class="welcome">Welcome! Fold, build and play with fun paper models from Pepo Studios.</p>
+      <a class="shop" href="https://payhip.com/PepoStudios">Visit the Pepo Studios shop</a>
+      <p class="products">Mr. Pepo paper products: <a href="https://payhip.com/PepoStudios">https://payhip.com/PepoStudios</a></p>
+      <aside class="support">
+        <h2>Show your support!</h2>
+        <p>Put a Mr. Pepo support flyer in your window, snap a photo and email it to <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a>. Then choose whichever Mr. Pepo practical printable paper product you like, worth up to $10, free!</p>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
