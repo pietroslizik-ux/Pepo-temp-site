@@ -260,6 +260,25 @@
       flex: 0 0 auto;
     }
 
+    .window-make {
+      padding: 8px 0 28px;
+    }
+
+    .window-make .section-head h2 {
+      font-family: var(--title);
+      font-weight: 400;
+    }
+
+    .window-photo {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      margin: 0 auto;
+      border: 3px solid var(--line);
+      border-radius: 18px;
+    }
+
     .printables {
       padding: 56px 0 24px;
       scroll-margin-top: 90px;
@@ -533,7 +552,7 @@
     @media (min-width: 1024px) {
       body {
         min-height: 100vh;
-        height: 100vh;
+        height: auto;
         display: flex;
         flex-direction: column;
       }
@@ -542,7 +561,16 @@
         flex: 1 1 auto;
         display: flex;
         flex-direction: column;
-        min-height: 0;
+        min-height: auto;
+      }
+
+      .window-make {
+        flex: 0 0 auto;
+      }
+
+      .window-photo {
+        max-height: 70vh;
+        object-fit: contain;
       }
 
       .site-nav .wrap {
@@ -942,6 +970,22 @@
             </a>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="window-make" aria-labelledby="made-by-mr-pepo-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="made-by-mr-pepo-title">Made by Mr. Pepo</h2>
+        </div>
+        <img class="window-photo" src="images/made-by-mr-pepo-window.jpg" alt="Mr. Pepo paper models in the window: hanging rocket, launch tower, skyscraper, paper robots">
+      </div>
+    </section>
+    <section class="window-make" aria-labelledby="our-window-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="our-window-title">Our window</h2>
+        </div>
+        <img class="window-photo" src="images/our-window.jpg" alt="The Pepo Studios window in a brick wall">
       </div>
     </section>
     <section class="printables" id="printables" aria-labelledby="printables-title">
