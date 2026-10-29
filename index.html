@@ -1430,15 +1430,16 @@
       outline-offset: 3px;
     }
 
+    /* Photo backgrounds: light cream wash so the photo shows, readable text on soft pills/cards */
     #book {
       background:
-        linear-gradient(rgba(255, 248, 225, 0.80), rgba(255, 248, 225, 0.80)),
+        linear-gradient(rgba(255, 248, 225, 0.42), rgba(255, 248, 225, 0.42)),
         url("images/workshop.jpg") center / cover no-repeat;
     }
 
     #printables {
       background-image:
-        linear-gradient(rgba(255, 248, 225, 0.78), rgba(255, 248, 225, 0.78)),
+        linear-gradient(rgba(255, 248, 225, 0.38), rgba(255, 248, 225, 0.38)),
         url("images/howie-window-side.jpg");
       background-position: center bottom;
       background-size: cover;
@@ -1446,9 +1447,104 @@
       background-attachment: fixed;
     }
 
+    /* Soft cream pill behind headings and short lines that sit on a photo */
+    #printables .section-head h2,
+    #printables .free-note,
+    #book h2,
+    #book .biz-lead,
+    #book .book-thanks:not([hidden]) {
+      display: inline-block;
+      max-width: 100%;
+      padding: 6px 20px;
+      background: rgba(255, 248, 225, 0.90);
+      border-radius: 999px;
+      box-shadow: 0 4px 14px rgba(60, 40, 10, 0.18);
+    }
+
+    #printables .section-head h2,
+    #book h2 {
+      padding: 8px 26px 10px;
+      border-radius: 28px;
+    }
+
+    #printables .free-note,
+    #book .biz-lead {
+      margin-top: 10px;
+    }
+
+    #book .wrap {
+      text-align: center;
+    }
+
+    /* Cards stay white so names read cleanly; the photo shows in the gaps */
+    #printables .grid {
+      gap: 26px;
+    }
+
+    #printables .pcard {
+      background: rgba(255, 255, 255, 0.94);
+    }
+
+    #printables .grownups-note {
+      display: table;
+      margin: 22px auto 0;
+      padding: 4px 14px;
+      color: #6a5a40;
+      background: rgba(255, 248, 225, 0.90);
+      border-radius: 999px;
+    }
+
+    #printables .grownups-note a {
+      color: #6a5a40;
+    }
+
+    /* Form sits on a cream panel so labels stay readable over the workshop photo */
+    #book .book-form {
+      padding: 20px 20px 22px;
+      background: rgba(255, 248, 225, 0.90);
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(60, 40, 10, 0.18);
+    }
+
+    /* Spam trap field: keep it off screen so real visitors never fill it */
+    .book-honey {
+      position: absolute !important;
+      left: -9999px !important;
+      width: 1px !important;
+      height: 1px !important;
+      opacity: 0 !important;
+    }
+
     @media (hover: none), (max-width: 900px) {
       #printables {
         background-attachment: scroll;
+      }
+    }
+
+    /* Phones: two product cards per row so the section is shorter and
+       'cover' does not zoom into a thin strip of the window photo */
+    @media (max-width: 640px) {
+      #printables .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      #printables .pcard {
+        min-height: 0;
+        gap: 10px;
+        padding: 10px 10px 12px;
+      }
+
+      #printables .pcard-pic {
+        height: 120px;
+      }
+
+      #printables .pname {
+        font-size: 0.98rem;
+      }
+
+      #printables {
+        background-position: 30% bottom;
       }
     }
 
