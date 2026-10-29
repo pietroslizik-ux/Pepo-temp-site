@@ -441,6 +441,43 @@
       margin: 6px 0;
     }
 
+    .follow-us {
+      margin: 4px 0 14px;
+    }
+
+    .follow-us h2 {
+      margin: 0 0 8px;
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 1.2;
+    }
+
+    .follow-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 14px;
+    }
+
+    .follow-links a {
+      display: inline-block;
+      padding: 8px 16px;
+      background: var(--yellow);
+      color: var(--ink);
+      font-family: var(--hand);
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      border: 3px solid var(--line);
+      border-radius: 999px;
+      box-shadow: 0 3px 0 var(--line);
+    }
+
+    .follow-links a:hover {
+      background: #fff4c4;
+    }
+
     @media (max-width: 800px) {
       .grid {
         grid-template-columns: 1fr;
@@ -659,6 +696,36 @@
       .site-footer p {
         margin: 1px 0;
         font-size: clamp(0.78rem, 1.45vh, 0.92rem);
+      }
+
+      .footer-links,
+      .follow-us {
+        display: inline-flex;
+        vertical-align: middle;
+      }
+
+      .follow-us {
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 2px 22px;
+      }
+
+      .follow-us h2 {
+        margin: 0;
+        font-size: clamp(0.9rem, 1.6vh, 1.05rem);
+        line-height: 1;
+      }
+
+      .follow-links {
+        gap: 4px 8px;
+      }
+
+      .follow-links a {
+        padding: 0 10px;
+        font-size: clamp(0.78rem, 1.4vh, 0.9rem);
+        line-height: 1.5;
+        border-width: 2px;
+        box-shadow: 0 2px 0 var(--line);
       }
     }
 
@@ -947,6 +1014,15 @@
         <a href="#printables">Free printables</a>
         <a href="#support">Support flyer</a>
       </nav>
+      <section class="follow-us" aria-labelledby="follow-us-title">
+        <h2 id="follow-us-title">Follow us</h2>
+        <div class="follow-links">
+          <a href="https://www.instagram.com/pepo_studios/" target="_blank" rel="noopener noreferrer">Pepo Studios on Instagram</a>
+          <a href="https://www.instagram.com/mrpepo.au/" target="_blank" rel="noopener noreferrer">Mr. Pepo on Instagram</a>
+          <a href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener noreferrer">MrPepoStories on YouTube</a>
+          <a href="https://www.youtube.com/@MrPepoLifeHacks" target="_blank" rel="noopener noreferrer">Mr. Pepo on YouTube</a>
+        </div>
+      </section>
       <p><a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a></p>
       <p>© 2026 Pepo Studios</p>
     </div>
