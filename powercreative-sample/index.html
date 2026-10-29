@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Power Creative — sample redesign</title>
+<meta name="description" content="Sample redesign concept for Power Creative. Video, events and storytelling from a Sydney crew. Real services and contact details, a warmer layout.">
+<link rel="icon" href="https://powercreative.com.au/wp-content/uploads/2013/10/power_favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Nunito+Sans:wght@420;650;780&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fbf4ea;
+  --paper:#fffaf4;
+  --sand:#f3e2cc;
+  --sand-deep:#e8d0b4;
+  --ink:#3b2a22;
+  --muted:#6d5648;
+  --terra:#c45c38;
+  --terra-deep:#8d3c24;
+  --amber:#e0a04a;
+  --line:#e6d3bc;
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Nunito Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--cream);color:var(--ink);font:17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--terra-deep)}
+h1,h2,h3{font-family:var(--serif);font-weight:560;letter-spacing:-.02em;line-height:1.12;margin:0 0 .4em}
+h1{font-size:clamp(2.5rem,6vw,4.6rem)}
+h2{font-size:clamp(2rem,4vw,3.1rem)}
+h3{font-size:1.35rem}
+p{margin:0 0 .8em}
+.wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}
+.skip{position:absolute;left:12px;top:-40px;background:#fff;padding:8px 12px;z-index:20}
+.skip:focus{top:12px}
+
+header{position:sticky;top:0;z-index:10;background:rgba(251,244,234,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:18px;min-height:74px}
+.brand{display:flex;align-items:center;text-decoration:none;color:inherit}
+.brand img{height:46px;width:auto}
+.nav ul{display:flex;gap:6px;list-style:none;margin:0 0 0 auto;padding:0}
+.nav a{text-decoration:none;color:var(--ink);font-weight:650;font-size:.95rem;padding:8px 10px;border-radius:999px}
+.nav a:hover{background:var(--sand)}
+.nav .cta{background:var(--terra);color:#fffaf4}
+.nav .cta:hover{background:var(--terra-deep);color:#fff}
+
+.hero{position:relative;overflow:hidden;padding:64px 0 72px}
+.blob{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
+.blob.a{width:420px;height:420px;background:radial-gradient(circle,#f6c98a 0%,rgba(246,201,138,0) 70%);top:-80px;right:-60px}
+.blob.b{width:280px;height:280px;background:radial-gradient(circle,#f0b7a2 0%,rgba(240,183,162,0) 70%);bottom:-40px;left:-40px}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.kicker{font-weight:780;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;color:var(--terra-deep);margin:0 0 12px}
+.lede{font-size:1.15rem;color:var(--muted);max-width:38rem}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn{display:inline-block;text-decoration:none;font-weight:780;border-radius:999px;padding:.85em 1.3em;border:2px solid var(--terra)}
+.btn.solid{background:var(--terra);color:#fffaf4}
+.btn.solid:hover{background:var(--terra-deep);border-color:var(--terra-deep)}
+.btn.ghost{background:transparent;color:var(--terra-deep)}
+.btn.ghost:hover{background:#fff}
+.meta{margin-top:18px;color:var(--muted);font-size:.95rem}
+.frame{position:relative}
+.frame img{width:100%;border-radius:28px;object-fit:cover;aspect-ratio:16/10;box-shadow:0 18px 40px -24px rgba(90,40,20,.55)}
+.frame:before{content:"";position:absolute;inset:18px -14px -14px 18px;border:2px solid var(--amber);border-radius:28px;z-index:-1}
+.caption{margin:12px 4px 0;font-size:.88rem;color:var(--muted)}
+
+section{padding:72px 0}
+.sand{background:linear-gradient(180deg,#f7eadc,#fbf4ea)}
+.intro{max-width:40rem;color:var(--muted);font-size:1.08rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.card{background:rgba(255,250,244,.8);border:1px solid var(--line);border-radius:22px;padding:22px 20px 18px;box-shadow:0 10px 24px -18px rgba(90,40,20,.4)}
+.card .mark{width:42px;height:42px;border-radius:14px;margin-bottom:14px;background:
+  radial-gradient(circle at 30% 30%,#fff 0 18%,transparent 19%),
+  linear-gradient(145deg,var(--amber),var(--terra));
+}
+.card ul{margin:.4em 0 0;padding-left:1.1em;color:var(--muted)}
+.card li{margin:.25em 0}
+
+.steps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px}
+.steps li{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:var(--paper);border-radius:18px;padding:16px 18px;border:1px solid var(--line)}
+.num{font-family:var(--serif);font-size:1.6rem;color:var(--terra);line-height:1}
+
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+blockquote{margin:0;background:var(--paper);border-radius:22px;padding:22px 22px 18px;border-top:6px solid var(--amber)}
+blockquote p{font-family:var(--serif);font-size:1.15rem;line-height:1.45}
+cite{display:block;margin-top:12px;font-style:normal;font-weight:780;font-size:.92rem}
+.note{margin-top:16px;color:var(--muted);font-size:.95rem}
+
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:center}
+.panel{background:var(--sand);border-radius:28px;padding:28px 26px}
+.panel strong{display:block;font-family:var(--serif);font-size:1.4rem;font-weight:560}
+
+.contact{background:
+  radial-gradient(500px 240px at 100% 0,rgba(224,160,74,.35),transparent 70%),
+  var(--ink);color:#f8efe6}
+.contact a{color:#f6d7a8}
+.contact h2{color:#fffaf4}
+.contact .intro{color:#e6d3c4}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}
+.facts{background:rgba(255,250,244,.08);border:1px solid rgba(255,250,244,.16);border-radius:22px;padding:20px 22px}
+.facts p{margin:0 0 10px}
+.contact .btn.solid{background:var(--amber);border-color:var(--amber);color:var(--ink)}
+.contact .btn.ghost{border-color:#f6d7a8;color:#fffaf4}
+
+footer{padding:28px 0 36px;color:var(--muted);font-size:.92rem}
+.foot{display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:space-between;align-items:center}
+.social{display:flex;flex-wrap:wrap;gap:12px}
+.social a{font-weight:780;text-decoration:none}
+.sample{font-size:.82rem}
+
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+
+@media(max-width:860px){
+  .hero-grid,.cards,.quotes,.about,.contact-grid{grid-template-columns:1fr}
+  .nav ul{display:none}
+  .nav .cta{display:inline-block;margin-left:auto}
+  .hero{padding-top:36px}
+  section{padding:52px 0}
+}
+@media(max-width:640px){
+  .wrap{width:min(1120px,calc(100% - 28px))}
+  .steps li{grid-template-columns:46px 1fr}
+  .brand img{height:38px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Power Creative, home">
+      <img src="https://powercreative.com.au/wp-content/uploads/2016/09/power_creative_logo-black.COM_.AU-with-tag.png" alt="Power Creative. Your professional video producers." width="2220" height="635">
+    </a>
+    <ul>
+      <li><a href="#make">What we make</a></li>
+      <li><a href="#process">How we work</a></li>
+      <li><a href="#clients">Clients</a></li>
+      <li><a href="#dave">About Dave</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="cta" href="mailto:info@powercreative.com.au?subject=Book%20a%20chat">Book a chat</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="blob a" aria-hidden="true"></div>
+    <div class="blob b" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Events and videos, amplified</p>
+        <h1>Tell the story. We’ll help it land.</h1>
+        <p class="lede">Power Creative makes high-quality video and event production for marketing that needs to reach a real audience. Event production, hybrid events, social content, media interviews and broadcast.</p>
+        <div class="actions">
+          <a class="btn solid" href="mailto:info@powercreative.com.au?subject=Tell%20us%20your%20story">Tell us your story</a>
+          <a class="btn ghost" href="mailto:info@powercreative.com.au?subject=Book%20a%20chat">Book a chat</a>
+        </div>
+        <p class="meta">A discovery call, Teams, Zoom, or a meeting. Phone <a href="tel:+61403750435">+61 403 750 435</a>.</p>
+      </div>
+      <figure class="frame">
+        <img src="https://powercreative.com.au/wp-content/uploads/2018/01/STATIC-ICCA-2018-BTS_Compressed.jpg" alt="Power Creative crew filming outdoors in Sydney, with the Harbour Bridge behind the set" width="4096" height="2160">
+        <figcaption class="caption">On location in Sydney. Still from the Power Creative site.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="make">
+    <div class="wrap">
+      <p class="kicker">What we make</p>
+      <h2>Video, events, and the story in between.</h2>
+      <p class="intro">The current site leads with a showreel and a welcome film. Under that, the work splits into the things clients actually book.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="mark" aria-hidden="true"></div>
+          <h3>Video</h3>
+          <p>Social films, media interviews and broadcast pieces. Packages on the current site run from a half-day camera call to a full crew day, with editing time built in.</p>
+          <ul>
+            <li>Half day, camera, about three short films</li>
+            <li>Full day with a writer and interviewer</li>
+            <li>Full crew, training, makeup and autocue</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true"></div>
+          <h3>Events</h3>
+          <p>Event production and creative, including hybrid events. Larger jobs come with a producer, regular meetings, and the work managed from concept through to delivery.</p>
+          <ul>
+            <li>Event production and creative</li>
+            <li>Hybrid events</li>
+            <li>End-to-end production and reporting</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true"></div>
+          <h3>Storytelling</h3>
+          <p>Once the strategy is agreed, creative takes the storyboard off the page: talent, set, makeup and direction, so the piece actually holds a viewer.</p>
+          <ul>
+            <li>Strategy before the shoot</li>
+            <li>Script, storyboard and media direction</li>
+            <li>A narrative that carries the message</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sand" id="process">
+    <div class="wrap">
+      <p class="kicker">How we work</p>
+      <h2>A clear path from the first chat to the cut.</h2>
+      <p class="intro">Power Creative already publishes the steps. This page just puts them in an order a new client can follow.</p>
+      <ol class="steps">
+        <li><span class="num">1</span><div><h3>Tell us the brief</h3><p>Who the film is for, who is in it, dates that matter, the messages, and whether you want interviews, voiceover, cutaways or graphics. If a budget or a three-quote comparison is in play, say so early.</p></div></li>
+        <li><span class="num">2</span><div><h3>A discovery chat</h3><p>Phone, Teams, Zoom or a meeting. The aim is a strategy plan and a sense of whether the fit is right.</p></div></li>
+        <li><span class="num">3</span><div><h3>Build the right team</h3><p>Script writing, media direction, storyboarding, talent and crew. The team grows or shrinks with the strategy.</p></div></li>
+        <li><span class="num">4</span><div><h3>Get creative</h3><p>Visual ideas, then the move from paper to film. That is where set, makeup, talent and direction come in.</p></div></li>
+        <li><span class="num">5</span><div><h3>Shoot, then sit with the cut</h3><p>Production brings subject, talent and location together. Post is a run of draft previews, remote or in the room, until the piece is ready.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="clients">
+    <div class="wrap">
+      <p class="kicker">Selected clients</p>
+      <h2>Names that already appear on the current site.</h2>
+      <p class="intro">These are people who have gone on the record there. Nothing here is invented.</p>
+      <div class="quotes">
+        <blockquote>
+          <p>“A visitor from France told me he watched the APAC Town Hall video Power Creative produced and said it was so, so good. Technically from the videography perspective, and that whoever did the videography and editing was really great.”</p>
+          <cite>Nicole McGrath, CFO, Asia-Pacific, Steelcase</cite>
+        </blockquote>
+        <blockquote>
+          <p>“I recently saw a piece of video work created by David and his team… impressed with every element, from the footage captured, the editing, music, narration and the narrative structure.”</p>
+          <cite>Karl Shelton, Director, Touch Marketing Australia</cite>
+        </blockquote>
+      </div>
+      <p class="note">The homepage also carries a testimonial video from Christine Cockburn, CEO of Rare Cancers Australia.</p>
+    </div>
+  </section>
+
+  <section class="sand" id="dave">
+    <div class="wrap about">
+      <div class="panel">
+        <p class="kicker">About Dave</p>
+        <strong>David, and a crew that can work from Sydney or from anywhere the job is.</strong>
+        <p>Clients talk about David and his team. The studio’s own contact page places the founders in Lake Macquarie, north of Sydney, with people across Australia and collaborations further away.</p>
+      </div>
+      <div>
+        <h2>A Western Sydney suite when the clock is tight.</h2>
+        <p>Power Creative has an NBN fibre production suite in Western Sydney for deadlines and heavy Sydney production. Content is managed in person and remotely. The first step they ask for is still the same: a little background, then a chat.</p>
+        <p><a href="https://vimeo.com/powercreative">Watch the showreel on Vimeo</a> · <a href="https://powercreative.com.au/">The current website</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="kicker">Contact</p>
+        <h2>We can’t wait to partner with you.</h2>
+        <p class="intro">That line is theirs. Send a short outline of the project and they will help work out the fit.</p>
+        <div class="actions">
+          <a class="btn solid" href="mailto:info@powercreative.com.au?subject=Tell%20us%20your%20story">Tell us your story</a>
+          <a class="btn ghost" href="mailto:info@powercreative.com.au?subject=Book%20a%20chat">Book a chat</a>
+        </div>
+      </div>
+      <div class="facts">
+        <p><strong>Email</strong><br><a href="mailto:info@powercreative.com.au">info@powercreative.com.au</a></p>
+        <p><strong>Phone</strong><br><a href="tel:+61403750435">+61 403 750 435</a></p>
+        <p><strong>Where</strong><br>Founders in Lake Macquarie, north of Sydney. Production suite in Western Sydney.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="social">
+      <a href="https://www.facebook.com/powercreativeaus">Facebook</a>
+      <a href="https://vimeo.com/powercreative">Vimeo</a>
+      <a href="https://www.instagram.com/powercreativeau">Instagram</a>
+      <a href="https://twitter.com/powercreativeau">Twitter</a>
+      <a href="https://au.pinterest.com/aupowercreative/">Pinterest</a>
+    </div>
+    <p class="sample">Sample redesign concept</p>
+  </div>
+</footer>
+</body>
+</html>
