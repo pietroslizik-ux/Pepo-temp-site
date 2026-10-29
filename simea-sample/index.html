@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Simea Piešťany – limonády, sirupy, CO2 a prenájom výčapov (návrh)</title>
+<meta name="description" content="Simea Piešťany s.r.o. – slovenský výrobca limonád v KEG sudoch, sirupov, dodávateľ CO2 a prenájom prenosných výčapných zariadení. Prototyp webu.">
+<meta name="theme-color" content="#3b1f12">
+<link rel="icon" href="assets/simea-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Simea Piešťany, s.r.o.","url":"https://www.simea.sk/","logo":"https://www.simea.sk/sites/default/files/simea-logo-biely-lem-220_0.png","email":"obchod@simea.sk","telephone":"+421337735051","address":{"@type":"PostalAddress","streetAddress":"Mlynská 5026/26","postalCode":"921 01","addressLocality":"Piešťany","addressCountry":"SK"},"taxID":"2020172363","vatID":"SK2020172363"}</script>
+<style>
+:root{--cream:#fff8ef;--paper:#fffdf9;--sand:#f6ead8;--cola:#3b1f12;--cola2:#52301d;--red:#d7263d;--rasp:#c2185b;--gold:#f2b632;--blue:#2e2a85;--text:#2a1d15;--muted:#6e5d50;--r:18px;--sh:0 10px 30px -12px rgba(59,31,18,.25)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font:16px/1.6 "Nunito Sans",system-ui,sans-serif;color:var(--text);background:var(--paper);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--blue)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:800;line-height:1.1;margin:0 0 .45em;letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,4.4vw,2.9rem)}
+section{padding:84px 0}
+.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.76rem;font-weight:800;color:var(--rasp);margin:0 0 .7em}
+.lead{font-size:1.1rem;color:var(--muted);max-width:720px;margin:0 0 1.2em}
+.btn{display:inline-flex;align-items:center;gap:.5em;background:var(--red);color:#fff;text-decoration:none;font-weight:800;padding:.9em 1.5em;border-radius:999px;border:2px solid var(--red);transition:.2s;font-size:1rem}
+.btn:hover{background:#b81d31;border-color:#b81d31;transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--cola);border-color:var(--cola)}.btn.ghost:hover{background:var(--cola);color:#fff}
+.btn.light{background:#fff;color:var(--cola);border-color:#fff}.btn.light:hover{background:var(--gold);border-color:var(--gold)}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,253,249,.94);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #f0e2cf}
+.nav{display:flex;align-items:center;gap:14px;height:68px}
+.logo img{height:48px;width:auto}
+.nav ul{display:flex;gap:2px;list-style:none;margin:0 0 0 auto;padding:0}
+.nav ul a{color:var(--cola);text-decoration:none;font-weight:700;font-size:.92rem;padding:8px 11px;border-radius:10px}
+.nav ul a:hover{background:var(--sand);color:var(--red)}
+.nav .cta{padding:.55em 1.05em;font-size:.88rem}
+.lang{background:#fff;border:1.5px solid var(--cola);color:var(--cola);border-radius:999px;padding:5px 11px;font-weight:800;cursor:pointer;font-size:.8rem;font-family:inherit}
+.burger{display:none;background:none;border:0;color:var(--cola);cursor:pointer;margin-left:auto;padding:8px;width:44px;height:44px}
+.burger span{display:block;height:2.5px;background:currentColor;margin:5px 0;border-radius:2px;transition:.25s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}.burger[aria-expanded=true] span:nth-child(2){opacity:0}.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+@media(max-width:1020px){.burger{display:block}.nav .cta{display:none}
+ .nav ul{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--paper);padding:8px 22px 20px;border-bottom:1px solid #f0e2cf;box-shadow:var(--sh)}
+ .nav ul.open{display:flex}.nav ul a{display:block;padding:13px 4px;font-size:1.05rem;border-bottom:1px solid #f3e7d6;border-radius:0}}
+.proto{position:fixed;left:12px;bottom:12px;z-index:60;background:var(--cola);color:var(--gold);font-weight:800;font-size:.7rem;letter-spacing:.08em;padding:6px 11px;border-radius:999px;box-shadow:var(--sh);pointer-events:none;opacity:.92}
+/* hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(1200px 500px at 85% -10%,#ffd9a8 0,transparent 60%),radial-gradient(900px 500px at -10% 110%,#ffd0dc 0,transparent 55%),var(--cream);padding:64px 0 72px}
+.hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,5.6vw,4.1rem);color:var(--cola)}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero .sub{font-size:1.15rem;color:var(--muted);margin:0 0 1.8em;max-width:560px}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:640px}
+.quick a{display:flex;flex-direction:column;align-items:flex-start;gap:6px;background:#fff;border-radius:16px;padding:16px 16px 14px;text-decoration:none;color:var(--cola);box-shadow:var(--sh);border:2px solid transparent;transition:.2s;min-height:112px}
+.quick a:hover{border-color:var(--red);transform:translateY(-3px)}
+.quick .dot{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:1.25rem}
+.quick b{font-family:Fraunces,serif;font-size:1.08rem;line-height:1.15}
+.quick small{font-size:.78rem;color:var(--muted);font-weight:600;line-height:1.3}
+.hero-art{position:relative;aspect-ratio:1/1;max-width:500px;justify-self:center;width:100%}
+.hero-art .blob{position:absolute;inset:4%;border-radius:46% 54% 50% 50%/52% 46% 54% 48%;background:linear-gradient(145deg,#fff 0,#fff3e2 100%);box-shadow:var(--sh)}
+.hero-art img{position:absolute;filter:drop-shadow(0 16px 20px rgba(59,31,18,.22))}
+.hero-art .i1{width:64%;left:18%;top:12%;border-radius:14px;mix-blend-mode:multiply;filter:none}
+.hero-art .i2{width:58%;right:-2%;bottom:8%}
+.hero-art .chip{position:absolute;left:0;bottom:16%;background:var(--cola);color:#fff;border-radius:14px;padding:10px 14px;font-weight:800;font-size:.85rem;box-shadow:var(--sh)}
+.hero-art .chip span{display:block;color:var(--gold);font-family:Fraunces,serif;font-size:1.35rem}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0;padding:0;list-style:none}
+.facts li{background:rgba(255,255,255,.7);border:1px solid #efd9bf;border-radius:999px;padding:5px 13px;font-size:.82rem;font-weight:700;color:var(--cola2)}
+@media(max-width:900px){.hero .grid{grid-template-columns:1fr}.hero-art{max-width:360px}.hero{padding-top:36px}}
+@media(max-width:560px){.quick{grid-template-columns:1fr 1fr}.hero-art{max-width:290px}.proto{left:auto;right:10px;bottom:10px;font-size:.62rem;padding:4px 9px}}
+/* product cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px}
+.cards.sm{grid-template-columns:repeat(7,1fr);gap:14px}.cards.four{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1020px){.cards.sm{grid-template-columns:repeat(4,1fr)}}@media(max-width:640px){.cards.sm,.cards.four{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr 1fr;gap:12px}.card .cb{padding:12px 14px 14px}.card h3{font-size:1.12rem}}
+.card{background:#fff;border-radius:var(--r);box-shadow:var(--sh);overflow:hidden;display:flex;flex-direction:column;transition:.2s;border:1px solid #f3e6d4}
+.card:hover{transform:translateY(-4px)}
+.card .cb{padding:14px 18px 18px;position:relative}
+.card h3{font-size:1.3rem;margin:0 0 .25em;color:var(--cola)}
+.card.sm h3{font-size:1.08rem}
+.card p{margin:0;font-size:.9rem;color:var(--muted)}
+.card .pk{margin-top:10px;display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.1em;background:var(--sand);color:var(--cola2);padding:3px 9px;border-radius:6px}
+.flag{position:absolute;top:-13px;right:14px;background:var(--gold);color:var(--cola);font-size:.68rem;font-weight:800;padding:4px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.06em}
+.glass{height:150px;display:grid;place-items:end center;padding-bottom:16px;background:linear-gradient(180deg,#fdf6ec,#f7ead8)}
+.card.sm .glass{height:120px}
+.glass .liq{position:relative;width:64px;height:96px;border-radius:6px 6px 16px 16px;background:linear-gradient(180deg,var(--c2) 0%,var(--c1) 100%);box-shadow:inset 0 0 0 3px rgba(255,255,255,.55),inset 8px 0 0 rgba(255,255,255,.18),0 10px 18px -8px rgba(0,0,0,.35);overflow:hidden}
+.card.sm .glass .liq{width:52px;height:78px}
+.glass .liq:before{content:"";position:absolute;left:0;right:0;top:0;height:10px;background:rgba(255,255,255,.45)}
+.glass .liq i{position:absolute;width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.65);bottom:14px;left:30%;animation:bub 3.2s infinite ease-in}
+.glass .liq i:nth-child(2){left:62%;width:4px;height:4px;animation-delay:1.3s}.glass .liq i:nth-child(3){left:45%;animation-delay:2.1s}
+@keyframes bub{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-70px);opacity:0}}
+@media(prefers-reduced-motion:reduce){.glass .liq i{animation:none;opacity:.6}*{scroll-behavior:auto!important;transition:none!important}}
+.note{font-size:.82rem;color:var(--muted);margin:16px 0 0;font-style:italic}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+.photo{background:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:18px;display:grid;place-items:center}
+.photo figcaption{font-size:.75rem;color:var(--muted);margin-top:8px;text-align:center}
+.photo figure{margin:0}
+.banner{height:150px;border-radius:var(--r);background-size:cover;background-position:center;margin:0 0 36px;position:relative;overflow:hidden}
+.banner:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(59,31,18,.7),rgba(59,31,18,0) 70%)}
+.banner span{position:relative;z-index:1;color:#fff;font-family:Fraunces,serif;font-weight:800;font-size:clamp(1.3rem,3vw,2rem);display:flex;height:100%;align-items:center;padding:0 30px;max-width:560px;line-height:1.15}
+#limonady{background:var(--paper)}
+#sirupy{background:var(--cream)}
+.sublabel{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:38px 0 16px}
+.sublabel h3{font-size:1.35rem;margin:0;color:var(--cola)}
+.sublabel span{font-size:.9rem;color:var(--muted)}
+.packs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;padding:0;list-style:none}
+.packs li{background:#fff;border:1.5px solid #ecd6ba;border-radius:999px;padding:6px 14px;font-weight:700;font-size:.88rem;color:var(--cola2)}
+/* co2 + vycap */
+#co2{background:var(--paper)}
+.co2grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.co2{background:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:20px;text-align:center;border:1px solid #f3e6d4}
+.co2 .ic{height:130px;display:grid;place-items:center;margin-bottom:10px}
+.co2 .ic img{max-height:130px;width:auto}
+.co2 b{font-family:Fraunces,serif;font-size:1.25rem;display:block;color:var(--cola)}
+.co2 small{color:var(--muted);font-size:.85rem}
+.cyl{width:34px;border-radius:12px 12px 6px 6px;background:linear-gradient(90deg,#8a96a8,#cfd7e2 45%,#7c879a);position:relative}
+.cyl:before{content:"";position:absolute;left:50%;top:-14px;width:12px;height:14px;transform:translateX(-50%);background:#444;border-radius:3px 3px 0 0}
+@media(max-width:860px){.co2grid{grid-template-columns:1fr 1fr}}
+#vycapy{background:linear-gradient(180deg,var(--cola) 0,#2a150b 100%);color:#f6ece0}
+#vycapy h2{color:#fff}#vycapy .eyebrow{color:var(--gold)}#vycapy .lead{color:#dccbb8}
+#vycapy .photo{background:#fff;max-width:340px;justify-self:center}
+.ticks{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:8px}
+.ticks li{padding-left:30px;position:relative}
+.ticks li:before{content:"✓";position:absolute;left:0;top:0;width:22px;height:22px;border-radius:50%;background:var(--gold);color:var(--cola);font-weight:800;font-size:.75rem;display:grid;place-items:center}
+/* b2b */
+#podniky{background:var(--cream)}
+.b2b{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0}
+.b2b div{background:#fff;border-radius:var(--r);padding:22px;box-shadow:var(--sh);border-top:5px solid var(--red)}
+.b2b div:nth-child(2){border-color:var(--gold)}.b2b div:nth-child(3){border-color:var(--blue)}
+.b2b h3{font-size:1.15rem;color:var(--cola)}
+.b2b p{margin:0;font-size:.92rem;color:var(--muted)}
+@media(max-width:860px){.b2b{grid-template-columns:1fr}}
+.enq{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;background:var(--cola);color:#fff;border-radius:var(--r);padding:26px 28px}
+.enq p{margin:0;flex:1 1 320px;font-size:1.05rem}
+.enq p b{font-family:Fraunces,serif;font-size:1.35rem;display:block;color:var(--gold)}
+/* story */
+#onas{background:var(--paper)}
+.story{display:grid;grid-template-columns:1.2fr .8fr;gap:48px}
+.story p{margin:0 0 1em}
+.owners{background:var(--cream);border-radius:var(--r);padding:26px;align-self:start;border:1px solid #f0dcc2}
+.owners h3{font-size:1.1rem;margin-bottom:12px}
+.owners ul{list-style:none;margin:0 0 18px;padding:0}.owners li{padding:10px 0;border-bottom:1px dashed #e4ceb1;font-weight:700}
+.owners li small{display:block;font-weight:600;color:var(--muted)}
+.quote{font-family:Fraunces,serif;font-size:1.5rem;color:var(--red);margin:.4em 0 .8em;font-weight:600}
+@media(max-width:860px){.story{grid-template-columns:1fr}}
+/* brewery */
+#pivovar{background:linear-gradient(120deg,#1e140d,#3b2615);color:#f2e6cf}
+#pivovar h2{color:#fff}#pivovar .eyebrow{color:var(--gold)}#pivovar .lead{color:#d8c7a8}
+.brew{display:grid;grid-template-columns:.7fr 1.3fr;gap:44px;align-items:center}
+.brew img{max-width:300px;margin:0 auto;filter:drop-shadow(0 14px 22px rgba(0,0,0,.5))}
+.brew .btns{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.age{display:inline-block;border:1.5px solid var(--gold);color:var(--gold);font-weight:800;font-size:.72rem;border-radius:6px;padding:2px 7px;vertical-align:middle;margin-left:4px}
+@media(max-width:760px){.brew{grid-template-columns:1fr}.brew img{max-width:220px}}
+/* contact */
+#kontakt{background:var(--cream)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.cbox{background:#fff;border-radius:var(--r);padding:22px;box-shadow:var(--sh)}
+.cbox h3{font-family:"Nunito Sans";font-weight:800;font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;color:var(--rasp);margin-bottom:10px}
+.cbox a.big{font-size:1.18rem;font-weight:800;text-decoration:none;color:var(--cola);display:block;word-break:break-word;margin-bottom:4px}
+.cbox a.big:hover{color:var(--red)}
+.cbox p{margin:0 0 10px}.cbox small{color:var(--muted)}
+.legal{margin-top:20px;font-size:.8rem;color:var(--muted)}
+@media(max-width:860px){.cgrid{grid-template-columns:1fr}}
+footer{background:var(--cola);color:#d8c7b5;padding:40px 0 56px;font-size:.88rem}
+footer .f{display:flex;flex-wrap:wrap;gap:18px 40px;justify-content:space-between;align-items:flex-start}
+footer img{height:52px;width:auto;background:#fff;border-radius:10px;padding:4px 8px}
+footer a{color:var(--gold)}
+.resp{background:rgba(255,255,255,.07);border-radius:12px;padding:12px 16px;margin:24px 0 0;color:#fff;font-weight:700}
+.resp span{display:block;font-weight:600;color:#cdb9a3}
+</style>
+</head>
+<body id="top">
+<div class="proto" aria-hidden="true">PROTOTYP / návrh</div>
+<header><div class="wrap nav">
+ <a class="logo" href="#top" aria-label="Simea Piešťany – domov"><img src="assets/simea-logo.webp" alt="Simea Piešťany" width="220" height="100"></a>
+ <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+ <ul id="menu">
+  <li><a href="#limonady" data-en="Lemonades">Limonády</a></li>
+  <li><a href="#sirupy" data-en="Syrups">Sirupy</a></li>
+  <li><a href="#co2">CO2</a></li>
+  <li><a href="#vycapy" data-en="Dispensers">Výčapy</a></li>
+  <li><a href="#podniky" data-en="Businesses">Pre podniky</a></li>
+  <li><a href="#onas" data-en="About">O nás</a></li>
+  <li><a href="#pivovar" data-en="Brewery">Pivovar</a></li>
+  <li><a href="#kontakt" data-en="Contact">Kontakt</a></li>
+ </ul>
+ <a class="btn cta" href="tel:+421905979954" data-en="Order: 0905 979 954">Objednávky 0905 979 954</a>
+ <button class="lang" id="lang" aria-label="Switch language / Prepnúť jazyk">EN</button>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap grid">
+ <div>
+  <p class="eyebrow" data-en="Soft drinks · syrups · CO2 · from Piešťany">Nealko nápoje · sirupy · CO2 · z Piešťan</p>
+  <h1 data-en="Lemonades and syrups <em>from Piešťany</em>">Limonády a sirupy <em>z Piešťan</em></h1>
+  <p class="sub" data-en="Simea Piešťany makes its own lemonades in KEG barrels and syrups in IBC containers, cans and PET bottles – and supplies CO2 and portable draught equipment for hire.">Simea Piešťany vyrába vlastné limonády v KEG sudoch a sirupy v IBC kontajneroch, bandaskách a PET fľašiach – a dodáva aj CO2 a prenajíma prenosné výčapné zariadenia.</p>
+  <nav class="quick" aria-label="Rýchle odkazy">
+   <a href="#limonady"><span class="dot" style="background:#fde3e7">🥤</span><b data-en="Lemonades">Limonády</b><small data-en="in KEG barrels">v KEG sudoch</small></a>
+   <a href="#sirupy"><span class="dot" style="background:#fff0cc">🍯</span><b data-en="Syrups">Sirupy</b><small data-en="IBC, cans, PET">IBC, bandasky, PET</small></a>
+   <a href="#co2"><span class="dot" style="background:#e3eefb">🫧</span><b>CO2</b><small data-en="bottles &amp; cartridges">fľaše a bombičky</small></a>
+   <a href="#vycapy"><span class="dot" style="background:#efe3d6">🚰</span><b data-en="Dispenser hire">Prenájom výčapov</b><small data-en="portable equipment">prenosné zariadenia</small></a>
+  </nav>
+  <ul class="facts">
+   <li data-en="Customers for 10+ years">Zákazníci viac ako 10 rokov</li>
+   <li data-en="Own recipes">Vlastný vývoj receptúr</li>
+   <li data-en="Quality European ingredients">Suroviny od popredných európskych dodávateľov</li>
+  </ul>
+ </div>
+ <div class="hero-art" aria-hidden="true">
+  <div class="blob"></div>
+  <img class="i1" src="assets/sirupy.webp" alt="" width="400" height="307" fetchpriority="high">
+  <img class="i2" src="assets/keg.webp" alt="" width="264" height="179">
+  <div class="chip"><span>Pubcola</span><span style="color:#fff;font-size:1rem;font-family:'Nunito Sans'">&amp; Vinovka</span></div>
+ </div>
+</div></section>
+
+<section id="limonady"><div class="wrap">
+ <div class="banner" style="background-image:url(assets/banner-hrozno.webp)"><span data-en="Lemonades in KEG barrels – for pubs, events and canteens">Limonády v KEG sudoch – pre krčmy, akcie aj jedálne</span></div>
+ <p class="eyebrow" data-en="Lemonades">Limonády</p>
+ <h2 data-en="Five lemonades on tap">Päť limonád na čapovanie</h2>
+ <p class="lead" data-en="Our flagships are Pubcola with its fruity-caramel-herbal taste and Vinovka with a grape flavour. Every drink comes from our own development.">Nosnými výrobkami sú Pubcola s ovocno-karamelovo-bylinkovou príchuťou a Vinovka s príchuťou hroznového vína. Všetky druhy nápojov sú výsledkom vlastného vývoja.</p>
+ <div class="cards">
+<article class="card"><div class="glass" style="--c1:#4a2512;--c2:#7a3e1d"><div class="liq"><i></i><i></i></div></div><div class="cb"><span class="flag" data-en="Flagship">Vlajková loď</span><h3>Pubcola</h3><p data-en="Fruity-caramel-herbal cola flavour">Ovocno-karamelovo-bylinková colová príchuť</p><p class="pk">KEG</p></div></article>
+<article class="card"><div class="glass" style="--c1:#e0b12a;--c2:#f4d56a"><div class="liq"><i></i><i></i></div></div><div class="cb"><span class="flag" data-en="Flagship">Vlajková loď</span><h3>Vinovka</h3><p data-en="Grape wine and grape-juice flavour">Príchuť hroznových vín a muštov</p><p class="pk">KEG</p></div></article>
+<article class="card"><div class="glass" style="--c1:#c2185b;--c2:#e8487d"><div class="liq"><i></i><i></i></div></div><div class="cb"><h3>Malinovka</h3><p data-en="Raspberry and forest-fruit flavour">Príchuť maliny a lesných plodov</p><p class="pk">KEG</p></div></article>
+<article class="card"><div class="glass" style="--c1:#7b1030;--c2:#a8213f"><div class="liq"><i></i><i></i></div></div><div class="cb"><h3>Rubea</h3><p data-en="Red grape wine and grape-juice flavour">Príchuť červených hroznových vín a muštov</p><p class="pk">KEG</p></div></article>
+<article class="card"><div class="glass" style="--c1:#cfe9f7;--c2:#eef8fd"><div class="liq"><i></i><i></i><i></i></div></div><div class="cb"><h3>Sóda</h3><p data-en="Sparkling water">Sýtená voda</p><p class="pk">KEG</p></div></article>
+ </div>
+ <p class="note" data-en="Colours are illustrative, suggested by each flavour – not photos of the actual product.">Farby sú ilustračné, odvodené od príchute – nie sú to fotografie skutočného výrobku.</p>
+</div></section>
+
+<section id="sirupy"><div class="wrap">
+ <div class="banner" style="background-image:url(assets/banner-ovocie.webp)"><span data-en="Syrups in IBC containers, cans and PET bottles">Sirupy v IBC kontajneroch, bandaskách a PET fľašiach</span></div>
+ <div class="split">
+  <div>
+   <p class="eyebrow" data-en="Syrups">Sirupy</p>
+   <h2 data-en="Syrups with reduced energy value">Sirupy so zníženou energetickou hodnotou</h2>
+   <p class="lead" data-en="Made with sugar and sweeteners, in two lines: NC 65% and thickened NCZ 21%. Supplied in IBC containers, cans and PET bottles.">S cukrom a náhradnými sladidlami, v dvoch radoch: NC 65 % a zahustené NCZ 21 %. Dodávame v IBC kontajneroch, bandaskách a PET fľašiach.</p>
+   <ul class="packs"><li data-en="IBC containers">IBC kontajnery</li><li data-en="Cans (bandasky)">Bandasky</li><li data-en="PET bottles">PET fľaše</li></ul>
+  </div>
+  <figure class="photo"><img src="assets/ibc-bandasky.webp" alt="IBC kontajner a bandasky Simea" width="251" height="179" loading="lazy"><figcaption data-en="Photo: simea.sk">Foto: simea.sk</figcaption></figure>
+ </div>
+ <div class="sublabel"><h3>NC 65 %</h3><span data-en="reduced-energy syrups with sugar and sweeteners">so zníženou energetickou hodnotou, s cukrom a náhradnými sladidlami</span></div>
+ <div class="cards sm four">
+<article class="card sm"><div class="glass" style="--c1:#4a2512;--c2:#7a3e1d"><div class="liq"><i></i><i></i></div></div><div class="cb"><h3>Pubcola</h3><p data-en="Fruity-caramel-herbal cola flavour">Ovocno-karamelovo-bylinková colová príchuť</p><p class="pk">NC 65 %</p></div></article>
+<article class="card sm"><div class="glass" style="--c1:#e0b12a;--c2:#f4d56a"><div class="liq"><i></i><i></i></div></div><div class="cb"><h3>Vinovka</h3><p data-en="Grape wine and grape-juice flavour">Príchuť hroznových vín a muštov</p><p class="pk">NC 65 %</p></div></article>
+<article class="card sm"><div class="glass" style="--c1:#7b1030;--c2:#a8213f"><div class="liq"><i></i><i></i></div></div><div class="cb"><h3>Rubea</h3><p data-en="Red grape wine and grape-juice flavour">Príchuť červených hroznových vín a muštov</p><p class="pk">NC 65 %</p></div></article>
+<article class="card sm"><div class="glass" style="--c1:#c2185b;--c2:#e8487d"><div class="liq"><i></i><i></i></div></div><div class="cb"><h3>Malinovka</h3><p data-en="Raspberry and forest-fruit flavour">Príchuť maliny a lesných plodov</p><p class="pk">NC 65 %</p></div></article>
+ </div>
+ <div class="sublabel"><h3 data-en="NCZ 21% thickened">NCZ 21 % zahustené</h3><span data-en="thickened reduced-energy syrups">zahustené sirupy so zníženou energetickou hodnotou</span></div>
+ <div class="cards sm">
+<article class="card sm"><div class="glass" style="--c1:#c2185b;--c2:#e8487d"><div class="liq"><i></i><i></i></div></div><div class="cb"><h3>Malinovka</h3><p data-en="Raspberry">Malinová príchuť</p><p class="pk">NCZ 21 %</p></div></article>
+<article class="card sm"><div class="glass" style="--c1:#d7263d;--c2:#f05a6a"><div class="liq"><i></i><i></i></div></div><div class="cb"><h3>Jahoda</h3><p data-en="Strawberry">Jahodová príchuť</p><p class="pk">NCZ 21 %</p></div></article>
+<article class="card sm"><div class="glass" style="--c1:#5b2a86;--c2:#8a4fbf"><div class="liq"><i></i><i></i></div></div><div class="cb"><h3>Lesná zmes</h3><p data-en="Forest fruit mix">Zmes lesných plodov</p><p class="pk">NCZ 21 %</p></div></article>
+<article class="card sm"><div class="glass" style="--c1:#f07c14;--c2:#ffa64d"><div class="liq"><i></i><i></i></div></div><div class="cb"><h3>Oranžáda</h3><p data-en="Orange">Pomarančová príchuť</p><p class="pk">NCZ 21 %</p></div></article>
+<article class="card sm"><div class="glass" style="--c1:#f2d21b;--c2:#fff07a"><div class="liq"><i></i><i></i></div></div><div class="cb"><h3>Citrón</h3><p data-en="Lemon">Citrónová príchuť</p><p class="pk">NCZ 21 %</p></div></article>
+<article class="card sm"><div class="glass" style="--c1:#5aa52b;--c2:#8fd14f"><div class="liq"><i></i><i></i></div></div><div class="cb"><h3>Zelené jablko</h3><p data-en="Green apple">Príchuť zeleného jablka</p><p class="pk">NCZ 21 %</p></div></article>
+<article class="card sm"><div class="glass" style="--c1:#bfe6d2;--c2:#e4f6ec"><div class="liq"><i></i><i></i></div></div><div class="cb"><h3>Mäta-baza</h3><p data-en="Mint and elderflower">Mäta a baza</p><p class="pk">NCZ 21 %</p></div></article>
+ </div>
+ <p class="note" data-en="Colours are illustrative, suggested by each flavour.">Farby sú ilustračné, odvodené od príchute.</p>
+</div></section>
+
+<section id="co2"><div class="wrap">
+ <p class="eyebrow">CO2</p>
+ <h2 data-en="CO2 bottles and cartridges">CO2 fľaše a bombičky</h2>
+ <p class="lead" data-en="Carbon dioxide for draught dispensers and home soda makers.">Oxid uhličitý pre výčapné zariadenia aj domáce sódovkovače.</p>
+ <div class="co2grid">
+  <div class="co2"><div class="ic"><img src="assets/co2-flasa.webp" alt="CO2 fľaša" width="104" height="520" loading="lazy" style="height:130px"></div><b>20 kg</b><small data-en="CO2 bottle">CO2 fľaša</small></div>
+  <div class="co2"><div class="ic"><img src="assets/co2-flasa.webp" alt="" width="104" height="520" loading="lazy" style="height:92px"></div><b>6 kg</b><small data-en="CO2 bottle">CO2 fľaša</small></div>
+  <div class="co2"><div class="ic"><img src="assets/co2-sodastream.webp" alt="CO2 bombička na Sodastream" width="97" height="520" loading="lazy" style="height:120px"></div><b>Sodastream</b><small data-en="CO2 cartridge">CO2 bombička</small></div>
+  <div class="co2"><div class="ic"><div class="cyl" style="height:62px;width:26px" aria-hidden="true"></div></div><b data-en="Capsule">Kyveta</b><small data-en="CO2 cartridge (kyveta)">CO2 bombička kyveta</small></div>
+ </div>
+</div></section>
+
+<section id="vycapy"><div class="wrap split">
+ <div>
+  <p class="eyebrow" data-en="Hire">Prenájom</p>
+  <h2 data-en="Portable draught equipment for hire">Prenájom prenosných výčapných zariadení</h2>
+  <p class="lead" data-en="Planning a party, a festival or a company event? Borrow a portable dispenser and pour our lemonades from the KEG.">Chystáte oslavu, festival či firemnú akciu? Požičajte si prenosný výčap a čapujte naše limonády priamo z KEG suda.</p>
+  <ul class="ticks">
+   <li data-en="Portable draught equipment">Prenosné výčapné zariadenia</li>
+   <li data-en="Lemonades in KEG barrels">Limonády v KEG sudoch</li>
+   <li data-en="CO2 bottles 6 kg and 20 kg">CO2 fľaše 6 kg a 20 kg</li>
+  </ul>
+  <a class="btn light" href="tel:+421905979954" data-en="Call to book: 0905 979 954">Rezervácia: 0905 979 954</a>
+ </div>
+ <figure class="photo"><img src="assets/vycap.webp" alt="Prenosné výčapné zariadenie" width="331" height="497" loading="lazy"><figcaption data-en="Illustrative photo: simea.sk">Ilustračné foto: simea.sk</figcaption></figure>
+</div></section>
+
+<section id="podniky"><div class="wrap">
+ <p class="eyebrow" data-en="For businesses and pubs">Pre podniky a krčmy</p>
+ <h2 data-en="Everything for your tap and your bar">Všetko pre váš výčap a bar</h2>
+ <p class="lead" data-en="We are a producer and wholesaler. Pubs, restaurants, canteens, event organisers and retailers can get everything from one supplier.">Sme výrobca aj veľkoobchod. Krčmy, reštaurácie, jedálne, organizátori akcií aj predajne dostanú všetko od jedného dodávateľa.</p>
+ <div class="b2b">
+  <div><h3 data-en="Lemonades in KEG">Limonády v KEG</h3><p data-en="Pubcola, Vinovka, Malinovka, Rubea and Sóda ready to pour.">Pubcola, Vinovka, Malinovka, Rubea a Sóda pripravené na čapovanie.</p></div>
+  <div><h3 data-en="Syrups in bulk">Sirupy vo veľkom</h3><p data-en="NC 65% and NCZ 21% syrups in IBC containers, cans and PET bottles.">Sirupy NC 65 % a NCZ 21 % v IBC kontajneroch, bandaskách a PET fľašiach.</p></div>
+  <div><h3 data-en="CO2 &amp; dispensers">CO2 a výčapy</h3><p data-en="CO2 bottles 20 kg and 6 kg, cartridges, and portable draught equipment for hire.">CO2 fľaše 20 kg a 6 kg, bombičky a prenájom prenosných výčapných zariadení.</p></div>
+ </div>
+ <div class="enq">
+  <p><b data-en="Send us an enquiry">Pošlite nám dopyt</b><span data-en="Tell us what you need, how much and where – we will get back to you.">Napíšte, čo potrebujete, aké množstvo a kam – ozveme sa vám.</span></p>
+  <a class="btn" href="mailto:obchod@simea.sk?subject=Dopyt%20%E2%80%93%20limon%C3%A1dy%20%2F%20sirupy%20%2F%20CO2&amp;body=Dobr%C3%BD%20de%C5%88%2C%0A%0Am%C3%A1m%20z%C3%A1ujem%20o%3A%0A-%20produkt%3A%0A-%20mno%C5%BEstvo%20%2F%20balenie%3A%0A-%20miesto%20dodania%3A%0A-%20term%C3%ADn%3A%0A%0AKontakt%3A%0A" data-en="✉ Send an enquiry">✉ Poslať dopyt</a>
+  <a class="btn light" href="tel:+421905979954">📞 0905 979 954</a>
+ </div>
+</div></section>
+
+<section id="onas"><div class="wrap story">
+ <div>
+  <p class="eyebrow" data-en="Our story">Náš príbeh</p>
+  <h2 data-en="A family company with a long tradition">Rodinná firma s dlhoročnou tradíciou</h2>
+  <p data-en="Simea Piešťany s.r.o. has a long tradition on the Slovak market – customers and buyers have known it for more than 10 years. The company went through several stages of development until it was registered in its current form in the Commercial Register of the District Court in Trnava in December 2004.">Spoločnosť Simea Piešťany s.r.o. je firma s dlhoročnou tradíciou na slovenskom trhu. Zákazníci a odberatelia sa s ňou stretávajú viac ako 10 rokov. Prešla viacerými vývojovými zmenami, až kým bola v súčasnej podobe zapísaná do Obchodného registra Okresného súdu v Trnave v decembri 2004.</p>
+  <p data-en="Our main activity in production and wholesale is syrups and soft drinks in PET bottles, IBC containers and KEG barrels – and also beer brewed in our own craft brewery, Simeon Piešťany.">Hlavným predmetom činnosti výroby a veľkoobchodu sú sirupy a nealkoholické nápoje v PET fľašiach, IBC kontajneroch a KEG sudoch – ale aj pivo z vlastného remeselného pivovaru Simeon Piešťany.</p>
+  <p data-en="All our drinks are the result of our own development and the good work of all our staff. Ingredients go through careful selection – we use only quality ingredients from leading European suppliers.">Všetky druhy nápojov sú výsledkom vlastného vývoja a kvalitnej práce všetkých pracovníkov. Suroviny prejdú dôsledným výberom – používame len kvalitné suroviny od popredných európskych dodávateľov.</p>
+ </div>
+ <aside class="owners">
+  <h3 data-en="Owners">Majitelia</h3>
+  <ul>
+   <li>Ing. Iveta Slížiková</li>
+   <li>Stanislav Slížik<small data-en="long experience in making syrups, concentrates, soft drinks and beer">dlhoročné skúsenosti s výrobou sirupov, koncentrátov, nealko nápojov a piva</small></li>
+  </ul>
+  <p class="quote" data-en="“From idea to reality is just a short step.”">„Od myšlienky k realizácii je kúsok.“</p>
+  <p style="margin:0;font-size:.92rem;color:var(--muted)" data-en="It was his brewing experience that led Mr Slížik to add quality unfiltered, unpasteurised beer without chemical additives to the soft-drink production.">Práve prax vo výrobe piva doviedla p. Slížika k myšlienke pridať k nealko nápojom aj výrobu kvalitného, nefiltrovaného, nepasterizovaného piva bez chemických prísad.</p>
+ </aside>
+</div></section>
+
+<section id="pivovar"><div class="wrap brew">
+ <img src="assets/simeon-12.webp" alt="Simeon 12 % – Pivovar Piešťany" width="480" height="468" loading="lazy">
+ <div>
+  <p class="eyebrow" data-en="Our brewery">Náš pivovar</p>
+  <h2>Pivovar Simeon <span class="age" title="Len pre osoby staršie ako 18 rokov">18+</span></h2>
+  <p class="lead" data-en="Beer from the Simeon Piešťany craft brewery is made the traditional way, without additives – unpasteurised, unfiltered, bottom-fermented, Pilsner type.">Pivo z remeselného pivovaru Simeon Piešťany sa vyrába tradičným postupom bez prídavných látok – nepasterizované, nefiltrované, spodne kvasené, plzenského typu.</p>
+  <div class="btns">
+   <a class="btn" href="https://www.pivovarsimeon.sk/" target="_blank" rel="noopener" data-en="pivovarsimeon.sk ↗">pivovarsimeon.sk ↗</a>
+   <a class="btn light" href="https://pietroslizik-ux.github.io/Pepo-temp-site/simeon-sample/" target="_blank" rel="noopener" data-en="See the new brewery website draft ↗">Návrh nového webu pivovaru ↗</a>
+  </div>
+ </div>
+</div></section>
+
+<section id="kontakt"><div class="wrap">
+ <p class="eyebrow" data-en="Contact">Kontakt</p>
+ <h2 data-en="Get in touch">Ozvite sa nám</h2>
+ <div class="cgrid">
+  <div class="cbox"><h3 data-en="Address">Adresa</h3><p><b>Simea Piešťany, s.r.o.</b><br>Mlynská 5026/26<br>921 01 Piešťany</p>
+   <a class="btn ghost" style="padding:.55em 1.1em;font-size:.9rem" href="https://www.google.com/maps/search/?api=1&amp;query=Mlynsk%C3%A1+5026%2F26%2C+921+01+Pie%C5%A1%C5%A5any" target="_blank" rel="noopener" data-en="📍 Open map">📍 Otvoriť mapu</a></div>
+  <div class="cbox"><h3 data-en="Phone">Telefón</h3>
+   <a class="big" href="tel:+421905979954">+421 905 979 954</a><small data-en="orders">objednávky</small>
+   <p></p>
+   <a class="big" href="tel:+421337735051">+421 33 77 350 51</a><small data-en="office">kancelária</small></div>
+  <div class="cbox"><h3>E-mail</h3>
+   <a class="big" href="mailto:obchod@simea.sk">obchod@simea.sk</a><small data-en="sales">obchod</small><p></p>
+   <a class="big" href="mailto:simea@simea.sk">simea@simea.sk</a><small data-en="general">všeobecné</small></div>
+ </div>
+ <p class="legal" data-en="Company ID (IČO) 36254371 · Tax ID (DIČ) 2020172363 · VAT ID SK2020172363 · Registered in the Commercial Register of the District Court Trnava, insert no. 14110/T · Reg. no. 2477/03 RP issued by the State Veterinary and Food Administration of the SR.">IČO 36254371 · DIČ 2020172363 · IČ DPH SK2020172363 · Zapísaná v OR Okresného súdu Trnava, vložka č. 14110/T · Evidenčné číslo 2477/03 RP vydané Štátnou veterinárnou a potravinovou správou SR.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <div class="f">
+  <div><img src="assets/simea-logo.webp" alt="Simea Piešťany" width="220" height="100" loading="lazy"><p style="margin:12px 0 0">Simea Piešťany, s.r.o. · Mlynská 5026/26, 921 01 Piešťany</p></div>
+  <div><b style="color:#fff" data-en="Products">Produkty</b><br><a href="#limonady" data-en="Lemonades">Limonády</a> · <a href="#sirupy" data-en="Syrups">Sirupy</a> · <a href="#co2">CO2</a> · <a href="#vycapy" data-en="Dispenser hire">Prenájom výčapov</a></div>
+  <div><b style="color:#fff" data-en="Contact">Kontakt</b><br><a href="tel:+421905979954">+421 905 979 954</a><br><a href="mailto:obchod@simea.sk">obchod@simea.sk</a></div>
+ </div>
+ <p class="resp">Sladké nápoje si užívajte s mierou.<span>Enjoy sweet drinks in moderation.</span></p>
+ <p style="margin:18px 0 0;font-size:.8rem" data-en="© <span class=yr></span> Simea Piešťany, s.r.o. · Website prototype by Pepo Studios – a draft, not the official site. Photos and logo: simea.sk.">© <span class="yr"></span> Simea Piešťany, s.r.o. · Prototyp webu: Pepo Studios – návrh, nie oficiálna stránka. Fotografie a logo: simea.sk.</p>
+</div></footer>
+
+<script>
+const yr=()=>document.querySelectorAll('.yr').forEach(e=>e.textContent=new Date().getFullYear());
+const els=[...document.querySelectorAll('[data-en]')];els.forEach(e=>e.dataset.sk=e.innerHTML);
+let en=false;const L=document.getElementById('lang');
+function setLang(v){en=v;els.forEach(e=>e.innerHTML=en?e.dataset.en:e.dataset.sk);document.documentElement.lang=en?'en':'sk';L.textContent=en?'SK':'EN';yr();}
+L.onclick=()=>setLang(!en);yr();if(location.hash==='#en')setLang(true);
+const B=document.querySelector('.burger'),M=document.getElementById('menu');
+B.onclick=()=>{const o=M.classList.toggle('open');B.setAttribute('aria-expanded',o)};
+M.onclick=e=>{if(e.target.tagName==='A'){M.classList.remove('open');B.setAttribute('aria-expanded',false)}};
+</script>
+</body>
+</html>
