@@ -635,7 +635,7 @@
       background: #fff;
     }
 
-    .support-overlay:target {
+    .support-overlay.is-open {
       display: flex;
     }
 
@@ -683,18 +683,11 @@
   </style>
 </head>
 <body id="top">
-  <div id="support" class="support-overlay">
+  <div id="support-overlay" class="support-overlay" aria-hidden="true">
     <a class="overlay-download" href="downloads/I-support-Mr-Pepo-flyer-A4-WHITE-border.pdf" download>Download PDF</a>
-    <a class="overlay-close" href="#top" aria-label="Close">×</a>
+    <button type="button" class="overlay-close" aria-label="Close">×</button>
     <img src="downloads/flyer-white-border.png" alt="I support Mr. Pepo. Pepo Studios. Scan to visit webpage.">
   </div>
-  <script>
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape" && location.hash === "#support") {
-        location.hash = "top";
-      }
-    });
-  </script>
   <div class="decor" aria-hidden="true">
     <svg class="sprite">
       <symbol id="howie" viewBox="0 0 80 120">
@@ -893,10 +886,10 @@
         </ul>
       </div>
     </section>
-    <section class="support-band" aria-labelledby="support-title">
+    <section class="support-band" id="show-your-support" aria-labelledby="show-your-support-title">
       <div class="wrap">
         <aside class="support">
-          <h2 id="support-title">Show your support!</h2>
+          <h2 id="show-your-support-title">Show your support!</h2>
           <p>Put a Mr. Pepo support flyer in your window, snap a photo and email it to <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a>. Then choose whichever Mr. Pepo practical printable paper product you like, worth up to $10, free!</p>
           <a class="flyer" href="#support">Download the support flyer (free PDF)</a>
         </aside>
@@ -916,5 +909,59 @@
       <p>© 2026 Pepo Studios</p>
     </div>
   </footer>
+  <script>
+    (function () {
+      var overlay = document.getElementById("support-overlay");
+      var closeButton = overlay.querySelector(".overlay-close");
+
+      function isOpenHash() {
+        return location.hash === "#support";
+      }
+
+      function openOverlay() {
+        overlay.classList.add("is-open");
+        overlay.setAttribute("aria-hidden", "false");
+        closeButton.focus();
+      }
+
+      function closeOverlay(updateHash) {
+        overlay.classList.remove("is-open");
+        overlay.setAttribute("aria-hidden", "true");
+        if (updateHash && isOpenHash()) {
+          history.replaceState(null, "", location.pathname + location.search);
+        }
+      }
+
+      function syncFromHash() {
+        if (isOpenHash()) openOverlay();
+        else closeOverlay(false);
+      }
+
+      document.querySelectorAll('a[href="#support"]').forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          if (!isOpenHash()) {
+            history.pushState(null, "", "#support");
+          }
+          openOverlay();
+        });
+      });
+
+      closeButton.addEventListener("click", function () {
+        closeOverlay(true);
+      });
+
+      window.addEventListener("hashchange", syncFromHash);
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && overlay.classList.contains("is-open")) {
+          event.preventDefault();
+          closeOverlay(true);
+        }
+      });
+
+      syncFromHash();
+    })();
+  </script>
 </body>
 </html>
