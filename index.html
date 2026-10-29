@@ -331,10 +331,30 @@
       transform: rotate(-25deg);
     }
 
+    .pcard-pic,
     .badge,
     .pname {
       position: relative;
       z-index: 2;
+    }
+
+    .pcard-pic {
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 140px;
+    }
+
+    .pcard-pic img {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center top;
     }
 
     .badge {
@@ -503,11 +523,11 @@
 
       .hero {
         flex: 0 0 auto;
-        padding: clamp(6px, 1.2vh, 20px) 0 clamp(2px, 0.4vh, 8px);
+        padding: clamp(2px, 0.6vh, 12px) 0 0;
       }
 
       h1 {
-        font-size: clamp(2.3rem, 6.2vh, 4.4rem);
+        font-size: clamp(2rem, 5vh, 3.6rem);
       }
 
       .tagline {
@@ -566,11 +586,28 @@
         grid-template-rows: 1fr 1fr;
       }
 
+      .grid > li {
+        min-height: 0;
+      }
+
       .pcard {
         min-height: 0;
         height: 100%;
-        gap: clamp(4px, 0.6vh, 10px);
+        justify-content: flex-start;
+        gap: clamp(4px, 0.6vh, 8px);
         padding: clamp(8px, 1vh, 12px) 12px;
+      }
+
+      .pcard-pic {
+        flex: 0 0 auto;
+        height: clamp(46px, 6.5vh, 84px);
+        min-height: 0;
+        overflow: hidden;
+      }
+
+      .badge,
+      .pname {
+        flex-shrink: 0;
       }
 
       .pname {
@@ -849,24 +886,28 @@
         <ul class="grid">
           <li>
             <a class="pcard" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">
+              <span class="pcard-pic"><img src="images/cards/morning.jpg" alt="Personalised Morning Routine Chart"></span>
               <span class="badge">FREE</span>
               <span class="pname">Personalised Morning Routine Chart for Kids with Name or Photo, Mr. Pepo Printable A4</span>
             </a>
           </li>
           <li>
             <a class="pcard" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">
+              <span class="pcard-pic"><img src="images/cards/evening.jpg" alt="Evening Routine Chart"></span>
               <span class="badge">FREE</span>
               <span class="pname">Evening Routine Chart</span>
             </a>
           </li>
           <li>
             <a class="pcard" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">
+              <span class="pcard-pic"><img src="images/cards/after-school.jpg" alt="After-School Routine Chart"></span>
               <span class="badge">FREE</span>
               <span class="pname">After-School Routine Chart</span>
             </a>
           </li>
           <li>
             <a class="pcard" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">
+              <span class="pcard-pic"><img src="images/cards/bundle.jpg" alt="Routine Chart Bundle"></span>
               <span class="badge">FREE</span>
               <span class="pname">Routine Chart Bundle - Morning, Evening and After-School</span>
             </a>
@@ -879,6 +920,7 @@
           </li>
           <li>
             <a class="pcard" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">
+              <span class="pcard-pic"><img src="images/cards/name-labels.jpg" alt="Mr. Pepo This Belongs To name labels"></span>
               <span class="badge">FREE</span>
               <span class="pname">Mr. Pepo "This Belongs To" Name Labels</span>
             </a>
@@ -890,7 +932,7 @@
       <div class="wrap">
         <aside class="support">
           <h2 id="show-your-support-title">Show your support!</h2>
-          <p>Put a Mr. Pepo support flyer in your window, snap a photo and email it to <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a>. Then choose whichever Mr. Pepo practical printable paper product you like, worth up to $10, free!</p>
+          <p>Download to support Pepo Studios. Show your support for Mr. Pepo. Support flyer in your windows. Snap a photo and email it to <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a>. While you are emailing the picture, please let us know which paper models you like.</p>
           <a class="flyer" href="#support">Download the support flyer (free PDF)</a>
         </aside>
       </div>
