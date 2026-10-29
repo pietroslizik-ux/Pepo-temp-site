@@ -561,6 +561,52 @@
       color: var(--cream);
     }
 
+    .motto {
+      padding: 92px 28px;
+      text-align: center;
+    }
+
+    .motto-accent {
+      margin: 0 0 12px;
+      font-family: var(--hand);
+      font-weight: 700;
+      font-size: clamp(1rem, 1.6vw, 1.2rem);
+      line-height: 1.2;
+    }
+
+    .motto-quote {
+      max-width: 14em;
+      margin: 0 auto;
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: clamp(2.6rem, 6.2vw, 4.35rem);
+      line-height: 1.12;
+    }
+
+    .motto-yellow {
+      background: var(--yellow);
+      color: #0e1848;
+    }
+
+    .motto-yellow .motto-accent {
+      color: var(--window-blue);
+    }
+
+    .motto-blue {
+      background: var(--window-blue-deep);
+      color: var(--yellow);
+    }
+
+    .motto-blue .motto-accent {
+      color: var(--cream);
+    }
+
+    @media (max-width: 640px) {
+      .motto {
+        padding: 72px 22px;
+      }
+    }
+
     .polaroids {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1218,6 +1264,10 @@
         </div>
       </div>
     </section>
+    <section class="motto motto-yellow" aria-label="When one door closes, another one opens.">
+      <p class="motto-accent">Pepo Studios</p>
+      <p class="motto-quote">When one door closes, another one opens.</p>
+    </section>
     <section class="window-band" aria-labelledby="full-build-title">
       <img class="window-band-photo" src="images/full-build.jpg" alt="The whole Pepo window display: hanging rocket, Pepcon Booster on its launch tower, skyscraper and paper crew" width="1200" height="1600" loading="lazy" decoding="async">
       <div class="window-band-shade" aria-hidden="true"></div>
@@ -1231,6 +1281,10 @@
           </div>
         </div>
       </div>
+    </section>
+    <section class="motto motto-blue" aria-label="Every big build starts with one small fold.">
+      <p class="motto-accent">Pepo Studios</p>
+      <p class="motto-quote">Every big build starts with one small fold.</p>
     </section>
     <section class="peephole" aria-labelledby="peek-inside-title">
       <h2 id="peek-inside-title">Peek inside</h2>
@@ -1249,6 +1303,10 @@
           <p>A paper Pepcon Heavy, standing tall at&nbsp;night.</p>
         </div>
       </div>
+    </section>
+    <section class="motto motto-yellow" aria-label="When life knocks you down, you come back stronger.">
+      <p class="motto-accent">Pepo Studios</p>
+      <p class="motto-quote">When life knocks you down, you come back stronger.</p>
     </section>
     <section class="workshop" aria-labelledby="made-by-mr-pepo-title">
       <img class="workshop-bg" src="images/workshop.jpg" alt="Mr. Pepo papercraft workshop desk with banner and QR signs" width="1200" height="900" loading="lazy" decoding="async">
@@ -1270,6 +1328,10 @@
           </figure>
         </div>
       </div>
+    </section>
+    <section class="motto motto-blue" aria-label="Make it with love. Share it with kindness.">
+      <p class="motto-accent">Pepo Studios</p>
+      <p class="motto-quote">Make it with love. Share it with kindness.</p>
     </section>
     <section class="support-band" id="show-your-support" aria-labelledby="show-your-support-title">
       <div class="wrap">
