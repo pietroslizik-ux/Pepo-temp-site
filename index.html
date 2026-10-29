@@ -960,6 +960,234 @@
       }
     }
 
+    .biz {
+      padding: 64px 0;
+      scroll-margin-top: 90px;
+    }
+
+    .biz-alt {
+      background: var(--cream);
+    }
+
+    .biz h2,
+    .biz h3 {
+      margin: 0 0 10px;
+      font-family: var(--title);
+      font-weight: 400;
+      color: var(--window-blue);
+      line-height: 1.15;
+    }
+
+    .biz h2 {
+      font-size: clamp(2.1rem, 4vw, 2.8rem);
+      text-align: center;
+    }
+
+    .biz h3 {
+      font-size: clamp(1.5rem, 3vw, 1.9rem);
+    }
+
+    .biz p,
+    .biz label,
+    .biz li {
+      font-family: var(--hand);
+      font-weight: 700;
+      font-size: 1.15rem;
+      line-height: 1.45;
+    }
+
+    .biz-lead,
+    .biz-foot {
+      max-width: 40rem;
+      margin: 12px auto 0;
+      text-align: center;
+    }
+
+    .biz a {
+      color: var(--link);
+    }
+
+    .biz-services,
+    .price-grid,
+    .work-grid {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .biz-services {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .biz-card,
+    .price-card,
+    .work-card {
+      margin: 0;
+      padding: 20px 18px 18px;
+      background: transparent;
+      border: 3px solid var(--line);
+      border-radius: 20px;
+    }
+
+    .biz-alt .biz-card,
+    .biz-alt .price-card {
+      background: rgba(255, 255, 255, 0.45);
+    }
+
+    .biz-example {
+      max-width: 40rem;
+      margin: 22px auto 0;
+      padding: 18px 18px 16px;
+      text-align: center;
+      border: 3px solid var(--brick);
+      border-radius: 20px;
+    }
+
+    .book-form,
+    .book-form label {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      text-align: left;
+    }
+
+    .book-form {
+      gap: 14px;
+      max-width: 36rem;
+      margin: 22px auto 0;
+    }
+
+    .book-form input,
+    .book-form select,
+    .book-form textarea {
+      width: 100%;
+      padding: 10px 14px;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 1rem;
+      background: #fff;
+      border: 3px solid var(--line);
+      border-radius: 16px;
+    }
+
+    .book-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .book-form button {
+      align-self: flex-start;
+      padding: 12px 28px;
+      background: var(--button);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 1.05rem;
+      font-weight: 700;
+      border: 3px solid #8d420c;
+      border-radius: 999px;
+      box-shadow: 0 4px 0 #8d420c;
+      cursor: pointer;
+    }
+
+    .book-form button:hover {
+      background: var(--button-hover);
+    }
+
+    .book-thanks {
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .work-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .work-card {
+      padding: 0;
+      overflow: hidden;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .work-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .work-card div {
+      padding: 14px 14px 16px;
+    }
+
+    .work-card h3 {
+      font-size: 1.35rem;
+    }
+
+    .work-card p {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .work-plain {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 100%;
+      background: var(--paper);
+    }
+
+    .work-plain div {
+      padding: 22px 16px 18px;
+    }
+
+    .in-progress {
+      display: inline-block;
+      margin: 0 0 8px;
+      padding: 3px 10px;
+      background: var(--yellow);
+      color: var(--ink);
+      font-family: var(--hand);
+      font-weight: 700;
+      font-size: 0.95rem;
+      border-radius: 999px;
+    }
+
+    .kind-words {
+      text-align: center;
+    }
+
+    .kind-words p {
+      max-width: 36rem;
+      margin: 8px auto 0;
+    }
+
+    .price-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .price-card p {
+      margin: 0 0 10px;
+    }
+
+    .price-soon {
+      margin: 0;
+      color: var(--brick);
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 800px) {
+      .biz-services,
+      .work-grid,
+      .price-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .book-form button {
+        width: 100%;
+      }
+    }
+
     .site-footer {
       position: relative;
       z-index: 1;
@@ -1328,6 +1556,11 @@
         <a href="https://www.youtube.com/@MrPepoLifeHacks" target="_blank" rel="noopener noreferrer">Grown-ups</a>
         <a href="#printables">Free printables</a>
         <a href="#support">Support flyer</a>
+        <a href="#web-pages">Web pages</a>
+        <a href="#book">Book a chat</a>
+        <a href="#work">Our work</a>
+        <a href="#kind-words">Kind words</a>
+        <a href="#prices">Prices</a>
       </nav>
     </div>
   </header>
@@ -1357,6 +1590,161 @@
             </a>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="biz" id="web-pages" aria-labelledby="web-pages-title">
+      <div class="wrap">
+        <h2 id="web-pages-title">Web pages for small businesses</h2>
+        <p class="biz-lead">A small business can have a clear, friendly page on the web. Here are two ways we can help.</p>
+        <div class="biz-services">
+          <article class="biz-card">
+            <h3>A website check</h3>
+            <p>We scan and audit the website you already have. Then we send you a plain list of what to fix: speed, how it works on a phone, how people contact you, and your Google listing.</p>
+          </article>
+          <article class="biz-card">
+            <h3>A new web page</h3>
+            <p>A simple, friendly page, built for you. Clear words, easy to read on a phone, and a simple way for a customer to reach you.</p>
+          </article>
+          <article class="biz-card">
+            <h3>Copywriting</h3>
+            <p>Warm, clear words written for every page we build.</p>
+          </article>
+          <article class="biz-card">
+            <h3>Basic SEO</h3>
+            <p>Set up so your site shows up in Google search.</p>
+          </article>
+          <article class="biz-card">
+            <h3>Email setup</h3>
+            <p>A custom email address like you@yourbusiness.com.au.</p>
+          </article>
+          <article class="biz-card">
+            <h3>Social media setup</h3>
+            <p>Facebook and Instagram pages set up to match your site.</p>
+          </article>
+        </div>
+        <aside class="biz-example">
+          <h3>A page we are making now</h3>
+          <p>We are making a page right now for the family business Simea, Pivovar Simeon, in Piešťany, Slovakia. Their current site is <a href="https://www.pivovarsimeon.sk/" target="_blank" rel="noopener noreferrer">www.pivovarsimeon.sk</a>.</p>
+        </aside>
+        <p class="biz-foot">Write to <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a>, or use the form below. Prices for the check, the sites and the care plan are further down the page.</p>
+      </div>
+    </section>
+    <section class="biz biz-alt" id="book" aria-labelledby="book-title">
+      <div class="wrap">
+        <h2 id="book-title">Book a free chat</h2>
+        <p class="biz-lead">Tell us a little about your business. We will reply by email.</p>
+        <p class="book-thanks" hidden>Thanks! We have your note and will reply by email.</p>
+        <form class="book-form" action="https://formsubmit.co/mr.pepo.au@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Pepo Studios booking">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://pietroslizik-ux.github.io/Pepo-temp-site/?booked=1">
+          <input class="book-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label>Your name
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <label>Email
+            <input type="email" name="email" required placeholder="your@email.com" autocomplete="email">
+          </label>
+          <label>Which service
+            <select name="service" required>
+              <option value="">Choose one</option>
+              <option>Website check</option>
+              <option>A new web page</option>
+              <option>Copywriting</option>
+              <option>Basic SEO</option>
+              <option>Email setup</option>
+              <option>Social media setup</option>
+              <option>Starter site</option>
+              <option>Business site</option>
+              <option>Care plan</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+          <label>Best day
+            <input type="text" name="best_day" required placeholder="A day that suits you">
+          </label>
+          <label>Message
+            <textarea name="message" required></textarea>
+          </label>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+    <section class="biz" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <h2 id="work-title">Our work</h2>
+        <p class="biz-lead">Real work only. This page, the paper makes, the free printables, the flyer, and one page still on the bench.</p>
+        <div class="work-grid">
+          <a class="work-card" href="#top">
+            <img src="images/night-window.jpg" alt="The Pepo Studios window at night" width="1350" height="1800" loading="lazy" decoding="async">
+            <div>
+              <h3>The Pepo Studios page</h3>
+              <p>The page you are on now.</p>
+            </div>
+          </a>
+          <a class="work-card" href="#made-by-mr-pepo-title">
+            <img src="images/made-by-mr-pepo-window.jpg" alt="Mr. Pepo paper models in the studio window" width="1200" height="1600" loading="lazy" decoding="async">
+            <div>
+              <h3>Mr. Pepo paper models</h3>
+              <p>Paper models from the studio window.</p>
+            </div>
+          </a>
+          <a class="work-card" href="#printables">
+            <img src="images/cards/morning.jpg" alt="Morning routine chart printable" width="1200" height="1200" loading="lazy" decoding="async">
+            <div>
+              <h3>Free printables</h3>
+              <p>Charts, labels and the block model, free on this page.</p>
+            </div>
+          </a>
+          <a class="work-card" href="#support">
+            <img src="downloads/flyer-white-border.png" alt="I support Mr. Pepo flyer" loading="lazy" decoding="async">
+            <div>
+              <h3>Support flyer</h3>
+              <p>The I support Mr. Pepo flyer.</p>
+            </div>
+          </a>
+          <a class="work-card work-plain" href="https://www.pivovarsimeon.sk/" target="_blank" rel="noopener noreferrer">
+            <div>
+              <span class="in-progress">In progress</span>
+              <h3>Simea / Pivovar Simeon</h3>
+              <p>Piešťany, Slovakia. A new page for this family business. Their current site is still the one they have today.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="biz biz-alt kind-words" id="kind-words" aria-labelledby="kind-words-title">
+      <div class="wrap">
+        <h2 id="kind-words-title">Kind words</h2>
+        <p>Kind words from our first customers coming soon.</p>
+        <p>If we have helped you, email <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a> and tell us how it went. If you are happy for us to share your words, we will put them here.</p>
+      </div>
+    </section>
+    <section class="biz" id="prices" aria-labelledby="prices-title">
+      <div class="wrap">
+        <h2 id="prices-title">Prices</h2>
+        <p class="biz-lead">Four ways to start.</p>
+        <div class="price-grid">
+          <article class="price-card">
+            <h3>Website check</h3>
+            <p>From $290 to $390 (about $300). This comes off the price if you go ahead with a rebuild.</p>
+          </article>
+          <article class="price-card">
+            <h3>Starter site</h3>
+            <p>1 to 3 pages. $990 to $1,490.</p>
+          </article>
+          <article class="price-card">
+            <h3>Business site</h3>
+            <p>Up to 5 pages. $1,990 to $2,490.</p>
+          </article>
+          <article class="price-card">
+            <h3>Care plan</h3>
+            <p>$49 to $79 a month.</p>
+          </article>
+        </div>
+        <p class="biz-foot">Prices in AUD, plus GST.</p>
+        <p class="biz-foot">Ask by email at <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a>, or <a href="#book">book a free chat</a>.</p>
       </div>
     </section>
     <section class="motto motto-yellow" aria-label="One door closes. The red one opens.">
@@ -1491,6 +1879,11 @@
         <a href="https://www.youtube.com/@MrPepoLifeHacks" target="_blank" rel="noopener noreferrer">Grown-ups</a>
         <a href="#printables">Free printables</a>
         <a href="#support">Support flyer</a>
+        <a href="#web-pages">Web pages</a>
+        <a href="#book">Book a chat</a>
+        <a href="#work">Our work</a>
+        <a href="#kind-words">Kind words</a>
+        <a href="#prices">Prices</a>
       </nav>
       <section class="follow-us" aria-labelledby="follow-us-title">
         <h2 id="follow-us-title">Follow Pepo Studios</h2>
@@ -1524,6 +1917,10 @@
       if (new URLSearchParams(window.location.search).get("joined") === "1") {
         var thanks = document.querySelector(".signup-thanks");
         if (thanks) thanks.hidden = false;
+      }
+      if (new URLSearchParams(window.location.search).get("booked") === "1") {
+        var booked = document.querySelector(".book-thanks");
+        if (booked) booked.hidden = false;
       }
     })();
   </script>
