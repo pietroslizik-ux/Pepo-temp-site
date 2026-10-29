@@ -16,11 +16,12 @@
       --button-hover: #c86612;
       --link: #0b4f9c;
       --line: #a85a12;
-      --window-blue: #16386e;
-      --window-blue-deep: #0b1d3d;
-      --brick: #9a3b2a;
+      --window-blue: #1e2bd6;
+      --window-blue-deep: #12186a;
+      --brick: #8d382c;
       --cream: #fff4dc;
       --paper: #fffaf1;
+      --night: #07080f;
       --title: "Pacifico", "Segoe Script", "Comic Sans MS", cursive;
       --hand: "Kalam", "Segoe Print", "Comic Sans MS", cursive;
       --sans: "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
@@ -186,7 +187,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: min(92vh, 880px);
+      min-height: 100vh;
+      min-height: 100svh;
       padding: 0;
       overflow: hidden;
       text-align: center;
@@ -200,7 +202,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: 58% 46%;
+      object-position: center 46%;
     }
 
     .hero-shade {
@@ -208,7 +210,7 @@
       inset: 0;
       z-index: 1;
       background:
-        linear-gradient(180deg, rgba(11, 29, 61, 0.82) 0%, rgba(14, 40, 86, 0.38) 42%, rgba(11, 29, 61, 0.78) 100%);
+        radial-gradient(ellipse at 50% 46%, rgba(8, 14, 48, 0.08) 0%, rgba(6, 8, 24, 0.28) 46%, rgba(4, 6, 16, 0.78) 100%);
     }
 
     .hero-inner {
@@ -219,7 +221,10 @@
 
     .hero h1 {
       color: var(--yellow);
-      text-shadow: 0 4px 22px rgba(8, 20, 48, 0.55);
+      text-shadow:
+        0 0 16px rgba(255, 229, 106, 0.7),
+        0 0 36px rgba(30, 43, 214, 0.45),
+        0 3px 12px rgba(0, 0, 0, 0.35);
     }
 
     .hero .tagline {
@@ -249,16 +254,20 @@
     .tagline,
     .free-note,
     .pname,
-    .shot-note,
     .story p,
-    .pepcon-copy p {
+    .pepcon-copy p,
+    .cream-card p,
+    .rules-note,
+    .peephole p,
+    .polaroid figcaption {
       font-family: var(--hand);
       font-weight: 700;
     }
 
     .section-head h2,
     .support h2,
-    .shot-title,
+    .cream-card h2,
+    .peephole h2,
     .story h2,
     .pepcon-copy h2 {
       font-family: var(--title);
@@ -374,8 +383,8 @@
     .workshop {
       position: relative;
       isolation: isolate;
-      overflow: hidden;
-      padding: 72px 0;
+      overflow: visible;
+      padding: 88px 0 96px;
       color: var(--cream);
     }
 
@@ -431,119 +440,219 @@
       color: var(--cream);
     }
 
-    .workshop-card {
-      margin: 0;
-      padding: 12px 12px 16px;
-      background: var(--paper);
-      border: 3px solid var(--brick);
-      border-radius: 18px;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
-    }
-
-    .workshop-card img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-    }
-
-    .gallery {
-      padding: 64px 0 20px;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 26px 22px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      align-items: stretch;
-    }
-
-    .gallery-grid > li {
-      display: flex;
-    }
-
-    .gallery figure {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      margin: 0;
-    }
-
-    .shot {
+    .window-band {
+      position: relative;
+      isolation: isolate;
+      padding: 96px 0;
+      background-color: #10142e;
       overflow: hidden;
-      aspect-ratio: 4 / 5;
-      border-radius: 18px;
-      box-shadow: 0 14px 30px rgba(90, 55, 10, 0.16);
     }
 
-    .shot img {
+    .window-band-photo {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 58%;
+    }
+
+    .window-band-shade {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: rgba(8, 12, 36, 0.28);
+    }
+
+    .cream-card {
+      position: relative;
+      z-index: 2;
+      width: min(680px, 100%);
+      margin: 0 auto;
+      padding: 32px 28px 26px;
+      background: rgba(255, 244, 220, 0.9);
+      border: 3px solid var(--brick);
+      border-radius: 22px;
+      box-shadow: 0 22px 44px rgba(6, 10, 28, 0.32);
+    }
+
+    .cream-card h2 {
+      margin: 0 0 12px;
+      font-size: clamp(2.3rem, 4.5vw, 3.2rem);
+      line-height: 1.1;
+    }
+
+    .cream-card p {
+      margin: 0 0 12px;
+      font-size: clamp(1.12rem, 2vw, 1.35rem);
+      line-height: 1.45;
+      color: var(--ink);
+    }
+
+    .rules-row {
+      display: grid;
+      grid-template-columns: 118px 1fr;
+      gap: 14px;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    .rules-row img {
+      display: block;
+      width: 118px;
+      height: 156px;
+      object-fit: cover;
+      object-position: left 8%;
+      border: 3px solid var(--brick);
+      border-radius: 10px;
+      box-shadow: 0 8px 18px rgba(90, 40, 20, 0.18);
+    }
+
+    .rules-note {
+      margin: 0;
+      font-size: 1.12rem;
+      line-height: 1.4;
+      color: var(--ink);
+    }
+
+    .peephole {
+      padding: 84px 20px 88px;
+      background:
+        radial-gradient(ellipse at center, #16182a 0%, var(--night) 68%);
+      color: var(--cream);
+      text-align: center;
+    }
+
+    .peephole h2 {
+      margin: 0;
+      color: var(--yellow);
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      line-height: 1.1;
+      text-shadow: 0 0 18px rgba(255, 229, 106, 0.35);
+    }
+
+    .peephole-glass {
+      width: min(380px, 72vw);
+      aspect-ratio: 1;
+      margin: 26px auto 18px;
+      overflow: hidden;
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 12px #12131a,
+        0 0 0 16px rgba(30, 43, 214, 0.7),
+        0 0 48px rgba(30, 43, 214, 0.35),
+        0 24px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    .peephole-glass img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    .shot-build {
-      object-position: center 58%;
-    }
-
-    .shot-window {
-      object-position: 72% center;
-    }
-
-    .is-peephole .shot {
-      aspect-ratio: 1;
-      margin-top: auto;
-      border-radius: 50%;
-      box-shadow: 0 16px 34px rgba(22, 40, 80, 0.22);
-    }
-
-    .is-peephole .shot img {
       object-position: center;
     }
 
-    .gallery figcaption {
-      margin-top: 12px;
+    .peephole p {
+      margin: 0 auto;
+      max-width: 28rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+      color: var(--cream);
+    }
+
+    .polaroids {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 18px;
+      align-items: start;
+    }
+
+    .polaroid {
+      margin: 0;
+      padding: 10px 10px 14px;
+      background: var(--paper);
+      border: 3px solid var(--brick);
+      border-radius: 3px;
+      box-shadow: 0 16px 28px rgba(0, 0, 0, 0.34);
+    }
+
+    .polaroid img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+    }
+
+    .polaroid-a {
+      transform: rotate(-6.5deg);
+    }
+
+    .polaroid-b {
+      transform: rotate(5deg);
+      margin-top: 36px;
+    }
+
+    .polaroid-b img {
+      object-position: 68% center;
+    }
+
+    .polaroid figcaption {
+      margin: 8px 0 2px;
+      color: var(--ink);
+      font-size: 1rem;
       text-align: center;
     }
 
-    .shot-title {
-      display: block;
-      font-size: 1.7rem;
-      line-height: 1.15;
-    }
+    @media (min-width: 901px) {
+      .window-band {
+        background-image: url("images/full-build.jpg");
+        background-repeat: no-repeat;
+        background-position: center 58%;
+        background-size: cover;
+        background-attachment: fixed;
+      }
 
-    .shot-note {
-      display: block;
-      margin-top: 4px;
-      font-size: 1.05rem;
-      line-height: 1.35;
+      .window-band-photo {
+        opacity: 0;
+      }
     }
 
     @media (max-width: 900px) {
       .pepcon-split,
-      .workshop-inner,
-      .gallery-grid {
+      .workshop-inner {
         grid-template-columns: 1fr;
       }
 
-      .pepcon-photo,
-      .workshop-card {
+      .pepcon-photo {
         max-width: 440px;
         margin-inline: auto;
       }
 
-      .is-peephole {
-        max-width: 280px;
+      .polaroids {
+        max-width: 460px;
         margin-inline: auto;
       }
 
+      .polaroid-a {
+        transform: rotate(-3deg);
+      }
+
+      .polaroid-b {
+        transform: rotate(3deg);
+        margin-top: 18px;
+      }
+
       .story p,
-      .pepcon-copy p {
+      .pepcon-copy p,
+      .cream-card p {
         max-width: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .window-band {
+        background-attachment: scroll;
       }
     }
 
@@ -1083,7 +1192,7 @@
   </header>
   <main>
     <section class="hero">
-      <img class="hero-bg" src="images/full-build.jpg" alt="" width="1200" height="1600" fetchpriority="high" decoding="async">
+      <img class="hero-bg" src="images/night-window.jpg" alt="" width="1350" height="1800" fetchpriority="high" decoding="async">
       <div class="hero-shade" aria-hidden="true"></div>
       <div class="wrap hero-inner">
         <h1>Pepo Studios</h1>
@@ -1109,6 +1218,27 @@
         </div>
       </div>
     </section>
+    <section class="window-band" aria-labelledby="full-build-title">
+      <img class="window-band-photo" src="images/full-build.jpg" alt="The whole Pepo window display: hanging rocket, Pepcon Booster on its launch tower, skyscraper and paper crew" width="1200" height="1600" loading="lazy" decoding="async">
+      <div class="window-band-shade" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="cream-card">
+          <h2 id="full-build-title">The window</h2>
+          <p>By day the whole build is on show: a hanging rocket, the Pepcon Booster on its launch tower, a paper skyscraper and the crew along the floor.</p>
+          <div class="rules-row">
+            <img src="images/night-window-close.jpg" alt="Closer view of the night window, with the Pepo Studios House and Play Rules poster beside the hanging rocket" width="1350" height="1800" loading="lazy" decoding="async">
+            <p class="rules-note">At night the same window glows blue. In the top corner, the yellow poster is the Pepo Studios House &amp; Play Rules.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="peephole" aria-labelledby="peek-inside-title">
+      <h2 id="peek-inside-title">Peek inside</h2>
+      <div class="peephole-glass">
+        <img src="images/peek-inside.jpg" alt="Peephole view of the paper dog, Mr. Pepo, bunny and robot models" width="1200" height="900" loading="lazy" decoding="async">
+      </div>
+      <p>A peephole view of the paper dog, Mr. Pepo, a bunny and a robot.</p>
+    </section>
     <section class="pepcon" aria-labelledby="pepcon-heavy-title">
       <div class="wrap pepcon-split">
         <figure class="pepcon-photo">
@@ -1129,48 +1259,16 @@
           <h2 id="made-by-mr-pepo-title">Made by Mr. Pepo</h2>
           <p>Mr. Pepo folds paper at the workshop bench, then stands the makes in the studio window. A hanging rocket, a launch tower, a skyscraper and a little paper crew, made to be seen from the street.</p>
         </div>
-        <figure class="workshop-card">
-          <img src="images/made-by-mr-pepo-window.jpg" alt="Mr. Pepo paper models in the window: hanging rocket, launch tower, skyscraper, paper robots" width="1200" height="1600" loading="lazy" decoding="async">
-        </figure>
-      </div>
-    </section>
-    <section class="gallery" aria-label="Window photos">
-      <div class="wrap">
-        <ul class="gallery-grid">
-          <li>
-            <figure>
-              <div class="shot">
-                <img class="shot-window" src="images/our-window.jpg" alt="The Pepo Studios window in a brick wall" width="1200" height="1600" loading="lazy" decoding="async">
-              </div>
-              <figcaption>
-                <span class="shot-title" id="our-window-title">Our window</span>
-                <span class="shot-note">The studio window in a brick wall.</span>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="is-peephole">
-            <figure>
-              <div class="shot">
-                <img src="images/peek-inside.jpg" alt="Peephole view of the paper dog, Mr. Pepo, bunny and robot models" width="1200" height="900" loading="lazy" decoding="async">
-              </div>
-              <figcaption>
-                <span class="shot-title" id="peek-inside-title">Peek inside</span>
-                <span class="shot-note">A peephole view of the paper crew.</span>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <div class="shot">
-                <img class="shot-build" src="images/full-build.jpg" alt="The whole Pepo window display: hanging rocket, Pepcon Booster on its launch tower, skyscraper and paper crew" width="1200" height="1600" loading="lazy" decoding="async">
-              </div>
-              <figcaption>
-                <span class="shot-title" id="full-build-title">The full build</span>
-                <span class="shot-note">Hanging rocket, launch tower, skyscraper and crew.</span>
-              </figcaption>
-            </figure>
-          </li>
-        </ul>
+        <div class="polaroids">
+          <figure class="polaroid polaroid-a">
+            <img src="images/made-by-mr-pepo-window.jpg" alt="Mr. Pepo paper models in the window: hanging rocket, launch tower, skyscraper, paper robots" width="1200" height="1600" loading="lazy" decoding="async">
+            <figcaption>In the window</figcaption>
+          </figure>
+          <figure class="polaroid polaroid-b">
+            <img src="images/our-window.jpg" alt="The Pepo Studios window in a brick wall" width="1200" height="1600" loading="lazy" decoding="async">
+            <figcaption id="our-window-title">Our window</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
     <section class="support-band" id="show-your-support" aria-labelledby="show-your-support-title">
