@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Simea Piešťany, s.r.o.","url":"https://www.simea.sk/","logo":"https://www.simea.sk/sites/default/files/simea-logo-biely-lem-220_0.png","email":"obchod@simea.sk","telephone":"+421337735051","address":{"@type":"PostalAddress","streetAddress":"Mlynská 5026/26","postalCode":"921 01","addressLocality":"Piešťany","addressCountry":"SK"},"taxID":"2020172363","vatID":"SK2020172363"}</script>
 <style>
-:root{--cream:#fff8ef;--paper:#fffdf9;--sand:#f6ead8;--cola:#3b1f12;--cola2:#52301d;--red:#d7263d;--rasp:#c2185b;--gold:#f2b632;--blue:#2e2a85;--text:#2a1d15;--muted:#6e5d50;--r:18px;--sh:0 10px 30px -12px rgba(59,31,18,.25)}
+:root{--cream:#fff8ef;--paper:#fffdf9;--sand:#f6ead8;--cola:#3b1f12;--cola2:#52301d;--red:#d7263d;--rasp:#c2185b;--gold:#f2b632;--blue:#2e2a85;--text:#2a1d15;--muted:#5a4a3e;--r:18px;--sh:0 10px 30px -12px rgba(59,31,18,.25)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{margin:0;font:16px/1.6 "Nunito Sans",system-ui,sans-serif;color:var(--text);background:var(--paper);-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
@@ -176,17 +176,17 @@ main>section>.wrap{position:relative;z-index:2}
 main>section:after{content:"";position:absolute;inset:0;background:var(--grain);opacity:.07;pointer-events:none;z-index:0}
 /* wave divider: drawn at the top of a section, in that section's top colour, overlapping the previous one */
 main>section:not(.hero):before{content:"";position:absolute;left:0;right:0;top:-38px;height:40px;background:var(--top,#fff);-webkit-mask:var(--wave) center/100% 100% no-repeat;mask:var(--wave) center/100% 100% no-repeat;pointer-events:none;z-index:1}
-.hero{background:var(--fizzdots) 0 0/220px 220px,radial-gradient(1100px 520px at 88% -8%,#ffc98a 0,transparent 60%),radial-gradient(800px 480px at -8% 108%,#ffc4d4 0,transparent 58%),radial-gradient(500px 300px at 45% 40%,#fff1c9 0,transparent 70%),linear-gradient(160deg,#fff4e4,#ffeede)}
-#limonady{--top:#fff6ea;background:radial-gradient(700px 380px at 100% 45%,rgba(255,176,92,.26),transparent 65%),radial-gradient(600px 360px at 0 100%,rgba(242,210,27,.18),transparent 65%),linear-gradient(180deg,#fff6ea,#fffaf3)}
-#sirupy{--top:#fff0f1;background:var(--fizzdots) 40px 60px/260px 260px,radial-gradient(800px 420px at 0 45%,rgba(232,72,125,.16),transparent 62%),radial-gradient(700px 420px at 100% 90%,rgba(138,79,191,.12),transparent 62%),linear-gradient(180deg,#fff0f1,#fff5ee)}
-#co2{--top:#eef8f9;background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.9) 0 3px,transparent 4px) 0 0/90px 90px,radial-gradient(circle at 70% 70%,rgba(255,255,255,.8) 0 2px,transparent 3px) 0 0/60px 60px,radial-gradient(800px 400px at 90% 50%,rgba(143,209,190,.35),transparent 65%),linear-gradient(180deg,#eef8f9,#f6f6ee)}
+.hero{background:var(--fizzdots) 0 0/220px 220px,radial-gradient(1100px 520px at 88% -8%,#f9b465 0,transparent 60%),radial-gradient(800px 480px at -8% 108%,#fb9db6 0,transparent 58%),radial-gradient(500px 300px at 45% 40%,#fbe4a2 0,transparent 70%),linear-gradient(160deg,#fce2bb,#fcd8b6)}
+#limonady{--top:#fce3c1;background:radial-gradient(700px 380px at 100% 45%,rgba(255,176,92,.325),transparent 65%),radial-gradient(600px 360px at 0 100%,rgba(242,210,27,.225),transparent 65%),linear-gradient(180deg,#fce3c1,#fde8ca)}
+#sirupy{--top:#fdc7cb;background:var(--fizzdots) 40px 60px/260px 260px,radial-gradient(800px 420px at 0 45%,rgba(232,72,125,.2),transparent 62%),radial-gradient(700px 420px at 100% 90%,rgba(138,79,191,.15),transparent 62%),linear-gradient(180deg,#fdc7cb,#fddcc5)}
+#co2{--top:#cfeaec;background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.9) 0 3px,transparent 4px) 0 0/90px 90px,radial-gradient(circle at 70% 70%,rgba(255,255,255,.8) 0 2px,transparent 3px) 0 0/60px 60px,radial-gradient(800px 400px at 90% 50%,rgba(143,209,190,.438),transparent 65%),linear-gradient(180deg,#cfeaec,#e6e6d3)}
 #vycapy{--top:#3b1f12;background:radial-gradient(700px 420px at 85% 50%,rgba(242,182,50,.22),transparent 65%),radial-gradient(600px 400px at 0 100%,rgba(215,38,61,.18),transparent 65%),linear-gradient(180deg,#3b1f12,#28140a)}
-#podniky{--top:#fff8e0;background:radial-gradient(900px 420px at 100% 45%,rgba(255,214,102,.33),transparent 62%),radial-gradient(600px 380px at 0 90%,rgba(143,209,79,.16),transparent 62%),linear-gradient(180deg,#fff8e0,#fff3e6)}
-#onas{--top:#fffaf4;background:repeating-linear-gradient(135deg,rgba(240,124,20,.035) 0 2px,transparent 2px 22px),radial-gradient(700px 400px at 0 50%,rgba(255,166,77,.18),transparent 62%),linear-gradient(180deg,#fffaf4,#fff4ea)}
+#podniky{--top:#fcedb8;background:radial-gradient(900px 420px at 100% 45%,rgba(255,214,102,.413),transparent 62%),radial-gradient(600px 380px at 0 90%,rgba(143,209,79,.2),transparent 62%),linear-gradient(180deg,#fcedb8,#fcdebd)}
+#onas{--top:#fde6cb;background:repeating-linear-gradient(135deg,rgba(240,124,20,.044) 0 2px,transparent 2px 22px),radial-gradient(700px 400px at 0 50%,rgba(255,166,77,.225),transparent 62%),linear-gradient(180deg,#fde6cb,#fcddc1)}
 #pivovar{--top:#24170e;background:var(--fizzdots) 0 0/240px 240px,radial-gradient(700px 400px at 15% 50%,rgba(242,182,50,.2),transparent 65%),linear-gradient(180deg,#24170e,#3b2615)}
 #pivovar{background-blend-mode:soft-light,normal,normal}
 #pivovar:after,#vycapy:after{opacity:.12;mix-blend-mode:overlay}
-#kontakt{--top:#ffeee6;background:radial-gradient(800px 420px at 100% 100%,rgba(240,90,106,.16),transparent 62%),radial-gradient(700px 380px at 0 55%,rgba(255,166,77,.22),transparent 62%),linear-gradient(180deg,#ffeee6,#fff6ec)}
+#kontakt{--top:#fcd2bd;background:radial-gradient(800px 420px at 100% 100%,rgba(240,90,106,.2),transparent 62%),radial-gradient(700px 380px at 0 55%,rgba(255,166,77,.275),transparent 62%),linear-gradient(180deg,#fcd2bd,#fde1c3)}
 footer{position:relative;background:radial-gradient(600px 260px at 90% 0,rgba(242,182,50,.14),transparent 65%),var(--cola)}
 footer:before{content:"";position:absolute;left:0;right:0;top:-38px;height:40px;background:var(--cola);-webkit-mask:var(--wave) center/100% 100% no-repeat;mask:var(--wave) center/100% 100% no-repeat;pointer-events:none}
 @media(max-width:640px){main>section:not(.hero):before,footer:before{top:-22px;height:24px}}
@@ -200,8 +200,8 @@ footer:before{content:"";position:absolute;left:0;right:0;top:-38px;height:40px;
 .resp{-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
 /* ===== animated fizz layer (CSS only) ===== */
 .fizz{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden;contain:strict}
-.fizz i{position:absolute;bottom:-40px;left:var(--x);width:var(--s);height:var(--s);border-radius:50%;background:radial-gradient(circle at 32% 30%,rgba(255,255,255,.95) 0 12%,rgba(255,255,255,.25) 30%,rgba(255,190,140,.10) 62%,rgba(255,255,255,.35) 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.6),0 0 6px rgba(255,170,120,.18);opacity:0;will-change:transform,opacity;animation:rise var(--d) linear var(--dl) infinite}
-@keyframes rise{0%{transform:translate3d(0,0,0);opacity:0}10%{opacity:.7}50%{transform:translate3d(14px,-55vh,0)}90%{opacity:.5}100%{transform:translate3d(-8px,-112vh,0);opacity:0}}
+.fizz i{position:absolute;bottom:-40px;left:var(--x);width:var(--s);height:var(--s);border-radius:50%;background:radial-gradient(circle at 32% 30%,rgba(255,255,255,1) 0 13%,rgba(255,255,255,.35) 30%,rgba(255,200,150,.14) 62%,rgba(255,255,255,.6) 100%);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.9),0 0 0 .5px rgba(120,60,30,.12),0 0 8px rgba(255,255,255,.35);opacity:0;will-change:transform,opacity;animation:rise var(--d) linear var(--dl) infinite}
+@keyframes rise{0%{transform:translate3d(0,0,0);opacity:0}10%{opacity:.9}50%{transform:translate3d(14px,-55vh,0)}90%{opacity:.7}100%{transform:translate3d(-8px,-112vh,0);opacity:0}}
 @media(max-width:640px){.fizz i:nth-child(n+11){display:none}}
 @media(prefers-reduced-motion:reduce){.fizz{display:none}}
 </style>
