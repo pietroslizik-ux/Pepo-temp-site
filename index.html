@@ -1429,6 +1429,34 @@
       outline: 3px solid #3a2a14;
       outline-offset: 3px;
     }
+
+    #book {
+      background:
+        linear-gradient(rgba(255, 248, 225, 0.80), rgba(255, 248, 225, 0.80)),
+        url("images/workshop.jpg") center / cover no-repeat;
+    }
+
+    #printables {
+      background-image:
+        linear-gradient(rgba(255, 248, 225, 0.78), rgba(255, 248, 225, 0.78)),
+        url("images/howie-window-side.jpg");
+      background-position: center bottom;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    @media (hover: none), (max-width: 900px) {
+      #printables {
+        background-attachment: scroll;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #printables {
+        background-attachment: scroll;
+      }
+    }
   </style>
 </head>
 <body id="top">
@@ -1756,12 +1784,12 @@
       <p class="motto-quote">One door closes. The red one opens.</p>
     </section>
     <section class="window-band" aria-labelledby="full-build-title">
-      <img class="window-band-photo" src="images/full-build.jpg" alt="The whole Pepo window display: hanging rocket, Pepcon Booster on its launch tower, skyscraper and paper crew" width="1200" height="1600" loading="lazy" decoding="async">
+      <img class="window-band-photo" src="images/full-build.jpg" alt="The whole Pepo window display: hanging rocket, Pepcon Booster on its launch tower, catch tower and paper crew" width="1200" height="1600" loading="lazy" decoding="async">
       <div class="window-band-shade" aria-hidden="true"></div>
       <div class="wrap">
         <div class="cream-card">
           <h2 id="full-build-title">The window</h2>
-          <p>By day the whole build is on show: a hanging rocket, the Pepcon Booster on its launch tower, a paper skyscraper and the crew along the floor.</p>
+          <p>By day the whole build is on show: a hanging rocket, the Pepcon Booster on its launch tower, a paper catch tower and the crew along the floor.</p>
           <div class="rules-row">
             <img src="images/night-window-close.jpg" alt="Closer view of the night window, with the Pepo Studios House and Play Rules poster beside the hanging rocket" width="1350" height="1800" loading="lazy" decoding="async">
             <p class="rules-note">At night the same window glows blue. In the top corner, the yellow poster is the Pepo Studios House &amp; Play Rules.</p>
@@ -1798,11 +1826,11 @@
         <div class="story">
           <p class="kicker" id="workshop-title">The workshop</p>
           <h2 id="made-by-mr-pepo-title">Made by Mr. Pepo</h2>
-          <p>Mr. Pepo folds paper at the workshop bench, then stands the makes in the studio window. A hanging rocket, a launch tower, a skyscraper and a little paper crew, made to be seen from the street.</p>
+          <p>Mr. Pepo folds paper at the workshop bench, then stands the makes in the studio window. A hanging rocket, a launch tower, a catch tower and a little paper crew, made to be seen from the street.</p>
         </div>
         <div class="polaroids">
           <figure class="polaroid polaroid-a">
-            <img src="images/made-by-mr-pepo-window.jpg" alt="Mr. Pepo paper models in the window: hanging rocket, launch tower, skyscraper, paper robots" width="1200" height="1600" loading="lazy" decoding="async">
+            <img src="images/made-by-mr-pepo-window.jpg" alt="Mr. Pepo paper models in the window: hanging rocket, launch tower, catch tower, paper robots" width="1200" height="1600" loading="lazy" decoding="async">
             <figcaption>In the window</figcaption>
           </figure>
           <figure class="polaroid polaroid-b">
