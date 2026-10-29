@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pietroslizik-ux.github.io/Pepo-temp-site/sitemap.xml
