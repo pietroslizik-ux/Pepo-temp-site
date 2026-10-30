@@ -1569,6 +1569,220 @@
         background-attachment: scroll;
       }
     }
+
+    /* ===== Two sides: Not-for-profit / Small business ===== */
+    .bounce-tagline {
+      margin: 10px auto 0;
+      font-family: var(--hand);
+      font-weight: 700;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      line-height: 1.2;
+      color: var(--cream);
+      letter-spacing: 0.01em;
+      text-shadow:
+        0 0 10px rgba(30, 43, 214, 0.55),
+        0 2px 12px rgba(0, 0, 0, 0.55);
+    }
+
+    .side-tabs {
+      background: #fff1b0;
+      border-top: 2px solid #e2b63a;
+    }
+
+    .side-tabs .wrap {
+      display: flex;
+      align-items: stretch;
+      gap: 10px;
+      padding: 8px 0;
+    }
+
+    .side-tab {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 12px;
+      color: var(--ink);
+      font-family: var(--hand);
+      font-weight: 700;
+      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+      line-height: 1.15;
+      text-align: center;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.55);
+      border: 3px solid var(--line);
+      border-radius: 999px;
+      transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .side-tab small {
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.02em;
+      opacity: 0.85;
+    }
+
+    .side-tab-nfp { border-color: var(--window-blue); }
+    .side-tab-biz { border-color: #8d420c; }
+
+    .side-tab-nfp:hover { background: rgba(30, 43, 214, 0.12); }
+    .side-tab-biz:hover { background: rgba(224, 122, 31, 0.2); }
+
+    .side-tab-nfp.is-active,
+    html:not(.js-sides) body:has(#nfp:target) .side-tab-nfp {
+      background: var(--window-blue);
+      color: var(--yellow);
+      box-shadow: 0 4px 0 var(--window-blue-deep);
+    }
+
+    .side-tab-biz.is-active,
+    html:not(.js-sides) body:has(#business:target) .side-tab-biz {
+      background: var(--button);
+      color: var(--ink);
+      box-shadow: 0 4px 0 #8d420c;
+    }
+
+    .side-tab:focus-visible {
+      outline: 3px solid var(--ink);
+      outline-offset: 3px;
+    }
+
+    .side {
+      position: relative;
+    }
+
+    main [id] {
+      scroll-margin-top: calc(var(--hdr, 130px) + 12px);
+    }
+
+    .side-nfp { border-top: 10px solid var(--window-blue); }
+    .side-biz { border-top: 10px solid var(--button); }
+
+    .side-banner {
+      padding: 34px 0 30px;
+      text-align: center;
+    }
+
+    .side-banner-nfp {
+      background: var(--window-blue-deep);
+      color: var(--cream);
+    }
+
+    .side-banner-biz {
+      background: #ffd9a8;
+      color: var(--ink);
+    }
+
+    .side-kicker {
+      display: inline-block;
+      margin: 0 0 6px;
+      padding: 3px 14px;
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 999px;
+    }
+
+    .side-banner-nfp .side-kicker { background: var(--yellow); color: var(--window-blue-deep); }
+    .side-banner-biz .side-kicker { background: var(--button); color: var(--ink); }
+
+    .side-banner h2 {
+      margin: 0;
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: clamp(2.3rem, 5.5vw, 3.6rem);
+      line-height: 1.15;
+    }
+
+    .side-banner-nfp h2 { color: var(--yellow); }
+    .side-banner-biz h2 { color: #8d420c; }
+
+    .side-banner p {
+      max-width: 40rem;
+      margin: 10px auto 0;
+      font-family: var(--hand);
+      font-weight: 700;
+      font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+      line-height: 1.4;
+    }
+
+    .side-banner .side-switch {
+      font-family: var(--sans);
+      font-size: 0.98rem;
+    }
+
+    .side-banner-nfp .side-switch a { color: var(--yellow); }
+    .side-banner-biz .side-switch a { color: var(--window-blue-deep); }
+
+    .svc-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .svc-card {
+      margin: 0;
+      padding: 20px 18px 18px;
+      background: rgba(255, 255, 255, 0.5);
+      border: 3px solid #8d420c;
+      border-top-width: 8px;
+      border-top-color: var(--button);
+      border-radius: 20px;
+    }
+
+    .svc-card p {
+      margin: 0;
+    }
+
+    .placeholder {
+      display: inline;
+      padding: 0 4px;
+      color: #7a4a10;
+      background: #fff1b0;
+      border: 1px dashed #c08a2a;
+      border-radius: 6px;
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 0.92rem;
+    }
+
+    .side-biz .biz h2 {
+      color: #8d420c;
+    }
+
+    @media (max-width: 800px) {
+      .svc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .site-nav .side-tabs .wrap {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 8px;
+        min-height: 0;
+        padding: 6px 0;
+      }
+
+      .side-tab {
+        padding: 5px 8px;
+        border-radius: 18px;
+      }
+
+      .side-tab small {
+        display: none;
+      }
+
+      .side-banner {
+        padding: 26px 0 22px;
+      }
+    }
   </style>
 </head>
 <body id="top">
@@ -1708,6 +1922,12 @@
         <a href="#prices">Prices</a>
       </nav>
     </div>
+    <nav class="side-tabs" aria-label="Choose a side">
+      <div class="wrap">
+        <a class="side-tab side-tab-nfp" href="#nfp">Not-for-profit<small>Mr. Pepo &amp; neurodiversity awareness</small></a>
+        <a class="side-tab side-tab-biz" href="#business">Small business<small>Web design, social media &amp; video</small></a>
+      </div>
+    </nav>
   </header>
   <main>
     <section class="hero">
@@ -1715,6 +1935,7 @@
       <div class="hero-shade" aria-hidden="true"></div>
       <div class="wrap hero-inner">
         <h1>Pepo Studios</h1>
+        <p class="bounce-tagline">Built to bounce back</p>
         <p class="nfp-statement">Pepo Studios is a not-for-profit project</p>
         <p class="tagline">Welcome! Fold, build and play with fun paper models from Pepo Studios.</p>
         <div class="actions">
@@ -1736,6 +1957,175 @@
             </a>
           </div>
         </div>
+      </div>
+    </section>
+    <div class="side side-nfp" id="nfp">
+    <header class="side-banner side-banner-nfp" aria-labelledby="nfp-title">
+      <div class="wrap">
+        <p class="side-kicker">You are on the not-for-profit side</p>
+        <h2 id="nfp-title">Not-for-profit</h2>
+        <p>Mr. Pepo, neurodiversity awareness, the paper window, the support flyer and free printables.</p>
+        <p class="side-switch">Looking for help with your business? <a href="#business">Go to Small business &rarr;</a></p>
+      </div>
+    </header>
+    <section class="motto motto-yellow" aria-label="One door closes. The red one opens.">
+      <p class="motto-accent">Pepo Studios</p>
+      <p class="motto-quote">One door closes. The red one opens.</p>
+    </section>
+    <section class="window-band" aria-labelledby="full-build-title">
+      <img class="window-band-photo" src="images/full-build.jpg" alt="The whole Pepo window display: hanging rocket, Pepcon Booster on its launch tower, catch tower and paper crew" width="1200" height="1600" loading="lazy" decoding="async">
+      <div class="window-band-shade" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="cream-card">
+          <h2 id="full-build-title">The window</h2>
+          <p>By day the whole build is on show: a hanging rocket, the Pepcon Booster on its launch tower, a paper catch tower and the crew along the floor.</p>
+          <div class="rules-row">
+            <img src="images/night-window-close.jpg" alt="Closer view of the night window, with the Pepo Studios House and Play Rules poster beside the hanging rocket" width="1350" height="1800" loading="lazy" decoding="async">
+            <p class="rules-note">At night the same window glows blue. In the top corner, the yellow poster is the Pepo Studios House &amp; Play Rules.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="peephole" aria-labelledby="peek-inside-title">
+      <h2 id="peek-inside-title">Peek inside</h2>
+      <div class="peephole-glass">
+        <img src="images/peek-inside.jpg" alt="Peephole view of the paper dog, Mr. Pepo, bunny and robot models" width="1200" height="900" loading="lazy" decoding="async">
+      </div>
+      <p>A peephole view of the paper dog, Mr. Pepo, a bunny and a robot.</p>
+    </section>
+    <section class="pepcon" aria-labelledby="pepcon-heavy-title">
+      <div class="wrap pepcon-split">
+        <figure class="pepcon-photo">
+          <img src="images/pepcon-heavy.jpg" alt="Paper Pepcon Heavy rocket standing tall at night" width="1200" height="1600" loading="lazy" decoding="async">
+        </figure>
+        <div class="pepcon-copy">
+          <h2 id="pepcon-heavy-title">Pepcon Heavy</h2>
+          <p>A paper Pepcon Heavy, standing tall at&nbsp;night.</p>
+        </div>
+      </div>
+    </section>
+    <section class="motto motto-blue" aria-label="When life knocks you down, you come back stronger.">
+      <p class="motto-accent">Pepo Studios</p>
+      <p class="motto-quote">When life knocks you down, you come back stronger.</p>
+    </section>
+    <section class="workshop" aria-labelledby="made-by-mr-pepo-title">
+      <img class="workshop-bg" src="images/workshop.jpg" alt="Mr. Pepo papercraft workshop desk with banner and QR signs" width="1200" height="900" loading="lazy" decoding="async">
+      <div class="workshop-shade" aria-hidden="true"></div>
+      <div class="wrap workshop-inner">
+        <div class="story">
+          <p class="kicker" id="workshop-title">The workshop</p>
+          <h2 id="made-by-mr-pepo-title">Made by Mr. Pepo</h2>
+          <p>Mr. Pepo folds paper at the workshop bench, then stands the makes in the studio window. A hanging rocket, a launch tower, a catch tower and a little paper crew, made to be seen from the street.</p>
+        </div>
+        <div class="polaroids">
+          <figure class="polaroid polaroid-a">
+            <img src="images/made-by-mr-pepo-window.jpg" alt="Mr. Pepo paper models in the window: hanging rocket, launch tower, catch tower, paper robots" width="1200" height="1600" loading="lazy" decoding="async">
+            <figcaption>In the window</figcaption>
+          </figure>
+          <figure class="polaroid polaroid-b">
+            <img src="images/our-window.jpg" alt="The Pepo Studios window in a brick wall" width="1200" height="1600" loading="lazy" decoding="async">
+            <figcaption id="our-window-title">Our window</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="support-band" id="show-your-support" aria-labelledby="show-your-support-title">
+      <div class="wrap">
+        <aside class="support">
+          <h2 id="show-your-support-title">Show your support!</h2>
+          <p>Download to support Pepo Studios. Show your support for Mr. Pepo. Support flyer in your windows. Snap a photo and email it to <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a>. While you are emailing the picture, please tell us which paper models you like, <a href="https://payhip.com/PepoStudios" target="_blank" rel="noopener">which you can choose from</a>.</p>
+          <img src="assets/flyer/i-support-mr-pepo-flyer.png" alt="I support Mr. Pepo flyer preview" loading="lazy" decoding="async" style="display:block;max-width:320px;width:100%;margin:1rem auto;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.15)">
+          <a class="flyer" href="assets/flyer/i-support-mr-pepo-flyer.pdf" download>Download the flyer (PDF)</a>
+          <a class="flyer" href="assets/flyer/i-support-mr-pepo-flyer-big.png" target="_blank" rel="noopener">View big flyer</a>
+        </aside>
+      </div>
+    </section>
+    <section class="printables" id="printables" aria-labelledby="printables-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="printables-title">Free Peppos practical printable paper product</h2>
+          <p class="free-note">Everything here is free!</p>
+        </div>
+        <ul class="grid">
+          <li>
+            <a class="pcard" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">
+              <span class="pcard-pic"><img loading="lazy" decoding="async" src="images/cards/morning.jpg?v=2" alt="Personalised Morning Routine Chart"></span>
+              <span class="badge">FREE</span>
+              <span class="pname">Personalised Morning Routine Chart for Kids with Name or Photo, Mr. Pepo Printable A4</span>
+            </a>
+          </li>
+          <li>
+            <a class="pcard" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">
+              <span class="pcard-pic"><img loading="lazy" decoding="async" src="images/cards/evening.jpg?v=2" alt="Evening Routine Chart"></span>
+              <span class="badge">FREE</span>
+              <span class="pname">Evening Routine Chart</span>
+            </a>
+          </li>
+          <li>
+            <a class="pcard" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">
+              <span class="pcard-pic"><img loading="lazy" decoding="async" src="images/cards/after-school.jpg?v=2" alt="After-School Routine Chart"></span>
+              <span class="badge">FREE</span>
+              <span class="pname">After-School Routine Chart</span>
+            </a>
+          </li>
+          <li>
+            <a class="pcard" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">
+              <span class="pcard-pic"><img loading="lazy" decoding="async" src="images/cards/bundle.jpg?v=2" alt="Routine Chart Bundle"></span>
+              <span class="badge">FREE</span>
+              <span class="pname">Routine Chart Bundle - Morning, Evening and After-School</span>
+            </a>
+          </li>
+          <li>
+            <a class="pcard" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">
+              <span class="pcard-pic"><img loading="lazy" decoding="async" src="images/cards/block-model.jpg" alt="Mr. Pepo Block Paper Model"></span>
+              <span class="badge">FREE</span>
+              <span class="pname">Pepo Studios Mr. Pepo Block Paper Model – Colour + Colour-In (A4 printable)</span>
+            </a>
+          </li>
+          <li>
+            <a class="pcard" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">
+              <span class="pcard-pic"><img loading="lazy" decoding="async" src="images/cards/name-labels.jpg" alt="Mr. Pepo This Belongs To name labels"></span>
+              <span class="badge">FREE</span>
+              <span class="pname">Mr. Pepo "This Belongs To" Name Labels</span>
+            </a>
+          </li>
+        </ul>
+        <p class="grownups-note">For the grown-ups: <a href="https://www.youtube.com/@MrPepoRedDoor" target="_blank" rel="noopener">Red Door on YouTube</a></p>
+      </div>
+    </section>
+    </div>
+    <div class="side side-biz" id="business">
+    <header class="side-banner side-banner-biz" aria-labelledby="business-title">
+      <div class="wrap">
+        <p class="side-kicker">You are on the small business side</p>
+        <h2 id="business-title">Small business</h2>
+        <p>Web design, social media and video for small businesses, from Pepo Studios.</p>
+        <p class="side-switch">Here for Mr. Pepo? <a href="#nfp">&larr; Go to Not-for-profit</a></p>
+      </div>
+    </header>
+    <section class="biz" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <h2 id="services-title">Small business services</h2>
+        <p class="biz-lead">Same friendly Pepo Studios, for your business.</p>
+        <div class="svc-grid">
+          <article class="svc-card">
+            <h3>Web design</h3>
+            <p>Clear, friendly websites that are easy to read on a phone. <span class="placeholder">[Peter to fill in: what is included and who it suits.]</span></p>
+          </article>
+          <article class="svc-card">
+            <h3>Social media</h3>
+            <p>Help setting up and looking after your social pages. <span class="placeholder">[Peter to fill in: which platforms and what we do each month.]</span></p>
+          </article>
+          <article class="svc-card">
+            <h3>Video production</h3>
+            <p>Short videos that show what your business does. <span class="placeholder">[Peter to fill in: types of video, length and how filming works.]</span></p>
+          </article>
+          <article class="svc-card">
+            <h3>Paper models &amp; printables</h3>
+            <p>Custom paper models and printables for your shop or event. <span class="placeholder">[Peter to fill in: examples and what a business can order.]</span></p>
+          </article>
+        </div>
+        <p class="biz-foot">To ask about any of these, email <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a> or <a href="#book">book a free chat</a>.</p>
       </div>
     </section>
     <section class="biz" id="web-pages" aria-labelledby="web-pages-title">
@@ -1893,131 +2283,7 @@
         <p class="biz-foot">Ask by email at <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a>, or <a href="#book">book a free chat</a>.</p>
       </div>
     </section>
-    <section class="motto motto-yellow" aria-label="One door closes. The red one opens.">
-      <p class="motto-accent">Pepo Studios</p>
-      <p class="motto-quote">One door closes. The red one opens.</p>
-    </section>
-    <section class="window-band" aria-labelledby="full-build-title">
-      <img class="window-band-photo" src="images/full-build.jpg" alt="The whole Pepo window display: hanging rocket, Pepcon Booster on its launch tower, catch tower and paper crew" width="1200" height="1600" loading="lazy" decoding="async">
-      <div class="window-band-shade" aria-hidden="true"></div>
-      <div class="wrap">
-        <div class="cream-card">
-          <h2 id="full-build-title">The window</h2>
-          <p>By day the whole build is on show: a hanging rocket, the Pepcon Booster on its launch tower, a paper catch tower and the crew along the floor.</p>
-          <div class="rules-row">
-            <img src="images/night-window-close.jpg" alt="Closer view of the night window, with the Pepo Studios House and Play Rules poster beside the hanging rocket" width="1350" height="1800" loading="lazy" decoding="async">
-            <p class="rules-note">At night the same window glows blue. In the top corner, the yellow poster is the Pepo Studios House &amp; Play Rules.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="peephole" aria-labelledby="peek-inside-title">
-      <h2 id="peek-inside-title">Peek inside</h2>
-      <div class="peephole-glass">
-        <img src="images/peek-inside.jpg" alt="Peephole view of the paper dog, Mr. Pepo, bunny and robot models" width="1200" height="900" loading="lazy" decoding="async">
-      </div>
-      <p>A peephole view of the paper dog, Mr. Pepo, a bunny and a robot.</p>
-    </section>
-    <section class="pepcon" aria-labelledby="pepcon-heavy-title">
-      <div class="wrap pepcon-split">
-        <figure class="pepcon-photo">
-          <img src="images/pepcon-heavy.jpg" alt="Paper Pepcon Heavy rocket standing tall at night" width="1200" height="1600" loading="lazy" decoding="async">
-        </figure>
-        <div class="pepcon-copy">
-          <h2 id="pepcon-heavy-title">Pepcon Heavy</h2>
-          <p>A paper Pepcon Heavy, standing tall at&nbsp;night.</p>
-        </div>
-      </div>
-    </section>
-    <section class="motto motto-blue" aria-label="When life knocks you down, you come back stronger.">
-      <p class="motto-accent">Pepo Studios</p>
-      <p class="motto-quote">When life knocks you down, you come back stronger.</p>
-    </section>
-    <section class="workshop" aria-labelledby="made-by-mr-pepo-title">
-      <img class="workshop-bg" src="images/workshop.jpg" alt="Mr. Pepo papercraft workshop desk with banner and QR signs" width="1200" height="900" loading="lazy" decoding="async">
-      <div class="workshop-shade" aria-hidden="true"></div>
-      <div class="wrap workshop-inner">
-        <div class="story">
-          <p class="kicker" id="workshop-title">The workshop</p>
-          <h2 id="made-by-mr-pepo-title">Made by Mr. Pepo</h2>
-          <p>Mr. Pepo folds paper at the workshop bench, then stands the makes in the studio window. A hanging rocket, a launch tower, a catch tower and a little paper crew, made to be seen from the street.</p>
-        </div>
-        <div class="polaroids">
-          <figure class="polaroid polaroid-a">
-            <img src="images/made-by-mr-pepo-window.jpg" alt="Mr. Pepo paper models in the window: hanging rocket, launch tower, catch tower, paper robots" width="1200" height="1600" loading="lazy" decoding="async">
-            <figcaption>In the window</figcaption>
-          </figure>
-          <figure class="polaroid polaroid-b">
-            <img src="images/our-window.jpg" alt="The Pepo Studios window in a brick wall" width="1200" height="1600" loading="lazy" decoding="async">
-            <figcaption id="our-window-title">Our window</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-    <section class="support-band" id="show-your-support" aria-labelledby="show-your-support-title">
-      <div class="wrap">
-        <aside class="support">
-          <h2 id="show-your-support-title">Show your support!</h2>
-          <p>Download to support Pepo Studios. Show your support for Mr. Pepo. Support flyer in your windows. Snap a photo and email it to <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a>. While you are emailing the picture, please tell us which paper models you like, <a href="https://payhip.com/PepoStudios" target="_blank" rel="noopener">which you can choose from</a>.</p>
-          <img src="assets/flyer/i-support-mr-pepo-flyer.png" alt="I support Mr. Pepo flyer preview" loading="lazy" decoding="async" style="display:block;max-width:320px;width:100%;margin:1rem auto;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.15)">
-          <a class="flyer" href="assets/flyer/i-support-mr-pepo-flyer.pdf" download>Download the flyer (PDF)</a>
-          <a class="flyer" href="assets/flyer/i-support-mr-pepo-flyer-big.png" target="_blank" rel="noopener">View big flyer</a>
-        </aside>
-      </div>
-    </section>
-    <section class="printables" id="printables" aria-labelledby="printables-title">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="printables-title">Free Peppos practical printable paper product</h2>
-          <p class="free-note">Everything here is free!</p>
-        </div>
-        <ul class="grid">
-          <li>
-            <a class="pcard" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">
-              <span class="pcard-pic"><img loading="lazy" decoding="async" src="images/cards/morning.jpg?v=2" alt="Personalised Morning Routine Chart"></span>
-              <span class="badge">FREE</span>
-              <span class="pname">Personalised Morning Routine Chart for Kids with Name or Photo, Mr. Pepo Printable A4</span>
-            </a>
-          </li>
-          <li>
-            <a class="pcard" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">
-              <span class="pcard-pic"><img loading="lazy" decoding="async" src="images/cards/evening.jpg?v=2" alt="Evening Routine Chart"></span>
-              <span class="badge">FREE</span>
-              <span class="pname">Evening Routine Chart</span>
-            </a>
-          </li>
-          <li>
-            <a class="pcard" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">
-              <span class="pcard-pic"><img loading="lazy" decoding="async" src="images/cards/after-school.jpg?v=2" alt="After-School Routine Chart"></span>
-              <span class="badge">FREE</span>
-              <span class="pname">After-School Routine Chart</span>
-            </a>
-          </li>
-          <li>
-            <a class="pcard" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">
-              <span class="pcard-pic"><img loading="lazy" decoding="async" src="images/cards/bundle.jpg?v=2" alt="Routine Chart Bundle"></span>
-              <span class="badge">FREE</span>
-              <span class="pname">Routine Chart Bundle - Morning, Evening and After-School</span>
-            </a>
-          </li>
-          <li>
-            <a class="pcard" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">
-              <span class="pcard-pic"><img loading="lazy" decoding="async" src="images/cards/block-model.jpg" alt="Mr. Pepo Block Paper Model"></span>
-              <span class="badge">FREE</span>
-              <span class="pname">Pepo Studios Mr. Pepo Block Paper Model – Colour + Colour-In (A4 printable)</span>
-            </a>
-          </li>
-          <li>
-            <a class="pcard" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">
-              <span class="pcard-pic"><img loading="lazy" decoding="async" src="images/cards/name-labels.jpg" alt="Mr. Pepo This Belongs To name labels"></span>
-              <span class="badge">FREE</span>
-              <span class="pname">Mr. Pepo "This Belongs To" Name Labels</span>
-            </a>
-          </li>
-        </ul>
-        <p class="grownups-note">For the grown-ups: <a href="https://www.youtube.com/@MrPepoRedDoor" target="_blank" rel="noopener">Red Door on YouTube</a></p>
-      </div>
-    </section>
+    </div>
   </main>
   <footer class="site-footer">
     <div class="wrap">
@@ -2124,6 +2390,35 @@
       });
 
       syncFromHash();
+    })();
+  </script>
+  <script>
+    (function () {
+      var nfp = document.getElementById("nfp");
+      var biz = document.getElementById("business");
+      var header = document.querySelector(".site-nav");
+      var tabN = document.querySelector(".side-tab-nfp");
+      var tabB = document.querySelector(".side-tab-biz");
+      if (!nfp || !biz || !header || !tabN || !tabB) return;
+      function setHdr() {
+        document.documentElement.style.setProperty("--hdr", header.offsetHeight + "px");
+      }
+      function update() {
+        var line = header.getBoundingClientRect().bottom + Math.min(160, window.innerHeight * 0.25);
+        var side = null;
+        if (biz.getBoundingClientRect().top <= line) side = "biz";
+        else if (nfp.getBoundingClientRect().top <= line) side = "nfp";
+        tabN.classList.toggle("is-active", side === "nfp");
+        tabB.classList.toggle("is-active", side === "biz");
+        if (side === "nfp") tabN.setAttribute("aria-current", "true"); else tabN.removeAttribute("aria-current");
+        if (side === "biz") tabB.setAttribute("aria-current", "true"); else tabB.removeAttribute("aria-current");
+      }
+      document.documentElement.classList.add("js-sides");
+      setHdr();
+      window.addEventListener("scroll", update, { passive: true });
+      window.addEventListener("resize", function () { setHdr(); update(); });
+      window.addEventListener("hashchange", function () { setTimeout(update, 50); });
+      update();
     })();
   </script>
 </body>

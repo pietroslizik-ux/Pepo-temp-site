@@ -119,6 +119,56 @@
         text-align: center;
       }
     }
+
+    .side-tabs {
+      display: flex;
+      gap: 8px;
+      margin: 0 auto 0 12px;
+    }
+
+    .side-tab {
+      display: inline-block;
+      padding: clamp(4px, 0.7vh, 7px) 14px;
+      color: var(--ink);
+      font-family: var(--hand);
+      font-size: clamp(0.85rem, 1.8vh, 1rem);
+      font-weight: 700;
+      text-decoration: none;
+      background: #fff;
+      border: 3px solid #e07a1f;
+      border-radius: 999px;
+    }
+
+    .side-tab-nfp {
+      border-color: #1e2bd6;
+    }
+
+    .side-tab-nfp.is-active {
+      background: #1e2bd6;
+      color: #ffe56a;
+      box-shadow: 0 3px 0 #12186a;
+    }
+
+    .side-tab-biz:hover {
+      background: #ffd9a8;
+    }
+
+    .side-tab:focus-visible {
+      outline: 3px solid var(--ink);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 640px) {
+      .side-tabs {
+        margin: 0;
+        align-self: stretch;
+      }
+
+      .side-tab {
+        flex: 1 1 0;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -152,6 +202,10 @@
       </svg>
       Back
     </a>
+    <nav class="side-tabs" aria-label="Choose a side">
+      <a class="side-tab side-tab-nfp is-active" href="index.html#nfp" aria-current="true">Not-for-profit</a>
+      <a class="side-tab side-tab-biz" href="index.html#business">Small business</a>
+    </nav>
     <a class="flyer" href="assets/flyer/i-support-mr-pepo-flyer.pdf" download>Download the flyer (PDF)</a>
           <a class="flyer" href="assets/flyer/i-support-mr-pepo-flyer-big.png" target="_blank" rel="noopener">View big flyer</a>
   </div>
