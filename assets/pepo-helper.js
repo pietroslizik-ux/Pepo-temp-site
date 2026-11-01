@@ -270,7 +270,7 @@
       text = "You can personalise your journal with your own photos.";
       links = [[pageHash("journal-idea"), "Open the request form"]];
     } else if (answerId === "support" || answerId === "price") {
-      text = "Free for everyone, or support it for whatever it's worth to you.";
+      text = "Free for everyone, or support what it's worth.";
       links = [["https://payhip.com/PepoStudios", "Pepo Studios shop"]];
     } else {
       text = "Leave a message for Peter.";
