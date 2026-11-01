@@ -1936,6 +1936,80 @@
       color: var(--brick);
     }
 
+    .mastermind-kicker {
+      margin: 0.9em 0 0.3em !important;
+      font-family: var(--hand);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .mastermind-steps {
+      margin: 6px 0 0;
+      padding-left: 1.3rem;
+      font-size: 1.05rem;
+      line-height: 1.45;
+    }
+
+    .mastermind-steps li { margin: 4px 0; }
+
+    .alpha-full-note {
+      margin-top: 0.75em !important;
+      padding: 10px 12px;
+      background: var(--yellow);
+      border: 2px dashed var(--line);
+      border-radius: 14px;
+      font-weight: 700;
+    }
+
+    .mastermind-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .mastermind-form label {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-align: left;
+    }
+
+    .mastermind-form input[type="text"],
+    .mastermind-form input[type="email"] {
+      width: 100%;
+      padding: 10px 12px;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 400;
+      background: #fff;
+      border: 3px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .mastermind-form button {
+      align-self: flex-start;
+      padding: 12px 18px;
+      background: var(--button);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 1.05rem;
+      font-weight: 700;
+      border: 3px solid #8d420c;
+      border-radius: 999px;
+      box-shadow: 0 4px 0 #8d420c;
+      cursor: pointer;
+    }
+
+    .mastermind-form button:hover { background: var(--button-hover); }
+
+    @media (max-width: 640px) {
+      .mastermind-form button { width: 100%; }
+    }
+
     @media (max-width: 640px) {
       .about-grid { grid-template-columns: 1fr; }
       .about-card { padding: 22px 18px 20px; }
@@ -2339,6 +2413,36 @@
           <section class="why-card" id="mastermind" aria-labelledby="mastermind-title">
             <h3 id="mastermind-title">Alpha Mastermind</h3>
             <p>I'm starting a mastermind for people with special abilities. Minds that notice things most people walk right past. It's not about being better than anyone. It's about finally having room to think out loud with people who get it. If that sounds like you, keep an eye on this page.</p>
+            <p><strong>Limited to 20 members.</strong></p>
+            <h4 class="mastermind-kicker">How to get in</h4>
+            <p>Alpha Mastermind is for people with a special ability who are building something real, have started or tried things, and want to help others too. If that's you, apply.</p>
+            <ol class="mastermind-steps">
+              <li>Apply with your name, email, and your special ability or what you want to build.</li>
+              <li>Answer a few questions.</li>
+              <li>Peter reviews every application personally.</li>
+              <li>Approved members get the private page and access code by email.</li>
+            </ol>
+            <p>Inside, approved members have a private discussion area for business ideas. It is visible only to people with the access code.</p>
+            <p>Other groups exist or can be created. Each one is looked after by a designated host, so everyone who fits has a place.</p>
+            <p>Hosts can run their own groups under Alpha Mastermind supervision. It's joint supervision, so many people have input, not just one person. As the owner, I want to hear what's working and what isn't. Tell me straight. I don't want to be misinformed.</p>
+            <p class="alpha-full-note" id="alpha-full-note" hidden>Alpha Mastermind is full (20 members). Apply anyway and Peter will place you in another group or the next opening.</p>
+            <form class="mastermind-form" id="mastermind-apply" action="https://formsubmit.co/mr.pepo.au@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="Alpha Mastermind application">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="true">
+              <input type="hidden" name="_next" value="https://pepostudios.au/mastermind/questions/">
+              <input class="journal-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <label>Name
+                <input type="text" name="name" required autocomplete="name">
+              </label>
+              <label>Email
+                <input type="email" name="email" required autocomplete="email" placeholder="your@email.com">
+              </label>
+              <label>Your special ability, or what you want to build
+                <input type="text" name="special_ability" required>
+              </label>
+              <button type="submit">Apply</button>
+            </form>
           </section>
           <div class="about-block">
             <h3>What we make</h3>
@@ -2976,6 +3080,28 @@
       <p>© 2026 Pepo Studios</p>
     </div>
   </footer>
+  <script src="mastermind/config.js"></script>
+  <script>
+    (function () {
+      var cfg = window.ALPHA_MASTERMIND || { alphaFull: false };
+      var form = document.getElementById("mastermind-apply");
+      if (!form) return;
+      if (cfg.alphaFull) {
+        var note = document.getElementById("alpha-full-note");
+        if (note) note.hidden = false;
+        var subject = form.querySelector('[name="_subject"]');
+        if (subject) subject.value = "Alpha Mastermind waitlist";
+      }
+      form.addEventListener("submit", function () {
+        var emailInput = form.querySelector('[name="email"]');
+        var next = form.querySelector('[name="_next"]');
+        if (!emailInput || !next) return;
+        var url = new URL("https://pepostudios.au/mastermind/questions/");
+        url.searchParams.set("email", emailInput.value.trim());
+        next.value = url.toString();
+      });
+    })();
+  </script>
   <script>
     (function () {
       if (new URLSearchParams(window.location.search).get("joined") === "1") {

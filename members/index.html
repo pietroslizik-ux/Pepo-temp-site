@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alpha Mastermind members | Pepo Studios</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&amp;family=Pacifico&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/pepo-helper.css">
+  <style>
+    :root {
+      --yellow: #ffe56a;
+      --ink: #3a2a14;
+      --button: #e07a1f;
+      --button-hover: #c86612;
+      --line: #a85a12;
+      --brick: #8d382c;
+      --paper: #fffaf1;
+      --title: "Pacifico", "Segoe Script", cursive;
+      --sans: "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--yellow);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.5;
+    }
+    .wrap { width: min(760px, calc(100% - 32px)); margin: 0 auto; padding: 32px 0 64px; }
+    .card {
+      padding: 26px 24px 22px;
+      background: var(--paper);
+      border: 3px solid var(--line);
+      border-left: 8px solid var(--brick);
+      border-radius: 18px;
+    }
+    h1, h2 {
+      margin: 0 0 8px;
+      font-family: var(--title);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--brick);
+    }
+    h1 { font-size: 2rem; }
+    h2 { margin-top: 1.2em; font-size: 1.45rem; }
+    p { margin: 0 0 0.8em; }
+    label { display: flex; flex-direction: column; gap: 4px; font-weight: 700; }
+    input[type="password"] {
+      width: 100%;
+      max-width: 320px;
+      padding: 10px 12px;
+      color: var(--ink);
+      font-size: 1rem;
+      background: #fff;
+      border: 3px solid var(--line);
+      border-radius: 14px;
+    }
+    button, .back {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 18px;
+      background: var(--button);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+      border: 3px solid #8d420c;
+      border-radius: 999px;
+      box-shadow: 0 4px 0 #8d420c;
+      cursor: pointer;
+    }
+    button:hover, .back:hover { background: var(--button-hover); }
+    .back { margin-top: 18px; background: transparent; box-shadow: none; }
+    .miss { color: var(--brick); font-weight: 700; }
+    .placeholder {
+      margin-top: 8px;
+      padding: 14px 14px 8px;
+      background: #fff;
+      border: 2px dashed var(--line);
+      border-radius: 14px;
+    }
+    .placeholder ol { margin: 0 0 0.8em; padding-left: 1.2rem; }
+    .placeholder a { color: #0b4f9c; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <article class="card">
+      <h1>Alpha Mastermind</h1>
+      <form id="member-gate">
+        <p>Approved members only. Peter emails the access code.</p>
+        <label>Access code
+          <input type="password" name="code" autocomplete="current-password" required>
+        </label>
+        <p class="miss" id="member-miss" hidden>That code does not match. Peter emails the code to approved members.</p>
+        <button type="submit">Enter</button>
+      </form>
+      <div id="member-room" hidden>
+        <p>You are in. This is the private discussion area for business ideas, for approved members only.</p>
+        <div class="placeholder">
+          <h2>Shared discussion</h2>
+          <p>The live thread is not connected yet. Peter turns it on once, with his own GitHub login. There is no new paid account.</p>
+          <ol>
+            <li>Open the GitHub repo pietroslizik-ux/Pepo-temp-site. In Settings, then General, then Features, turn on Discussions.</li>
+            <li>Create a discussion category named Alpha Mastermind.</li>
+            <li>Install the giscus GitHub app on that repo only, at github.com/apps/giscus.</li>
+            <li>Open giscus.app, choose this repo and the Alpha Mastermind category, and set the discussion term to the page pathname.</li>
+            <li>Copy the script giscus.app gives you and paste it into members/index.html in place of the comment that says PASTE GISCUS SCRIPT HERE. Commit that change to main.</li>
+          </ol>
+          <p>Until that script is in place, members cannot see one another's ideas on this page.</p>
+          <!-- PASTE GISCUS SCRIPT HERE -->
+        </div>
+      </div>
+      <a class="back" href="../index.html">Back to Pepo Studios</a>
+    </article>
+  </div>
+  <script>
+    (function () {
+      var CODE_HASH = "a31fed52c1d959cf3674d6f06aafc295e768dc8e27e18cef94d2583fff9f2912";
+      var gate = document.getElementById("member-gate");
+      var room = document.getElementById("member-room");
+      var miss = document.getElementById("member-miss");
+      var key = "alpha-mastermind";
+
+      function showRoom() {
+        gate.hidden = true;
+        room.hidden = false;
+      }
+
+      if (sessionStorage.getItem(key) === "yes") showRoom();
+
+      function digest(text) {
+        return crypto.subtle.digest("SHA-256", new TextEncoder().encode(text)).then(function (buf) {
+          return Array.prototype.map.call(new Uint8Array(buf), function (b) {
+            return b.toString(16).padStart(2, "0");
+          }).join("");
+        });
+      }
+
+      gate.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var code = gate.querySelector("[name=code]").value.trim();
+        digest(code).then(function (hash) {
+          if (hash === CODE_HASH) {
+            sessionStorage.setItem(key, "yes");
+            miss.hidden = true;
+            showRoom();
+          } else {
+            miss.hidden = false;
+          }
+        });
+      });
+    })();
+  </script>
+  <script src="../assets/pepo-helper.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alpha Mastermind questionnaire | Pepo Studios</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' font-size='48'%3EP%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&amp;family=Pacifico&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/pepo-helper.css">
+  <style>
+    :root {
+      --yellow: #ffe56a;
+      --ink: #3a2a14;
+      --button: #e07a1f;
+      --button-hover: #c86612;
+      --line: #a85a12;
+      --brick: #8d382c;
+      --paper: #fffaf1;
+      --title: "Pacifico", "Segoe Script", cursive;
+      --hand: "Kalam", "Segoe Print", "Comic Sans MS", cursive;
+      --sans: "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--yellow);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.5;
+    }
+    .wrap { width: min(720px, calc(100% - 32px)); margin: 0 auto; padding: 32px 0 48px; }
+    .card {
+      padding: 26px 24px 22px;
+      background: var(--paper);
+      border: 3px solid var(--line);
+      border-left: 8px solid var(--brick);
+      border-radius: 18px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 1.2;
+      color: var(--brick);
+    }
+    p { margin: 0 0 0.8em; }
+    form { display: flex; flex-direction: column; gap: 12px; }
+    label { display: flex; flex-direction: column; gap: 4px; font-weight: 700; text-align: left; }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 400;
+      background: #fff;
+      border: 3px solid var(--line);
+      border-radius: 14px;
+    }
+    textarea { min-height: 96px; resize: vertical; }
+    .check {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 10px;
+      font-weight: 400;
+    }
+    .check input { margin-top: 4px; }
+    button, .back {
+      align-self: flex-start;
+      display: inline-block;
+      padding: 12px 18px;
+      background: var(--button);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+      border: 3px solid #8d420c;
+      border-radius: 999px;
+      box-shadow: 0 4px 0 #8d420c;
+      cursor: pointer;
+    }
+    button:hover, .back:hover { background: var(--button-hover); }
+    .back { margin-top: 16px; background: transparent; box-shadow: none; }
+    .honey {
+      position: absolute !important;
+      left: -9999px !important;
+      width: 1px !important;
+      height: 1px !important;
+      opacity: 0 !important;
+    }
+    @media (max-width: 640px) {
+      button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <article class="card">
+      <h1>Alpha Mastermind</h1>
+      <div id="questions-thanks" hidden>
+        <p>Thanks! Peter reads every application personally and will email you.</p>
+        <p>If Alpha Mastermind isn't the right fit yet, Peter may invite you to our Open Circle, a friendlier, beginner-friendly group.</p>
+      </div>
+      <form id="questions-form" action="https://formsubmit.co/mr.pepo.au@gmail.com" method="POST">
+        <p>A few more questions. Peter uses the same email to match this with your application.</p>
+        <p>If Alpha Mastermind isn't the right fit yet, Peter may invite you to our Open Circle, a friendlier, beginner-friendly group.</p>
+        <input type="hidden" name="_subject" value="Alpha Mastermind questionnaire">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_next" value="https://pepostudios.au/mastermind/questions/?thanks=1">
+        <input class="honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label>Email
+          <input type="email" name="email" required autocomplete="email" placeholder="your@email.com">
+        </label>
+        <label>What do you want to build in the next 12 months?
+          <textarea name="build_next" required></textarea>
+        </label>
+        <label>What have you already made, started or tried (links welcome)?
+          <textarea name="already_made" required></textarea>
+        </label>
+        <label>Why do you belong in this group, and what would you bring to others?
+          <textarea name="belong" required></textarea>
+        </label>
+        <label>How much time can you give each week?
+          <input type="text" name="time_each_week" required>
+        </label>
+        <label>What kind of help are you hoping to get?
+          <textarea name="help_hoped" required></textarea>
+        </label>
+        <label class="check">
+          <input type="checkbox" name="open_circle" value="Yes">
+          <span>If Alpha Mastermind isn't the right fit yet, I'm happy to be invited to the Open Circle.</span>
+        </label>
+        <button type="submit">Send my answers</button>
+      </form>
+      <a class="back" href="../../index.html#mastermind">Back to Pepo Studios</a>
+    </article>
+  </div>
+  <script>
+    (function () {
+      var params = new URLSearchParams(location.search);
+      var form = document.getElementById("questions-form");
+      var thanks = document.getElementById("questions-thanks");
+      if (params.get("thanks") === "1") {
+        if (form) form.hidden = true;
+        if (thanks) thanks.hidden = false;
+        return;
+      }
+      var email = params.get("email");
+      if (email && form) {
+        var field = form.querySelector('[name="email"]');
+        if (field) field.value = email;
+      }
+    })();
+  </script>
+  <script src="../../assets/pepo-helper.js"></script>
+</body>
+</html>
