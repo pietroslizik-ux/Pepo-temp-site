@@ -1,5 +1,5 @@
 (function () {
-  var REPLY = "We answer every custom journal request within 48 hours.";
+  var REPLY = "We answer every custom journal request.";
   var PHOTO_YES = "Great! After you send this, just reply to our email with your photos.";
   var FORM_URL = "https://formsubmit.co/mr.pepo.au@gmail.com";
   var script = document.currentScript;
