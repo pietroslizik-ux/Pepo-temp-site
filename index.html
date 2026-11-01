@@ -1906,6 +1906,52 @@
     .jname { font-weight:700; margin-top:6px; }
     .jdesc { font-size:.95rem; line-height:1.35; }
     .jcard .flyer { margin-top:auto; }
+    .pepo-choose { margin: 14px 0 16px; }
+    .pepo-choose h3 { margin: 0 0 8px; font-size: 1.15rem; }
+    .pepo-choose-thumbs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 10px; }
+    .pepo-choose-thumbs button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      width: 104px;
+      padding: 6px 6px 8px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+      border: 3px solid transparent;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+    .pepo-choose-thumbs button[aria-checked="true"] {
+      border-color: var(--line);
+      background: var(--yellow);
+    }
+    .pepo-choose-thumbs button:focus-visible {
+      outline: 3px solid var(--ink);
+      outline-offset: 2px;
+    }
+    .pepo-choose-thumbs img {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 8px;
+    }
+    .pepo-choose-preview {
+      display: block;
+      width: min(280px, 100%);
+      height: auto;
+      margin: 0 auto 10px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.15);
+    }
+    .pepo-choose-note { margin: 0 !important; }
   </style>
   <link rel="stylesheet" href="assets/pepo-mark.css">
 </head>
@@ -2222,6 +2268,29 @@
           <h2 id="journals-title">Journals &amp; diaries</h2>
           <p>Free printable journals made for neurodivergent minds, to help you plan, calm down and celebrate the small wins.</p>
           <p>Any other more personalised journals can be easily made after you tell us your criteria for your journal.</p>
+          <div class="pepo-choose" id="pepo-choose">
+            <h3 id="pepo-choose-title">Choose your Mr. Pepo</h3>
+            <div class="pepo-choose-thumbs" role="radiogroup" aria-labelledby="pepo-choose-title">
+              <button type="button" role="radio" aria-checked="true" tabindex="0" data-pepo="official" data-src="images/pepo-choose/official.jpg" data-alt="Classic Mr. Pepo">
+                <img src="images/pepo-choose/official.jpg" alt="" width="72" height="72">
+                <span>Classic</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="calm" data-src="images/pepo-choose/calm.jpg" data-alt="Calm Mr. Pepo">
+                <img src="images/pepo-choose/calm.jpg" alt="" width="72" height="72">
+                <span>Calm</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="playful" data-src="images/pepo-choose/playful.jpg" data-alt="Playful Mr. Pepo">
+                <img src="images/pepo-choose/playful.jpg" alt="" width="72" height="72">
+                <span>Playful</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="trio" data-src="images/pepo-choose/trio.jpg" data-alt="Mr. Pepo with Luna and Sakura">
+                <img src="images/pepo-choose/trio.jpg" alt="" width="72" height="72">
+                <span>With Luna &amp; Sakura</span>
+              </button>
+            </div>
+            <img class="pepo-choose-preview" id="pepo-choose-preview" src="images/pepo-choose/official.jpg" alt="Classic Mr. Pepo" width="640" height="360">
+            <p class="pepo-choose-note">Pick the Mr. Pepo you like best. Tell us your favourite when you ask for a personalised journal.</p>
+          </div>
           <ul class="journal-grid">
             <li class="jcard">
               <img src="downloads/The-Mr-Pepo-Journal-preview.png" alt="The Mr. Pepo Journal cover with Mr. Pepo and his light-bulb idea" loading="lazy" decoding="async">
@@ -2690,6 +2759,56 @@
       window.addEventListener("resize", function () { setHdr(); update(); });
       window.addEventListener("hashchange", function () { setTimeout(update, 50); });
       update();
+    })();
+  </script>
+  <script>
+    (function () {
+      var root = document.getElementById("pepo-choose");
+      if (!root) return;
+      var group = root.querySelector("[role='radiogroup']");
+      var buttons = root.querySelectorAll("[data-pepo]");
+      var preview = document.getElementById("pepo-choose-preview");
+      if (!group || !buttons.length || !preview) return;
+      var key = "pepo-choose";
+
+      function select(button, persist) {
+        for (var i = 0; i < buttons.length; i++) {
+          var on = buttons[i] === button;
+          buttons[i].setAttribute("aria-checked", on ? "true" : "false");
+          buttons[i].tabIndex = on ? 0 : -1;
+        }
+        preview.src = button.getAttribute("data-src");
+        preview.alt = button.getAttribute("data-alt");
+        if (persist) {
+          try { localStorage.setItem(key, button.getAttribute("data-pepo")); } catch (err) {}
+        }
+      }
+
+      var saved = "";
+      try { saved = localStorage.getItem(key) || ""; } catch (err) {}
+      var initial = buttons[0];
+      for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].getAttribute("data-pepo") === saved) initial = buttons[i];
+        buttons[i].addEventListener("click", function () { select(this, true); });
+      }
+
+      group.addEventListener("keydown", function (event) {
+        var next = -1;
+        var current = 0;
+        for (var n = 0; n < buttons.length; n++) {
+          if (buttons[n].getAttribute("aria-checked") === "true") current = n;
+        }
+        if (event.key === "ArrowRight" || event.key === "ArrowDown") next = (current + 1) % buttons.length;
+        else if (event.key === "ArrowLeft" || event.key === "ArrowUp") next = (current - 1 + buttons.length) % buttons.length;
+        else if (event.key === "Home") next = 0;
+        else if (event.key === "End") next = buttons.length - 1;
+        else return;
+        event.preventDefault();
+        select(buttons[next], true);
+        buttons[next].focus();
+      });
+
+      select(initial, false);
     })();
   </script>
 </body>
