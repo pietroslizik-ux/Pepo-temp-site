@@ -1757,18 +1757,6 @@
       margin: 0;
     }
 
-    .placeholder {
-      display: inline;
-      padding: 0 4px;
-      color: #7a4a10;
-      background: #fff1b0;
-      border: 1px dashed #c08a2a;
-      border-radius: 6px;
-      font-family: var(--sans);
-      font-weight: 400;
-      font-size: 0.92rem;
-    }
-
     .side-biz .biz h2 {
       color: #8d420c;
     }
@@ -1962,13 +1950,20 @@
     .jcard .flyer { margin-top:auto; }
     .pepo-choose { margin: 14px 0 16px; }
     .pepo-choose h3 { margin: 0 0 8px; font-size: 1.15rem; }
+    .pepo-choose .pepo-choose-caption {
+      margin: 0 0 10px !important;
+      font-family: var(--hand);
+      font-weight: 700;
+      font-size: 0.95rem;
+      line-height: 1.35;
+    }
     .pepo-choose-thumbs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 10px; }
     .pepo-choose-thumbs button {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 4px;
-      width: 104px;
+      width: 120px;
       padding: 6px 6px 8px;
       background: #fff;
       color: var(--ink);
@@ -2006,8 +2001,127 @@
       box-shadow: 0 4px 14px rgba(0,0,0,.15);
     }
     .pepo-choose-note { margin: 0 !important; }
+    .journal-highlights {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 12px;
+      padding: 0;
+    }
+    .journal-highlights li {
+      margin: 0;
+      padding: 6px 10px;
+      background: var(--yellow);
+      border: 2px solid var(--line);
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      line-height: 1.3;
+    }
+    .picture-note,
+    .pepo-choose-note.picture-note {
+      display: block;
+      margin: 8px 0 !important;
+      padding: 8px 12px;
+      background: var(--yellow);
+      border: 2px dashed var(--line);
+      border-radius: 14px;
+      font-weight: 700;
+    }
+    .peter-note {
+      margin: 12px 0;
+      padding: 14px 16px 12px;
+      background: var(--paper);
+      border: 2px solid #e7c98a;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(58, 42, 20, 0.08);
+    }
+    .peter-note p {
+      margin: 0;
+      max-width: none;
+      font-size: 1.02rem;
+      line-height: 1.55;
+    }
+    .peter-note p + p,
+    .peter-note .peter-note-sign {
+      margin-top: 8px !important;
+      text-align: right;
+      font-family: var(--hand);
+      font-weight: 700;
+      font-size: 1.15rem;
+      line-height: 1.2;
+      color: var(--brick);
+    }
+    .journal-idea {
+      margin: 4px 0 18px;
+      padding: 14px 14px 16px;
+      background: var(--paper);
+      border: 3px solid var(--line);
+      border-radius: 18px;
+    }
+    .journal-idea h3 {
+      margin: 0 0 4px;
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: 1.35rem;
+      line-height: 1.25;
+      color: var(--brick);
+    }
+    .journal-idea .journal-reply {
+      margin: 0 0 12px !important;
+      font-family: var(--hand);
+      font-weight: 700;
+      font-size: 0.95rem;
+      line-height: 1.35;
+    }
+    .journal-idea label {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin: 0 0 10px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-align: left;
+    }
+    .journal-idea input,
+    .journal-idea select,
+    .journal-idea textarea {
+      width: 100%;
+      padding: 10px 12px;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 400;
+      background: #fff;
+      border: 3px solid var(--line);
+      border-radius: 14px;
+    }
+    .journal-idea textarea { min-height: 96px; resize: vertical; }
+    .journal-idea button {
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--button);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 1.05rem;
+      font-weight: 700;
+      border: 3px solid #8d420c;
+      border-radius: 999px;
+      box-shadow: 0 4px 0 #8d420c;
+      cursor: pointer;
+    }
+    .journal-idea button:hover { background: var(--button-hover); }
+    .journal-honey {
+      position: absolute !important;
+      left: -9999px !important;
+      width: 1px !important;
+      height: 1px !important;
+      opacity: 0 !important;
+    }
   </style>
   <link rel="stylesheet" href="assets/pepo-mark.css">
+  <link rel="stylesheet" href="assets/pepo-helper.css">
 </head>
 <body id="top">
   <span class="pepo-signature" aria-hidden="true">Pepo Studios</span>
@@ -2225,8 +2339,13 @@
           <div class="about-block">
             <h3>What we make</h3>
             <p>At Pepo Studios we make happy, practical paper things for families: papercraft to cut, fold and build, colouring sheets for quiet time, bedtime story books with Mr. Pepo, Luna and Sakura, and now journals and diaries made for neurodivergent minds, to help you plan, calm down and celebrate the small wins.</p>
+            <p>Journals with Mr. Pepo, Luna and Sakura, for kids, teens, parents and every neurodivergent mind.</p>
             <p>Any other more personalised journals can be easily made after you tell us your criteria for your journal.</p>
-            <p>If you like, you can also personalise your journal with your own pictures.</p>
+            <p class="picture-note">If you like, you can also personalise your journal with your own pictures.</p>
+            <aside class="peter-note">
+              <p>Free for everyone, or support it for whatever it's worth to you. If you can, please pay something; I need to survive too.</p>
+              <p class="peter-note-sign">— Peter</p>
+            </aside>
             <p class="make-buttons">
               <a class="flyer" href="#papercraft">Papercraft</a>
               <a class="flyer" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">Colouring sheets</a>
@@ -2287,6 +2406,10 @@
           <h2 id="pepcon-heavy-title">Pepcon Heavy</h2>
           <p>A paper Pepcon Heavy, standing tall at&nbsp;night.</p>
           <p>The Pepcon models on Payhip come with instructions made by OG, and I'm one hundred percent sure that's all that's written there — nothing else. I apologise, I didn't read them. I have no idea what's in there anyway. I didn't check them, didn't use them, as I never use instructions. If you get stuck, <a href="mailto:mr.pepo.au@gmail.com">tell me</a> and I'll help you through it.</p>
+          <aside class="peter-note">
+            <p>Free for everyone, or support it for whatever it's worth to you. If you can, please pay something; I need to survive too.</p>
+            <p class="peter-note-sign">— Peter</p>
+          </aside>
         </div>
       </div>
     </section>
@@ -2330,11 +2453,18 @@
       <div class="wrap">
         <aside class="support">
           <h2 id="journals-title">Journals &amp; diaries</h2>
+          <ul class="journal-highlights">
+            <li>Free journals for kids, teens, parents and every neurodivergent mind</li>
+            <li>Made with Mr. Pepo, Luna and Sakura</li>
+            <li>Choose your Mr. Pepo</li>
+            <li>Add your own pictures</li>
+          </ul>
           <p>Free printable journals made for neurodivergent minds, to help you plan, calm down and celebrate the small wins.</p>
           <p>Any other more personalised journals can be easily made after you tell us your criteria for your journal.</p>
-          <p>If you like, you can also personalise your journal with your own pictures.</p>
+          <p class="picture-note">If you like, you can also personalise your journal with your own pictures.</p>
           <div class="pepo-choose" id="pepo-choose">
             <h3 id="pepo-choose-title">Choose your Mr. Pepo</h3>
+            <p class="pepo-choose-caption">All our official Mr. Pepo covers, pick your favourite.</p>
             <div class="pepo-choose-thumbs" role="radiogroup" aria-labelledby="pepo-choose-title">
               <button type="button" role="radio" aria-checked="true" tabindex="0" data-pepo="official" data-src="images/pepo-choose/official.jpg" data-alt="Classic Mr. Pepo">
                 <img src="images/pepo-choose/official.jpg" alt="" width="72" height="72">
@@ -2352,11 +2482,108 @@
                 <img src="images/pepo-choose/trio.jpg" alt="" width="72" height="72">
                 <span>With Luna &amp; Sakura</span>
               </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="workshop" data-src="images/pepo-choose/workshop.jpg" data-alt="Mr. Pepo in the workshop">
+                <img src="images/pepo-choose/workshop.jpg" alt="" width="72" height="72">
+                <span>Workshop</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="garden" data-src="images/pepo-choose/garden.jpg" data-alt="Mr. Pepo watering the garden">
+                <img src="images/pepo-choose/garden.jpg" alt="" width="72" height="72">
+                <span>Garden</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="library" data-src="images/pepo-choose/library.jpg" data-alt="Mr. Pepo reading in the library">
+                <img src="images/pepo-choose/library.jpg" alt="" width="72" height="72">
+                <span>Library</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="classroom" data-src="images/pepo-choose/classroom.jpg" data-alt="Mr. Pepo in the classroom">
+                <img src="images/pepo-choose/classroom.jpg" alt="" width="72" height="72">
+                <span>Classroom</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="summer" data-src="images/pepo-choose/summer.jpg" data-alt="Mr. Pepo at the beach in summer">
+                <img src="images/pepo-choose/summer.jpg" alt="" width="72" height="72">
+                <span>Summer</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="christmas" data-src="images/pepo-choose/christmas.jpg" data-alt="Mr. Pepo at an Aussie Christmas">
+                <img src="images/pepo-choose/christmas.jpg" alt="" width="72" height="72">
+                <span>Aussie Christmas</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="howie" data-src="images/pepo-choose/with-howie.jpg" data-alt="Mr. Pepo with Howie">
+                <img src="images/pepo-choose/with-howie.jpg" alt="" width="72" height="72">
+                <span>With Howie</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="line-art" data-src="images/pepo-choose/minimal-line-art.jpg" data-alt="Line art of Mr. Pepo">
+                <img src="images/pepo-choose/minimal-line-art.jpg" alt="" width="72" height="72">
+                <span>Line art</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="beach" data-src="images/pepo-choose/beach-ocean.jpg" data-alt="Mr. Pepo at the beach and ocean">
+                <img src="images/pepo-choose/beach-ocean.jpg" alt="" width="72" height="72">
+                <span>Beach &amp; Ocean</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="space" data-src="images/pepo-choose/space-stars.jpg" data-alt="Mr. Pepo in space among the stars">
+                <img src="images/pepo-choose/space-stars.jpg" alt="" width="72" height="72">
+                <span>Space &amp; Stars</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="camping" data-src="images/pepo-choose/camping-under-the-stars.jpg" data-alt="Mr. Pepo camping under the stars">
+                <img src="images/pepo-choose/camping-under-the-stars.jpg" alt="" width="72" height="72">
+                <span>Camping Under the Stars</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="rainy" data-src="images/pepo-choose/rainy-day-reading.jpg" data-alt="Mr. Pepo reading on a rainy day">
+                <img src="images/pepo-choose/rainy-day-reading.jpg" alt="" width="72" height="72">
+                <span>Rainy Day Reading</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="music" data-src="images/pepo-choose/music.jpg" data-alt="Mr. Pepo with music">
+                <img src="images/pepo-choose/music.jpg" alt="" width="72" height="72">
+                <span>Music</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="sports" data-src="images/pepo-choose/sports-bike.jpg" data-alt="Mr. Pepo with a bike">
+                <img src="images/pepo-choose/sports-bike.jpg" alt="" width="72" height="72">
+                <span>Sports &amp; Bike</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="kitchen" data-src="images/pepo-choose/kitchen-baking.jpg" data-alt="Mr. Pepo baking in the kitchen">
+                <img src="images/pepo-choose/kitchen-baking.jpg" alt="" width="72" height="72">
+                <span>Kitchen &amp; Baking</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-pepo="bush" data-src="images/pepo-choose/aussie-bush.jpg" data-alt="Mr. Pepo in the Aussie bush">
+                <img src="images/pepo-choose/aussie-bush.jpg" alt="" width="72" height="72">
+                <span>Aussie Bush</span>
+              </button>
             </div>
             <img class="pepo-choose-preview" id="pepo-choose-preview" src="images/pepo-choose/official.jpg" alt="Classic Mr. Pepo" width="640" height="360">
             <p class="pepo-choose-note">Pick the Mr. Pepo you like best. Tell us your favourite when you ask for a personalised journal.</p>
-            <p class="pepo-choose-note">If you like, you can also personalise your journal with your own pictures.</p>
+            <p class="pepo-choose-note picture-note">If you like, you can also personalise your journal with your own pictures.</p>
+            <aside class="peter-note">
+              <p>Free for everyone, or support it for whatever it's worth to you. If you can, please pay something; I need to survive too.</p>
+              <p class="peter-note-sign">— Peter</p>
+            </aside>
           </div>
+          <form class="journal-idea" id="journal-idea" action="https://formsubmit.co/mr.pepo.au@gmail.com" method="POST">
+            <h3 id="journal-idea-title">Can't find the one you want? Tell us and we'll make it for you.</h3>
+            <p class="journal-reply">We answer every custom journal request within 48 hours.</p>
+            <p class="journal-thanks" id="journal-thanks" hidden>Thanks! We have your idea and will reply by email.</p>
+            <input type="hidden" name="_subject" value="Pepo Studios custom journal request">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_next" value="https://pietroslizik-ux.github.io/Pepo-temp-site/?journal=1#journal-thanks">
+            <input class="journal-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <label>Name
+              <input type="text" name="name" required autocomplete="name">
+            </label>
+            <label>Email
+              <input type="email" name="email" required autocomplete="email" placeholder="your@email.com">
+            </label>
+            <label>What kind of journal or cover would you like?
+              <textarea name="idea" required placeholder="e.g. Mr. Pepo at the beach, for my 9-year-old, with our dog's photo"></textarea>
+            </label>
+            <label>Who is it for?
+              <select name="who">
+                <option value="">Choose if you like</option>
+                <option>Child</option>
+                <option>Teen</option>
+                <option>Parent</option>
+                <option>Me</option>
+              </select>
+            </label>
+            <button type="submit">Send my idea</button>
+          </form>
           <ul class="journal-grid">
             <li class="jcard">
               <img src="downloads/The-Mr-Pepo-Journal-preview.png" alt="The Mr. Pepo Journal cover with Mr. Pepo and his light-bulb idea" loading="lazy" decoding="async">
@@ -2413,6 +2640,10 @@
               <a class="flyer" href="downloads/The-Mr-Pepo-School-Journal.pdf" download>Download free (PDF)</a>
             </li>
           </ul>
+          <aside class="peter-note">
+            <p>You can get everything with Mr. Pepo for free, or support it for whatever it's worth to you, or donate. I'm happy to be open to everyone. I gently and politely ask you to pay something if you can, because I need to survive too. I'm doing this because I now know how much I was suffering all my life, and since becoming aware, I want to lift awareness. I'm not saying 'poor me' because of my disability. Because of my disability, I'm able to come up with many different ways to survive, support myself, and help others in the future.</p>
+            <p class="peter-note-sign">— Peter</p>
+          </aside>
         </aside>
       </div>
     </section>
@@ -2421,7 +2652,11 @@
         <aside class="support">
           <h2 id="mr-pepo-journal-title">Free for spectrum families: The Mr. Pepo Journal</h2>
           <p>A free printable journal for ADHD, autism and all neurodivergent families. Written by Peter for minds that work differently: about me, daily pages, a weekly look back and a page to tell your story in your own words. There are no wrong answers. A neurodiversity awareness project by Pepo Studios.</p>
-          <p>If you like, you can also personalise your journal with your own pictures.</p>
+          <p class="picture-note">If you like, you can also personalise your journal with your own pictures.</p>
+          <aside class="peter-note">
+            <p>Free for everyone, or support it for whatever it's worth to you. If you can, please pay something; I need to survive too.</p>
+            <p class="peter-note-sign">— Peter</p>
+          </aside>
           <img src="downloads/The-Mr-Pepo-Journal-preview.png" alt="The Mr. Pepo Journal cover with Mr. Pepo and his light-bulb idea" loading="lazy" decoding="async" style="display:block;max-width:240px;width:100%;margin:1rem auto;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.15)">
           <a class="flyer" href="downloads/The-Mr-Pepo-Journal.pdf" download>Download the journal free (PDF)</a>
           <a class="flyer" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener">Support what it's worth</a>
@@ -2452,6 +2687,10 @@
           <h2 id="printables-title">Free Peppos practical printable paper product</h2>
           <p class="free-note">Everything here is free!</p>
         </div>
+        <aside class="peter-note">
+          <p>Free for everyone, or support it for whatever it's worth to you. If you can, please pay something; I need to survive too.</p>
+          <p class="peter-note-sign">— Peter</p>
+        </aside>
         <ul class="grid">
           <li>
             <a class="pcard" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">
@@ -2516,19 +2755,19 @@
         <div class="svc-grid">
           <article class="svc-card">
             <h3>Web design</h3>
-            <p>Clear, friendly websites that are easy to read on a phone. <span class="placeholder">[Peter to fill in: what is included and who it suits.]</span></p>
+            <p>Clear, friendly websites that are easy to read on a phone.</p>
           </article>
           <article class="svc-card">
             <h3>Social media</h3>
-            <p>Help setting up and looking after your social pages. <span class="placeholder">[Peter to fill in: which platforms and what we do each month.]</span></p>
+            <p>Help setting up and looking after your social pages.</p>
           </article>
           <article class="svc-card">
             <h3>Video production</h3>
-            <p>Short videos that show what your business does. <span class="placeholder">[Peter to fill in: types of video, length and how filming works.]</span></p>
+            <p>Short videos that show what your business does.</p>
           </article>
           <article class="svc-card">
             <h3>Paper models &amp; printables</h3>
-            <p>Custom paper models and printables for your shop or event. <span class="placeholder">[Peter to fill in: examples and what a business can order.]</span></p>
+            <p>Custom paper models and printables for your shop or event.</p>
           </article>
         </div>
         <p class="biz-foot">To ask about any of these, email <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a> or <a href="#book">book a free chat</a>.</p>
@@ -2743,6 +2982,10 @@
         var booked = document.querySelector(".book-thanks");
         if (booked) booked.hidden = false;
       }
+      if (new URLSearchParams(window.location.search).get("journal") === "1") {
+        var journalThanks = document.querySelector(".journal-thanks");
+        if (journalThanks) journalThanks.hidden = false;
+      }
     })();
   </script>
   <script>
@@ -2878,5 +3121,6 @@
       select(initial, false);
     })();
   </script>
+  <script src="assets/pepo-helper.js"></script>
 </body>
 </html>

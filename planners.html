@@ -1886,8 +1886,32 @@
       .about-grid { grid-template-columns: 1fr; }
       .about-card { padding: 22px 18px 20px; }
     }
+    .peter-note {
+      margin: 12px 0;
+      padding: 14px 16px 12px;
+      background: var(--paper);
+      border: 2px solid #e7c98a;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(58, 42, 20, 0.08);
+    }
+    .peter-note p {
+      margin: 0;
+      max-width: none;
+      font-size: 1.02rem;
+      line-height: 1.55;
+    }
+    .peter-note .peter-note-sign {
+      margin-top: 8px !important;
+      text-align: right;
+      font-family: var(--hand);
+      font-weight: 700;
+      font-size: 1.15rem;
+      line-height: 1.2;
+      color: var(--brick);
+    }
   </style>
   <link rel="stylesheet" href="assets/pepo-mark.css">
+  <link rel="stylesheet" href="assets/pepo-helper.css">
 </head>
 <body id="top">
   <span class="pepo-signature" aria-hidden="true">Pepo Studios</span>
@@ -1953,6 +1977,10 @@
         <aside class="support">
           <p>Every set comes in colour and black-and-white (ink-saver) versions, as undated A4 and US Letter PDFs. Print at home at whatever quality you like, as many times as you like. Single pages are A$1 or more, and every set has free sample pages.</p>
           <p style="margin-top:10px">Every download you support helps Mr. Pepo make free neurodiversity resources for families who can't afford them, so thank you for being part of it.</p>
+          <aside class="peter-note">
+            <p>Free for everyone, or support it for whatever it's worth to you. If you can, please pay something; I need to survive too.</p>
+            <p class="peter-note-sign">— Peter</p>
+          </aside>
         </aside>
         <p class="grownups-note"><a href="#planner-downloads">Downloads</a> · <a href="#print-options">Print options</a> · <a href="#print-shops">Print shops by country</a> · <a href="#customise">Customisation</a></p>
       </div>
@@ -2231,5 +2259,6 @@
       }
     })();
   </script>
+  <script src="assets/pepo-helper.js"></script>
 </body>
 </html>
