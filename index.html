@@ -1898,6 +1898,14 @@
       .about-grid { grid-template-columns: 1fr; }
       .about-card { padding: 22px 18px 20px; }
     }
+    .make-buttons { display:flex; flex-wrap:wrap; gap:8px 10px; margin:10px 0 14px !important; }
+    .make-buttons .flyer { margin-top:0; }
+    .journal-grid { list-style:none; padding:0; margin:1rem 0 0; display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:18px; }
+    .jcard { display:flex; flex-direction:column; align-items:center; text-align:center; gap:4px; }
+    .jcard img { width:100%; max-width:170px; border-radius:8px; box-shadow:0 4px 14px rgba(0,0,0,.15); }
+    .jname { font-weight:700; margin-top:6px; }
+    .jdesc { font-size:.95rem; line-height:1.35; }
+    .jcard .flyer { margin-top:auto; }
   </style>
   <link rel="stylesheet" href="assets/pepo-mark.css">
 </head>
@@ -2107,6 +2115,13 @@
           </div>
           <div class="about-block">
             <h3>What we make</h3>
+            <p>At Pepo Studios we make happy, practical paper things for families: papercraft to cut, fold and build, colouring sheets for quiet time, bedtime story books with Mr. Pepo, Luna and Sakura, and now journals and diaries made for neurodivergent minds, to help you plan, calm down and celebrate the small wins.</p>
+            <p class="make-buttons">
+              <a class="flyer" href="#papercraft">Papercraft</a>
+              <a class="flyer" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">Colouring sheets</a>
+              <a class="flyer" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">Bedtime books</a>
+              <a class="flyer" href="#journals">Journals &amp; diaries</a>
+            </p>
             <ul class="about-list">
               <li><strong>Paper crafts:</strong> paper rockets like the Pepcon Heavy, pumpkin boxes and spooky paper houses.</li>
               <li><strong>Colouring sheets:</strong> print it, colour it, stick it on the fridge.</li>
@@ -2152,7 +2167,7 @@
       </div>
       <p>A peephole view of the paper dog, Mr. Pepo, a bunny and a robot.</p>
     </section>
-    <section class="pepcon" aria-labelledby="pepcon-heavy-title">
+    <section class="pepcon" id="papercraft" aria-labelledby="pepcon-heavy-title">
       <div class="wrap pepcon-split">
         <figure class="pepcon-photo">
           <img src="images/pepcon-heavy.jpg" alt="Paper Pepcon Heavy rocket standing tall at night" width="1200" height="1600" loading="lazy" decoding="async">
@@ -2197,6 +2212,70 @@
           <img src="assets/flyer/i-support-mr-pepo-flyer.png" alt="I support Mr. Pepo flyer preview" loading="lazy" decoding="async" style="display:block;max-width:320px;width:100%;margin:1rem auto;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.15)">
           <a class="flyer" href="assets/flyer/i-support-mr-pepo-flyer.pdf" download>Download the flyer (PDF)</a>
           <a class="flyer" href="assets/flyer/i-support-mr-pepo-flyer-big.png" target="_blank" rel="noopener">View big flyer</a>
+        </aside>
+      </div>
+    </section>
+    <section class="support-band" id="journals" aria-labelledby="journals-title">
+      <div class="wrap">
+        <aside class="support">
+          <h2 id="journals-title">Journals &amp; diaries</h2>
+          <p>Free printable journals made for neurodivergent minds, to help you plan, calm down and celebrate the small wins.</p>
+          <ul class="journal-grid">
+            <li class="jcard">
+              <img src="downloads/The-Mr-Pepo-Journal-preview.png" alt="The Mr. Pepo Journal cover with Mr. Pepo and his light-bulb idea" loading="lazy" decoding="async">
+              <span class="jname">The Mr. Pepo Journal</span>
+              <span class="jdesc">For people with ADHD, autism, or any neurodivergent mind.</span>
+              <a class="flyer" href="downloads/The-Mr-Pepo-Journal.pdf" download>Download free (PDF)</a>
+            </li>
+            <li class="jcard">
+              <img src="downloads/The-Mr-Pepo-Kids-Journal-preview.png" alt="The Mr. Pepo Kids Journal cover with Mr. Pepo and his light-bulb idea" loading="lazy" decoding="async">
+              <span class="jname">The Mr. Pepo Kids Journal</span>
+              <span class="jdesc">Simple words, drawing boxes and feelings with Luna and Sakura.</span>
+              <a class="flyer" href="downloads/The-Mr-Pepo-Kids-Journal.pdf" download>Download free (PDF)</a>
+            </li>
+            <li class="jcard">
+              <img src="downloads/The-Mr-Pepo-Teen-Journal-preview.png" alt="The Mr. Pepo Teen Journal cover with Mr. Pepo and his light-bulb idea" loading="lazy" decoding="async">
+              <span class="jname">The Mr. Pepo Teen Journal</span>
+              <span class="jdesc">Social battery, masking, goals and words for speaking up.</span>
+              <a class="flyer" href="downloads/The-Mr-Pepo-Teen-Journal.pdf" download>Download free (PDF)</a>
+            </li>
+            <li class="jcard">
+              <img src="downloads/The-Mr-Pepo-Journal-for-Adults-preview.png" alt="The Mr. Pepo Journal for Adults cover with Mr. Pepo and his light-bulb idea" loading="lazy" decoding="async">
+              <span class="jname">The Mr. Pepo Journal for Adults</span>
+              <span class="jdesc">Energy, focus, life admin and the way you work best.</span>
+              <a class="flyer" href="downloads/The-Mr-Pepo-Journal-for-Adults.pdf" download>Download free (PDF)</a>
+            </li>
+            <li class="jcard">
+              <img src="downloads/The-Mr-Pepo-Parent-Journal-preview.png" alt="The Mr. Pepo Parent Journal cover with Mr. Pepo and his light-bulb idea" loading="lazy" decoding="async">
+              <span class="jname">The Mr. Pepo Parent Journal</span>
+              <span class="jdesc">For parents and carers of neurodivergent children.</span>
+              <a class="flyer" href="downloads/The-Mr-Pepo-Parent-Journal.pdf" download>Download free (PDF)</a>
+            </li>
+            <li class="jcard">
+              <img src="downloads/The-Mr-Pepo-Classroom-Journal-preview.png" alt="The Mr. Pepo Classroom Journal cover with Mr. Pepo and his light-bulb idea" loading="lazy" decoding="async">
+              <span class="jname">The Mr. Pepo Classroom Journal</span>
+              <span class="jdesc">For teachers: student strengths, adjustments and calm corners.</span>
+              <a class="flyer" href="downloads/The-Mr-Pepo-Classroom-Journal.pdf" download>Download free (PDF)</a>
+            </li>
+            <li class="jcard">
+              <img src="downloads/The-Mr-Pepo-Gratitude-Journal-preview.png" alt="The Mr. Pepo Gratitude Journal cover with Mr. Pepo and his light-bulb idea" loading="lazy" decoding="async">
+              <span class="jname">The Mr. Pepo Gratitude Journal</span>
+              <span class="jdesc">Small bright moments, thank-you notes and a gratitude jar.</span>
+              <a class="flyer" href="downloads/The-Mr-Pepo-Gratitude-Journal.pdf" download>Download free (PDF)</a>
+            </li>
+            <li class="jcard">
+              <img src="downloads/The-Mr-Pepo-Sleep-and-Routine-Journal-preview.png" alt="The Mr. Pepo Sleep and Routine Journal cover with Mr. Pepo and his light-bulb idea" loading="lazy" decoding="async">
+              <span class="jname">The Mr. Pepo Sleep and Routine Journal</span>
+              <span class="jdesc">Wind-down routines, night and morning pages, calmer sleep.</span>
+              <a class="flyer" href="downloads/The-Mr-Pepo-Sleep-and-Routine-Journal.pdf" download>Download free (PDF)</a>
+            </li>
+            <li class="jcard">
+              <img src="downloads/The-Mr-Pepo-School-Journal-preview.png" alt="The Mr. Pepo School Journal cover with Mr. Pepo and his light-bulb idea" loading="lazy" decoding="async">
+              <span class="jname">The Mr. Pepo School Journal</span>
+              <span class="jdesc">Homework planner, friendships and a break plan.</span>
+              <a class="flyer" href="downloads/The-Mr-Pepo-School-Journal.pdf" download>Download free (PDF)</a>
+            </li>
+          </ul>
         </aside>
       </div>
     </section>
