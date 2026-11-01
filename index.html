@@ -1793,6 +1793,99 @@
         padding: 26px 0 22px;
       }
     }
+
+    .about-pepo {
+      padding: 48px 0 56px;
+    }
+
+    .about-card {
+      width: min(780px, 100%);
+      margin: 0 auto;
+      padding: 30px 28px 26px;
+      background: var(--cream);
+      border: 3px solid var(--brick);
+      border-radius: 22px;
+      box-shadow: 0 14px 30px rgba(58, 42, 20, 0.18);
+      color: var(--ink);
+    }
+
+    .about-card h2 {
+      margin: 0 0 6px;
+      font-size: clamp(1.7rem, 3.6vw, 2.4rem);
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    .about-sub {
+      margin: 0 0 18px;
+      text-align: center;
+      font-family: var(--hand);
+      font-size: 1.2rem;
+    }
+
+    .about-art {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 0 20px;
+      border-radius: 16px;
+      border: 3px solid var(--line);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 24px;
+    }
+
+    .about-block {
+      margin: 0 0 16px;
+    }
+
+    .about-block h3 {
+      margin: 0 0 6px;
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: 1.35rem;
+      color: var(--brick);
+    }
+
+    .about-card p,
+    .about-list,
+    .about-links {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+
+    .about-list,
+    .about-links {
+      padding-left: 1.3rem;
+    }
+
+    .about-list li,
+    .about-links li { margin: 3px 0; }
+
+    .about-card a {
+      color: var(--link);
+      font-weight: 700;
+    }
+
+    .about-halloween,
+    .about-prices {
+      margin: 0 0 16px !important;
+      padding: 10px 14px;
+      background: var(--yellow);
+      border: 2px dashed var(--line);
+      border-radius: 14px;
+    }
+
+    .about-prices { margin-bottom: 0 !important; }
+
+    @media (max-width: 640px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .about-card { padding: 22px 18px 20px; }
+    }
   </style>
 </head>
 <body id="top">
@@ -1978,6 +2071,44 @@
         <p class="side-switch">Looking for help with your business? <a href="#business">Go to Small business &rarr;</a></p>
       </div>
     </header>
+    <section class="about-pepo" id="about-pepo-studios" aria-labelledby="about-pepo-title">
+      <div class="wrap">
+        <div class="about-card">
+          <h2 id="about-pepo-title">Please have a read before you say anything about my stuff</h2>
+          <p class="about-sub">Peter Slizik &middot; Pepo Studios &middot; Sydney</p>
+          <img class="about-art" src="images/pepo-studios-crew.jpg" alt="Mr. Pepo with a glowing light bulb above him, beside a paper robot, bunny, dog, rocket, pumpkins, colouring sheets and books" width="1152" height="864" loading="lazy" decoding="async">
+          <div class="about-grid">
+            <div class="about-block">
+              <h3>What Pepo Studios is</h3>
+              <p>Pepo Studios is my project. Mr. Pepo is the guy with the light bulb: quirky, witty and full of ideas, because he is neurodiverse. I turn his ideas into practical printable paper products, colouring sheets and bedtime story books for kids, families and teachers.</p>
+            </div>
+            <div class="about-block">
+              <h3>The cause</h3>
+              <p>It is a not-for-profit neurodiversity awareness project. Different brains build brilliant things, and every page you print helps more people see that. No big company, no profit, just a lot of paper, glue and ideas.</p>
+            </div>
+          </div>
+          <div class="about-block">
+            <h3>What we make</h3>
+            <ul class="about-list">
+              <li><strong>Paper crafts:</strong> paper rockets like the Pepcon Heavy, pumpkin boxes and spooky paper houses.</li>
+              <li><strong>Colouring sheets:</strong> print it, colour it, stick it on the fridge.</li>
+              <li><strong>Bedtime books:</strong> &ldquo;Mr. Pepo and the Not-So-Spooky Night&rdquo;, coming to Amazon KDP.</li>
+            </ul>
+          </div>
+          <p class="about-halloween"><strong>Halloween 2026:</strong> my garage in Campsie is dressed up as a Mr. Pepo display. Kids, wave hello!</p>
+          <div class="about-block">
+            <h3>Find us</h3>
+            <ul class="about-links">
+              <li>Shop <a href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">payhip.com/PepoStudios</a></li>
+              <li>Instagram <a href="https://instagram.com/pepo_studios" target="_blank" rel="noopener noreferrer">@pepo_studios</a></li>
+              <li>Website <a href="https://pietroslizik-ux.github.io/Pepo-temp-site/">pietroslizik-ux.github.io/Pepo-temp-site</a></li>
+              <li>YouTube <a href="https://youtube.com/@MrPepoStories" target="_blank" rel="noopener noreferrer">@MrPepoStories</a></li>
+            </ul>
+          </div>
+          <p class="about-prices"><strong>Shop prices:</strong> support what it's worth, from a gold coin a page.</p>
+        </div>
+      </div>
+    </section>
     <section class="motto motto-yellow" aria-label="One door closes. The red one opens.">
       <p class="motto-accent">Pepo Studios</p>
       <p class="motto-quote">One door closes. The red one opens.</p>
