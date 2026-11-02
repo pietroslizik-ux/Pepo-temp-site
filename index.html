@@ -2193,6 +2193,192 @@
       height: 1px !important;
       opacity: 0 !important;
     }
+
+    .paper-studio {
+      --ps-bg: #efe6d4;
+      --ps-paper: #f7f1e4;
+      --ps-ink: #3a2a14;
+      --ps-muted: #6b5344;
+      --ps-rule: #cbb89a;
+      --ps-accent: #6e4b32;
+      --ps-blue: #3d4f73;
+      --ps-serif: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, "Times New Roman", serif;
+      margin: 8px 0 18px;
+      padding: 28px 26px 22px;
+      background: var(--ps-bg);
+      color: var(--ps-ink);
+      border: 1px solid var(--ps-rule);
+      border-radius: 2px;
+      font-family: var(--ps-serif);
+      line-height: 1.6;
+      overflow-wrap: break-word;
+    }
+
+    .paper-studio-intro {
+      display: grid;
+      grid-template-columns: minmax(148px, 210px) minmax(0, 1fr);
+      gap: 18px 26px;
+      align-items: center;
+      margin: 0 0 20px;
+      padding: 0 0 18px;
+      border-bottom: 1px solid var(--ps-rule);
+    }
+
+    .paper-studio-portrait {
+      display: block;
+      width: 100%;
+      height: 268px;
+      object-fit: cover;
+      object-position: 18% 42%;
+      background: var(--ps-paper);
+      border: 1px solid var(--ps-rule);
+    }
+
+    .paper-studio h3 {
+      margin: 0 0 8px;
+      font-family: var(--ps-serif);
+      font-weight: 700;
+      font-size: clamp(1.45rem, 2.4vw, 1.85rem);
+      line-height: 1.2;
+      color: var(--ps-ink);
+    }
+
+    .paper-studio p,
+    .paper-studio li,
+    .paper-studio label {
+      font-family: var(--ps-serif);
+    }
+
+    .paper-studio p {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .paper-studio p + p {
+      margin-top: 0.8em;
+    }
+
+    .paper-studio-about {
+      margin: 0;
+      color: var(--ps-ink);
+    }
+
+    .paper-studio-motto {
+      margin: 12px 0 0;
+      font-style: italic;
+      font-size: 1.2rem;
+      line-height: 1.35;
+      color: var(--ps-accent);
+    }
+
+    .paper-studio .mastermind-kicker {
+      margin: 1.15em 0 0.35em;
+      font-family: var(--ps-serif);
+      font-style: normal;
+      font-variant: small-caps;
+      font-weight: 700;
+      font-size: 1.02rem;
+      letter-spacing: 0.04em;
+      color: var(--ps-blue);
+    }
+
+    .paper-studio .mastermind-steps {
+      margin: 4px 0 0;
+      padding-left: 1.25rem;
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+
+    .paper-studio .mastermind-steps li {
+      margin: 4px 0;
+    }
+
+    .paper-studio .alpha-full-note {
+      margin-top: 0.85em;
+      padding: 10px 12px;
+      background: var(--ps-paper);
+      border: 1px solid var(--ps-rule);
+      border-radius: 2px;
+      font-weight: 600;
+    }
+
+    .paper-studio .mastermind-form {
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .paper-studio .mastermind-form label {
+      font-family: var(--ps-serif);
+      font-weight: 700;
+      font-size: 0.98rem;
+    }
+
+    .paper-studio .mastermind-form input[type="text"],
+    .paper-studio .mastermind-form input[type="email"] {
+      padding: 10px 12px;
+      color: var(--ps-ink);
+      font-family: var(--ps-serif);
+      font-size: 1rem;
+      background: var(--ps-paper);
+      border: 1px solid var(--ps-rule);
+      border-radius: 2px;
+    }
+
+    .paper-studio .mastermind-form input:focus-visible,
+    .paper-studio .mastermind-form button:focus-visible {
+      outline: 2px solid var(--ps-blue);
+      outline-offset: 2px;
+    }
+
+    .paper-studio .mastermind-form button {
+      padding: 11px 18px;
+      background: var(--ps-accent);
+      color: var(--ps-paper);
+      font-family: var(--ps-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      border: 1px solid var(--ps-accent);
+      border-radius: 2px;
+      box-shadow: none;
+    }
+
+    .paper-studio .mastermind-form button:hover {
+      background: #5c3e2a;
+      border-color: #5c3e2a;
+    }
+
+    .paper-studio a {
+      color: var(--ps-blue);
+      font-weight: 600;
+    }
+
+    @media (max-width: 640px) {
+      .paper-studio {
+        padding: 18px 14px 16px;
+      }
+
+      .paper-studio-intro {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 14px;
+        margin-bottom: 16px;
+        padding-bottom: 14px;
+      }
+
+      .paper-studio-portrait {
+        width: min(220px, 78%);
+        height: 248px;
+      }
+
+      .paper-studio-lead {
+        width: 100%;
+      }
+
+      .paper-studio .mastermind-form button {
+        width: 100%;
+      }
+    }
   </style>
   <link rel="stylesheet" href="assets/pepo-mark.css">
   <link rel="stylesheet" href="assets/pepo-helper.css">
@@ -2377,7 +2563,7 @@
     <div class="side side-nfp" id="nfp">
     <header class="side-banner side-banner-nfp" aria-labelledby="nfp-title">
       <div class="wrap">
-        <p class="side-kicker">You are on the neurodiversity awareness side</p>
+        <p class="side-kicker">Neurodiversity awareness</p>
         <h2 id="nfp-title">Neurodiversity awareness</h2>
         <p>Mr. Pepo, neurodiversity awareness, the paper window, the support flyer and free printables.</p>
         <p class="side-switch">Looking for help with your business? <a href="#business">Go to Small business &rarr;</a></p>
@@ -2386,7 +2572,7 @@
     <section class="about-pepo" id="about-pepo-studios" aria-labelledby="about-pepo-title">
       <div class="wrap">
         <div class="about-card">
-          <h2 id="about-pepo-title">Look first, talk after.</h2>
+          <h2 id="about-pepo-title">Look and think before you speak.</h2>
           <p class="about-sub">Peter Slizik &middot; Pepo Studios &middot; Sydney</p>
           <img class="about-art" src="images/pepo-studios-crew.jpg" alt="Mr. Pepo with a glowing light bulb above him, beside a paper robot, bunny, dog, rocket, pumpkins, colouring sheets and books" width="1152" height="864" loading="lazy" decoding="async">
           <div class="about-grid">
@@ -2417,8 +2603,15 @@
             <p>I want this to reach as many people as possible, here in Australia and all around the world. Free for everyone, or support what it's worth.</p>
             <p class="why-sign">&mdash; Peter</p>
           </section>
-          <section class="why-card" id="mastermind" aria-labelledby="mastermind-title">
-            <h3 id="mastermind-title">Alpha Mastermind</h3>
+          <section class="paper-studio" id="mastermind" aria-labelledby="mastermind-title">
+            <div class="paper-studio-intro">
+              <img class="paper-studio-portrait" src="images/pepo-choose/official.jpg" alt="Mr. Pepo with a grey ponytail and curly moustache, in a brown shirt and shorts, raising a light bulb" width="1280" height="720" loading="lazy" decoding="async">
+              <div class="paper-studio-lead">
+                <h3 id="mastermind-title">Alpha Mastermind</h3>
+                <p class="paper-studio-about">Alpha Mastermind is a small group for people with a special ability who are building something real. Approved members get a private page and an access code.</p>
+                <p class="paper-studio-motto">Look and think before you speak.</p>
+              </div>
+            </div>
             <p>I'm starting a mastermind for people with special abilities. Minds that notice things most people walk right past. It's not about being better than anyone. It's about finally having room to think out loud with people who get it. If that sounds like you, keep an eye on this page.</p>
             <p><strong>Limited to 20 members per class.</strong></p>
             <h4 class="mastermind-kicker">How to get in</h4>
