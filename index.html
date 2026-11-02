@@ -3068,6 +3068,76 @@
     .story-print li { margin: 4px 0; line-height: 1.45; }
     .story-print p { margin: 10px 0 0; }
 
+/* Binding tips and tricks: palette only (#FDF8EE #8C5F3C #F5C85A #FAECCD #46321F) */
+.story-bind {
+  max-width: 860px;
+  margin: 14px auto 0;
+  padding: 14px 16px 16px;
+  background: #FAECCD;
+  color: #46321F;
+  border-left: 8px solid #F5C85A;
+  border-radius: 0 18px 18px 0;
+}
+.free-stories .story-bind h3 { margin: 0 0 8px; }
+.story-bind-lead { margin: 0 0 12px; line-height: 1.5; }
+.story-bind-step {
+  display: grid;
+  grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  margin: 12px 0 0;
+  padding: 12px;
+  background: #FDF8EE;
+  border: 2px solid #8C5F3C;
+  border-radius: 14px;
+}
+.story-bind-step img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: #FDF8EE;
+}
+.story-bind h4 { margin: 0 0 6px; color: #8C5F3C; font-size: 1.1rem; }
+.story-bind ul { margin: 0; padding-left: 1.2rem; }
+.story-bind li { margin: 4px 0; line-height: 1.45; }
+.story-bind-note { margin: 12px 0 0; font-weight: 700; }
+.story-bind-download {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin: 14px 0 0;
+  padding: 12px;
+  background: #FDF8EE;
+  border: 2px dashed #8C5F3C;
+  border-radius: 14px;
+}
+.story-bind-download img {
+  width: 96px;
+  height: auto;
+  border: 2px solid #8C5F3C;
+  border-radius: 8px;
+}
+.story-bind-button {
+  display: inline-block;
+  min-height: 48px;
+  padding: 12px 18px;
+  background: #8C5F3C;
+  color: #FDF8EE;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid #8C5F3C;
+  border-radius: 999px;
+}
+.story-bind-button:hover { background: #F5C85A; color: #46321F; }
+.story-bind-button:focus-visible { outline: 3px solid #8C5F3C; outline-offset: 3px; }
+@media (max-width: 640px) {
+  .story-bind-step { grid-template-columns: 1fr; }
+  .story-bind-step img { max-width: 360px; }
+  .story-bind-button { width: 100%; text-align: center; }
+}
+
     .story-amazon-note {
       flex-basis: 100%;
       margin: 2px 0 0;
@@ -3484,11 +3554,89 @@
           <ul>
             <li>Download the free PDF and open it.</li>
             <li>Choose Print, then pick 'Fit to page' (or 'Scale to fit') on A4 or Letter paper.</li>
-            <li>Print double-sided if your printer can, flipping on the long edge. Otherwise print one side.</li>
-            <li>Staple or fold along the left side to make a little book.</li>
+            <li>Print on one side only, then glue the pages back to back with a glue stick and bind them however you like (see the binding tips below).</li>
             <li>The inside pages are black and white, so they're ready for colouring in.</li>
           </ul>
           <p>Book pages are square, 216 x 216 mm.</p>
+        </aside>
+        <aside class="story-bind" id="binding-tips" aria-labelledby="story-bind-title">
+          <h3 id="story-bind-title">Binding tips and tricks</h3>
+          <p class="story-bind-lead">Works for any Mr. Pepo book. No need to think about printing on the other side. Print one side, glue, then bind however you like.</p>
+
+          <div class="story-bind-step">
+            <img src="images/binding/binding-glue-stick.jpg" alt="Mr. Pepo rubbing a glue stick on the back of a printed page" width="800" height="600" loading="lazy" decoding="async">
+            <div>
+              <h4>First: glue the pages back to back</h4>
+              <ul>
+                <li>Print every page on one side only.</li>
+                <li>Keep the pages in order. Take the first page and the next one, and lay them face down.</li>
+                <li>Rub a glue stick all over the back of one page, right out to the edges.</li>
+                <li>Press the two pages back to back, so both pictures face out.</li>
+                <li>Line up the edges and smooth from the middle outwards.</li>
+                <li>Do the same for the next two pages, and so on to the end.</li>
+                <li>Let it dry under a heavy book, then bind it any way you like.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="story-bind-step">
+            <img src="images/binding/binding-stapler.jpg" alt="Mr. Pepo using a stapler on the edge of a little book" width="800" height="600" loading="lazy" decoding="async">
+            <div>
+              <h4>Normal stapler</h4>
+              <ul>
+                <li>Stack the glued pages in order and tap them on the table so the edges line up.</li>
+                <li>Hold them with a clip or a peg.</li>
+                <li>Staple close to the spine edge, about a finger width in.</li>
+                <li>Put one staple near the top and one near the bottom. Add one in the middle for a bigger book.</li>
+                <li>If the stack is too thick, staple from the front, then turn it over and add staples from the back.</li>
+                <li>Folded booklet instead? Open the stapler out flat, lay the booklet open and face down on thick cardboard, and staple along the fold.</li>
+                <li>Lift it off the cardboard and press the staple legs flat with the back of a spoon.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="story-bind-step">
+            <img src="images/binding/binding-needle-thread.jpg" alt="Mr. Pepo sewing the edge of a little book with needle and yellow thread" width="800" height="600" loading="lazy" decoding="async">
+            <div>
+              <h4>Needle and thread</h4>
+              <ul>
+                <li>An adult helps with the pushpin and needle.</li>
+                <li>Clip the pages together and lay them on cardboard.</li>
+                <li>Push a pushpin through near the spine edge: one hole near the top, one in the middle, one near the bottom. Keep the holes a finger width from the edge.</li>
+                <li>Thick book? Make the holes a few pages at a time, using the first page as a guide.</li>
+                <li>Cut thread about three times as long as the book is tall, and thread the needle.</li>
+                <li>Go in through the middle hole from the back. Leave a tail of thread behind.</li>
+                <li>Go out through the top hole.</li>
+                <li>Skip the middle and go in through the bottom hole.</li>
+                <li>Come back out through the middle hole.</li>
+                <li>Pull it snug, tie the two ends in a double knot over the long stitch, and trim.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="story-bind-step">
+            <img src="images/binding/binding-wire-twist.jpg" alt="Mr. Pepo twisting a short piece of wire with pliers to bind a little book" width="800" height="600" loading="lazy" decoding="async">
+            <div>
+              <h4>Bent wire (paper clip or garden wire)</h4>
+              <ul>
+                <li>An adult does this one, or helps closely. Wire ends are sharp.</li>
+                <li>Make two holes near the spine edge, one near the top and one near the bottom, with a pushpin or a hole punch.</li>
+                <li>Straighten a big paper clip, or cut a short piece of soft garden wire.</li>
+                <li>Push it through both holes from the front, so the ends come out at the back.</li>
+                <li>Twist the ends together tightly with pliers, so the pages are held snug.</li>
+                <li>Trim the extra wire.</li>
+                <li>Fold the twist down flat and press it against the back cover so no sharp end sticks out.</li>
+                <li>Cover it with a bit of tape for extra safety.</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="story-bind-note">Any way you bind it is the right way. Have fun with it.</p>
+
+          <div class="story-bind-download">
+            <img src="downloads/books/mr-pepo-wobbly-day-bed-cover-300.jpg" alt="Cover of Mr. Pepo and the Wobbly Day Bed" width="296" height="300" loading="lazy" decoding="async">
+            <a class="story-bind-button" href="downloads/books/mr-pepo-wobbly-day-bed-A5-print.pdf" download>Download The Wobbly Day Bed (A5, print at home)</a>
+          </div>
         </aside>
         <aside class="story-more" aria-labelledby="more-stories-title">
           <h3 id="more-stories-title">More stories coming</h3>
