@@ -2857,6 +2857,183 @@
         align-items: flex-start;
       }
     }
+
+    .free-stories {
+      scroll-margin-top: 11rem;
+      padding: 8px 0 48px;
+      background: #FDF8EE;
+      color: #46321F;
+    }
+
+    .free-stories h2,
+    .free-stories h3 {
+      margin: 0 0 8px;
+      color: #8C5F3C;
+      font-family: var(--title);
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .free-stories h2 { font-size: clamp(1.8rem, 3.4vw, 2.4rem); }
+    .free-stories h3 { font-size: clamp(1.45rem, 2.6vw, 1.8rem); }
+
+    .free-stories .learn-lead { color: #46321F; }
+
+    .free-stories-card {
+      display: grid;
+      grid-template-columns: minmax(160px, 240px) minmax(0, 1fr);
+      gap: 18px 22px;
+      align-items: start;
+      max-width: 860px;
+      margin: 18px auto 0;
+      padding: 16px;
+      background: #FAECCD;
+      border-radius: 18px;
+    }
+
+    .free-stories-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .story-line {
+      margin: 0 0 12px;
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+
+    .story-read {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      margin: 0 0 12px;
+      padding: 12px 18px;
+      background: #F5C85A;
+      color: #46321F;
+      font-weight: 700;
+      text-decoration: none;
+      border: 2px solid #8C5F3C;
+      border-radius: 999px;
+    }
+
+    .story-frame {
+      display: block;
+      width: 100%;
+      height: 420px;
+      margin: 0 0 14px;
+      background: #FDF8EE;
+      border: 2px solid #8C5F3C;
+      border-radius: 12px;
+    }
+
+    .story-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .story-actions a,
+    .story-actions button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 16px;
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 999px;
+      border: 2px solid #8C5F3C;
+    }
+
+    .story-download {
+      background: #8C5F3C;
+      color: #FDF8EE;
+    }
+
+    .story-support {
+      background: #F5C85A;
+      color: #46321F;
+    }
+
+    .story-amazon {
+      background: #E7DCC8;
+      color: #8A7560;
+      border-color: #C9B89A;
+      cursor: not-allowed;
+    }
+
+    .story-soon {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #8C5F3C;
+    }
+
+    .story-read:focus-visible,
+    .story-actions a:focus-visible,
+    .story-more input:focus-visible,
+    .story-more button:focus-visible {
+      outline: 3px solid #8C5F3C;
+      outline-offset: 3px;
+    }
+
+    .story-more {
+      max-width: 860px;
+      margin: 22px auto 0;
+      padding: 16px 18px;
+      background: #FAECCD;
+      border-left: 8px solid #F5C85A;
+      border-radius: 0 16px 16px 0;
+    }
+
+    .story-more p { margin: 0 0 10px; line-height: 1.5; }
+
+    .story-more form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .story-more input[type="email"] {
+      flex: 1 1 200px;
+      min-height: 48px;
+      padding: 10px 12px;
+      color: #46321F;
+      font-size: 1rem;
+      background: #FDF8EE;
+      border: 2px solid #8C5F3C;
+      border-radius: 12px;
+    }
+
+    .story-more button {
+      min-height: 48px;
+      padding: 12px 16px;
+      background: #8C5F3C;
+      color: #FDF8EE;
+      font-weight: 700;
+      border: 2px solid #8C5F3C;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .story-thanks { margin-top: 8px; font-weight: 700; }
+
+    @media (max-width: 640px) {
+      .free-stories { scroll-margin-top: 13rem; }
+      .free-stories-card { grid-template-columns: 1fr; }
+      .story-frame { display: none; }
+      .story-actions a,
+      .story-actions button,
+      .story-more input[type="email"],
+      .story-more button {
+        width: 100%;
+      }
+    }
   </style>
   <link rel="stylesheet" href="assets/pepo-mark.css">
   <link rel="stylesheet" href="assets/pepo-helper.css">
@@ -2991,6 +3168,7 @@
         <a href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener noreferrer">YouTube</a>
         <a href="https://www.youtube.com/@MrPepoLifeHacks" target="_blank" rel="noopener noreferrer">Grown-ups</a>
         <a href="#learn-at-home">Learn &amp; Make</a>
+        <a href="#free-stories">Free stories</a>
         <a href="#printables">Free printables</a>
         <a href="planners.html">Planners</a>
         <a href="#mr-pepo-journal">Free journal</a>
@@ -3212,6 +3390,46 @@
             </li>
           </ul>
         </article>
+      </div>
+    </section>
+    <section class="free-stories" id="free-stories" aria-labelledby="free-stories-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="free-stories-title">Free Mr. Pepo Stories</h2>
+          <p class="learn-lead">Read a story together, then keep it.</p>
+        </div>
+        <article class="free-stories-card">
+          <img src="downloads/books/mr-pepo-not-so-spooky-night-cover-600.jpg" alt="Cover of Mr. Pepo and the Not-So-Spooky Night, a bedtime story" width="600" height="600" loading="lazy" decoding="async">
+          <div>
+            <h3>Mr. Pepo and the Not-So-Spooky Night</h3>
+            <p class="story-line">A warm bedtime story for a night that only looks spooky, until the lantern light shows the friendly bits.</p>
+            <a class="story-read" href="downloads/books/mr-pepo-not-so-spooky-night-read-online.pdf" target="_blank" rel="noopener noreferrer">Read online free</a>
+            <object class="story-frame" data="downloads/books/mr-pepo-not-so-spooky-night-read-online.pdf" type="application/pdf" aria-label="Read Mr. Pepo and the Not-So-Spooky Night">
+              <a href="downloads/books/mr-pepo-not-so-spooky-night-read-online.pdf" target="_blank" rel="noopener noreferrer">Read online free</a>
+            </object>
+            <div class="story-actions">
+              <a class="story-download" href="downloads/books/mr-pepo-not-so-spooky-night-read-online.pdf" download>Download free</a>
+              <a class="story-support" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">Support what it's worth</a>
+              <button type="button" class="story-amazon" disabled>Buy on Amazon</button>
+              <span class="story-soon">Coming soon to Amazon</span>
+            </div>
+          </div>
+        </article>
+        <aside class="story-more" aria-labelledby="more-stories-title">
+          <h3 id="more-stories-title">More stories coming</h3>
+          <p>Leave your email and Peter will tell you when a new story is ready.</p>
+          <p class="story-thanks" id="stories-thanks" hidden>Thanks! Peter has your email for new stories.</p>
+          <form action="https://formsubmit.co/mr.pepo.au@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Mr. Pepo stories">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://pepostudios.au/?stories=1#free-stories">
+            <input type="hidden" name="interest" value="New Mr. Pepo stories">
+            <input class="signup-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="email" name="email" required autocomplete="email" placeholder="your@email.com" aria-label="Email for new Mr. Pepo stories">
+            <button type="submit">Tell me</button>
+          </form>
+        </aside>
       </div>
     </section>
     <section class="peter-public" id="a-note-from-peter" aria-labelledby="a-note-from-peter-title">
@@ -4139,6 +4357,7 @@
         <a href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener noreferrer">YouTube</a>
         <a href="https://www.youtube.com/@MrPepoLifeHacks" target="_blank" rel="noopener noreferrer">Grown-ups</a>
         <a href="#learn-at-home">Learn &amp; Make</a>
+        <a href="#free-stories">Free stories</a>
         <a href="#printables">Free printables</a>
         <a href="planners.html">Planners</a>
         <a href="#support">Support flyer</a>
@@ -4215,6 +4434,10 @@
       if (new URLSearchParams(window.location.search).get("club") === "1") {
         var clubThanks = document.getElementById("club-thanks");
         if (clubThanks) clubThanks.hidden = false;
+      }
+      if (new URLSearchParams(window.location.search).get("stories") === "1") {
+        var storiesThanks = document.getElementById("stories-thanks");
+        if (storiesThanks) storiesThanks.hidden = false;
       }
     })();
   </script>
