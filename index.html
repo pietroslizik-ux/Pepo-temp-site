@@ -2525,6 +2525,222 @@
     .kpb-soon { display: inline-block; margin-top: 14px; padding: 10px 16px; font-weight: 700; color: var(--brick); border: 3px dashed var(--line); border-radius: 999px; }
     .keep-pepo .peter-note { max-width: 860px; margin: 22px auto 0; }
     @media (max-width: 820px) { .kpb-options { grid-template-columns: 1fr; } }
+
+    .learn-home {
+      scroll-margin-top: 11rem;
+      padding: 56px 0 64px;
+      background: #FDF8EE;
+      color: #46321F;
+    }
+
+    .learn-home .section-head h2,
+    .learn-home h3,
+    .learn-home h4 {
+      color: #46321F;
+      font-family: var(--title);
+      font-weight: 400;
+    }
+
+    .learn-lead {
+      margin: 10px auto 0;
+      max-width: 40rem;
+      font-family: var(--hand);
+      font-weight: 700;
+      font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+      line-height: 1.35;
+    }
+
+    .learn-block {
+      margin: 28px auto 0;
+      max-width: 980px;
+    }
+
+    .learn-block h3 {
+      margin: 0 0 8px;
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      line-height: 1.2;
+    }
+
+    .learn-block p,
+    .learn-club li,
+    .learn-soon-list li {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+
+    .learn-block p + p,
+    .learn-block p + ul,
+    .learn-block ul + p {
+      margin-top: 0.75em;
+    }
+
+    .learn-grid,
+    .learn-tips {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .learn-card {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 10px;
+      background: #FAECCD;
+      color: #46321F;
+      font-weight: 700;
+      text-decoration: none;
+      border: 2px solid #8C5F3C;
+      border-radius: 16px;
+    }
+
+    .learn-card img {
+      display: block;
+      width: 100%;
+      height: 210px;
+      object-fit: contain;
+      background: #FDF8EE;
+      border-radius: 10px;
+    }
+
+    .learn-card span {
+      font-family: var(--sans);
+      font-size: 0.98rem;
+      line-height: 1.3;
+    }
+
+    .learn-download,
+    .learn-club button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      margin-top: 14px;
+      padding: 12px 18px;
+      background: #8C5F3C;
+      color: #FDF8EE;
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      border: 2px solid #8C5F3C;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .learn-download:hover,
+    .learn-club button:hover {
+      background: #F5C85A;
+      color: #46321F;
+      border-color: #8C5F3C;
+    }
+
+    .learn-download:focus-visible,
+    .learn-club button:focus-visible,
+    .learn-club input:focus-visible,
+    .learn-card:focus-visible {
+      outline: 3px solid #8C5F3C;
+      outline-offset: 3px;
+    }
+
+    .learn-club {
+      margin-top: 8px;
+      padding: 18px 18px 16px;
+      background: #FAECCD;
+      border: 2px solid #8C5F3C;
+      border-radius: 18px;
+    }
+
+    .learn-club ul {
+      margin: 8px 0 0;
+      padding-left: 1.2rem;
+    }
+
+    .learn-club li { margin: 4px 0; }
+
+    .learn-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .learn-form input[type="email"] {
+      flex: 1 1 200px;
+      min-height: 48px;
+      padding: 10px 12px;
+      color: #46321F;
+      font-family: var(--sans);
+      font-size: 1rem;
+      background: #FDF8EE;
+      border: 2px solid #8C5F3C;
+      border-radius: 12px;
+    }
+
+    .learn-thanks {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+
+    .learn-soon-list {
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .learn-soon-list li {
+      margin: 0 0 8px;
+      padding: 10px 12px;
+      background: #FAECCD;
+      border: 2px solid #8C5F3C;
+      border-radius: 14px;
+    }
+
+    .learn-tips li {
+      padding: 14px 14px 12px;
+      background: #FAECCD;
+      border: 2px solid #8C5F3C;
+      border-radius: 16px;
+    }
+
+    .learn-tips h4 {
+      margin: 0 0 6px;
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+
+    .learn-soon {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 4px 10px;
+      background: #F5C85A;
+      color: #46321F;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border-radius: 999px;
+    }
+
+    @media (max-width: 640px) {
+      .learn-home {
+        scroll-margin-top: 13rem;
+        padding: 40px 0 48px;
+      }
+
+      .learn-grid,
+      .learn-tips {
+        grid-template-columns: 1fr;
+      }
+
+      .learn-download,
+      .learn-club button,
+      .learn-form input[type="email"] {
+        width: 100%;
+      }
+    }
   </style>
   <link rel="stylesheet" href="assets/pepo-mark.css">
   <link rel="stylesheet" href="assets/pepo-helper.css">
@@ -2658,6 +2874,7 @@
         <a href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">Shop</a>
         <a href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener noreferrer">YouTube</a>
         <a href="https://www.youtube.com/@MrPepoLifeHacks" target="_blank" rel="noopener noreferrer">Grown-ups</a>
+        <a href="#learn-at-home">Learn &amp; Make</a>
         <a href="#printables">Free printables</a>
         <a href="planners.html">Planners</a>
         <a href="#mr-pepo-journal">Free journal</a>
@@ -2685,6 +2902,7 @@
         <p class="bounce-tagline">Built to bounce back</p>
         <p class="nfp-statement">Mr. Pepo is a neurodiversity awareness project by Pepo Studios</p>
         <p class="tagline">Welcome! Fold, build, organise yourself and play with fun paper models and journals from Pepo Studios.</p>
+        <p class="tagline">Pepo Studios is a very helpful page to visit, where people learn how to help themselves.</p>
         <div class="actions">
           <a class="primary" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">Visit the Pepo Studios Shop</a>
           <div class="secondary-row">
@@ -2702,8 +2920,175 @@
               </svg>
               Mr. Pepo Life Hacks (grown-ups)
             </a>
+            <a class="secondary" href="#learn-at-home">Learn &amp; Make at Home</a>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="learn-home" id="learn-at-home" aria-labelledby="learn-at-home-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="learn-at-home-title">Learn &amp; Make at Home</h2>
+          <p class="learn-lead">Practical, hands-on ways kids and families can learn physics and creativity at home with paper.</p>
+        </div>
+
+        <article class="learn-block" aria-labelledby="spinner-title">
+          <h3 id="spinner-title">Fidget spinner printables</h3>
+          <p>Free for everyone: the basic Pepo spinner set (three-arm page, mixed page, how-to page). Print it on cardstock, cut it out and spin.</p>
+          <ul class="learn-grid">
+            <li>
+              <a class="learn-card" href="images/learn/pepo-spinner-three-arm.png">
+                <img src="images/learn/pepo-spinner-three-arm.png" alt="Three-arm Pepo fidget spinner sheet" width="2480" height="3508" loading="lazy" decoding="async">
+                <span>Three-arm spinner</span>
+              </a>
+            </li>
+            <li>
+              <a class="learn-card" href="images/learn/pepo-spinner-mixed.png">
+                <img src="images/learn/pepo-spinner-mixed.png" alt="Mixed Pepo fidget spinner sheet" width="2480" height="3508" loading="lazy" decoding="async">
+                <span>Mixed spinner page</span>
+              </a>
+            </li>
+            <li>
+              <a class="learn-card" href="images/learn/pepo-spinner-how-to.png">
+                <img src="images/learn/pepo-spinner-how-to.png" alt="How to cut and build a Pepo fidget spinner" width="2480" height="3508" loading="lazy" decoding="async">
+                <span>How to make it</span>
+              </a>
+            </li>
+          </ul>
+          <a class="learn-download" href="downloads/learn/pepo-fidget-spinners-all.pdf" download>Download the free spinner set (PDF)</a>
+        </article>
+
+        <article class="learn-block" aria-labelledby="spinner-club-title">
+          <h3 id="spinner-club-title">Pepo Spinner Club</h3>
+          <div class="learn-club">
+            <p><strong>Join the Pepo Spinner Club: support what it's worth.</strong> Choose any amount that feels right. If you'd like a starting point, members often pick one gold coin (A$1), two gold coins (A$2) or five gold coins (A$5). Any other amount is welcome too, and every member gets the same club.</p>
+            <p>Members unlock:</p>
+            <ul>
+              <li>More Pepo designs</li>
+              <li>Exclusive colours you won't find in the free set</li>
+              <li>Regular new spinner releases, straight to your inbox</li>
+              <li>First word on every new Pepo Studios product and release</li>
+            </ul>
+            <p>Send your email if you'd like to join. This note goes to Peter. There is no payment on this page.</p>
+            <p class="learn-thanks" id="club-thanks" hidden>Thanks! Peter has your email for the Pepo Spinner Club.</p>
+            <form class="learn-form" action="https://formsubmit.co/mr.pepo.au@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="Pepo Spinner Club interest">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="https://pepostudios.au/?club=1#learn-at-home">
+              <input type="hidden" name="interest" value="Pepo Spinner Club">
+              <input class="signup-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <input type="email" name="email" required autocomplete="email" placeholder="your@email.com" aria-label="Email for the Pepo Spinner Club">
+              <button type="submit">Count me in</button>
+            </form>
+          </div>
+        </article>
+
+        <article class="learn-block" aria-labelledby="flipbook-title">
+          <h3 id="flipbook-title">Pepo Flipbook</h3>
+          <p>See how movies move by putting pictures one behind the other. Print the frames, stack them, and flip.</p>
+          <ul class="learn-grid">
+            <li>
+              <a class="learn-card" href="images/learn/pepo-flipbook-how-to.png">
+                <img src="images/learn/pepo-flipbook-how-to.png" alt="How to make a Pepo flipbook" width="2480" height="3508" loading="lazy" decoding="async">
+                <span>How a flipbook works</span>
+              </a>
+            </li>
+            <li>
+              <a class="learn-card" href="images/learn/pepo-flipbook-frames-a.png">
+                <img src="images/learn/pepo-flipbook-frames-a.png" alt="Pepo flipbook frames, first sheet" width="2480" height="3508" loading="lazy" decoding="async">
+                <span>Frames, first sheet</span>
+              </a>
+            </li>
+            <li>
+              <a class="learn-card" href="images/learn/pepo-flipbook-frames-b.png">
+                <img src="images/learn/pepo-flipbook-frames-b.png" alt="Pepo flipbook frames, second sheet" width="2480" height="3508" loading="lazy" decoding="async">
+                <span>Frames, second sheet</span>
+              </a>
+            </li>
+          </ul>
+          <a class="learn-download" href="downloads/learn/pepo-flipbook-all.pdf" download>Download the flipbook (PDF)</a>
+        </article>
+
+        <article class="learn-block" aria-labelledby="animation-title">
+          <h3 id="animation-title">Animation ideas</h3>
+          <p>Coming soon, one idea at a time.</p>
+          <ul class="learn-soon-list">
+            <li>Thaumatrope, a two-sided spinning disc.</li>
+            <li>Zoetrope wheel.</li>
+            <li>Phenakistoscope disc.</li>
+            <li>Two-page flicker.</li>
+            <li>Mr. Pepo story strip.</li>
+            <li>Cause-and-effect frames.</li>
+            <li>Draw-your-own frames.</li>
+            <li>Spinner animation.</li>
+            <li>Shadow puppet movie.</li>
+            <li>Stop-motion set.</li>
+            <li>Layered overlay sheets.</li>
+          </ul>
+        </article>
+
+        <article class="learn-block" aria-labelledby="physics-title">
+          <h3 id="physics-title">Physics play pages</h3>
+          <p>Four paper plays that show a real idea from science.</p>
+          <ul class="learn-grid">
+            <li>
+              <a class="learn-card" href="images/learn/physics-spinning-top.png">
+                <img src="images/learn/physics-spinning-top.png" alt="Spinning top physics play page" width="2480" height="3508" loading="lazy" decoding="async">
+                <span>Spinning Top, rotational inertia</span>
+              </a>
+            </li>
+            <li>
+              <a class="learn-card" href="images/learn/physics-balloon-rocket.png">
+                <img src="images/learn/physics-balloon-rocket.png" alt="Balloon rocket physics play page" width="2480" height="3508" loading="lazy" decoding="async">
+                <span>Balloon Rocket, Newton's third law</span>
+              </a>
+            </li>
+            <li>
+              <a class="learn-card" href="images/learn/physics-paper-plane.png">
+                <img src="images/learn/physics-paper-plane.png" alt="Paper plane physics play page" width="2480" height="3508" loading="lazy" decoding="async">
+                <span>Paper Plane, aerodynamics</span>
+              </a>
+            </li>
+            <li>
+              <a class="learn-card" href="images/learn/physics-shadow-clock.png">
+                <img src="images/learn/physics-shadow-clock.png" alt="Shadow clock physics play page" width="2480" height="3508" loading="lazy" decoding="async">
+                <span>Shadow Clock, Earth's rotation</span>
+              </a>
+            </li>
+          </ul>
+          <a class="learn-download" href="downloads/learn/pepo-physics-play-all.pdf" download>Download the physics pages (PDF)</a>
+        </article>
+
+        <article class="learn-block" aria-labelledby="gadgets-title">
+          <h3 id="gadgets-title">At-home paper gadgets and tips</h3>
+          <ul class="learn-tips">
+            <li>
+              <h4>Paper phone holder</h4>
+              <p>Fold cardstock into a triangle stand.</p>
+            </li>
+            <li>
+              <h4>Paper cable tidy</h4>
+              <p>A little paper wrap that keeps a cable from wandering.</p>
+              <span class="learn-soon">Coming soon</span>
+            </li>
+            <li>
+              <h4>Paper bookmark corner</h4>
+              <p>A folded corner that holds your page.</p>
+              <span class="learn-soon">Coming soon</span>
+            </li>
+            <li>
+              <h4>Paper desk organiser</h4>
+              <p>Small paper trays for pens and bits.</p>
+              <span class="learn-soon">Coming soon</span>
+            </li>
+            <li>
+              <h4>Paper drawer dividers</h4>
+              <p>Folded strips that sort a drawer.</p>
+              <span class="learn-soon">Coming soon</span>
+            </li>
+          </ul>
+        </article>
       </div>
     </section>
     <div class="side side-nfp" id="nfp">
@@ -3609,6 +3994,7 @@
         <a href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">Shop</a>
         <a href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener noreferrer">YouTube</a>
         <a href="https://www.youtube.com/@MrPepoLifeHacks" target="_blank" rel="noopener noreferrer">Grown-ups</a>
+        <a href="#learn-at-home">Learn &amp; Make</a>
         <a href="#printables">Free printables</a>
         <a href="planners.html">Planners</a>
         <a href="#support">Support flyer</a>
@@ -3680,6 +4066,10 @@
       if (new URLSearchParams(window.location.search).get("journal") === "1") {
         var journalThanks = document.querySelector(".journal-thanks");
         if (journalThanks) journalThanks.hidden = false;
+      }
+      if (new URLSearchParams(window.location.search).get("club") === "1") {
+        var clubThanks = document.getElementById("club-thanks");
+        if (clubThanks) clubThanks.hidden = false;
       }
     })();
   </script>
