@@ -2724,6 +2724,45 @@
       border-radius: 999px;
     }
 
+    .pepo-idea {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      max-width: 860px;
+      margin: 0 auto 28px;
+      padding: 16px 18px 16px 16px;
+      background: #FAECCD;
+      color: #46321F;
+      border-left: 8px solid #F5C85A;
+      border-radius: 0 16px 16px 0;
+    }
+
+    .pepo-idea img {
+      display: block;
+      width: 92px;
+      height: 120px;
+      flex: 0 0 auto;
+      object-fit: cover;
+      object-position: 16% 42%;
+      background: #FDF8EE;
+      border-radius: 10px;
+    }
+
+    .learn-home .pepo-idea-title {
+      margin: 0 0 6px;
+      color: #8C5F3C;
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: clamp(1.45rem, 2.6vw, 1.8rem);
+      line-height: 1.2;
+    }
+
+    .pepo-idea p {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+
     @media (max-width: 640px) {
       .learn-home {
         scroll-margin-top: 13rem;
@@ -2739,6 +2778,10 @@
       .learn-club button,
       .learn-form input[type="email"] {
         width: 100%;
+      }
+
+      .pepo-idea {
+        align-items: flex-start;
       }
     }
   </style>
@@ -2927,6 +2970,13 @@
     </section>
     <section class="learn-home" id="learn-at-home" aria-labelledby="learn-at-home-title">
       <div class="wrap">
+        <aside class="pepo-idea">
+          <img src="images/pepo-choose/official.jpg" alt="Mr. Pepo with a grey ponytail and curly moustache, in a brown shirt and shorts, raising a light bulb" width="1280" height="720" loading="lazy" decoding="async">
+          <div>
+            <h3 class="pepo-idea-title">Mr. Pepo's Big Idea</h3>
+            <p>When you really want something and you love it with your whole heart, almost nothing can stop you, because you can always dream up a new idea. Kids are the best at this. Grown-ups sometimes forget how, so here's a little tip for the grown-ups: listen to the kids a bit more. They might just have the answer.</p>
+          </div>
+        </aside>
         <div class="section-head">
           <h2 id="learn-at-home-title">Learn &amp; Make at Home</h2>
           <p class="learn-lead">Practical, hands-on ways kids and families can learn physics and creativity at home with paper.</p>
