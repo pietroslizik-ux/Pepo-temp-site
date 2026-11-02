@@ -3137,6 +3137,45 @@
   .story-bind-step img { max-width: 360px; }
   .story-bind-button { width: 100%; text-align: center; }
 }
+.story-spooky { margin-top: 0; }
+.story-spooky-card {
+  display: grid;
+  grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  padding: 14px;
+  background: #FDF8EE;
+  border: 2px solid #8C5F3C;
+  border-radius: 14px;
+}
+.story-spooky-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid #8C5F3C;
+  border-radius: 10px;
+}
+.free-stories .story-spooky h3 { margin: 0 0 2px; color: #46321F; }
+.story-spooky-tag { margin: 0 0 10px; color: #8C5F3C; font-weight: 700; }
+.story-spooky-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 0; }
+.story-bind-button.story-spooky-alt { background: #F5C85A; color: #46321F; }
+.story-bind-button.story-spooky-alt:hover { background: #8C5F3C; color: #FDF8EE; }
+.story-spooky-meta { margin: 8px 0 0; font-size: .92rem; color: #8C5F3C; }
+.story-spooky-amazon,
+.story-amazon-line {
+  margin: 12px 0 0;
+  padding: 8px 12px;
+  background: #FAECCD;
+  border-radius: 10px;
+  color: #46321F;
+  line-height: 1.45;
+}
+.story-spooky-amazon a,
+.story-amazon-line a { color: #8C5F3C; font-weight: 700; }
+@media (max-width: 640px) {
+  .story-spooky-card { grid-template-columns: 1fr; }
+  .story-spooky-cover img { max-width: 300px; margin: 0 auto; }
+}
 
     .story-amazon-note {
       flex-basis: 100%;
@@ -3521,24 +3560,25 @@
           <h2 id="free-stories-title">Free Mr. Pepo Stories</h2>
           <p class="learn-lead">Read a story together, then keep it.</p>
         </div>
-        <article class="free-stories-card">
-          <img src="downloads/books/mr-pepo-not-so-spooky-night-cover-600.jpg" alt="Cover of Mr. Pepo and the Not-So-Spooky Night, a bedtime story" width="600" height="600" loading="lazy" decoding="async">
-          <div>
-            <h3>Mr. Pepo and the Not-So-Spooky Night</h3>
-            <p class="story-line">A warm bedtime story for a night that only looks spooky, until the lantern light shows the friendly bits.</p>
-            <a class="story-read" href="downloads/books/mr-pepo-not-so-spooky-night-read-online.pdf" target="_blank" rel="noopener noreferrer">Read online free</a>
-            <object class="story-frame" data="downloads/books/mr-pepo-not-so-spooky-night-read-online.pdf" type="application/pdf" aria-label="Read Mr. Pepo and the Not-So-Spooky Night">
-              <a href="downloads/books/mr-pepo-not-so-spooky-night-read-online.pdf" target="_blank" rel="noopener noreferrer">Read online free</a>
-            </object>
-            <div class="story-actions">
-              <a class="story-download" href="downloads/books/mr-pepo-not-so-spooky-night-read-online.pdf" download>Download free</a>
-              <a class="story-support" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">Support what it's worth</a>
-              <p class="story-amazon-note">If you want a nice one, you can buy a nice one from Amazon.</p>
-              <button type="button" class="story-amazon" disabled>Buy on Amazon</button>
-              <span class="story-soon">Coming soon to Amazon</span>
+        <aside class="story-bind story-spooky" id="not-so-spooky-night" aria-labelledby="story-spooky-title">
+          <div class="story-spooky-card">
+            <a class="story-spooky-cover" href="downloads/books/not-so-spooky-night.pdf" target="_blank" rel="noopener noreferrer">
+              <img src="images/books/not-so-spooky-night-cover-800.jpg" alt="Cover of Mr. Pepo and the Not-So-Spooky Night: Mr. Pepo with his lantern, Luna, Howie and Sakura on a porch full of smiling pumpkins" width="800" height="812" loading="lazy" decoding="async">
+            </a>
+            <div>
+              <h3 id="story-spooky-title">Mr. Pepo and the Not-So-Spooky Night</h3>
+              <p class="story-spooky-tag">A Halloween bedtime story</p>
+              <p class="story-bind-lead">It's Halloween night at the little brick house, and a row of pumpkins is glowing with smiley faces. Then comes a sound from outside: thump-thump, thump-thump! Mr. Pepo lifts his little lantern and, together with Luna, Howie and Sakura, goes to find out what it is.</p>
+              <p class="story-bind-lead">A cosy story about being brave together, counting pumpkins and drifting off to sleep. The colour cover opens onto black and white pages, ready for colouring in.</p>
+              <div class="story-spooky-actions">
+                <a class="story-bind-button" href="downloads/books/not-so-spooky-night.pdf" target="_blank" rel="noopener noreferrer">Read online</a>
+                <a class="story-bind-button story-spooky-alt" href="downloads/books/not-so-spooky-night.pdf" download="Mr-Pepo-Not-So-Spooky-Night.pdf">Download free</a>
+              </div>
+              <p class="story-spooky-meta">PDF, 26 pages, about 3 MB. Square pages, easy to print at home.</p>
+              <p class="story-spooky-amazon">Prefer a real book to hold? <span>A printed copy will be on Amazon soon</span> for a small cost.</p>
             </div>
           </div>
-        </article>
+        </aside>
         <div class="story-peek" aria-labelledby="story-peek-title">
           <h3 id="story-peek-title" class="story-peek-title">Peek inside</h3>
           <ul class="story-peek-row">
@@ -3622,6 +3662,7 @@
           <div class="story-bind-download">
             <img src="downloads/books/mr-pepo-wobbly-day-bed-cover-300.jpg" alt="Cover of Mr. Pepo and the Wobbly Day Bed" width="296" height="300" loading="lazy" decoding="async">
             <a class="story-bind-button" href="downloads/books/mr-pepo-wobbly-day-bed-A5-print.pdf" download>Download The Wobbly Day Bed (A5, print at home)</a>
+            <p class="story-amazon-line" style="flex-basis:100%">Prefer a real book to hold? <span>A printed copy will be on Amazon soon</span> for a small cost.</p>
           </div>
         </aside>
         <aside class="story-more" aria-labelledby="more-stories-title">
