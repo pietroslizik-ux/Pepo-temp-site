@@ -2763,6 +2763,45 @@
       line-height: 1.5;
     }
 
+    .peter-public {
+      scroll-margin-top: 11rem;
+      padding: 4px 0 40px;
+      background: #FDF8EE;
+    }
+
+    .peter-public-card {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 18px 20px 16px 18px;
+      background: #FAECCD;
+      color: #46321F;
+      border-left: 8px solid #F5C85A;
+      border-radius: 0 16px 16px 0;
+    }
+
+    .peter-public h2 {
+      margin: 0 0 8px;
+      color: #8C5F3C;
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: clamp(1.45rem, 2.6vw, 1.8rem);
+      line-height: 1.2;
+    }
+
+    .peter-public p {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.55;
+    }
+
+    .peter-public .peter-sign {
+      margin-top: 12px;
+      text-align: right;
+      color: #8C5F3C;
+      font-family: var(--hand);
+      font-weight: 700;
+    }
+
     @media (max-width: 640px) {
       .learn-home {
         scroll-margin-top: 13rem;
@@ -2782,6 +2821,11 @@
 
       .pepo-idea {
         align-items: flex-start;
+      }
+
+      .peter-public {
+        scroll-margin-top: 13rem;
+        padding-bottom: 32px;
       }
     }
   </style>
@@ -3139,6 +3183,15 @@
             </li>
           </ul>
         </article>
+      </div>
+    </section>
+    <section class="peter-public" id="a-note-from-peter" aria-labelledby="a-note-from-peter-title">
+      <div class="wrap">
+        <div class="peter-public-card">
+          <h2 id="a-note-from-peter-title">A note from Peter</h2>
+          <p>Hi. One little birdie told me some kid in the neighbourhood is scared of me. Sorry, very sorry to hear that. Even though I cannot affect how people see me and understand my quirkiness, and frankly, I don't even mind, I'd never do anything to frighten a child. Kids aren't born scared of people. They learn how to feel by watching the grown-ups around them, so how a child acts usually comes from what they've been shown at home. All I can do is be kind, keep to myself, and be a good neighbour, and that's what I'll keep doing. I'm sorry, not sorry, for my quirkiness. I've been hiding for long enough. I'm not sorry now.</p>
+          <p class="peter-sign">— Peter</p>
+        </div>
       </div>
     </section>
     <div class="side side-nfp" id="nfp">
@@ -4053,6 +4106,7 @@
         <a href="#work">Our work</a>
         <a href="#kind-words">Kind words</a>
         <a href="#prices">Prices</a>
+        <a href="#a-note-from-peter">A note from Peter</a>
       </nav>
       <section class="follow-us" aria-labelledby="follow-us-title">
         <h2 id="follow-us-title">Follow Pepo Studios</h2>
