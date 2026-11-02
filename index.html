@@ -3212,6 +3212,21 @@
         width: 100%;
       }
     }
+
+    /* Language picker (preview) */
+    .lang-picker { position: relative; flex: 0 0 auto; }
+    .lang-picker summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; background: #FDF8EE; color: #46321F; border: 2px solid #8C5F3C; border-radius: 999px; font-weight: 700; font-size: .95rem; }
+    .lang-picker summary::-webkit-details-marker { display: none; }
+    .lang-picker summary::after { content: ""; border: 5px solid transparent; border-top-color: #8C5F3C; margin-top: 5px; }
+    .lang-picker summary:focus-visible { outline: 3px solid #8C5F3C; outline-offset: 3px; }
+    .lang-globe { width: 18px; height: 18px; color: #8C5F3C; }
+    .lang-list { position: absolute; right: 0; top: calc(100% + 6px); z-index: 30; margin: 0; padding: 6px; list-style: none; min-width: 170px; background: #FDF8EE; border: 2px solid #8C5F3C; border-radius: 12px; box-shadow: 0 6px 18px rgba(70,50,31,.18); }
+    .lang-list a { display: block; padding: 7px 12px; border-radius: 8px; color: #46321F; font-weight: 700; text-decoration: none; }
+    .lang-list a:hover { background: #FAECCD; }
+    .lang-list a[aria-current] { background: #F5C85A; }
+    .story-lang-row { margin: 10px 0 0; color: #46321F; font-weight: 700; }
+    .story-lang-row a { color: #8C5F3C; }
+    @media (max-width: 640px) { .lang-list { right: auto; left: 0; } }
   </style>
   <link rel="stylesheet" href="assets/pepo-mark.css">
   <link rel="stylesheet" href="assets/pepo-helper.css">
@@ -3357,6 +3372,7 @@
         <a href="#kind-words">Kind words</a>
         <a href="#prices">Prices</a>
       </nav>
+      <details class="lang-picker"><summary aria-label="Language"><svg class="lang-globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2.5 12h19M12 2.5c3 3.2 3 15.8 0 19M12 2.5c-3 3.2-3 15.8 0 19" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="lang-label">Language:</span> <span class="lang-current" lang="en">English</span></summary><ul class="lang-list"><li><a href="index.html#free-stories" hreflang="en" lang="en" aria-current="page">English</a></li><li><a href="stories/es/not-so-spooky-night.html" hreflang="es" lang="es">Español</a></li><li><a href="stories/zh/not-so-spooky-night.html" hreflang="zh" lang="zh">中文</a></li><li><a href="stories/sk/not-so-spooky-night.html" hreflang="sk" lang="sk">Slovenčina</a></li></ul></details>
     </div>
     <nav class="side-tabs" aria-label="Choose a side">
       <div class="wrap">
@@ -3591,6 +3607,7 @@
                 <a class="story-bind-button story-spooky-alt" href="downloads/books/not-so-spooky-night.pdf" download="Mr-Pepo-Not-So-Spooky-Night.pdf">Download free</a>
               </div>
               <p class="story-spooky-meta">PDF, 26 pages, about 3 MB. Square pages, easy to print at home.</p>
+              <p class="story-lang-row">Read online in: <a href="stories/es/not-so-spooky-night.html" hreflang="es" lang="es">Español</a> · <a href="stories/zh/not-so-spooky-night.html" hreflang="zh" lang="zh">中文</a> · <a href="stories/sk/not-so-spooky-night.html" hreflang="sk" lang="sk">Slovenčina</a></p>
               <p class="story-spooky-amazon">Prefer a real book to hold? <span>A printed copy will be on Amazon soon</span> for a small cost.</p>
             </div>
           </div>
@@ -3678,6 +3695,7 @@
           <div class="story-bind-download">
             <img src="downloads/books/mr-pepo-wobbly-day-bed-cover-300.jpg" alt="Cover of Mr. Pepo and the Wobbly Day Bed" width="296" height="300" loading="lazy" decoding="async">
             <a class="story-bind-button" href="downloads/books/mr-pepo-wobbly-day-bed-A5-print.pdf" download>Download The Wobbly Day Bed (A5, print at home)</a>
+            <p class="story-lang-row" style="flex-basis:100%">Read online in: <a href="stories/sk/wobbly-day-bed.html" hreflang="sk" lang="sk">Slovenčina</a></p>
             <p class="story-amazon-line" style="flex-basis:100%">Prefer a real book to hold? <span>A printed copy will be on Amazon soon</span> for a small cost.</p>
           </div>
         </aside>

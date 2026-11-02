@@ -1,0 +1,57 @@
+:root{--cream:#FDF8EE;--brown:#8C5F3C;--yellow:#F5C85A;--light:#FAECCD;--text:#46321F;
+--title:"Pacifico","Segoe Script","Comic Sans MS",cursive;--hand:"Kalam","Segoe Print","Comic Sans MS",cursive;
+--sans:"Trebuchet MS","Segoe UI",Verdana,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--cream);color:var(--text);font-family:var(--sans);line-height:1.6}
+html[lang=zh] body{font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Noto Serif CJK SC",var(--sans)}
+.wrap{width:min(1000px,calc(100% - 32px));margin:0 auto}
+.site-nav{position:sticky;top:0;z-index:20;background:var(--yellow);border-bottom:3px solid var(--brown)}
+.site-nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px 20px;flex-wrap:wrap;min-height:64px;padding:8px 0}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--text);text-decoration:none}
+.brand span{font-family:var(--title);font-size:1.5rem;line-height:1}
+.nav-mark{width:40px;height:auto;display:block}
+.nav-links{display:flex;align-items:center;flex-wrap:wrap;gap:6px 18px}
+.nav-links a{color:var(--text);font-weight:700;text-decoration:none}
+.nav-links a:hover{text-decoration:underline}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--brown);outline-offset:3px}
+.lang-picker{position:relative}
+.lang-picker summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:6px 12px;background:var(--cream);color:var(--text);border:2px solid var(--brown);border-radius:999px;font-weight:700;font-size:.95rem}
+.lang-picker summary::-webkit-details-marker{display:none}
+.lang-picker summary::after{content:"";border:5px solid transparent;border-top-color:var(--brown);margin-top:5px}
+.lang-globe{width:18px;height:18px;color:var(--brown)}
+.lang-list{position:absolute;right:0;top:calc(100% + 6px);margin:0;padding:6px;list-style:none;min-width:170px;background:var(--cream);border:2px solid var(--brown);border-radius:12px;box-shadow:0 6px 18px rgba(70,50,31,.18)}
+.lang-list a{display:block;padding:7px 12px;border-radius:8px;color:var(--text);font-weight:700;text-decoration:none}
+.lang-list a:hover{background:var(--light)}
+.lang-list a[aria-current]{background:var(--yellow)}
+main{padding:28px 0 40px}
+.story-hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:24px;align-items:center;padding:16px;background:var(--light);border:2px solid var(--brown);border-radius:16px}
+.story-hero img{display:block;width:100%;height:auto;border:2px solid var(--brown);border-radius:12px}
+.kicker{margin:0 0 6px;color:var(--brown);font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.04em}
+html[lang=zh] .kicker{text-transform:none;letter-spacing:.1em}
+h1{margin:0 0 6px;font-family:var(--hand);font-size:clamp(1.7rem,3.6vw,2.4rem);line-height:1.2;color:var(--text)}
+.sub{margin:0 0 4px;font-weight:700;color:var(--brown)}
+.byline{margin:0 0 12px;color:var(--brown)}
+.blurb{margin:0}
+.pages{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:22px}
+.page{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center;padding:14px;background:#fff;border:2px solid var(--brown);border-radius:14px}
+.page:nth-child(even) .page-art{order:2}
+.page-art img{display:block;width:100%;height:auto;border-radius:10px;background:var(--light)}
+.page-num{margin:0 0 6px;color:var(--brown);font-weight:700;font-size:.9rem}
+.page-text p{margin:0 0 10px;font-size:1.15rem;line-height:1.65}
+html[lang=zh] .page-text p{font-size:1.2rem;line-height:1.9}
+.page-text p:last-child{margin-bottom:0}
+.the-end{margin:30px 0 0;text-align:center;font-family:var(--hand);font-size:clamp(1.6rem,3vw,2.1rem);color:var(--brown)}
+.the-end span{display:block;font-size:.7em;color:var(--text)}
+.about,.more,.support-line{margin:26px 0 0;padding:16px 18px;background:var(--light);border:2px solid var(--brown);border-radius:14px}
+.about h2,.more h2{margin:0 0 6px;font-size:1.2rem;color:var(--text)}
+.about p,.more p{margin:0}
+.more a{color:var(--brown);font-weight:700}
+.support-line{background:var(--yellow);text-align:center;font-weight:700;font-size:1.1rem}
+.site-footer{padding:18px 0 26px;text-align:center;color:var(--brown);font-size:.95rem}
+.site-footer a{color:var(--brown);font-weight:700}
+@media (max-width:720px){
+ .story-hero,.page{grid-template-columns:1fr}
+ .page:nth-child(even) .page-art{order:0}
+ .lang-list{right:auto;left:0}
+}
