@@ -3023,6 +3023,59 @@
 
     .story-thanks { margin-top: 8px; font-weight: 700; }
 
+    .story-peek {
+      max-width: 860px;
+      margin: 14px auto 0;
+      padding: 14px 16px;
+      background: #FAECCD;
+      border-radius: 18px;
+    }
+    .free-stories .story-peek-title { font-size: clamp(1.2rem, 2.2vw, 1.45rem); margin: 0 0 10px; }
+    .story-peek-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .story-peek-row a {
+      display: block;
+      background: #FDF8EE;
+      border: 2px solid #8C5F3C;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .story-peek-row a:hover { border-color: #F5C85A; }
+    .story-peek-row a:focus-visible { outline: 3px solid #8C5F3C; outline-offset: 3px; }
+    .story-peek-row img { display: block; width: 100%; height: auto; }
+    .story-peek-note { margin: 10px 0 0; font-size: 0.95rem; color: #46321F; }
+    @media (max-width: 640px) {
+      .story-peek-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    .story-print {
+      max-width: 860px;
+      margin: 14px auto 0;
+      padding: 14px 16px 16px;
+      background: #FAECCD;
+      color: #46321F;
+      border-left: 8px solid #F5C85A;
+      border-radius: 0 18px 18px 0;
+    }
+    .free-stories .story-print h3 { margin: 0 0 8px; }
+    .story-print ul { margin: 0; padding-left: 1.2rem; }
+    .story-print li { margin: 4px 0; line-height: 1.45; }
+    .story-print p { margin: 10px 0 0; }
+
+    .story-amazon-note {
+      flex-basis: 100%;
+      margin: 2px 0 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #46321F;
+    }
+
     @media (max-width: 640px) {
       .free-stories { scroll-margin-top: 13rem; }
       .free-stories-card { grid-template-columns: 1fr; }
@@ -3410,11 +3463,33 @@
             <div class="story-actions">
               <a class="story-download" href="downloads/books/mr-pepo-not-so-spooky-night-read-online.pdf" download>Download free</a>
               <a class="story-support" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">Support what it's worth</a>
+              <p class="story-amazon-note">If you want a nice one, you can buy a nice one from Amazon.</p>
               <button type="button" class="story-amazon" disabled>Buy on Amazon</button>
               <span class="story-soon">Coming soon to Amazon</span>
             </div>
           </div>
         </article>
+        <div class="story-peek" aria-labelledby="story-peek-title">
+          <h3 id="story-peek-title" class="story-peek-title">Peek inside</h3>
+          <ul class="story-peek-row">
+            <li><a href="downloads/books/previews/mr-pepo-not-so-spooky-night-peek-1.jpg" target="_blank" rel="noopener"><img src="downloads/books/previews/mr-pepo-not-so-spooky-night-peek-1.jpg" alt="Story page: Mr. Pepo on the porch with friendly pumpkins" width="600" height="609" loading="lazy" decoding="async"></a></li>
+            <li><a href="downloads/books/previews/mr-pepo-not-so-spooky-night-peek-2.jpg" target="_blank" rel="noopener"><img src="downloads/books/previews/mr-pepo-not-so-spooky-night-peek-2.jpg" alt="Story page: Mr. Pepo picks up his little lantern and opens the door" width="600" height="609" loading="lazy" decoding="async"></a></li>
+            <li><a href="downloads/books/previews/mr-pepo-not-so-spooky-night-peek-3.jpg" target="_blank" rel="noopener"><img src="downloads/books/previews/mr-pepo-not-so-spooky-night-peek-3.jpg" alt="Story page: a friendly dog among the glowing pumpkins" width="600" height="609" loading="lazy" decoding="async"></a></li>
+            <li><a href="downloads/books/previews/mr-pepo-not-so-spooky-night-peek-4.jpg" target="_blank" rel="noopener"><img src="downloads/books/previews/mr-pepo-not-so-spooky-night-peek-4.jpg" alt="Story page: Mr. Pepo tucks everyone into bed" width="600" height="609" loading="lazy" decoding="async"></a></li>
+          </ul>
+          <p class="story-peek-note">Tap a page to see it full size.</p>
+        </div>
+        <aside class="story-print" aria-labelledby="story-print-title">
+          <h3 id="story-print-title">How to print at home</h3>
+          <ul>
+            <li>Download the free PDF and open it.</li>
+            <li>Choose Print, then pick 'Fit to page' (or 'Scale to fit') on A4 or Letter paper.</li>
+            <li>Print double-sided if your printer can, flipping on the long edge. Otherwise print one side.</li>
+            <li>Staple or fold along the left side to make a little book.</li>
+            <li>The inside pages are black and white, so they're ready for colouring in.</li>
+          </ul>
+          <p>Book pages are square, 216 x 216 mm.</p>
+        </aside>
         <aside class="story-more" aria-labelledby="more-stories-title">
           <h3 id="more-stories-title">More stories coming</h3>
           <p>Leave your email and Peter will tell you when a new story is ready.</p>
