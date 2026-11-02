@@ -2379,6 +2379,134 @@
         width: 100%;
       }
     }
+
+    .spot-hack {
+      scroll-margin-top: 11rem;
+      padding: 8px 0 64px;
+    }
+
+    .hack-intro {
+      margin: 10px auto 0;
+      max-width: 36rem;
+      font-family: var(--hand);
+      font-weight: 700;
+      font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+      line-height: 1.35;
+      color: var(--ink);
+    }
+
+    .hack-card {
+      width: min(920px, 100%);
+      margin: 0 auto;
+      padding: 18px;
+      background: var(--cream);
+      border: 3px solid var(--brick);
+      border-radius: 22px;
+      box-shadow: 0 14px 30px rgba(58, 42, 20, 0.18);
+    }
+
+    .hack-card-layout {
+      display: grid;
+      grid-template-columns: minmax(220px, 380px) minmax(0, 1fr);
+      gap: 20px 22px;
+      align-items: start;
+    }
+
+    .hack-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 3px solid var(--line);
+      border-radius: 16px;
+    }
+
+    .hack-reveal summary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 18px;
+      background: var(--button);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 1.05rem;
+      font-weight: 700;
+      list-style: none;
+      border: 3px solid #8d420c;
+      border-radius: 999px;
+      box-shadow: 0 4px 0 #8d420c;
+      cursor: pointer;
+    }
+
+    .hack-reveal summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .hack-reveal summary:hover {
+      background: var(--button-hover);
+    }
+
+    .hack-reveal summary:focus-visible {
+      outline: 3px solid var(--ink);
+      outline-offset: 3px;
+    }
+
+    .hack-reveal[open] .hack-show,
+    .hack-reveal:not([open]) .hack-hide {
+      display: none;
+    }
+
+    .hack-list {
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hack-list li {
+      margin: 0 0 10px;
+      padding: 10px 12px;
+      background: var(--paper);
+      border: 2px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .hack-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .hack-list strong {
+      display: block;
+      margin-bottom: 2px;
+      font-family: var(--hand);
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .hack-list span {
+      display: block;
+      font-size: 1.02rem;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 720px) {
+      .spot-hack {
+        scroll-margin-top: 13rem;
+        padding-bottom: 48px;
+      }
+
+      .hack-card {
+        padding: 14px;
+      }
+
+      .hack-card-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hack-reveal summary {
+        width: 100%;
+      }
+    }
   </style>
   <link rel="stylesheet" href="assets/pepo-mark.css">
   <link rel="stylesheet" href="assets/pepo-helper.css">
@@ -2751,6 +2879,45 @@
             <figcaption id="our-window-title">Our window</figcaption>
           </figure>
         </div>
+      </div>
+    </section>
+    <section class="spot-hack" id="spot-the-hack" aria-labelledby="spot-the-hack-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="spot-the-hack-title">Spot the Hack</h2>
+          <p class="hack-intro">Look closely. Every photo hides a clever fix from the Pepo Studios workshop.</p>
+        </div>
+        <article class="hack-card">
+          <div class="hack-card-layout">
+            <img src="images/hacks/studio-door-closer.jpg" alt="Peter's outdoor studio beside a screen door, with plants on a bench, a hanging sheet and a hose" width="1200" height="1600" loading="lazy" decoding="async">
+            <div class="hack-card-copy">
+              <details class="hack-reveal">
+                <summary>
+                  <span class="hack-show">Show the hacks</span>
+                  <span class="hack-hide">Hide the hacks</span>
+                </summary>
+                <ul class="hack-list">
+                  <li>
+                    <strong>Bottle-weight door closer</strong>
+                    <span>A rope runs up the door frame to a filled bottle hanging beside the screen door, and the bottle's weight pulls the door shut.</span>
+                  </li>
+                  <li>
+                    <strong>Bedsheet backdrop</strong>
+                    <span>A plain sheet with &lsquo;Mr. Pepo&rsquo; on it, hung on the wall as a filming backdrop.</span>
+                  </li>
+                  <li>
+                    <strong>Fake-grass bonsai bench</strong>
+                    <span>Artificial turf on the bench top keeps the plant table neat and easy to wipe clean.</span>
+                  </li>
+                  <li>
+                    <strong>Parked spray gun</strong>
+                    <span>The hose spray gun rests on the table edge, so it's always within reach for watering.</span>
+                  </li>
+                </ul>
+              </details>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
     <section class="support-band" id="show-your-support" aria-labelledby="show-your-support-title">
