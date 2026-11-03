@@ -3193,6 +3193,82 @@
   .story-spooky-cover img { max-width: 300px; margin: 0 auto; }
 }
 
+    .shop-note {
+      padding: 4px 0 28px;
+      background: #FDF8EE;
+      color: #46321F;
+    }
+
+    .shop-note-box {
+      max-width: 640px;
+      padding: 16px 18px 14px;
+      background: #FDF8EE;
+      border: 2px solid #8C5F3C;
+      border-left: 8px solid #F5C85A;
+      border-radius: 0 18px 18px 0;
+    }
+
+    .shop-note h2 {
+      margin: 0 0 8px;
+      color: #8C5F3C;
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: clamp(1.45rem, 2.6vw, 1.8rem);
+      line-height: 1.2;
+    }
+
+    .shop-note p {
+      margin: 0 0 14px;
+      line-height: 1.5;
+    }
+
+    .shop-note-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 18px;
+      background: #8C5F3C;
+      color: #FDF8EE;
+      font-weight: 700;
+      text-decoration: none;
+      border: 2px solid #8C5F3C;
+      border-radius: 999px;
+    }
+
+    .shop-note-button:hover { background: #F5C85A; color: #46321F; }
+    .shop-note-button:focus-visible { outline: 3px solid #8C5F3C; outline-offset: 3px; }
+
+    .shop-note .shop-note-poll {
+      margin: 16px 0 8px;
+      padding-top: 12px;
+      border-top: 2px dashed #F5C85A;
+      font-size: 0.95rem;
+    }
+
+    .shop-note-poll-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .shop-note-poll-actions a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 6px 12px;
+      background: #F5C85A;
+      color: #46321F;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+      border: 2px solid #8C5F3C;
+      border-radius: 999px;
+    }
+
+    .shop-note-poll-actions a:hover { background: #8C5F3C; color: #FDF8EE; }
+    .shop-note-poll-actions a:focus-visible { outline: 3px solid #8C5F3C; outline-offset: 3px; }
+
     .story-amazon-note {
       flex-basis: 100%;
       margin: 2px 0 0;
@@ -4105,6 +4181,20 @@
           </div>
         </details>
               </div>
+    </section>
+    <section class="shop-note" aria-labelledby="shop-note-title">
+      <div class="wrap">
+        <div class="shop-note-box">
+          <h2 id="shop-note-title">Enjoying Mr. Pepo?</h2>
+          <p>Every story here is free, and it always will be. If Mr. Pepo has brought a smile to your family, you can support what it's worth by picking up a book in our shop. You choose the price.</p>
+          <a class="shop-note-button" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener">Visit the Pepo Studios shop</a>
+          <p class="shop-note-poll">Quick question: would you like printed Mr. Pepo books?</p>
+          <div class="shop-note-poll-actions">
+            <a href="mailto:mr.pepo.au@gmail.com?subject=Mr.%20Pepo%20poll%3A%20Printed%20please">Yes, printed please</a>
+            <a href="mailto:mr.pepo.au@gmail.com?subject=Mr.%20Pepo%20poll%3A%20Digital%20is%20fine">Digital is fine</a>
+          </div>
+        </div>
+      </div>
     </section>
     <div class="side side-nfp" id="nfp">
     <header class="side-banner side-banner-nfp" aria-labelledby="nfp-title">
