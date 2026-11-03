@@ -3229,6 +3229,27 @@
     /* Tighter homepage: less vertical padding, shorter images, grids instead of stacks */
     body { line-height: 1.4; }
     .hero { min-height: 0; }
+    .hero-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.65fr) minmax(200px, 0.72fr);
+      align-items: stretch;
+      background: #FDF8EE;
+    }
+    .hero-bonsai {
+      position: relative;
+      margin: 0;
+      min-height: 0;
+      overflow: hidden;
+      background: #FDF8EE;
+    }
+    .hero-bonsai img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 48%;
+    }
     .hero-inner { padding: 28px 0 22px; }
     h1 { font-size: clamp(2.6rem, 6vw, 4rem); }
     .bounce-tagline { margin-top: 4px; font-size: clamp(1.2rem, 2.8vw, 1.7rem); }
@@ -3386,6 +3407,11 @@
       .spot-hack .wrap { grid-template-columns: 1fr 1fr; }
       .hack-card-layout { flex-direction: column; align-items: stretch; }
       .hack-card img { width: 100%; height: 96px; }
+    }
+    @media (max-width: 800px) {
+      .hero-row { grid-template-columns: 1fr; }
+      .hero-bonsai { height: auto; aspect-ratio: 3 / 4; }
+      .hero-bonsai img { object-position: center center; }
     }
     @media (max-width: 640px) {
       .hero-inner { padding: 20px 0 16px; }
@@ -3694,6 +3720,7 @@
     </nav>
   </header>
   <main>
+    <div class="hero-row">
     <section class="hero">
       <img class="hero-bg" src="images/night-window.jpg" alt="" width="1350" height="1800" fetchpriority="high" decoding="async">
       <div class="hero-shade" aria-hidden="true"></div>
@@ -3724,6 +3751,10 @@
         </div>
       </div>
     </section>
+    <figure class="hero-bonsai">
+      <img src="images/bunny-bonsai-aryka.jpg" alt="White bunny paper model under a bonsai" width="864" height="1152">
+    </figure>
+    </div>
     <section class="learn-home" id="learn-at-home" aria-labelledby="learn-at-home-title">
       <div class="wrap">
         <aside class="pepo-idea">
@@ -4790,7 +4821,7 @@
           </li>
           <li id="white-bunny">
             <a class="pcard" href="downloads/White-Bunny-One-Sheet-A4.pdf" download="White-Bunny-One-Sheet-A4.pdf">
-              <span class="pcard-pic"><img loading="lazy" decoding="async" src="images/cards/white-bunny-preview.png" alt="White bunny paper model with a pink flower and a red dress"></span>
+              <span class="pcard-pic"><img loading="lazy" decoding="async" src="images/bunny-desk.jpg" alt="White bunny paper model on the workshop desk" width="1200" height="900"></span>
               <span class="badge">Free · support what it's worth</span>
               <span class="pname">White Bunny with Pink Flowers paper model</span>
               <span class="pname">Mr. Pepo's cousin from Slovakia, a white bunny with a pink flower and a red dress. One A4 sheet: front and back pieces, a box stand and simple how-to steps. Print, cut, fold and glue.</span>
