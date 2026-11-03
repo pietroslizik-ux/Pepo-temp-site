@@ -3305,39 +3305,29 @@
     /* Tighter homepage: less vertical padding, shorter images, grids instead of stacks */
     body { line-height: 1.4; }
     .hero { min-height: 0; }
-    .hero-row {
+    .hero-row { display: block; }
+    .hero-inner { padding: 16px 0 14px; }
+    h1 { font-size: clamp(2.1rem, 4.6vw, 3.1rem); }
+    .bounce-tagline { margin-top: 2px; font-size: clamp(1.05rem, 2.2vw, 1.4rem); }
+    .nfp-statement { margin-top: 4px; font-size: clamp(0.98rem, 1.7vw, 1.12rem); }
+    .tagline { margin-top: 4px; font-size: clamp(0.98rem, 1.6vw, 1.08rem); }
+    .actions { margin-top: 10px; gap: 8px; }
+    .primary { padding: 10px 18px; font-size: 1.02rem; box-shadow: 0 3px 0 #8d420c; }
+    .secondary { padding: 8px 14px; }
+    .section-head { margin-bottom: 8px; }
+    .section-head h2 { font-size: clamp(1.45rem, 2.6vw, 1.9rem); }
+    .learn-home { padding: 12px 0 8px; }
+    .learn-home .wrap {
       display: grid;
-      grid-template-columns: minmax(0, 1.65fr) minmax(200px, 0.72fr);
-      align-items: stretch;
-      background: #FDF8EE;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      align-items: start;
     }
-    .hero-bonsai {
-      position: relative;
-      margin: 0;
-      min-height: 0;
-      overflow: hidden;
-      background: #FDF8EE;
-    }
-    .hero-bonsai img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 48%;
-    }
-    .hero-inner { padding: 28px 0 22px; }
-    h1 { font-size: clamp(2.6rem, 6vw, 4rem); }
-    .bounce-tagline { margin-top: 4px; font-size: clamp(1.2rem, 2.8vw, 1.7rem); }
-    .nfp-statement { margin-top: 8px; font-size: clamp(1.02rem, 2vw, 1.28rem); }
-    .tagline { margin-top: 8px; font-size: clamp(1.02rem, 1.8vw, 1.2rem); }
-    .actions { margin-top: 14px; gap: 8px; }
-    .primary { padding: 12px 22px; font-size: 1.12rem; box-shadow: 0 4px 0 #8d420c; }
-    .section-head { margin-bottom: 10px; }
-    .section-head h2 { font-size: clamp(1.6rem, 3vw, 2.15rem); }
-    .learn-home { padding: 20px 0 8px; }
-    .pepo-idea { margin-bottom: 12px; padding: 10px 12px; }
-    .learn-block { margin-top: 14px; }
+    .learn-home .pepo-idea,
+    .learn-home .section-head,
+    .learn-home .learn-block:has(details[open]) { grid-column: 1 / -1; }
+    .pepo-idea { margin-bottom: 0; padding: 8px 10px; }
+    .learn-block { margin-top: 0; }
     .learn-card img { height: 108px; }
     .learn-grid, .learn-tips { gap: 8px; margin-top: 8px; }
     .learn-soon-list {
@@ -3348,7 +3338,7 @@
     .learn-soon-list li { margin: 0; }
     .learn-club { padding: 12px 14px; }
     .learn-tips li { padding: 10px 10px 8px; }
-    .free-stories { padding: 4px 0 12px; }
+    .free-stories { padding: 4px 0 8px; }
     .free-stories .wrap {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -3356,11 +3346,31 @@
       align-items: start;
     }
     .free-stories .section-head,
-    .free-stories .story-spooky,
-    .free-stories .story-peek,
-    .free-stories .story-bind { grid-column: 1 / -1; }
+    .free-stories details.fold[open] { grid-column: 1 / -1; }
+    .stories-with-howie {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      text-align: left;
+    }
+    .stories-howie { margin: 0; flex: 0 0 auto; }
+    .stories-howie img {
+      display: block;
+      width: 104px;
+      height: 132px;
+      object-fit: cover;
+      object-position: center 28%;
+      border: 2px solid #8C5F3C;
+      border-radius: 14px;
+    }
     .story-peek, .story-print, .story-bind, .story-more { max-width: none; margin-top: 0; }
-    .story-spooky-cover img { max-height: 220px; object-fit: cover; }
+    .free-stories .story-spooky-card {
+      grid-template-columns: 112px minmax(0, 1fr);
+      gap: 12px;
+      padding: 10px;
+    }
+    .story-spooky-cover img { width: 100%; max-height: 150px; object-fit: cover; }
     .story-bind-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -3427,8 +3437,28 @@
     .hack-card + .hack-card { margin-top: 0; }
     .hack-card-layout { display: flex; align-items: center; gap: 12px; }
     .hack-card img { width: 168px; height: 112px; max-height: none; flex: 0 0 auto; object-fit: cover; }
-    .support-band { padding: 10px 0 12px; }
-    .support { padding: 12px 14px; }
+    .support-band { padding: 8px 0 10px; }
+    .support { padding: 10px 12px; }
+    .support-split {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 148px;
+      gap: 14px;
+      align-items: center;
+      width: min(920px, 100%);
+    }
+    .support-bunny { margin: 0; }
+    .support-bunny img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 210px;
+      object-fit: contain;
+      object-position: top center;
+      background: #FDF8EE;
+      border: 2px solid #8C5F3C;
+      border-radius: 12px;
+    }
+    .support h2 { font-size: 1.35rem; }
     #journals .support { width: min(1100px, 100%); }
     .support-trio {
       display: grid;
@@ -3442,6 +3472,7 @@
     .support-trio .wrap { width: 100%; }
     .support-trio .support { width: 100%; }
     .support > img,
+    .support-copy > img,
     .support-trio img {
       max-height: 140px !important;
       width: auto !important;
@@ -3455,17 +3486,19 @@
     #journals .pepo-choose-preview { width: min(160px, 70%); }
     .journal-idea { padding: 10px 10px 12px; }
     .journal-idea textarea { min-height: 64px; }
-    .keep-pepo { padding: 18px 0 8px; }
+    .keep-pepo { padding: 12px 0 8px; }
     .kpb-cover { max-width: 140px; }
     .kpb-intro { margin-bottom: 10px; }
     .kpb-options { gap: 10px; }
     .kpb-option { padding: 10px 12px 12px; }
     .keep-pepo .peter-note { margin-top: 10px; }
-    .printables { padding: 20px 0 8px; }
-    #printables .grid { gap: 12px; }
-    .pcard { min-height: 0; gap: 8px; padding: 10px 10px 12px; }
-    .pcard-pic { height: 88px; }
-    .biz { padding: 22px 0; }
+    .printables { padding: 12px 0 8px; }
+    #printables .grid { gap: 10px; }
+    #printables .pname { font-size: 0.95rem; line-height: 1.25; }
+    .pcard { min-height: 0; gap: 8px; padding: 8px 8px 10px; }
+    .pcard-pic { height: 72px; }
+    .biz { padding: 12px 0; }
+    .price-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     .biz-services, .price-grid, .work-grid, .svc-grid { margin-top: 12px; gap: 10px; }
     .biz-card, .price-card, .svc-card { padding: 12px 12px 10px; }
     .work-card img { aspect-ratio: 16 / 9; max-height: 140px; object-fit: cover; }
@@ -3474,32 +3507,44 @@
     .book-form textarea { min-height: 64px; }
     .site-footer { padding: 14px 0 18px; }
     .footer-links { gap: 4px 12px; margin-bottom: 8px; }
+    @media (min-width: 1000px) {
+      #printables .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+    @media (max-width: 900px) {
+      .free-stories .story-spooky { grid-column: 1 / -1; }
+      .free-stories .story-spooky-card { grid-template-columns: 140px minmax(0, 1fr); }
+    }
     @media (max-width: 800px) {
       .biz-services, .price-grid, .svc-grid, .work-grid { grid-template-columns: 1fr 1fr; }
-      .support-trio { grid-template-columns: 1fr; width: min(1100px, calc(100% - 28px)); }
-      .kpb-options { grid-template-columns: 1fr; }
+      .support-trio { grid-template-columns: 1fr 1fr; width: min(1100px, calc(100% - 28px)); }
+      .support-trio .support-band:last-child { grid-column: 1 / -1; }
+      .kpb-options { grid-template-columns: 1fr 1fr; }
+      .learn-home .wrap { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 720px) {
       .spot-hack .wrap { grid-template-columns: 1fr 1fr; }
       .hack-card-layout { flex-direction: column; align-items: stretch; }
       .hack-card img { width: 100%; height: 96px; }
     }
-    @media (max-width: 800px) {
-      .hero-row { grid-template-columns: 1fr; }
-      .hero-bonsai { height: auto; aspect-ratio: 3 / 4; }
-      .hero-bonsai img { object-position: center center; }
-    }
     @media (max-width: 640px) {
-      .hero-inner { padding: 20px 0 16px; }
+      .hero-inner { padding: 14px 0 12px; }
       .motto { padding: 14px 12px; }
+      .learn-home .wrap { grid-template-columns: 1fr; }
       .learn-grid, .learn-tips { grid-template-columns: 1fr 1fr; }
       .learn-card img { height: 92px; }
       .learn-soon-list { grid-template-columns: 1fr 1fr; }
+      .stories-howie img { width: 84px; height: 108px; }
       .free-stories .wrap, .story-bind-grid, .about-list { grid-template-columns: 1fr; }
+      .free-stories .story-spooky-card { grid-template-columns: 92px minmax(0, 1fr); }
+      .story-spooky-cover img { max-height: 120px; max-width: none; }
       .story-bind-step img { max-height: 120px; max-width: none; }
       .about-art { max-height: 160px; }
+      .support-split { grid-template-columns: minmax(0, 1fr) 96px; gap: 10px; }
+      .support-bunny img { max-height: 150px; }
+      .support-trio, .kpb-options { grid-template-columns: 1fr; }
       #printables .grid { grid-template-columns: 1fr 1fr; }
-      #printables .pcard-pic { height: 72px; }
+      #printables .pcard-pic { height: 64px; }
+      .price-grid { grid-template-columns: 1fr 1fr; }
     }
 
     .jump-bar {
@@ -3828,9 +3873,6 @@
         </div>
       </div>
     </section>
-    <figure class="hero-bonsai">
-      <img src="images/bunny-bonsai-aryka.jpg" alt="White bunny paper model under a bonsai" width="864" height="1152">
-    </figure>
     </div>
     <section class="learn-home" id="learn-at-home" aria-labelledby="learn-at-home-title">
       <div class="wrap">
@@ -4025,9 +4067,14 @@
     </section>
     <section class="free-stories" id="free-stories" aria-labelledby="free-stories-title">
       <div class="wrap">
-        <div class="section-head">
-          <h2 id="free-stories-title">Free Mr. Pepo Stories</h2>
-          <p class="learn-lead">Read a story together, then keep it.</p>
+        <div class="section-head stories-with-howie">
+          <div>
+            <h2 id="free-stories-title">Free Mr. Pepo Stories</h2>
+            <p class="learn-lead">Read a story together, then keep it.</p>
+          </div>
+          <figure class="stories-howie">
+            <img src="images/bunny-bonsai-aryka.jpg" alt="White bunny paper model under a bonsai" width="864" height="1152" loading="lazy" decoding="async">
+          </figure>
         </div>
         <aside class="story-bind story-spooky" id="not-so-spooky-night" aria-labelledby="story-spooky-title">
           <div class="story-spooky-card">
@@ -4578,12 +4625,17 @@
     </section>
     <section class="support-band" id="show-your-support" aria-labelledby="show-your-support-title">
       <div class="wrap">
-        <aside class="support">
-          <h2 id="show-your-support-title">Show your support!</h2>
-          <p>Put the flyer in your window, then email a photo to <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a>. Tell us which paper models you like. <a href="https://payhip.com/PepoStudios" target="_blank" rel="noopener">Choose them here</a>.</p>
-          <img src="assets/flyer/i-support-mr-pepo-flyer.png" alt="I support Mr. Pepo flyer preview" loading="lazy" decoding="async" style="display:block;max-width:320px;width:100%;margin:1rem auto;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.15)">
-          <a class="flyer" href="assets/flyer/i-support-mr-pepo-flyer.pdf" download>Download the flyer (PDF)</a>
-          <a class="flyer" href="assets/flyer/i-support-mr-pepo-flyer-big.png" target="_blank" rel="noopener">View big flyer</a>
+        <aside class="support support-split">
+          <div class="support-copy">
+            <h2 id="show-your-support-title">Show your support!</h2>
+            <p>Put the flyer in your window, then email a photo to <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a>. Tell us which paper models you like. <a href="https://payhip.com/PepoStudios" target="_blank" rel="noopener">Choose them here</a>.</p>
+            <img src="assets/flyer/i-support-mr-pepo-flyer.png" alt="I support Mr. Pepo flyer preview" loading="lazy" decoding="async" style="display:block;max-width:220px;width:100%;margin:0.6rem 0;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.15)">
+            <a class="flyer" href="assets/flyer/i-support-mr-pepo-flyer.pdf" download>Download the flyer (PDF)</a>
+            <a class="flyer" href="assets/flyer/i-support-mr-pepo-flyer-big.png" target="_blank" rel="noopener">View big flyer</a>
+          </div>
+          <figure class="support-bunny">
+            <img src="images/white-bunny-support.png" alt="White Bunny paper model sheet, with a stand that reads pepostudios.au for Aryka" width="640" height="905" loading="lazy" decoding="async">
+          </figure>
         </aside>
       </div>
     </section>
