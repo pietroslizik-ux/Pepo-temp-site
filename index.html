@@ -3399,6 +3399,103 @@
       #printables .grid { grid-template-columns: 1fr 1fr; }
       #printables .pcard-pic { height: 72px; }
     }
+
+    .jump-bar {
+      background: #FDF8EE;
+      border-top: 2px solid #8C5F3C;
+      color: #46321F;
+      max-width: 100%;
+      overflow: hidden;
+    }
+    .jump-bar .wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 0;
+      min-width: 0;
+      max-width: 100%;
+      padding: 6px 0;
+    }
+    .jump-label {
+      flex: 0 0 auto;
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: #8C5F3C;
+    }
+    .jump-links {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      flex: 1 1 auto;
+      min-width: 0;
+      max-width: 100%;
+      margin: 0;
+      padding: 0 0 2px;
+      scrollbar-width: thin;
+    }
+    .jump-links a {
+      flex: 0 0 auto;
+      padding: 4px 10px;
+      background: #FAECCD;
+      color: #46321F;
+      border: 2px solid #8C5F3C;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .jump-links a:hover,
+    .jump-links a:focus-visible { background: #F5C85A; }
+    details.fold {
+      margin: 8px 0;
+      background: #FDF8EE;
+      color: #46321F;
+      border: 2px solid #8C5F3C;
+      border-radius: 14px;
+    }
+    details.fold > summary {
+      cursor: pointer;
+      padding: 8px 12px;
+      font-weight: 700;
+      list-style: none;
+      background: #FAECCD;
+      border-radius: 12px;
+    }
+    details.fold[open] > summary {
+      border-bottom: 2px solid #F5C85A;
+      border-radius: 12px 12px 0 0;
+    }
+    details.fold > summary::-webkit-details-marker { display: none; }
+    details.fold > summary::before { content: "\25B8  "; color: #8C5F3C; }
+    details.fold[open] > summary::before { content: "\25BE  "; }
+    details.fold > summary h2,
+    details.fold > summary h3 {
+      display: inline;
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.3;
+    }
+    details.fold > .fold-body { padding: 8px 12px 12px; }
+    .free-stories details.fold,
+    .spot-hack details.fold,
+    .about-pepo details.fold { grid-column: 1 / -1; }
+    .hack-fold-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .pcard .pname + .pname {
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: 0.92rem;
+      line-height: 1.35;
+    }
+    @media (max-width: 720px) {
+      .hack-fold-grid { grid-template-columns: 1fr; }
+    }
+
     .story-lang-row a { color: #8C5F3C; }
     @media (max-width: 640px) { .lang-list { right: auto; left: 0; } }
   </style>
@@ -3554,6 +3651,47 @@
         <a class="side-tab side-tab-biz" href="#business">Small business<small>Web design, social media &amp; video</small></a>
       </div>
     </nav>
+    <nav class="jump-bar" aria-label="Jump to a section">
+      <div class="wrap">
+        <span class="jump-label">Jump to</span>
+        <div class="jump-links">
+          <a href="#learn-at-home">Learn &amp; Make</a>
+          <a href="#spinner-title">Spinners</a>
+          <a href="#spinner-club-title">Spinner Club</a>
+          <a href="#flipbook-title">Flipbook</a>
+          <a href="#animation-title">Animation</a>
+          <a href="#physics-title">Physics</a>
+          <a href="#gadgets-title">Gadgets</a>
+          <a href="#free-stories">Stories</a>
+          <a href="#not-so-spooky-night">Not-So-Spooky Night</a>
+          <a href="#binding-tips">Binding</a>
+          <a href="#nfp">Awareness</a>
+          <a href="#about-pepo-studios">About</a>
+          <a href="#why">Why</a>
+          <a href="#moving-forward">Moving forward</a>
+          <a href="#mastermind">Mastermind</a>
+          <a href="#full-build-title">The window</a>
+          <a href="#peek-inside-title">Peek inside</a>
+          <a href="#papercraft">Papercraft</a>
+          <a href="#made-by-mr-pepo-title">Workshop</a>
+          <a href="#spot-the-hack">Spot the Hack</a>
+          <a href="#show-your-support">Support</a>
+          <a href="#journals">Journals</a>
+          <a href="#mr-pepo-journal">Free journal</a>
+          <a href="#halloween-ghost">Ghost</a>
+          <a href="#brewery-picture">Brewery</a>
+          <a href="#keep-mr-pepo-here">Keep Mr. Pepo</a>
+          <a href="#printables">Printables</a>
+          <a href="#business">Business</a>
+          <a href="#services">Services</a>
+          <a href="#web-pages">Web pages</a>
+          <a href="#book">Book a chat</a>
+          <a href="#work">Our work</a>
+          <a href="#kind-words">Kind words</a>
+          <a href="#prices">Prices</a>
+        </div>
+      </div>
+    </nav>
   </header>
   <main>
     <section class="hero">
@@ -3601,8 +3739,10 @@
         </div>
 
         <article class="learn-block" aria-labelledby="spinner-title">
-          <h3 id="spinner-title">Fidget spinner printables</h3>
-          <p>Free for everyone: the basic Pepo spinner set (three-arm page, mixed page, how-to page). Print it on cardstock, cut it out and spin.</p>
+          <details class="fold">
+          <summary><h3 id="spinner-title">Fidget spinner printables</h3></summary>
+          <div class="fold-body">
+<p>Free for everyone: the basic Pepo spinner set (three-arm page, mixed page, how-to page). Print it on cardstock, cut it out and spin.</p>
           <ul class="learn-grid">
             <li>
               <a class="learn-card" href="images/learn/pepo-spinner-three-arm.png">
@@ -3623,12 +3763,15 @@
               </a>
             </li>
           </ul>
-          <a class="learn-download" href="downloads/learn/pepo-fidget-spinners-all.pdf" download>Download the free spinner set (PDF)</a>
+          <a class="learn-download" href="downloads/learn/pepo-fidget-spinners-all.pdf" download>Download the free spinner set (PDF)</a>          </div>
+        </details>
         </article>
 
         <article class="learn-block" aria-labelledby="spinner-club-title">
-          <h3 id="spinner-club-title">Pepo Spinner Club</h3>
-          <div class="learn-club">
+          <details class="fold">
+          <summary><h3 id="spinner-club-title">Pepo Spinner Club</h3></summary>
+          <div class="fold-body">
+<div class="learn-club">
             <p><strong>Join the Pepo Spinner Club: support what it's worth.</strong> Choose any amount that feels right. Pay what you want. There's no upper limit, and every member gets the same club.</p>
             <p>Members unlock:</p>
             <ul>
@@ -3649,12 +3792,15 @@
               <input type="email" name="email" required autocomplete="email" placeholder="your@email.com" aria-label="Email for the Pepo Spinner Club">
               <button type="submit">Count me in</button>
             </form>
-          </div>
+          </div>          </div>
+        </details>
         </article>
 
         <article class="learn-block" aria-labelledby="flipbook-title">
-          <h3 id="flipbook-title">Pepo Flipbook</h3>
-          <p>See how movies move by putting pictures one behind the other. Print the frames, stack them, and flip.</p>
+          <details class="fold">
+          <summary><h3 id="flipbook-title">Pepo Flipbook</h3></summary>
+          <div class="fold-body">
+<p>See how movies move by putting pictures one behind the other. Print the frames, stack them, and flip.</p>
           <ul class="learn-grid">
             <li>
               <a class="learn-card" href="images/learn/pepo-flipbook-how-to.png">
@@ -3675,12 +3821,15 @@
               </a>
             </li>
           </ul>
-          <a class="learn-download" href="downloads/learn/pepo-flipbook-all.pdf" download>Download the flipbook (PDF)</a>
+          <a class="learn-download" href="downloads/learn/pepo-flipbook-all.pdf" download>Download the flipbook (PDF)</a>          </div>
+        </details>
         </article>
 
         <article class="learn-block" aria-labelledby="animation-title">
-          <h3 id="animation-title">Animation ideas</h3>
-          <p>Coming soon, one idea at a time.</p>
+          <details class="fold">
+          <summary><h3 id="animation-title">Animation ideas</h3></summary>
+          <div class="fold-body">
+<p>Coming soon, one idea at a time.</p>
           <ul class="learn-soon-list">
             <li>Thaumatrope, a two-sided spinning disc.</li>
             <li>Zoetrope wheel.</li>
@@ -3693,12 +3842,15 @@
             <li>Shadow puppet movie.</li>
             <li>Stop-motion set.</li>
             <li>Layered overlay sheets.</li>
-          </ul>
+          </ul>          </div>
+        </details>
         </article>
 
         <article class="learn-block" aria-labelledby="physics-title">
-          <h3 id="physics-title">Physics play pages</h3>
-          <p>Four paper plays that show a real idea from science.</p>
+          <details class="fold">
+          <summary><h3 id="physics-title">Physics play pages</h3></summary>
+          <div class="fold-body">
+<p>Four paper plays that show a real idea from science.</p>
           <ul class="learn-grid">
             <li>
               <a class="learn-card" href="images/learn/physics-spinning-top.png">
@@ -3725,12 +3877,15 @@
               </a>
             </li>
           </ul>
-          <a class="learn-download" href="downloads/learn/pepo-physics-play-all.pdf" download>Download the physics pages (PDF)</a>
+          <a class="learn-download" href="downloads/learn/pepo-physics-play-all.pdf" download>Download the physics pages (PDF)</a>          </div>
+        </details>
         </article>
 
         <article class="learn-block" aria-labelledby="gadgets-title">
-          <h3 id="gadgets-title">At-home paper gadgets and tips</h3>
-          <ul class="learn-tips">
+          <details class="fold">
+          <summary><h3 id="gadgets-title">At-home paper gadgets and tips</h3></summary>
+          <div class="fold-body">
+<ul class="learn-tips">
             <li>
               <h4>Paper phone holder</h4>
               <p>Fold cardstock into a triangle stand.</p>
@@ -3755,7 +3910,8 @@
               <p>Folded strips that sort a drawer.</p>
               <span class="learn-soon">Coming soon</span>
             </li>
-          </ul>
+          </ul>          </div>
+        </details>
         </article>
       </div>
     </section>
@@ -3784,7 +3940,10 @@
             </div>
           </div>
         </aside>
-        <div class="story-peek" aria-labelledby="story-peek-title">
+        <details class="fold">
+          <summary>Peek inside</summary>
+          <div class="fold-body">
+<div class="story-peek" aria-labelledby="story-peek-title">
           <h3 id="story-peek-title" class="story-peek-title">Peek inside</h3>
           <ul class="story-peek-row">
             <li><a href="downloads/books/previews/mr-pepo-not-so-spooky-night-peek-1.jpg" target="_blank" rel="noopener"><img src="downloads/books/previews/mr-pepo-not-so-spooky-night-peek-1.jpg" alt="Story page: Mr. Pepo on the porch with friendly pumpkins" width="600" height="609" loading="lazy" decoding="async"></a></li>
@@ -3794,7 +3953,12 @@
           </ul>
           <p class="story-peek-note">Tap a page to see it full size.</p>
         </div>
-        <aside class="story-print" aria-labelledby="story-print-title">
+                  </div>
+        </details>
+        <details class="fold">
+          <summary>How to print at home</summary>
+          <div class="fold-body">
+<aside class="story-print" aria-labelledby="story-print-title">
           <h3 id="story-print-title">How to print at home</h3>
           <ul>
             <li>Download the free PDF and open it.</li>
@@ -3804,7 +3968,12 @@
           </ul>
           <p>Book pages are square, 216 x 216 mm.</p>
         </aside>
-        <aside class="story-bind" id="binding-tips" aria-labelledby="story-bind-title">
+                  </div>
+        </details>
+        <details class="fold">
+          <summary>Binding tips</summary>
+          <div class="fold-body">
+<aside class="story-bind" id="binding-tips" aria-labelledby="story-bind-title">
           <h3 id="story-bind-title">Binding tips and tricks</h3>
           <p class="story-bind-lead">Works for any Mr. Pepo book. Print one side, glue the pages back to back, then bind however you like.</p>
 
@@ -3864,7 +4033,12 @@
             <p class="story-amazon-line" style="flex-basis:100%">Prefer a real book to hold? <span>A printed copy will be on Amazon soon</span> for a small cost.</p>
           </div>
         </aside>
-        <aside class="story-more" aria-labelledby="more-stories-title">
+                  </div>
+        </details>
+        <details class="fold">
+          <summary>More stories</summary>
+          <div class="fold-body">
+<aside class="story-more" aria-labelledby="more-stories-title">
           <h3 id="more-stories-title">More stories coming</h3>
           <p>Leave your email and Peter will tell you when a new story is ready.</p>
           <p class="story-thanks" id="stories-thanks" hidden>Thanks! Peter has your email for new stories.</p>
@@ -3879,7 +4053,9 @@
             <button type="submit">Tell me</button>
           </form>
         </aside>
-      </div>
+          </div>
+        </details>
+              </div>
     </section>
     <div class="side side-nfp" id="nfp">
     <header class="side-banner side-banner-nfp" aria-labelledby="nfp-title">
@@ -3892,7 +4068,10 @@
     </header>
     <section class="about-pepo" id="about-pepo-studios" aria-labelledby="about-pepo-title">
       <div class="wrap">
-        <div class="about-card">
+        <details class="fold">
+          <summary>About Pepo Studios</summary>
+          <div class="fold-body">
+<div class="about-card">
           <h2 id="about-pepo-title">Look and think before you speak.</h2>
           <p class="about-sub">Peter Slizik &middot; Pepo Studios &middot; Sydney</p>
           <img class="about-art" src="images/pepo-studios-crew.jpg" alt="Mr. Pepo with a glowing light bulb above him, beside a paper robot, bunny, dog, rocket, pumpkins, colouring sheets and books" width="1152" height="864" loading="lazy" decoding="async">
@@ -4000,7 +4179,9 @@
           </div>
           <p class="about-prices"><strong>Shop prices:</strong> support what it's worth, from a gold coin a page.</p>
         </div>
-      </div>
+          </div>
+        </details>
+              </div>
     </section>
     <section class="motto motto-yellow" aria-label="One door closes. The red one opens.">
       <p class="motto-accent">Pepo Studios</p>
@@ -4010,7 +4191,10 @@
       <img class="window-band-photo" src="images/full-build.jpg" alt="The whole Pepo window display: hanging rocket, Pepcon Booster on its launch tower, catch tower and paper crew" width="1200" height="1600" loading="lazy" decoding="async">
       <div class="window-band-shade" aria-hidden="true"></div>
       <div class="wrap">
-        <div class="cream-card">
+        <details class="fold">
+          <summary>The window</summary>
+          <div class="fold-body">
+<div class="cream-card">
           <h2 id="full-build-title">The window</h2>
           <p>By day the whole build is on show: a hanging rocket, the Pepcon Booster on its launch tower, a paper catch tower and the crew along the floor.</p>
           <div class="rules-row">
@@ -4018,17 +4202,27 @@
             <p class="rules-note">At night the same window glows blue. In the top corner, the yellow poster is the Pepo Studios House &amp; Play Rules.</p>
           </div>
         </div>
-      </div>
+          </div>
+        </details>
+              </div>
     </section>
     <section class="peephole" aria-labelledby="peek-inside-title">
       <h2 id="peek-inside-title">Peek inside</h2>
-      <div class="peephole-glass">
+      <details class="fold">
+          <summary>Peek inside the models</summary>
+          <div class="fold-body">
+<div class="peephole-glass">
         <img src="images/peek-inside.jpg" alt="Peephole view of the paper dog, Mr. Pepo, bunny and robot models" width="1200" height="900" loading="lazy" decoding="async">
       </div>
       <p>A peephole view of the paper dog, Mr. Pepo, a bunny and a robot.</p>
-    </section>
+          </div>
+        </details>
+            </section>
     <section class="pepcon" id="papercraft" aria-labelledby="pepcon-heavy-title">
-      <div class="wrap pepcon-split">
+      <details class="fold">
+          <summary>Pepcon Heavy</summary>
+          <div class="fold-body">
+<div class="wrap pepcon-split">
         <figure class="pepcon-photo">
           <img src="images/pepcon-heavy.jpg" alt="Paper Pepcon Heavy rocket standing tall at night" width="1200" height="1600" loading="lazy" decoding="async">
         </figure>
@@ -4042,7 +4236,9 @@
           </aside>
         </div>
       </div>
-    </section>
+          </div>
+        </details>
+            </section>
     <section class="motto motto-blue" aria-label="Some of your best work happens on the hard days.">
       <p class="motto-accent">Pepo Studios</p>
       <p class="motto-quote">Some of your best work happens on the hard days.</p>
@@ -4050,7 +4246,10 @@
     <section class="workshop" aria-labelledby="made-by-mr-pepo-title">
       <img class="workshop-bg" src="images/workshop.jpg" alt="Mr. Pepo papercraft workshop desk with banner and QR signs" width="1200" height="900" loading="lazy" decoding="async">
       <div class="workshop-shade" aria-hidden="true"></div>
-      <div class="wrap workshop-inner">
+      <details class="fold">
+          <summary>Made by Mr. Pepo</summary>
+          <div class="fold-body">
+<div class="wrap workshop-inner">
         <div class="story">
           <p class="kicker" id="workshop-title">The workshop</p>
           <h2 id="made-by-mr-pepo-title">Made by Mr. Pepo</h2>
@@ -4067,14 +4266,19 @@
           </figure>
         </div>
       </div>
-    </section>
+          </div>
+        </details>
+            </section>
     <section class="spot-hack" id="spot-the-hack" aria-labelledby="spot-the-hack-title">
       <div class="wrap">
         <div class="section-head">
           <h2 id="spot-the-hack-title">Spot the Hack</h2>
           <p class="hack-intro">Look closely. Every photo hides a clever fix from the Pepo Studios workshop.</p>
         </div>
-        <article class="hack-card">
+        <details class="fold">
+          <summary>Workshop photos</summary>
+          <div class="fold-body hack-fold-grid">
+<article class="hack-card">
           <div class="hack-card-layout">
             <img src="images/hacks/studio-door-closer.jpg" alt="Peter's outdoor studio beside a screen door, with plants on a bench, a green backdrop and a hose" width="1200" height="1600" loading="lazy" decoding="async">
             <div class="hack-card-copy">
@@ -4229,7 +4433,9 @@
             </div>
           </div>
         </article>
-      </div>
+          </div>
+        </details>
+              </div>
     </section>
     <section class="support-band" id="show-your-support" aria-labelledby="show-your-support-title">
       <div class="wrap">
@@ -4254,7 +4460,10 @@
           </ul>
           <p>Free printable journals for neurodivergent minds: plan, calm down and celebrate the small wins. Tell us your criteria and we can personalise one.</p>
           <p class="picture-note">If you like, you can also personalise your journal with your own pictures.</p>
-          <div class="pepo-choose" id="pepo-choose">
+          <details class="fold">
+          <summary>Journal covers and downloads</summary>
+          <div class="fold-body">
+<div class="pepo-choose" id="pepo-choose">
             <h3 id="pepo-choose-title">Choose your Mr. Pepo</h3>
             <p class="pepo-choose-caption">All our official Mr. Pepo covers, pick your favourite.</p>
             <div class="pepo-choose-thumbs" role="radiogroup" aria-labelledby="pepo-choose-title">
@@ -4436,7 +4645,9 @@
             <p>You can get everything with Mr. Pepo for free, or support what it's worth. If you can, please pay something. I need to survive too. Because of my special ability I can find ways to support myself and help others, and I want to lift awareness.</p>
             <p class="peter-note-sign">— Peter</p>
           </aside>
-        </aside>
+          </div>
+        </details>
+                </aside>
       </div>
     </section>
     <div class="support-trio">
@@ -4577,6 +4788,14 @@
               <span class="pname">Mr. Pepo "This Belongs To" Name Labels</span>
             </a>
           </li>
+          <li id="white-bunny">
+            <a class="pcard" href="downloads/White-Bunny-One-Sheet-A4.pdf" download="White-Bunny-One-Sheet-A4.pdf">
+              <span class="pcard-pic"><img loading="lazy" decoding="async" src="images/cards/white-bunny-preview.png" alt="White bunny paper model with a pink flower and a red dress"></span>
+              <span class="badge">Free · support what it's worth</span>
+              <span class="pname">White Bunny with Pink Flowers paper model</span>
+              <span class="pname">Mr. Pepo's cousin from Slovakia, a white bunny with a pink flower and a red dress. One A4 sheet: front and back pieces, a box stand and simple how-to steps. Print, cut, fold and glue.</span>
+            </a>
+          </li>
         </ul>
         <p class="grownups-note">For the grown-ups: <a href="https://www.youtube.com/@MrPepoRedDoor" target="_blank" rel="noopener">Red Door on YouTube</a></p>
       </div>
@@ -4595,7 +4814,10 @@
       <div class="wrap">
         <h2 id="services-title">Small business services</h2>
         <p class="biz-lead">Same friendly Pepo Studios, for your business.</p>
-        <div class="svc-grid">
+        <details class="fold">
+          <summary>What we offer</summary>
+          <div class="fold-body">
+<div class="svc-grid">
           <article class="svc-card">
             <h3>Web design</h3>
             <p>Clear, friendly websites that are easy to read on a phone.</p>
@@ -4613,14 +4835,19 @@
             <p>Custom paper models and printables for your shop or event.</p>
           </article>
         </div>
-        <p class="biz-foot">To ask about any of these, email <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a> or <a href="#book">book a free chat</a>.</p>
+          </div>
+        </details>
+                <p class="biz-foot">To ask about any of these, email <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a> or <a href="#book">book a free chat</a>.</p>
       </div>
     </section>
     <section class="biz" id="web-pages" aria-labelledby="web-pages-title">
       <div class="wrap">
         <h2 id="web-pages-title">Web pages for small businesses</h2>
         <p class="biz-lead">A small business can have a clear, friendly page on the web. Here are two ways we can help.</p>
-        <div class="biz-services">
+        <details class="fold">
+          <summary>Ways we can help</summary>
+          <div class="fold-body">
+<div class="biz-services">
           <article class="biz-card">
             <h3>A website check</h3>
             <p>We scan and audit the website you already have. Then we send you a plain list of what to fix: speed, how it works on a phone, how people contact you, and your Google listing.</p>
@@ -4646,7 +4873,9 @@
             <p>Facebook and Instagram pages set up to match your site.</p>
           </article>
         </div>
-        <aside class="biz-example">
+          </div>
+        </details>
+                <aside class="biz-example">
           <h3>A page we are making now</h3>
           <p>We are making a page right now for the family business Simea, Pivovar Simeon, in Piešťany, Slovakia. Their current site is <a href="https://www.pivovarsimeon.sk/" target="_blank" rel="noopener noreferrer">www.pivovarsimeon.sk</a>.</p>
         </aside>
@@ -4658,7 +4887,10 @@
         <h2 id="book-title">Book a free chat</h2>
         <p class="biz-lead">Tell us a little about your business. We will reply by email.</p>
         <p class="book-thanks" hidden>Thanks! We have your note and will reply by email.</p>
-        <form class="book-form" action="https://formsubmit.co/mr.pepo.au@gmail.com" method="POST">
+        <details class="fold">
+          <summary>Open the booking form</summary>
+          <div class="fold-body">
+<form class="book-form" action="https://formsubmit.co/mr.pepo.au@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="Pepo Studios booking">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
@@ -4693,13 +4925,18 @@
           </label>
           <button type="submit">Send</button>
         </form>
-      </div>
+          </div>
+        </details>
+              </div>
     </section>
     <section class="biz" id="work" aria-labelledby="work-title">
       <div class="wrap">
         <h2 id="work-title">Our work</h2>
         <p class="biz-lead">Real work only. This page, the paper makes, the free printables, the flyer, and one page still on the bench.</p>
-        <div class="work-grid">
+        <details class="fold">
+          <summary>Work samples</summary>
+          <div class="fold-body">
+<div class="work-grid">
           <a class="work-card" href="#top">
             <img src="images/night-window.jpg" alt="The Pepo Studios window at night" width="1350" height="1800" loading="lazy" decoding="async">
             <div>
@@ -4736,7 +4973,9 @@
             </div>
           </a>
         </div>
-      </div>
+          </div>
+        </details>
+              </div>
     </section>
     <section class="biz biz-alt kind-words" id="kind-words" aria-labelledby="kind-words-title">
       <div class="wrap">
@@ -4998,5 +5237,24 @@
     })();
   </script>
   <script src="assets/pepo-helper.js"></script>
+
+  <script>
+    (function () {
+      function reveal(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var node = el;
+        while (node) {
+          if (node.tagName === "DETAILS") node.open = true;
+          node = node.parentElement;
+        }
+      }
+      function fromHash() {
+        if (location.hash.length > 1) reveal(decodeURIComponent(location.hash.slice(1)));
+      }
+      window.addEventListener("hashchange", fromHash);
+      fromHash();
+    })();
+  </script>
 </body>
 </html>
