@@ -17,7 +17,7 @@
   face.className = "pepo-helper-face";
   var faceImg = document.createElement("img");
   faceImg.src = assetBase + "pepo-helper-face.jpg";
-  faceImg.alt = "";
+  faceImg.alt = "Mr. Pepo";
   face.appendChild(faceImg);
   launch.appendChild(label);
   launch.appendChild(face);
