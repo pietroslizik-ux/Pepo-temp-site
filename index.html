@@ -3306,6 +3306,27 @@
     body { line-height: 1.4; }
     .hero { min-height: 0; }
     .hero-row { display: block; }
+    .amazon-books {
+      margin: 0;
+      padding: 6px 16px 8px;
+      text-align: center;
+      background: #FDF8EE;
+    }
+    .amazon-books-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 8px 18px;
+      background: #8C5F3C;
+      color: #FDF8EE;
+      font-weight: 700;
+      text-decoration: none;
+      border: 2px solid #8C5F3C;
+      border-radius: 999px;
+    }
+    .amazon-books-button:hover { background: #F5C85A; color: #46321F; }
+    .amazon-books-button:focus-visible { outline: 3px solid #8C5F3C; outline-offset: 3px; }
     .hero-inner { padding: 16px 0 14px; }
     h1 { font-size: clamp(2.1rem, 4.6vw, 3.1rem); }
     .bounce-tagline { margin-top: 2px; font-size: clamp(1.05rem, 2.2vw, 1.4rem); }
@@ -3528,6 +3549,8 @@
     }
     @media (max-width: 640px) {
       .hero-inner { padding: 14px 0 12px; }
+      .amazon-books { padding: 6px 12px; }
+      .amazon-books-button { width: 100%; font-size: 0.98rem; }
       .motto { padding: 14px 12px; }
       .learn-home .wrap { grid-template-columns: 1fr; }
       .learn-grid, .learn-tips { grid-template-columns: 1fr 1fr; }
@@ -3874,6 +3897,9 @@
       </div>
     </section>
     </div>
+    <p class="amazon-books">
+      <a class="amazon-books-button" href="https://www.amazon.com/s?k=Mr.+Pepo+Peter+Slizik&amp;i=stripbooks" target="_blank" rel="noopener">Get Mr. Pepo books on Amazon</a>
+    </p>
     <section class="learn-home" id="learn-at-home" aria-labelledby="learn-at-home-title">
       <div class="wrap">
         <aside class="pepo-idea">
