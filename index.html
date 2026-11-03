@@ -3225,6 +3225,180 @@
     .lang-list a:hover { background: #FAECCD; }
     .lang-list a[aria-current] { background: #F5C85A; }
     .story-lang-row { margin: 10px 0 0; color: #46321F; font-weight: 700; }
+
+    /* Tighter homepage: less vertical padding, shorter images, grids instead of stacks */
+    body { line-height: 1.4; }
+    .hero { min-height: 0; }
+    .hero-inner { padding: 28px 0 22px; }
+    h1 { font-size: clamp(2.6rem, 6vw, 4rem); }
+    .bounce-tagline { margin-top: 4px; font-size: clamp(1.2rem, 2.8vw, 1.7rem); }
+    .nfp-statement { margin-top: 8px; font-size: clamp(1.02rem, 2vw, 1.28rem); }
+    .tagline { margin-top: 8px; font-size: clamp(1.02rem, 1.8vw, 1.2rem); }
+    .actions { margin-top: 14px; gap: 8px; }
+    .primary { padding: 12px 22px; font-size: 1.12rem; box-shadow: 0 4px 0 #8d420c; }
+    .section-head { margin-bottom: 10px; }
+    .section-head h2 { font-size: clamp(1.6rem, 3vw, 2.15rem); }
+    .learn-home { padding: 20px 0 8px; }
+    .pepo-idea { margin-bottom: 12px; padding: 10px 12px; }
+    .learn-block { margin-top: 14px; }
+    .learn-card img { height: 108px; }
+    .learn-grid, .learn-tips { gap: 8px; margin-top: 8px; }
+    .learn-soon-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .learn-soon-list li { margin: 0; }
+    .learn-club { padding: 12px 14px; }
+    .learn-tips li { padding: 10px 10px 8px; }
+    .free-stories { padding: 4px 0 12px; }
+    .free-stories .wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+    .free-stories .section-head,
+    .free-stories .story-spooky,
+    .free-stories .story-peek,
+    .free-stories .story-bind { grid-column: 1 / -1; }
+    .story-peek, .story-print, .story-bind, .story-more { max-width: none; margin-top: 0; }
+    .story-spooky-cover img { max-height: 220px; object-fit: cover; }
+    .story-bind-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .story-bind-step { margin: 0; }
+    .story-bind-step img { max-height: 110px; object-fit: cover; }
+    .side-banner { padding: 14px 0 12px; }
+    .side-banner h2 { font-size: clamp(1.7rem, 4vw, 2.5rem); }
+    .side-banner p { margin-top: 6px; }
+    .about-pepo { padding: 16px 0 8px; }
+    .about-card { padding: 14px 14px 12px; }
+    .about-sub { margin-bottom: 8px; }
+    .about-art {
+      max-height: 200px;
+      object-fit: cover;
+      object-position: center 28%;
+      margin-bottom: 10px;
+    }
+    .about-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px 16px;
+    }
+    .why-card { padding: 10px 12px 8px; margin: 0 0 8px; }
+    .why-card blockquote::before { font-size: 1.5rem; }
+    .why-card h3 { font-size: 1.35rem; }
+    .paper-studio { padding: 12px 12px 10px; margin: 4px 0 10px; }
+    .paper-studio-intro { gap: 10px 14px; margin-bottom: 8px; padding-bottom: 8px; }
+    .paper-studio-portrait { height: 120px; }
+    .paper-studio p, .paper-studio li { font-size: 0.98rem; line-height: 1.4; }
+    .motto { padding: 16px 14px; }
+    .motto-accent { margin-bottom: 2px; }
+    .motto-quote { font-size: clamp(1.45rem, 3.6vw, 2.15rem); }
+    .window-band { padding: 22px 0; }
+    .cream-card { padding: 14px 14px 12px; }
+    .cream-card h2, .peephole h2, .story h2, .pepcon-copy h2 {
+      font-size: clamp(1.6rem, 3.4vw, 2.3rem);
+    }
+    .peephole { padding: 18px 14px 20px; }
+    .peephole-glass {
+      width: min(180px, 42vw);
+      margin: 10px auto 8px;
+      box-shadow:
+        0 0 0 8px #12131a,
+        0 0 0 11px rgba(30, 43, 214, 0.7),
+        0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+    .pepcon { padding: 20px 0; }
+    .pepcon-split { gap: 16px; }
+    .pepcon-photo { max-height: 260px; }
+    .workshop { padding: 22px 0 24px; }
+    .polaroid img { max-height: 200px; }
+    .polaroid-b { margin-top: 10px; }
+    .spot-hack { padding-bottom: 12px; }
+    .spot-hack .wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+    .spot-hack .section-head { grid-column: 1 / -1; margin-bottom: 2px; }
+    .hack-card { width: 100%; margin: 0; padding: 8px; }
+    .hack-card + .hack-card { margin-top: 0; }
+    .hack-card-layout { display: flex; align-items: center; gap: 12px; }
+    .hack-card img { width: 168px; height: 112px; max-height: none; flex: 0 0 auto; object-fit: cover; }
+    .support-band { padding: 10px 0 12px; }
+    .support { padding: 12px 14px; }
+    #journals .support { width: min(1100px, 100%); }
+    .support-trio {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+      align-items: start;
+    }
+    .support-trio .support-band { padding: 0 0 12px; }
+    .support-trio .wrap { width: 100%; }
+    .support-trio .support { width: 100%; }
+    .support > img,
+    .support-trio img {
+      max-height: 140px !important;
+      width: auto !important;
+      max-width: min(160px, 100%) !important;
+      object-fit: contain;
+    }
+    #journals .journal-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin-top: 10px; }
+    #journals .jcard img { max-width: 110px; max-height: 140px; }
+    .pepo-choose-thumbs button { width: 78px; padding: 4px 4px 6px; }
+    .pepo-choose-thumbs img { width: 48px; height: 48px; }
+    #journals .pepo-choose-preview { width: min(160px, 70%); }
+    .journal-idea { padding: 10px 10px 12px; }
+    .journal-idea textarea { min-height: 64px; }
+    .keep-pepo { padding: 18px 0 8px; }
+    .kpb-cover { max-width: 140px; }
+    .kpb-intro { margin-bottom: 10px; }
+    .kpb-options { gap: 10px; }
+    .kpb-option { padding: 10px 12px 12px; }
+    .keep-pepo .peter-note { margin-top: 10px; }
+    .printables { padding: 20px 0 8px; }
+    #printables .grid { gap: 12px; }
+    .pcard { min-height: 0; gap: 8px; padding: 10px 10px 12px; }
+    .pcard-pic { height: 88px; }
+    .biz { padding: 22px 0; }
+    .biz-services, .price-grid, .work-grid, .svc-grid { margin-top: 12px; gap: 10px; }
+    .biz-card, .price-card, .svc-card { padding: 12px 12px 10px; }
+    .work-card img { aspect-ratio: 16 / 9; max-height: 140px; object-fit: cover; }
+    .work-card div { padding: 8px 10px 10px; }
+    .book-form { gap: 8px; margin-top: 10px; }
+    .book-form textarea { min-height: 64px; }
+    .site-footer { padding: 14px 0 18px; }
+    .footer-links { gap: 4px 12px; margin-bottom: 8px; }
+    @media (max-width: 800px) {
+      .biz-services, .price-grid, .svc-grid, .work-grid { grid-template-columns: 1fr 1fr; }
+      .support-trio { grid-template-columns: 1fr; width: min(1100px, calc(100% - 28px)); }
+      .kpb-options { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .spot-hack .wrap { grid-template-columns: 1fr 1fr; }
+      .hack-card-layout { flex-direction: column; align-items: stretch; }
+      .hack-card img { width: 100%; height: 96px; }
+    }
+    @media (max-width: 640px) {
+      .hero-inner { padding: 20px 0 16px; }
+      .motto { padding: 14px 12px; }
+      .learn-grid, .learn-tips { grid-template-columns: 1fr 1fr; }
+      .learn-card img { height: 92px; }
+      .learn-soon-list { grid-template-columns: 1fr 1fr; }
+      .free-stories .wrap, .story-bind-grid, .about-list { grid-template-columns: 1fr; }
+      .story-bind-step img { max-height: 120px; max-width: none; }
+      .about-art { max-height: 160px; }
+      #printables .grid { grid-template-columns: 1fr 1fr; }
+      #printables .pcard-pic { height: 72px; }
+    }
     .story-lang-row a { color: #8C5F3C; }
     @media (max-width: 640px) { .lang-list { right: auto; left: 0; } }
   </style>
@@ -3389,8 +3563,7 @@
         <h1>Pepo Studios</h1>
         <p class="bounce-tagline">Built to bounce back</p>
         <p class="nfp-statement">Mr. Pepo is a neurodiversity awareness project by Pepo Studios</p>
-        <p class="tagline">Welcome! Fold, build, organise yourself and play with fun paper models and journals from Pepo Studios.</p>
-        <p class="tagline">Pepo Studios is a very helpful page to visit, where people learn how to help themselves.</p>
+        <p class="tagline">Welcome! Fold, build and play with paper models, journals and stories from Pepo Studios.</p>
         <div class="actions">
           <a class="primary" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">Visit the Pepo Studios Shop</a>
           <div class="secondary-row">
@@ -3419,7 +3592,7 @@
           <img src="images/pepo-choose/official.jpg" alt="Mr. Pepo with a grey ponytail and curly moustache, in a brown shirt and shorts, raising a light bulb" width="1280" height="720" loading="lazy" decoding="async">
           <div>
             <h3 class="pepo-idea-title">Mr. Pepo's Big Idea</h3>
-            <p>When you really want something and you love it with your whole heart, almost nothing can stop you, because you can always dream up a new idea. Kids are the best at this. Grown-ups sometimes forget how, so here's a little tip for the grown-ups: listen to the kids a bit more. They might just have the answer.</p>
+            <p>When you love an idea with your whole heart, you can always dream up another one. Kids are the best at this. Grown-ups: listen to them a bit more. They might just have the answer.</p>
           </div>
         </aside>
         <div class="section-head">
@@ -3456,7 +3629,7 @@
         <article class="learn-block" aria-labelledby="spinner-club-title">
           <h3 id="spinner-club-title">Pepo Spinner Club</h3>
           <div class="learn-club">
-            <p><strong>Join the Pepo Spinner Club: support what it's worth.</strong> Choose any amount that feels right. Pay what you want. There's no upper limit. Any other amount is welcome too, and every member gets the same club.</p>
+            <p><strong>Join the Pepo Spinner Club: support what it's worth.</strong> Choose any amount that feels right. Pay what you want. There's no upper limit, and every member gets the same club.</p>
             <p>Members unlock:</p>
             <ul>
               <li>More Pepo designs</li>
@@ -3600,8 +3773,7 @@
             <div>
               <h3 id="story-spooky-title">Mr. Pepo and the Not-So-Spooky Night</h3>
               <p class="story-spooky-tag">A Halloween bedtime story</p>
-              <p class="story-bind-lead">It's Halloween night at the little brick house, and a row of pumpkins is glowing with smiley faces. Then comes a sound from outside: thump-thump, thump-thump! Mr. Pepo lifts his little lantern and, together with Luna, Howie and Sakura, goes to find out what it is.</p>
-              <p class="story-bind-lead">A cosy story about being brave together, counting pumpkins and drifting off to sleep. The colour cover opens onto black and white pages, ready for colouring in.</p>
+              <p class="story-bind-lead">A Halloween bedtime story. The pumpkins glow, then something goes thump-thump outside. Mr. Pepo, Luna, Howie and Sakura go to see. Colour cover, black and white pages to colour in.</p>
               <div class="story-spooky-actions">
                 <a class="story-bind-button" href="downloads/books/not-so-spooky-night.pdf" target="_blank" rel="noopener noreferrer">Read online</a>
                 <a class="story-bind-button story-spooky-alt" href="downloads/books/not-so-spooky-night.pdf" download="Mr-Pepo-Not-So-Spooky-Night.pdf">Download free</a>
@@ -3634,20 +3806,17 @@
         </aside>
         <aside class="story-bind" id="binding-tips" aria-labelledby="story-bind-title">
           <h3 id="story-bind-title">Binding tips and tricks</h3>
-          <p class="story-bind-lead">Works for any Mr. Pepo book. No need to think about printing on the other side. Print one side, glue, then bind however you like.</p>
+          <p class="story-bind-lead">Works for any Mr. Pepo book. Print one side, glue the pages back to back, then bind however you like.</p>
 
+          <div class="story-bind-grid">
           <div class="story-bind-step">
             <img src="images/binding/binding-glue-stick.jpg" alt="Mr. Pepo rubbing a glue stick on the back of a printed page" width="800" height="600" loading="lazy" decoding="async">
             <div>
               <h4>First: glue the pages back to back</h4>
               <ul>
-                <li>Print every page on one side only.</li>
-                <li>Keep the pages in order. Take the first page and the next one, and lay them face down.</li>
-                <li>Rub a glue stick all over the back of one page, right out to the edges.</li>
-                <li>Press the two pages back to back, so both pictures face out.</li>
-                <li>Line up the edges and smooth from the middle outwards.</li>
-                <li>Do the same for the next two pages, and so on to the end.</li>
-                <li>Let it dry under a heavy book, then bind it any way you like.</li>
+                <li>Print one side only, and keep the pages in order.</li>
+                <li>Glue each pair back to back so both pictures face out. Smooth from the middle.</li>
+                <li>Dry under a book, then bind it any way you like.</li>
               </ul>
             </div>
           </div>
@@ -3657,9 +3826,8 @@
             <div>
               <h4>Staple gun</h4>
               <ul>
-                <li>Put a piece of cardboard underneath the papers as a pad, so the staple doesn't damage the floor or table.</li>
-                <li>Shoot the staple gun through the middle of the papers. The staple goes through and a little into the cardboard, which you can easily pull out.</li>
-                <li>Turn the book around and bend the staple ends flat.</li>
+                <li>Put cardboard underneath so the staple doesn't mark the table.</li>
+                <li>Staple through the middle, pull the cardboard off, and bend the ends flat.</li>
               </ul>
             </div>
           </div>
@@ -3670,9 +3838,7 @@
               <h4>Needle and thread</h4>
               <ul>
                 <li>An adult helps with the needle.</li>
-                <li>Good, but fiddly.</li>
-                <li>Make holes in each paper first, then thread it.</li>
-                <li>Threading through several papers at once without the force of a gun behind it is very challenging. Not impossible, but challenging.</li>
+                <li>Make the holes first, then sew. Several sheets at once is fiddly, but it works.</li>
               </ul>
             </div>
           </div>
@@ -3683,11 +3849,10 @@
               <h4>Bent wire (paper clip or garden wire)</h4>
               <ul>
                 <li>An adult helps. Wire ends are sharp.</li>
-                <li>Use a straight piece of wire.</li>
-                <li>Put it through the middle.</li>
-                <li>Bend it tight around the edges.</li>
+                <li>Push a straight piece through the middle and bend it tight around the edges.</li>
               </ul>
             </div>
+          </div>
           </div>
 
           <p class="story-bind-note">Any way you bind it is the right way. Have fun with it.</p>
@@ -3716,27 +3881,6 @@
         </aside>
       </div>
     </section>
-    <section class="peter-public" id="a-note-from-peter" aria-labelledby="a-note-from-peter-title">
-      <div class="wrap">
-        <div class="peter-public-card">
-          <div class="peter-public-head">
-            <h2 id="a-note-from-peter-title">A note from Peter</h2>
-            <svg class="peter-spinner" viewBox="0 0 90 90" width="90" height="90" role="img" aria-label="Pepo spinner">
-              <line x1="45" y1="45" x2="45" y2="16" stroke="#3BA9F5" stroke-width="8" stroke-linecap="round"/>
-              <line x1="45" y1="45" x2="70.1" y2="59.5" stroke="#3BA9F5" stroke-width="8" stroke-linecap="round"/>
-              <line x1="45" y1="45" x2="19.9" y2="59.5" stroke="#3BA9F5" stroke-width="8" stroke-linecap="round"/>
-              <circle cx="45" cy="16" r="11" fill="#FFD23F" stroke="#3BA9F5" stroke-width="3"/>
-              <circle cx="70.1" cy="59.5" r="11" fill="#FFD23F" stroke="#3BA9F5" stroke-width="3"/>
-              <circle cx="19.9" cy="59.5" r="11" fill="#FFD23F" stroke="#3BA9F5" stroke-width="3"/>
-              <circle cx="45" cy="45" r="10" fill="#FF6B5A"/>
-              <circle cx="45" cy="45" r="3.5" fill="#FDF8EE"/>
-            </svg>
-          </div>
-          <p>Hi. One little birdie told me some kid in the neighbourhood is scared of me. Sorry, very sorry to hear that. Even though I cannot affect how people see me and understand my quirkiness, and frankly, I don't even mind, I'd never do anything to frighten a child. Kids aren't born scared of people. They learn how to feel by watching the grown-ups around them, so how a child acts usually comes from what they've been shown at home. All I can do is be kind, keep to myself, and be a good neighbour, and that's what I'll keep doing. I'm sorry, not sorry, for my quirkiness. I've been hiding for long enough. I'm not sorry now.</p>
-          <p class="peter-sign">— Peter</p>
-        </div>
-      </div>
-    </section>
     <div class="side side-nfp" id="nfp">
     <header class="side-banner side-banner-nfp" aria-labelledby="nfp-title">
       <div class="wrap">
@@ -3755,9 +3899,9 @@
           <div class="about-grid">
             <div class="about-block">
               <h3>What Pepo Studios is</h3>
-              <p>Pepo Studios is my project. Mr. Pepo is the guy with the light bulb: quirky, witty and full of ideas, because he is neurodiverse. I turn his ideas into practical printable paper products, colouring sheets and bedtime story books for kids, families and teachers.</p>
+              <p>Pepo Studios is my project. Mr. Pepo is the guy with the light bulb: quirky, witty and full of ideas, because he is neurodiverse. I turn his ideas into printable paper, colouring sheets and bedtime books.</p>
               <p>Pepo Studios has applied for a Create NSW grant to bring Mr. Pepo and the Paper Sky to families.</p>
-              <p>For people like me, the overwhelm isn't random — it shows up when I'm in deep focus, whether that's work on the computer, exercise, or anything else. When I'm in that stage and someone rattles me, it can feel like slamming on the brakes. To others it can look constant, but it's tied to the focus.</p>
+              <p>For people like me, the overwhelm shows up in deep focus. If someone rattles me then, it can feel like slamming on the brakes.</p>
             </div>
             <div class="about-block">
               <h3>The cause</h3>
@@ -3767,17 +3911,15 @@
           <section class="why-card" id="why" aria-labelledby="why-title">
             <h3 id="why-title">Why I'm doing this</h3>
             <blockquote>
-              <p>I'm doing all this because I came to the realisation of what I've been suffering all my life, and how little awareness there is about that around us.</p>
-              <p>Most of the people with this kind of ability, as I like to say, not disability, are suffering greatly, and lots of them I see are called the scum of the earth now. And lots of them are the masters who control the earth.</p>
-              <p>Because these minds can either be super incredible and do super things, or can very easily wind down on a bad path. So that's what I would like to point out.</p>
+              <p>I'm doing this because I finally saw what I've been living with all my life, and how little awareness there is around us.</p>
+              <p>People with this special ability are often suffering, even while some of them do incredible things. These minds can build something brilliant, or they can be pushed onto a hard path. That's what I want people to see.</p>
             </blockquote>
             <p class="why-sign">&mdash; Peter</p>
           </section>
           <section class="why-card" id="moving-forward" aria-labelledby="moving-forward-title">
             <h3 id="moving-forward-title">Moving forward</h3>
-            <p>I'm fed up with how the system treats people like me. But I'm not bitter. I'm turning that anger into strength.</p>
-            <p>I'm not asking for pity, and I'm not desperate. I'm pumped, and I'm pushing forward for the right cause.</p>
-            <p>I want this to reach as many people as possible, here in Australia and all around the world. Free for everyone, or support what it's worth.</p>
+            <p>I'm fed up with how the system treats people like me. I'm not bitter, and I'm not asking for pity. I'm turning that into strength and pushing forward.</p>
+            <p>I want this to reach as many people as possible, in Australia and around the world. Free for everyone, or support what it's worth.</p>
             <p class="why-sign">&mdash; Peter</p>
           </section>
           <section class="paper-studio" id="mastermind" aria-labelledby="mastermind-title">
@@ -3789,21 +3931,19 @@
                 <p class="paper-studio-motto">Look and think before you speak.</p>
               </div>
             </div>
-            <p>I'm starting a mastermind for people with special abilities. Minds that notice things most people walk right past. It's not about being better than anyone. It's about finally having room to think out loud with people who get it. If that sounds like you, keep an eye on this page.</p>
+            <p>A mastermind for people with a special ability. Minds that notice what most people walk past. Not about being better than anyone. Room to think out loud with people who get it.</p>
             <p><strong>Limited to 20 members per class.</strong></p>
             <h4 class="mastermind-kicker">How to get in</h4>
-            <p>Alpha Mastermind is for people with a special ability who are building something real, have started or tried things, and want to help others too. If that's you, apply.</p>
+            <p>For people with a special ability who are building something real and want to help others too. If that's you, apply.</p>
             <ol class="mastermind-steps">
               <li>Apply with your name, email, and your special ability or what you want to build.</li>
               <li>Answer a few questions.</li>
               <li>Peter reviews every application personally.</li>
               <li>Approved members get the private page and access code by email.</li>
             </ol>
-            <p>Inside, approved members have a private discussion area for business ideas. It is visible only to people with the access code.</p>
-            <p>Other groups exist or can be created. Each one is looked after by a designated host, so everyone who fits has a place.</p>
-            <p>Hosts can run their own groups under Alpha Mastermind supervision. It's joint supervision, so many people have input, not just one person. As the owner, I want to hear what's working and what isn't. Tell me straight. I don't want to be misinformed.</p>
+            <p>Approved members share a private area for business ideas, visible only with the access code. Other groups can be hosted under joint supervision. Tell me straight what's working.</p>
             <h4 class="mastermind-kicker">Weekly sessions</h4>
-            <p>I'd like to start one-hour sessions once a week. We'll pick the day that suits the group, Tuesday, Wednesday or Thursday. I don't mind which. I'm very happy to talk through plans for any future business, the pros and cons, and how to make them happen. I won't spend any time on why something can't be done. I only focus on how it can be done.</p>
+            <p>One-hour sessions once a week, on a Tuesday, Wednesday or Thursday that suits the group. We talk through how a plan can happen. I don't spend time on why it can't.</p>
             <p class="alpha-full-note" id="alpha-full-note" hidden>Alpha Mastermind is full (20 members). Apply anyway and Peter will place you in another group or the next opening.</p>
             <form class="mastermind-form" id="mastermind-apply" action="https://formsubmit.co/mr.pepo.au@gmail.com" method="POST">
               <input type="hidden" name="_subject" value="Alpha Mastermind application">
@@ -3825,9 +3965,7 @@
           </section>
           <div class="about-block">
             <h3>What we make</h3>
-            <p>At Pepo Studios we make happy, practical paper things for families: papercraft to cut, fold and build, colouring sheets for quiet time, bedtime story books with Mr. Pepo, Luna and Sakura, and now journals and diaries made for neurodivergent minds, to help you plan, calm down and celebrate the small wins.</p>
-            <p>Journals with Mr. Pepo, Luna and Sakura, for kids, teens, parents and every neurodivergent mind.</p>
-            <p>Any other more personalised journals can be easily made after you tell us your criteria for your journal.</p>
+            <p>Happy, practical paper things for families: papercraft, colouring sheets, bedtime stories, and journals for neurodivergent minds. Tell us what you need and we can personalise a journal, including your own pictures.</p>
             <p class="picture-note">If you like, you can also personalise your journal with your own pictures.</p>
             <aside class="peter-note">
               <p>Free for everyone, or support what it's worth. If you can, please pay something; I need to survive too.</p>
@@ -3897,7 +4035,7 @@
         <div class="pepcon-copy">
           <h2 id="pepcon-heavy-title">Pepcon Heavy</h2>
           <p>A paper Pepcon Heavy, standing tall at&nbsp;night.</p>
-          <p>The Pepcon models on Payhip come with instructions made by OG, and I'm one hundred percent sure that's all that's written there — nothing else. I apologise, I didn't read them. I have no idea what's in there anyway. I didn't check them, didn't use them, as I never use instructions. If you get stuck, <a href="mailto:mr.pepo.au@gmail.com">tell me</a> and I'll help you through it.</p>
+          <p>Instructions come with the Payhip models. If you get stuck, <a href="mailto:mr.pepo.au@gmail.com">tell me</a> and I'll help you through it.</p>
           <aside class="peter-note">
             <p>Free for everyone, or support what it's worth. If you can, please pay something; I need to survive too.</p>
             <p class="peter-note-sign">— Peter</p>
@@ -4097,7 +4235,7 @@
       <div class="wrap">
         <aside class="support">
           <h2 id="show-your-support-title">Show your support!</h2>
-          <p>Download to support Pepo Studios. Show your support for Mr. Pepo. Support flyer in your windows. Snap a photo and email it to <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a>. While you are emailing the picture, please tell us which paper models you like, <a href="https://payhip.com/PepoStudios" target="_blank" rel="noopener">which you can choose from</a>.</p>
+          <p>Put the flyer in your window, then email a photo to <a href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a>. Tell us which paper models you like. <a href="https://payhip.com/PepoStudios" target="_blank" rel="noopener">Choose them here</a>.</p>
           <img src="assets/flyer/i-support-mr-pepo-flyer.png" alt="I support Mr. Pepo flyer preview" loading="lazy" decoding="async" style="display:block;max-width:320px;width:100%;margin:1rem auto;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.15)">
           <a class="flyer" href="assets/flyer/i-support-mr-pepo-flyer.pdf" download>Download the flyer (PDF)</a>
           <a class="flyer" href="assets/flyer/i-support-mr-pepo-flyer-big.png" target="_blank" rel="noopener">View big flyer</a>
@@ -4114,8 +4252,7 @@
             <li>Choose your Mr. Pepo</li>
             <li>Add your own pictures</li>
           </ul>
-          <p>Free printable journals made for neurodivergent minds, to help you plan, calm down and celebrate the small wins.</p>
-          <p>Any other more personalised journals can be easily made after you tell us your criteria for your journal.</p>
+          <p>Free printable journals for neurodivergent minds: plan, calm down and celebrate the small wins. Tell us your criteria and we can personalise one.</p>
           <p class="picture-note">If you like, you can also personalise your journal with your own pictures.</p>
           <div class="pepo-choose" id="pepo-choose">
             <h3 id="pepo-choose-title">Choose your Mr. Pepo</h3>
@@ -4296,17 +4433,18 @@
             </li>
           </ul>
           <aside class="peter-note">
-            <p>You can get everything with Mr. Pepo for free, or support what it's worth. I'm happy to be open to everyone. I gently and politely ask you to pay something if you can, because I need to survive too. I'm doing this because I now know how much I was suffering all my life, and since becoming aware, I want to lift awareness. I'm not saying 'poor me' because of my special ability. Because of my special ability, I'm able to come up with many different ways to survive, support myself, and help others in the future.</p>
+            <p>You can get everything with Mr. Pepo for free, or support what it's worth. If you can, please pay something. I need to survive too. Because of my special ability I can find ways to support myself and help others, and I want to lift awareness.</p>
             <p class="peter-note-sign">— Peter</p>
           </aside>
         </aside>
       </div>
     </section>
+    <div class="support-trio">
     <section class="support-band" id="mr-pepo-journal" aria-labelledby="mr-pepo-journal-title">
       <div class="wrap">
         <aside class="support">
           <h2 id="mr-pepo-journal-title">Free for spectrum families: The Mr. Pepo Journal</h2>
-          <p>A free printable journal for ADHD, autism and all neurodivergent families. Written by Peter for minds that work differently: about me, daily pages, a weekly look back and a page to tell your story in your own words. There are no wrong answers. A neurodiversity awareness project by Pepo Studios.</p>
+          <p>A free printable journal for ADHD, autism and neurodivergent families. About me, daily pages, a weekly look back, and a page for your own story. A neurodiversity awareness project by Pepo Studios.</p>
           <p class="picture-note">If you like, you can also personalise your journal with your own pictures.</p>
           <aside class="peter-note">
             <p>Free for everyone, or support what it's worth. If you can, please pay something; I need to survive too.</p>
@@ -4346,6 +4484,7 @@
         </aside>
       </div>
     </section>
+    </div>
     <section class="keep-pepo" id="keep-mr-pepo-here" aria-labelledby="keep-mr-pepo-here-title">
       <div class="wrap">
         <div class="section-head">
@@ -4650,7 +4789,6 @@
         <a href="#work">Our work</a>
         <a href="#kind-words">Kind words</a>
         <a href="#prices">Prices</a>
-        <a href="#a-note-from-peter">A note from Peter</a>
       </nav>
       <section class="follow-us" aria-labelledby="follow-us-title">
         <h2 id="follow-us-title">Follow Pepo Studios</h2>
