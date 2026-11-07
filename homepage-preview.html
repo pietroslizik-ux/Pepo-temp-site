@@ -3973,27 +3973,29 @@
 </style>
 
 <style>
-.opening-stage{position:relative;z-index:2;width:100%;background:#3a2418}
-.opening-hero{display:block;width:100%;height:auto}
-.brick-nav{position:absolute;inset:0;pointer-events:none}
-.brick-col{position:absolute;top:10px;bottom:12px;z-index:3;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;pointer-events:auto;overflow:auto}
-.brick-left{left:0;width:9.5%}
-.brick-right{right:0;width:21%}
-.brick-col a{display:flex;align-items:center;gap:6px;min-height:52px;padding:4px 6px;background:#ffe56a;color:#3a2a14;text-decoration:none;border:2px solid #3a2a14;border-radius:12px;font-weight:800;font-size:.95rem;line-height:1.15;box-shadow:0 2px 0 #8d420c}
+.opening-stage{position:relative;z-index:2;display:grid;grid-template-columns:minmax(210px,26vw) minmax(0,1fr) minmax(230px,28vw);grid-template-rows:1fr;height:calc(100svh - 34px);background:#3a2418;align-items:stretch}
+.opening-middle{grid-column:2;grid-row:1;position:relative;min-height:0;height:100%}
+.brick-nav{display:contents}
+.opening-hero{display:block;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.window-brand{position:absolute;left:22%;right:16%;top:54%;margin:0;transform:translateY(-50%);z-index:2;pointer-events:none;text-align:center;font-family:"Pacifico","Segoe Script","Comic Sans MS",cursive;font-size:clamp(1.35rem,2.7vw,2.7rem);line-height:1.05;color:#ffe56a;text-shadow:0 2px 0 #24160c,0 8px 18px rgba(0,0,0,.72)}
+.brick-col{grid-row:1;margin:0;padding:8px;list-style:none;display:flex;flex-direction:column;gap:8px;min-height:0;overflow:auto}
+.brick-left{grid-column:1}
+.brick-right{grid-column:3;padding-bottom:58px}
+.brick-col li{flex:1 1 0;display:flex;min-height:72px}
+.brick-col a{flex:1;display:flex;align-items:center;gap:10px;min-height:72px;padding:8px 10px;background:#ffe56a;color:#3a2a14;text-decoration:none;border:3px solid #3a2a14;border-radius:16px;font-weight:800;font-size:1.08rem;line-height:1.15;box-shadow:0 3px 0 #8d420c}
 .brick-col a:hover{background:#fff}
 .brick-col a:focus-visible{outline:3px solid #ffe56a;outline-offset:2px}
-.brick-col img{width:44px;height:44px;object-fit:cover;border-radius:8px;flex:0 0 auto;background:#fffaf1}
-.brick-left a{flex-direction:column;justify-content:center;text-align:center;font-size:.78rem;padding:5px 3px;gap:3px}
-.brick-left img{width:100%;height:40px}
+.brick-col img{width:64px;height:64px;object-fit:cover;border-radius:10px;flex:0 0 auto;background:#fffaf1}
+.brick-col span{display:block}
 @media(max-width:800px){
-.brick-left{width:8%}
-.brick-right{width:22%}
-.brick-col{gap:4px}
-.brick-col a{min-height:44px}
-.brick-col{top:6px;bottom:8px;gap:6px}
-.brick-col a{min-height:48px;font-size:.72rem;padding:3px}
-.brick-col img{width:32px;height:32px}
-.brick-left img{height:28px}
+.preview-note{font-size:.82rem;padding:6px 8px}
+.opening-stage{grid-template-columns:minmax(112px,30vw) minmax(0,1fr) minmax(116px,31vw);height:calc(100svh - 58px)}
+.brick-col{padding:5px;gap:6px}
+.brick-right{padding-bottom:96px}
+.brick-col li,.brick-col a{min-height:58px}
+.brick-col a{flex-direction:column;justify-content:center;text-align:center;gap:4px;font-size:.86rem;padding:6px 4px}
+.brick-col img{width:42px;height:42px}
+.window-brand{left:12%;right:10%;font-size:clamp(1rem,3.8vw,1.35rem);top:55%}
 }
 </style>
 </head>
@@ -4001,7 +4003,10 @@
   <p class="preview-note">Preview only. The live homepage has not been changed.</p>
 
   <div class="opening-stage">
-  <img class="opening-hero" src="images/night-window.jpg" alt="The Pepo Studios night window: paper rockets in a deep blue glow, and the yellow Pepo Studios House and Play Rules sign" width="1350" height="1800">
+  <div class="opening-middle">
+    <img class="opening-hero" src="images/night-window.jpg" alt="The Pepo Studios night window: paper rockets in a deep blue glow, and the yellow Pepo Studios House and Play Rules sign" width="1350" height="1800">
+    <p class="window-brand">Pepo Studios</p>
+  </div>
   <nav class="brick-nav" id="paths" aria-label="Choose a path">
     <ul class="brick-col brick-left">
       <li><a href="https://payhip.com/PepoStudios" target="_blank" rel="noopener"><img src="images/workshop.jpg" alt="" width="1200" height="900"><span>Shop</span></a></li>
@@ -4011,6 +4016,7 @@
       <li><a href="#printables"><img src="images/bunny-desk.jpg" alt="" width="1200" height="900"><span>Free printables</span></a></li>
       <li><a href="#mr-pepo-journal"><img src="downloads/The-Mr-Pepo-Journal-preview.png" alt="" width="600" height="800"><span>Free journal</span></a></li>
       <li><a href="#book"><img src="images/hacks/front.jpg" alt="" width="1200" height="900"><span>Book a chat</span></a></li>
+      <li><a href="https://www.instagram.com/mrpepo.au/" target="_blank" rel="noopener"><img src="images/pepo-waving.png" alt="" width="800" height="800"><span>Mr. Pepo on Instagram</span></a></li>
     </ul>
     <ul class="brick-col brick-right">
       <li><a href="https://www.amazon.com.au/dp/B0HNP7NWWJ" target="_blank" rel="noopener"><img src="images/books/not-so-spooky-night-cover-800.jpg" alt="" width="800" height="812"><span>Amazon books</span></a></li>
@@ -4020,7 +4026,6 @@
       <li><a href="https://www.youtube.com/@MrPepoRedDoor" target="_blank" rel="noopener"><img src="images/night-window-close.jpg" alt="" width="1350" height="1800"><span>Red Door</span></a></li>
       <li><a href="#web-pages"><img src="images/full-build.jpg" alt="" width="1200" height="1600"><span>Web pages</span></a></li>
       <li><a href="#support"><img src="images/made-by-mr-pepo-window.jpg" alt="" width="1200" height="1600"><span>Support flyer</span></a></li>
-      <li><a href="https://www.instagram.com/mrpepo.au/" target="_blank" rel="noopener"><img src="images/pepo-waving.png" alt="" width="800" height="800"><span>Mr. Pepo on Instagram</span></a></li>
     </ul>
   </nav>
   </div>
