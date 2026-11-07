@@ -3973,57 +3973,57 @@
 </style>
 
 <style>
-.opening-hero{display:block;width:100%;height:calc(100svh - 36px - 300px);min-height:320px;object-fit:cover;object-position:center 8%;background:#07081a}
-.opening-paths{background:#fff4dc;color:#3a2a14;padding:12px 0 16px}
-.opening-paths .path-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
-.opening-paths .path-grid a{display:flex;flex-direction:column;min-height:148px;background:#fff;color:#3a2a14;text-decoration:none;border:3px solid #3a2a14;border-radius:16px;overflow:hidden;box-shadow:0 4px 0 #e07a1f}
-.opening-paths .path-grid a:hover{background:#ffe56a}
-.opening-paths .path-grid a:focus-visible{outline:3px solid #3a2a14;outline-offset:3px}
-.opening-paths .path-grid img{width:100%;height:92px;object-fit:cover;background:#fffaf1}
-.opening-paths .path-grid img.fit-contain{object-fit:contain}
-.opening-paths .path-grid span{display:flex;align-items:center;justify-content:center;min-height:52px;padding:8px 8px 10px;font-size:1.12rem;font-weight:800;line-height:1.2;text-align:center}
-.opening-more{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:12px}
-.opening-more a{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 16px;background:#ffe56a;color:#3a2a14;border:3px solid #3a2a14;border-radius:999px;font-weight:800;font-size:1.05rem;text-decoration:none}
-.opening-more a:hover{background:#fff}
-.opening-more a:focus-visible{outline:3px solid #3a2a14;outline-offset:3px}
+.opening-stage{position:relative;z-index:2;width:100%;background:#3a2418}
+.opening-hero{display:block;width:100%;height:auto}
+.brick-nav{position:absolute;inset:0;pointer-events:none}
+.brick-col{position:absolute;top:10px;bottom:12px;z-index:3;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;pointer-events:auto;overflow:auto}
+.brick-left{left:0;width:9.5%}
+.brick-right{right:0;width:21%}
+.brick-col a{display:flex;align-items:center;gap:6px;min-height:52px;padding:4px 6px;background:#ffe56a;color:#3a2a14;text-decoration:none;border:2px solid #3a2a14;border-radius:12px;font-weight:800;font-size:.95rem;line-height:1.15;box-shadow:0 2px 0 #8d420c}
+.brick-col a:hover{background:#fff}
+.brick-col a:focus-visible{outline:3px solid #ffe56a;outline-offset:2px}
+.brick-col img{width:44px;height:44px;object-fit:cover;border-radius:8px;flex:0 0 auto;background:#fffaf1}
+.brick-left a{flex-direction:column;justify-content:center;text-align:center;font-size:.78rem;padding:5px 3px;gap:3px}
+.brick-left img{width:100%;height:40px}
 @media(max-width:800px){
-.opening-hero{height:calc(100svh - 36px - 340px);min-height:240px}
-.opening-paths .path-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-.opening-paths .path-grid a{min-height:132px}
-.opening-paths .path-grid span{font-size:1.15rem;min-height:48px}
+.brick-left{width:8%}
+.brick-right{width:22%}
+.brick-col{gap:4px}
+.brick-col a{min-height:44px}
+.brick-col{top:6px;bottom:8px;gap:6px}
+.brick-col a{min-height:48px;font-size:.72rem;padding:3px}
+.brick-col img{width:32px;height:32px}
+.brick-left img{height:28px}
 }
 </style>
 </head>
 <body id="top">
   <p class="preview-note">Preview only. The live homepage has not been changed.</p>
 
+  <div class="opening-stage">
   <img class="opening-hero" src="images/night-window.jpg" alt="The Pepo Studios night window: paper rockets in a deep blue glow, and the yellow Pepo Studios House and Play Rules sign" width="1350" height="1800">
-  <nav class="opening-paths" id="paths" aria-label="Choose a path">
-    <div class="wrap">
-      <ul class="path-grid">
-        <li><a href="https://www.amazon.com.au/dp/B0HNP7NWWJ" target="_blank" rel="noopener"><img class="fit-contain" src="images/books/not-so-spooky-night-cover-800.jpg" alt="A Mr. Pepo book cover" width="800" height="812"><span>Amazon books</span></a></li>
-        <li><a href="https://payhip.com/PepoStudios" target="_blank" rel="noopener"><img src="images/workshop.jpg" alt="The Pepo Studios workshop desk" width="1200" height="900"><span>Shop</span></a></li>
-        <li><a href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener"><img src="images/stories/not-so-spooky-night/p01.jpg" alt="A page from a Mr. Pepo story" width="600" height="600"><span>YouTube stories</span></a></li>
-        <li><a href="https://www.instagram.com/pepo_studios/" target="_blank" rel="noopener"><img src="images/our-window.jpg" alt="The Pepo Studios window in the brick wall" width="1200" height="1600"><span>Instagram</span></a></li>
-        <li><a href="https://www.youtube.com/@MrPepoLifeHacks" target="_blank" rel="noopener"><img src="images/hacks/desk.jpg" alt="The craft desk used for life hacks" width="1200" height="900"><span>Life Hacks</span></a></li>
-        <li><a href="#free-stories"><img class="fit-contain" src="downloads/books/mr-pepo-warm-vegetable-soup-cover-800.jpg" alt="Cover of Mr. Pepo Makes Warm Vegetable Soup" width="800" height="800"><span>Free stories</span></a></li>
-        <li><a href="#learn-at-home"><img src="images/hero-models/19-pepo-spinner-three-arm.jpg" alt="Pepo fidget spinner paper model" width="1200" height="900"><span>Learn and Make</span></a></li>
-        <li><a href="#printables"><img src="images/bunny-desk.jpg" alt="White bunny paper model on the workshop desk" width="1200" height="900"><span>Free printables</span></a></li>
-        <li><a href="https://pepostudios.au/planners.html"><img src="images/pepo-choose/workshop.jpg" alt="Mr. Pepo in the workshop" width="1280" height="720"><span>Planners</span></a></li>
-        <li><a href="https://www.youtube.com/@MrPepoRedDoor" target="_blank" rel="noopener"><img src="images/night-window-close.jpg" alt="Closer view of the night window and yellow sign" width="1350" height="1800"><span>Red Door</span></a></li>
-        <li><a href="#web-pages"><img src="images/full-build.jpg" alt="The Pepo Studios window display" width="1200" height="1600"><span>Web pages</span></a></li>
-        <li><a href="#nfp"><img class="fit-contain" src="images/pepo-choose/official.jpg" alt="Mr. Pepo with a grey ponytail and curly moustache, raising a light bulb" width="1280" height="720"><span>Awareness</span></a></li>
-      </ul>
-      <div class="opening-more">
-        <a href="#free-stories">Free stories</a>
-        <a href="#learn-at-home">Learn and Make</a>
-        <a href="#mr-pepo-journal">Free journal</a>
-        <a href="#support">Support flyer</a>
-        <a href="#book">Book a chat</a>
-        <a href="https://www.instagram.com/mrpepo.au/" target="_blank" rel="noopener">Mr. Pepo on Instagram</a>
-      </div>
-    </div>
+  <nav class="brick-nav" id="paths" aria-label="Choose a path">
+    <ul class="brick-col brick-left">
+      <li><a href="https://payhip.com/PepoStudios" target="_blank" rel="noopener"><img src="images/workshop.jpg" alt="" width="1200" height="900"><span>Shop</span></a></li>
+      <li><a href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener"><img src="images/stories/not-so-spooky-night/p01.jpg" alt="" width="600" height="600"><span>YouTube stories</span></a></li>
+      <li><a href="#free-stories"><img src="downloads/books/mr-pepo-warm-vegetable-soup-cover-800.jpg" alt="" width="800" height="800"><span>Free stories</span></a></li>
+      <li><a href="#learn-at-home"><img src="images/hero-models/19-pepo-spinner-three-arm.jpg" alt="" width="1200" height="900"><span>Learn and Make</span></a></li>
+      <li><a href="#printables"><img src="images/bunny-desk.jpg" alt="" width="1200" height="900"><span>Free printables</span></a></li>
+      <li><a href="#mr-pepo-journal"><img src="downloads/The-Mr-Pepo-Journal-preview.png" alt="" width="600" height="800"><span>Free journal</span></a></li>
+      <li><a href="#book"><img src="images/hacks/front.jpg" alt="" width="1200" height="900"><span>Book a chat</span></a></li>
+    </ul>
+    <ul class="brick-col brick-right">
+      <li><a href="https://www.amazon.com.au/dp/B0HNP7NWWJ" target="_blank" rel="noopener"><img src="images/books/not-so-spooky-night-cover-800.jpg" alt="" width="800" height="812"><span>Amazon books</span></a></li>
+      <li><a href="https://www.instagram.com/pepo_studios/" target="_blank" rel="noopener"><img src="images/our-window.jpg" alt="" width="1200" height="1600"><span>Instagram</span></a></li>
+      <li><a href="https://www.youtube.com/@MrPepoLifeHacks" target="_blank" rel="noopener"><img src="images/hacks/desk.jpg" alt="" width="1200" height="900"><span>Life Hacks</span></a></li>
+      <li><a href="https://pepostudios.au/planners.html"><img src="images/pepo-choose/workshop.jpg" alt="" width="1280" height="720"><span>Planners</span></a></li>
+      <li><a href="https://www.youtube.com/@MrPepoRedDoor" target="_blank" rel="noopener"><img src="images/night-window-close.jpg" alt="" width="1350" height="1800"><span>Red Door</span></a></li>
+      <li><a href="#web-pages"><img src="images/full-build.jpg" alt="" width="1200" height="1600"><span>Web pages</span></a></li>
+      <li><a href="#support"><img src="images/made-by-mr-pepo-window.jpg" alt="" width="1200" height="1600"><span>Support flyer</span></a></li>
+      <li><a href="https://www.instagram.com/mrpepo.au/" target="_blank" rel="noopener"><img src="images/pepo-waving.png" alt="" width="800" height="800"><span>Mr. Pepo on Instagram</span></a></li>
+    </ul>
   </nav>
+  </div>
 
   <span class="pepo-signature" aria-hidden="true">Pepo Studios</span>
   <div class="decor" aria-hidden="true">
