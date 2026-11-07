@@ -3971,16 +3971,61 @@
 .hero.hero-window .path-grid span{font-size:1.16rem}
 }
 </style>
+
+<style>
+.opening-hero{display:block;width:100%;height:calc(100svh - 36px - 300px);min-height:320px;object-fit:cover;object-position:center 8%;background:#07081a}
+.opening-paths{background:#fff4dc;color:#3a2a14;padding:12px 0 16px}
+.opening-paths .path-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.opening-paths .path-grid a{display:flex;flex-direction:column;min-height:148px;background:#fff;color:#3a2a14;text-decoration:none;border:3px solid #3a2a14;border-radius:16px;overflow:hidden;box-shadow:0 4px 0 #e07a1f}
+.opening-paths .path-grid a:hover{background:#ffe56a}
+.opening-paths .path-grid a:focus-visible{outline:3px solid #3a2a14;outline-offset:3px}
+.opening-paths .path-grid img{width:100%;height:92px;object-fit:cover;background:#fffaf1}
+.opening-paths .path-grid img.fit-contain{object-fit:contain}
+.opening-paths .path-grid span{display:flex;align-items:center;justify-content:center;min-height:52px;padding:8px 8px 10px;font-size:1.12rem;font-weight:800;line-height:1.2;text-align:center}
+.opening-more{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:12px}
+.opening-more a{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 16px;background:#ffe56a;color:#3a2a14;border:3px solid #3a2a14;border-radius:999px;font-weight:800;font-size:1.05rem;text-decoration:none}
+.opening-more a:hover{background:#fff}
+.opening-more a:focus-visible{outline:3px solid #3a2a14;outline-offset:3px}
+@media(max-width:800px){
+.opening-hero{height:calc(100svh - 36px - 340px);min-height:240px}
+.opening-paths .path-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.opening-paths .path-grid a{min-height:132px}
+.opening-paths .path-grid span{font-size:1.15rem;min-height:48px}
+}
+</style>
 </head>
 <body id="top">
   <p class="preview-note">Preview only. The live homepage has not been changed.</p>
+
+  <img class="opening-hero" src="images/night-window.jpg" alt="The Pepo Studios night window: paper rockets in a deep blue glow, and the yellow Pepo Studios House and Play Rules sign" width="1350" height="1800">
+  <nav class="opening-paths" id="paths" aria-label="Choose a path">
+    <div class="wrap">
+      <ul class="path-grid">
+        <li><a href="https://www.amazon.com.au/dp/B0HNP7NWWJ" target="_blank" rel="noopener"><img class="fit-contain" src="images/books/not-so-spooky-night-cover-800.jpg" alt="A Mr. Pepo book cover" width="800" height="812"><span>Amazon books</span></a></li>
+        <li><a href="https://payhip.com/PepoStudios" target="_blank" rel="noopener"><img src="images/workshop.jpg" alt="The Pepo Studios workshop desk" width="1200" height="900"><span>Shop</span></a></li>
+        <li><a href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener"><img src="images/stories/not-so-spooky-night/p01.jpg" alt="A page from a Mr. Pepo story" width="600" height="600"><span>YouTube stories</span></a></li>
+        <li><a href="https://www.instagram.com/pepo_studios/" target="_blank" rel="noopener"><img src="images/our-window.jpg" alt="The Pepo Studios window in the brick wall" width="1200" height="1600"><span>Instagram</span></a></li>
+        <li><a href="https://www.youtube.com/@MrPepoLifeHacks" target="_blank" rel="noopener"><img src="images/hacks/desk.jpg" alt="The craft desk used for life hacks" width="1200" height="900"><span>Life Hacks</span></a></li>
+        <li><a href="#free-stories"><img class="fit-contain" src="downloads/books/mr-pepo-warm-vegetable-soup-cover-800.jpg" alt="Cover of Mr. Pepo Makes Warm Vegetable Soup" width="800" height="800"><span>Free stories</span></a></li>
+        <li><a href="#learn-at-home"><img src="images/hero-models/19-pepo-spinner-three-arm.jpg" alt="Pepo fidget spinner paper model" width="1200" height="900"><span>Learn and Make</span></a></li>
+        <li><a href="#printables"><img src="images/bunny-desk.jpg" alt="White bunny paper model on the workshop desk" width="1200" height="900"><span>Free printables</span></a></li>
+        <li><a href="https://pepostudios.au/planners.html"><img src="images/pepo-choose/workshop.jpg" alt="Mr. Pepo in the workshop" width="1280" height="720"><span>Planners</span></a></li>
+        <li><a href="https://www.youtube.com/@MrPepoRedDoor" target="_blank" rel="noopener"><img src="images/night-window-close.jpg" alt="Closer view of the night window and yellow sign" width="1350" height="1800"><span>Red Door</span></a></li>
+        <li><a href="#web-pages"><img src="images/full-build.jpg" alt="The Pepo Studios window display" width="1200" height="1600"><span>Web pages</span></a></li>
+        <li><a href="#nfp"><img class="fit-contain" src="images/pepo-choose/official.jpg" alt="Mr. Pepo with a grey ponytail and curly moustache, raising a light bulb" width="1280" height="720"><span>Awareness</span></a></li>
+      </ul>
+      <div class="opening-more">
+        <a href="#free-stories">Free stories</a>
+        <a href="#learn-at-home">Learn and Make</a>
+        <a href="#mr-pepo-journal">Free journal</a>
+        <a href="#support">Support flyer</a>
+        <a href="#book">Book a chat</a>
+        <a href="https://www.instagram.com/mrpepo.au/" target="_blank" rel="noopener">Mr. Pepo on Instagram</a>
+      </div>
+    </div>
+  </nav>
+
   <span class="pepo-signature" aria-hidden="true">Pepo Studios</span>
-  <div id="support-overlay" class="support-overlay" aria-hidden="true">
-    <a class="overlay-download" href="https://pepostudios.au/assets/flyer/i-support-mr-pepo-flyer.pdf" download>Download the flyer (PDF)</a>
-          <a class="overlay-download" href="https://pepostudios.au/assets/flyer/i-support-mr-pepo-flyer-big.png" target="_blank" rel="noopener">View big flyer</a>
-    <button type="button" class="overlay-close" aria-label="Close">×</button>
-    <img src="https://pepostudios.au/assets/flyer/i-support-mr-pepo-flyer.png" alt="I support Mr. Pepo. Pepo Studios. Scan to visit webpage.">
-  </div>
   <div class="decor" aria-hidden="true">
     <svg class="sprite">
       <symbol id="howie" viewBox="0 0 80 120">
@@ -4110,38 +4155,6 @@
 </div>
   </header>
   <main>
-    <div class="hero-row">
-    <section class="hero hero-window">
-      <img class="hero-bg" src="images/night-window.jpg" alt="The Pepo Studios night window, with paper rockets and the yellow Pepo Studios sign" width="1350" height="1800">
-      <div class="hero-shade" aria-hidden="true"></div>
-      <div class="wrap hero-inner">
-        <h1>Pepo Studios</h1>
-        <p class="bounce-tagline">Built to bounce back</p>
-        <p class="nfp-statement">Mr. Pepo is a neurodiversity awareness project by Pepo Studios</p>
-        <p class="tagline">Welcome! Fold, build and play with paper models, journals and stories from Pepo Studios.</p>
-        <div class="actions">
-          <a class="primary" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener noreferrer">Visit the Pepo Studios Shop</a>
-          <div class="secondary-row"><a class="secondary" href="#free-stories">Free stories</a></div>
-        </div>
-      </div>
-    <nav class="path-pick" id="paths" aria-label="Choose a path">
-      <div class="wrap">
-        <h2>Choose a path</h2>
-        <p class="path-lead">Just scanned the flyer? Tap where you want to go.</p>
-        <ul class="path-grid">
-          <li><a href="https://payhip.com/PepoStudios" target="_blank" rel="noopener"><img src="images/workshop.jpg" alt="The Pepo Studios workshop desk" width="1200" height="900"><span>Shop</span></a></li>
-          <li><a href="#free-stories"><img class="fit-contain" src="images/books/not-so-spooky-night-cover-800.jpg" alt="Cover of Mr. Pepo and the Not-So-Spooky Night" width="800" height="812"><span>Free stories</span></a></li>
-          <li><a href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener"><img src="images/stories/not-so-spooky-night/p01.jpg" alt="A page from a Mr. Pepo story" width="600" height="600"><span>YouTube stories</span></a></li>
-          <li><a href="#amazon"><img class="fit-contain" src="downloads/books/mr-pepo-warm-vegetable-soup-cover-800.jpg" alt="Cover of Mr. Pepo Makes Warm Vegetable Soup" width="800" height="800"><span>Books on Amazon</span></a></li>
-          <li><a href="#learn-at-home"><img src="images/hero-models/19-pepo-spinner-three-arm.jpg" alt="Pepo fidget spinner paper model" width="1200" height="900"><span>Learn &amp; Make</span></a></li>
-          <li><a href="https://www.instagram.com/pepo_studios/" target="_blank" rel="noopener"><img src="images/pepo-studios-crew.jpg" alt="Mr. Pepo with the paper crew" width="1152" height="864"><span>Instagram</span></a></li>
-          <li><a href="https://www.youtube.com/@MrPepoLifeHacks" target="_blank" rel="noopener"><img src="images/hacks/desk.jpg" alt="The craft desk used for Mr. Pepo life hacks" width="1200" height="900"><span>Life Hacks</span></a></li>
-          <li><a href="#nfp"><img class="fit-contain" src="images/pepo-choose/official.jpg" alt="Mr. Pepo with a grey ponytail and curly moustache, raising a light bulb" width="1280" height="720"><span>Neurodiversity awareness</span></a></li>
-        </ul>
-      </div>
-    </nav>
-    </section>
-    </div>
     <ul class="pic-strip opening-windows" aria-label="More of the studio window">
       <li><img src="images/night-window-close.jpg" alt="Closer view of the night window, rockets and the yellow Pepo Studios sign" width="1350" height="1800" loading="lazy" decoding="async"></li>
       <li><img src="images/full-build.jpg" alt="The Pepo Studios window display with the hanging rocket and launch tower" width="1200" height="1600" loading="lazy" decoding="async"></li>
@@ -5802,5 +5815,11 @@
       fromHash();
     })();
   </script>
+  <div id="support-overlay" class="support-overlay" aria-hidden="true">
+    <a class="overlay-download" href="https://pepostudios.au/assets/flyer/i-support-mr-pepo-flyer.pdf" download>Download the flyer (PDF)</a>
+          <a class="overlay-download" href="https://pepostudios.au/assets/flyer/i-support-mr-pepo-flyer-big.png" target="_blank" rel="noopener">View big flyer</a>
+    <button type="button" class="overlay-close" aria-label="Close">×</button>
+    <img src="https://pepostudios.au/assets/flyer/i-support-mr-pepo-flyer.png" alt="I support Mr. Pepo. Pepo Studios. Scan to visit webpage.">
+  </div>
 </body>
 </html>
