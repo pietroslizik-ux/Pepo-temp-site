@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Morning Notes | Pepo Studios</title>
+  <meta name="description" content="Preview of Morning Notes, a short picture-friendly page for personal notes from Mr. Pepo at Pepo Studios.">
+  <link rel="canonical" href="https://pepostudios.au/journal-preview.html">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#ffe56a">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 140'%3E%3Cg transform='rotate(14 64 72)'%3E%3Cpolygon points='52,96 64,122 76,96' fill='%23f0b429'/%3E%3Cpolygon points='42,78 16,112 48,94' fill='%23f0b429'/%3E%3Cpolygon points='86,78 112,112 80,94' fill='%23c86612'/%3E%3Cpolygon points='46,42 64,42 61,98 48,98' fill='%23fff3b0'/%3E%3Cpolygon points='64,42 82,42 80,98 64,98' fill='%23e07a1f'/%3E%3Cpolygon points='64,8 84,44 64,38' fill='%23f0b429'/%3E%3Cpolygon points='64,8 44,44 64,38' fill='%23e08a2a'/%3E%3Cg fill='none' stroke='%233a2a14' stroke-width='2.4' stroke-linejoin='round'%3E%3Cpolygon points='64,8 84,44 82,42 80,98 76,96 64,122 52,96 48,98 46,42 44,44'/%3E%3Cpolygon points='42,78 16,112 48,94'/%3E%3Cpolygon points='86,78 112,112 80,94'/%3E%3C/g%3E%3Ccircle cx='64' cy='66' r='13' fill='%23fff4c4' stroke='%233a2a14' stroke-width='2.4'/%3E%3Ctext x='64' y='72' text-anchor='middle' font-family='Pacifico' font-size='18' fill='%233a2a14'%3EP%3C/text%3E%3C/g%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&amp;family=Nunito:wght@400;700;800&amp;family=Pacifico&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --yellow: #ffe56a;
+      --ink: #3a2a14;
+      --button: #e07a1f;
+      --button-hover: #c86612;
+      --line: #a85a12;
+      --cream: #fff4dc;
+      --paper: #fffaf1;
+      --blue: #1e2bd6;
+      --brick: #8d382c;
+      --title: "Pacifico", "Segoe Script", "Comic Sans MS", cursive;
+      --hand: "Kalam", "Segoe Print", "Comic Sans MS", cursive;
+      --sans: "Nunito", "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--yellow);
+    }
+
+    body {
+      font-family: var(--sans);
+      color: var(--ink);
+      line-height: 1.45;
+      overflow-x: hidden;
+    }
+
+    .preview-note {
+      margin: 0;
+      padding: calc(10px + env(safe-area-inset-top)) 14px 10px;
+      text-align: center;
+      background: var(--ink);
+      color: var(--yellow);
+      font-weight: 800;
+      font-size: 1rem;
+      line-height: 1.35;
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+
+    .site-nav {
+      background: var(--yellow);
+      border-bottom: 3px solid #e2b63a;
+    }
+
+    .site-nav .bar {
+      width: min(560px, calc(100% - 28px));
+      margin: 0 auto;
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      padding: 8px 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      text-decoration: none;
+      min-height: 48px;
+    }
+
+    .brand span {
+      font-family: var(--title);
+      font-size: 1.55rem;
+      line-height: 1.45;
+      padding: 6px 0 2px;
+    }
+
+    .brand svg {
+      width: 42px;
+      height: auto;
+      display: block;
+    }
+
+    .brand:focus-visible,
+    .ig:focus-visible {
+      outline: 3px solid var(--ink);
+      outline-offset: 3px;
+    }
+
+    main {
+      width: min(560px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 18px 0 28px;
+    }
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 8px;
+      margin: 4px 0 22px;
+    }
+
+    .portrait {
+      width: 188px;
+      height: 196px;
+      object-fit: cover;
+      object-position: center center;
+      border-radius: 32px;
+      border: 3px solid var(--ink);
+      background: #fff;
+      box-shadow: 0 4px 0 var(--button);
+    }
+
+    h1 {
+      margin: 8px 0 14px;
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: clamp(2.55rem, 11vw, 3.4rem);
+      line-height: 1.28;
+      color: var(--ink);
+    }
+
+    .subtitle {
+      margin: 0;
+      max-width: 16rem;
+      font-family: var(--hand);
+      font-size: clamp(1.25rem, 5vw, 1.45rem);
+      line-height: 1.25;
+      text-wrap: balance;
+    }
+
+    .quiet {
+      margin: 0;
+      max-width: 18rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .parts-block,
+    .notes-block { margin: 0 0 18px; }
+
+    h2 {
+      margin: 0 0 10px;
+      font-family: var(--hand);
+      font-size: 1.55rem;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .parts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .parts li {
+      margin: 0;
+      min-height: 138px;
+      padding: 10px 10px 12px;
+      background: var(--paper);
+      border: 3px solid var(--ink);
+      border-radius: 18px;
+      box-shadow: 0 4px 0 var(--button);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 6px;
+      text-align: center;
+    }
+
+    .parts li strong {
+      font-size: 1rem;
+      line-height: 1.2;
+      font-weight: 800;
+    }
+
+    .mark {
+      width: 54px;
+      height: 54px;
+      display: block;
+      flex: 0 0 auto;
+    }
+
+    .note {
+      background: var(--paper);
+      border: 3px solid var(--line);
+      border-radius: 22px;
+      box-shadow: 0 6px 0 var(--button);
+      padding: 14px 14px 16px;
+    }
+
+    .example-flag {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 12px;
+      padding: 8px 10px;
+      background: var(--cream);
+      border: 3px solid var(--button);
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.98rem;
+      line-height: 1.25;
+    }
+
+    .example-flag span {
+      flex: 0 0 auto;
+      background: var(--button);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 3px 10px;
+      letter-spacing: 0.02em;
+    }
+
+    .note time {
+      display: block;
+      font-family: var(--hand);
+      font-size: 1.15rem;
+    }
+
+    .note h3 {
+      margin: 4px 0 16px;
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: clamp(1.7rem, 6vw, 2.15rem);
+      line-height: 1.35;
+    }
+
+    .bits {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .bit {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 10px;
+      align-items: start;
+      margin: 0;
+      padding: 12px 0;
+      border-top: 3px dashed #e7c98a;
+    }
+
+    .bit .mark { width: 52px; height: 52px; }
+
+    .bit h4 {
+      margin: 2px 0 4px;
+      font-family: var(--sans);
+      font-size: 0.98rem;
+      line-height: 1.2;
+      font-weight: 800;
+    }
+
+    .bit p {
+      margin: 0;
+      font-size: 1.125rem;
+      line-height: 1.45;
+    }
+
+    .bit-noticed h4 { color: #12186a; }
+    .bit-thought h4 { color: #8d420c; }
+    .bit-making h4 { color: #8d420c; }
+    .bit-picture h4 { color: var(--brick); }
+
+    .bit-picture {
+      display: block;
+    }
+
+    .bit-picture .bit-label {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .bit-picture figure { margin-top: 10px; }
+
+    .parts .part-noticed { border-top: 8px solid var(--blue); }
+    .parts .part-thought { border-top: 8px solid #8d420c; }
+    .parts .part-making { border-top: 8px solid var(--button); }
+    .parts .part-picture { border-top: 8px solid var(--brick); }
+
+    figure {
+      margin: 8px 0 0;
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      border: 3px solid var(--ink);
+      background: var(--cream);
+    }
+
+    figcaption {
+      margin-top: 6px;
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .site-footer {
+      width: min(560px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 8px 0 calc(28px + env(safe-area-inset-bottom));
+      text-align: center;
+    }
+
+    .site-footer p {
+      margin: 0 0 10px;
+      font-family: var(--title);
+      font-size: 1.45rem;
+      line-height: 1;
+    }
+
+    .ig {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 10px 16px;
+      background: var(--paper);
+      color: var(--ink);
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      box-shadow: 0 3px 0 var(--button);
+      font-weight: 800;
+      font-size: 1.05rem;
+      text-decoration: none;
+    }
+
+    .ig:hover { background: #fff; }
+
+    @media (max-width: 380px) {
+      .portrait { width: 164px; height: 171px; }
+      .parts li { min-height: 128px; padding: 8px 6px 10px; }
+      .parts li strong { font-size: 0.95rem; }
+      .example-flag { border-radius: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <p class="preview-note">Preview only. The live homepage has not been changed.</p>
+
+  <header class="site-nav">
+    <div class="bar">
+      <a class="brand" href="index.html">
+        <svg viewBox="0 0 128 140" aria-hidden="true">
+          <g transform="rotate(14 64 72)">
+            <polygon points="52,96 64,122 76,96" fill="#f0b429"/>
+            <polygon points="42,78 16,112 48,94" fill="#f0b429"/>
+            <polygon points="86,78 112,112 80,94" fill="#c86612"/>
+            <polygon points="46,42 64,42 61,98 48,98" fill="#fff3b0"/>
+            <polygon points="64,42 82,42 80,98 64,98" fill="#e07a1f"/>
+            <polygon points="64,8 84,44 64,38" fill="#f0b429"/>
+            <polygon points="64,8 44,44 64,38" fill="#e08a2a"/>
+            <g fill="none" stroke="#3a2a14" stroke-width="2.4" stroke-linejoin="round">
+              <polygon points="64,8 84,44 82,42 80,98 76,96 64,122 52,96 48,98 46,42 44,44"/>
+              <polygon points="42,78 16,112 48,94"/>
+              <polygon points="86,78 112,112 80,94"/>
+            </g>
+            <circle cx="64" cy="66" r="13" fill="#fff4c4" stroke="#3a2a14" stroke-width="2.4"/>
+            <text x="64" y="72" text-anchor="middle" font-family="Pacifico, cursive" font-size="18" fill="#3a2a14">P</text>
+          </g>
+        </svg>
+        <span>Pepo Studios</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <header class="intro">
+      <img class="portrait" src="images/pepo-face-standard.png" width="292" height="304" alt="Mr. Pepo smiling, with dark wavy hair and a curled moustache">
+      <div>
+        <h1>Morning Notes</h1>
+        <p class="subtitle">personal notes from Mr. Pepo</p>
+        <p class="quiet">Notes when he wakes up, most mornings.</p>
+      </div>
+    </header>
+
+    <section class="parts-block" aria-labelledby="parts-title">
+      <h2 id="parts-title">Four simple parts</h2>
+      <ul class="parts">
+        <li class="part-noticed">
+          <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+            <ellipse cx="32" cy="32" rx="22" ry="13" fill="#fff4dc" stroke="#3a2a14" stroke-width="3"/>
+            <circle cx="32" cy="32" r="7" fill="#1e2bd6" stroke="#3a2a14" stroke-width="3"/>
+            <circle cx="34.5" cy="29.5" r="2" fill="#fff"/>
+          </svg>
+          <strong>One thing I noticed</strong>
+        </li>
+        <li class="part-thought">
+          <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+            <ellipse cx="32" cy="26" rx="20" ry="15" fill="#ffe56a" stroke="#3a2a14" stroke-width="3"/>
+            <circle cx="24" cy="46" r="5" fill="#ffe56a" stroke="#3a2a14" stroke-width="3"/>
+            <circle cx="16" cy="55" r="3" fill="#ffe56a" stroke="#3a2a14" stroke-width="2.5"/>
+          </svg>
+          <strong>One thought I want to share</strong>
+        </li>
+        <li class="part-making">
+          <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+            <polygon points="12,16 38,16 50,28 50,52 12,52" fill="#fffaf1" stroke="#3a2a14" stroke-width="3" stroke-linejoin="round"/>
+            <polygon points="38,16 38,28 50,28" fill="#ffe56a" stroke="#3a2a14" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M20 36h18M20 44h12" fill="none" stroke="#e07a1f" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <strong>One small thing I'm making or trying</strong>
+        </li>
+        <li class="part-picture">
+          <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="10" y="14" width="44" height="36" rx="6" fill="#fffaf1" stroke="#3a2a14" stroke-width="3"/>
+            <circle cx="24" cy="28" r="5" fill="#ffe56a" stroke="#3a2a14" stroke-width="2.5"/>
+            <polygon points="16,44 28,32 36,40 44,33 50,44" fill="#e07a1f" stroke="#3a2a14" stroke-width="2.5" stroke-linejoin="round"/>
+          </svg>
+          <strong>Optional picture</strong>
+        </li>
+      </ul>
+    </section>
+
+    <section class="notes-block" aria-labelledby="notes-title">
+      <h2 id="notes-title">Newest first</h2>
+      <article class="note" aria-labelledby="example-title">
+        <p class="example-flag"><span>Example</span> Peter did not write this.</p>
+        <time datetime="2026-11-08">8 November 2026</time>
+        <h3 id="example-title">A little paper idea</h3>
+        <ol class="bits">
+          <li class="bit bit-noticed">
+            <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+              <ellipse cx="32" cy="32" rx="22" ry="13" fill="#fff4dc" stroke="#3a2a14" stroke-width="3"/>
+              <circle cx="32" cy="32" r="7" fill="#1e2bd6" stroke="#3a2a14" stroke-width="3"/>
+              <circle cx="34.5" cy="29.5" r="2" fill="#fff"/>
+            </svg>
+            <div>
+              <h4>One thing I noticed</h4>
+              <p>The kitchen light landed on a scrap of yellow paper. It looked a little like a tiny window.</p>
+            </div>
+          </li>
+          <li class="bit bit-thought">
+            <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+              <ellipse cx="32" cy="26" rx="20" ry="15" fill="#ffe56a" stroke="#3a2a14" stroke-width="3"/>
+              <circle cx="24" cy="46" r="5" fill="#ffe56a" stroke="#3a2a14" stroke-width="3"/>
+              <circle cx="16" cy="55" r="3" fill="#ffe56a" stroke="#3a2a14" stroke-width="2.5"/>
+            </svg>
+            <div>
+              <h4>One thought I want to share</h4>
+              <p>A small paper house can begin with one leftover piece. I do not need a whole new sheet to start. Starting small feels kinder than waiting for a perfect plan.</p>
+            </div>
+          </li>
+          <li class="bit bit-making">
+            <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+              <polygon points="12,16 38,16 50,28 50,52 12,52" fill="#fffaf1" stroke="#3a2a14" stroke-width="3" stroke-linejoin="round"/>
+              <polygon points="38,16 38,28 50,28" fill="#ffe56a" stroke="#3a2a14" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M20 36h18M20 44h12" fill="none" stroke="#e07a1f" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <h4>One small thing I'm making or trying</h4>
+              <p>I folded one corner, then another. The scrap stood up on its own. Next I might try a little door, just to see if it opens. The fold marks made a soft shadow, and that was enough for today.</p>
+            </div>
+          </li>
+          <li class="bit bit-picture">
+            <div class="bit-label">
+              <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+                <rect x="10" y="14" width="44" height="36" rx="6" fill="#fffaf1" stroke="#3a2a14" stroke-width="3"/>
+                <circle cx="24" cy="28" r="5" fill="#ffe56a" stroke="#3a2a14" stroke-width="2.5"/>
+                <polygon points="16,44 28,32 36,40 44,33 50,44" fill="#e07a1f" stroke="#3a2a14" stroke-width="2.5" stroke-linejoin="round"/>
+              </svg>
+              <h4>Optional picture</h4>
+            </div>
+            <div>
+              <figure>
+                <img src="images/night-window.jpg" width="1350" height="1800" alt="Yellow paper rockets hanging in the Pepo Studios night window">
+                <figcaption>Example picture. Yellow paper rockets in the night window. A real note can skip this.</figcaption>
+              </figure>
+            </div>
+          </li>
+        </ol>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Pepo Studios</p>
+    <a class="ig" href="https://www.instagram.com/pepo_studios/" target="_blank" rel="noopener">@pepo_studios</a>
+  </footer>
+
+</body>
+</html>
