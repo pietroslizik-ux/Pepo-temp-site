@@ -3862,6 +3862,29 @@
   line-height: 1.35;
 }
 .aware-sign { font-family: var(--hand); font-weight: 700; }
+.aware-page-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  margin: 6px 0 4px;
+  padding: 14px 22px;
+  background: #ffe56a;
+  color: #3a2a14;
+  font-weight: 800;
+  font-size: 1.12rem;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  border: 3px solid #3a2a14;
+  border-radius: 999px;
+  box-shadow: 0 3px 0 #8d420c;
+}
+.aware-page-link:hover { background: #fff; }
+.aware-page-link:focus-visible { outline: 3px solid #3a2a14; outline-offset: 3px; }
+@media (max-width: 700px) {
+  .aware-page-link { display: flex; width: 100%; }
+}
 .about-seen {
   display: grid;
   grid-template-columns: 160px 200px minmax(0, 1fr);
@@ -4138,7 +4161,7 @@
 <a href="#learn-at-home">Learn &amp; Make</a>
 <a href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener">YouTube</a>
 <details class="mk-dd"><summary>Explore ▾</summary><ul><li><a href="#spinner-title">Spinners</a></li><li><a href="#spinner-club-title">Spinner Club</a></li><li><a href="#flipbook-title">Flipbook</a></li><li><a href="#animation-title">Animation</a></li><li><a href="#physics-title">Physics</a></li><li><a href="#gadgets-title">Gadgets</a></li><li><a href="#printables">Printables</a></li><li><a href="#about-pepo-studios">About</a></li></ul></details>
-<details class="mk-dd"><summary>More ▾</summary><ul><li><a href="#printables">Free printables</a></li><li><a href="https://pepostudios.au/planners.html">Planners</a></li><li><a href="#mr-pepo-journal">Free journal</a></li><li><a href="https://www.youtube.com/@MrPepoLifeHacks">Grown-ups</a></li><li><a href="#support">Support flyer</a></li><li><a href="#web-pages">Web pages</a></li><li><a href="#book">Book a chat</a></li><li><a href="#work">Our work</a></li><li><a href="#kind-words">Kind words</a></li><li><a href="#prices">Prices</a></li></ul></details>
+<details class="mk-dd"><summary>More ▾</summary><ul><li><a href="neurodiversity.html">Neurodiversity Awareness</a></li><li><a href="#printables">Free printables</a></li><li><a href="https://pepostudios.au/planners.html">Planners</a></li><li><a href="#mr-pepo-journal">Free journal</a></li><li><a href="https://www.youtube.com/@MrPepoLifeHacks">Grown-ups</a></li><li><a href="#support">Support flyer</a></li><li><a href="#web-pages">Web pages</a></li><li><a href="#book">Book a chat</a></li><li><a href="#work">Our work</a></li><li><a href="#kind-words">Kind words</a></li><li><a href="#prices">Prices</a></li></ul></details>
 </nav>
 <details class="mk-dd mk-lang"><summary aria-label="Language"><svg class="lang-globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2.5 12h19M12 2.5c3 3.2 3 15.8 0 19M12 2.5c-3 3.2-3 15.8 0 19" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></summary><ul><li><a href="https://pepostudios.au/index.html#free-stories" hreflang="en" lang="en">English</a></li><li><a href="https://pepostudios.au/stories/es/not-so-spooky-night.html" hreflang="es" lang="es">Español</a></li><li><a href="https://pepostudios.au/stories/zh/not-so-spooky-night.html" hreflang="zh" lang="zh">中文</a></li><li><a href="https://pepostudios.au/stories/sk/not-so-spooky-night.html" hreflang="sk" lang="sk">Slovenčina</a></li><li><a href="https://pepostudios.au/stories/de/not-so-spooky-night.html" hreflang="de" lang="de">Deutsch</a></li><li><a href="https://pepostudios.au/stories/fr/not-so-spooky-night.html" hreflang="fr" lang="fr">Français</a></li><li><a href="https://pepostudios.au/stories/pl/not-so-spooky-night.html" hreflang="pl" lang="pl">Polski</a></li><li><a href="https://pepostudios.au/stories/ja/not-so-spooky-night.html" hreflang="ja" lang="ja">日本語</a></li></ul></details>
 </div>
@@ -4552,38 +4575,11 @@
         <img class="banner-photo" src="images/pepo-face-standard.png" alt="Mr. Pepo, clean-shaven with a moustache" width="292" height="304" loading="lazy" decoding="async" style="object-fit:contain;background:#fffaf1;height:210px">
       </div>
     </header>
-    <article class="aware-read" aria-labelledby="aware-day-title">
+    <article class="aware-read" id="awareness" aria-labelledby="aware-jump-title">
       <p class="aware-kicker">Neurodiversity awareness</p>
-      <h3 id="aware-day-title">What if a neurotypical person had to live a neurodiverse day?</h3>
-      <div class="aware-split">
-        <img class="person" src="images/pepo-face-standard.png" alt="Mr. Pepo, clean-shaven with a moustache" width="292" height="304" loading="lazy" decoding="async">
-        <div>
-          <p>Your radio starts at a random volume, and you have to guess it before you can even think. The grocery aisles move every week, and nobody gives you a map. People ask open questions like 'How are you?' with no options — but they want the long answer. Your boss says 'circle back,' and they mean today.</p>
-          <p>The bright hallway lights feel like a spotlight. Small talk has invisible rules, and you only learn them by getting it wrong. A deadline sounds soft… until suddenly it isn't. You rehearse a phone call three times, and you still freeze.</p>
-        </div>
-      </div>
-      <p class="aware-big">It's not bad. It's just different.<br>And different comes with huge advantages too.</p>
-      <div class="aware-split flip">
-        <div>
-          <p>I have super quick reflexes. I'm able to see many things what many people miss. I process things fast, and I catch inconsistencies others walk right past. I have the real talent to do stuff with my hands — paper craft, crochet, building things.</p>
-          <p>Whenever some door gets closed in front of me, I'm that kind who will be obsessed to look for another door to open. I cannot sit still and accept — some people call it fate. I solve whatever situation I'm in. That drive is mine, and I own it.</p>
-        </div>
-        <img class="place" src="images/workshop.jpg" alt="The Pepo Studios workshop desk" width="1200" height="900" loading="lazy" decoding="async">
-      </div>
-      <div class="aware-split">
-        <img class="place" src="images/our-window.jpg" alt="The Pepo Studios window in a brick wall" width="1200" height="1600" loading="lazy" decoding="async">
-        <div>
-          <p>If people got hurt by me in the past, or ever do in the future, I apologize — honestly, not from guilt. Being neurodiverse is different, and it is good. Once you learn to control certain aspects, those traits become almost like superpowers.</p>
-          <p>The world is built for the neurotypical default, so simple tasks can become big obstacles. If this helps you understand a little better, I'd love to hear your thoughts.</p>
-          <p class="aware-sign">Pepo Studios · pepostudios.au</p>
-        </div>
-      </div>
-      <ul class="pic-strip" aria-label="Window and workshop pictures">
-        <li><img src="images/made-by-mr-pepo-window.jpg" alt="Paper models in the Pepo Studios window" width="1200" height="1600" loading="lazy" decoding="async"></li>
-        <li><img src="images/night-window.jpg" alt="The Pepo Studios window at night" width="1350" height="1800" loading="lazy" decoding="async"></li>
-        <li><img src="images/night-window-close.jpg" alt="Closer view of the night window" width="1350" height="1800" loading="lazy" decoding="async"></li>
-        <li><img src="images/hacks/desk.jpg" alt="Craft desk inside the green gazebo" width="1200" height="900" loading="lazy" decoding="async"></li>
-      </ul>
+      <h3 id="aware-jump-title">Neurodiversity Awareness</h3>
+      <p>Peter's writing about a neurodiverse day is on its own page.</p>
+      <a class="aware-page-link" href="neurodiversity.html">Read Neurodiversity Awareness</a>
     </article>
     <section class="about-pepo" id="about-pepo-studios" aria-labelledby="about-pepo-title">
       <div class="wrap">
@@ -5357,7 +5353,7 @@
         <p class="side-kicker">You are on the small business side</p>
         <h2 id="business-title">Small business</h2>
         <p>Web design, social media and video for small businesses, from Pepo Studios.</p>
-        <p class="side-switch">Here for Mr. Pepo? <a href="#nfp">&larr; Go to Neurodiversity awareness</a></p>
+        <p class="side-switch">Here for Mr. Pepo? <a href="neurodiversity.html">&larr; Go to Neurodiversity Awareness</a></p>
         <img class="banner-photo" src="images/night-window-close.jpg" alt="Closer view of the Pepo Studios window at night" width="1350" height="1800" loading="lazy" decoding="async">
       </div>
     </header>
@@ -5569,6 +5565,7 @@
         <a href="#printables">Free printables</a>
         <a href="https://pepostudios.au/planners.html">Planners</a>
         <a href="#support">Support flyer</a>
+        <a href="neurodiversity.html">Neurodiversity Awareness</a>
         <a href="#web-pages">Web pages</a>
         <a href="#book">Book a chat</a>
         <a href="#work">Our work</a>
