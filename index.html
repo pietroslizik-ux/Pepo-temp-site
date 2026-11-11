@@ -3408,6 +3408,63 @@
     body { line-height: 1.4; }
     .hero { min-height: 0; }
     .hero-row { display: block; }
+
+    .summer-trip-home {
+      margin: 0;
+      padding: 10px 16px 14px;
+      scroll-margin-top: 11rem;
+      background: #e4efe6;
+      color: #3a2a14;
+    }
+    .summer-trip-home-card {
+      display: grid;
+      grid-template-columns: minmax(140px, 280px) minmax(0, 1fr);
+      gap: 14px 18px;
+      align-items: center;
+      width: min(1100px, 100%);
+      margin: 0 auto;
+      padding: 12px;
+      background: #fffaf1;
+      color: inherit;
+      text-decoration: none;
+      border: 3px solid #3f5a45;
+      border-radius: 20px;
+      box-shadow: 0 4px 0 #3f5a45;
+    }
+    .summer-trip-home-card:hover { background: #fff; }
+    .summer-trip-home-card img {
+      display: block;
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 2px solid #3f5a45;
+      background: #e4efe6;
+    }
+    .summer-trip-kicker {
+      display: inline-block;
+      margin: 0 0 4px;
+      padding: 2px 10px;
+      background: #ffe56a;
+      font-family: var(--hand);
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: 2px solid #3a2a14;
+      border-radius: 999px;
+    }
+    .summer-trip-home-card h2 {
+      margin: 0 0 6px;
+      color: #3f5a45;
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+      line-height: 1.2;
+    }
+    .summer-trip-home-card p { margin: 0; font-weight: 700; }
+    @media (max-width: 700px) {
+      .summer-trip-home-card { grid-template-columns: 1fr; }
+      .summer-trip-home-card img { height: 150px; }
+    }
     .amazon-books {
       margin: 0;
       padding: 8px 16px 10px;
@@ -4163,6 +4220,7 @@
     <ul class="brick-col brick-right">
       <li><a href="https://www.amazon.com.au/dp/B0HNP7NWWJ" target="_blank" rel="noopener"><img src="images/books/not-so-spooky-night-cover-800.jpg" alt="" width="800" height="812"><span>Amazon books</span></a></li>
       <li><a href="https://www.instagram.com/pepo_studios/" target="_blank" rel="noopener"><img src="images/our-window.jpg" alt="" width="1200" height="1600"><span>Instagram</span></a></li>
+      <li><a href="summer-trip/"><img src="images/summer-trip/mr-pepo-camper-starlink.jpg" alt="" width="1152" height="864"><span>Summer Trip Vlog</span></a></li>
       <li><a href="https://www.youtube.com/@MrPepoLifeHacks" target="_blank" rel="noopener"><img src="images/hacks/desk.jpg" alt="" width="1200" height="900"><span>Life Hacks</span></a></li>
       <li><a href="https://pepostudios.au/planners.html"><img src="images/pepo-choose/workshop.jpg" alt="" width="1280" height="720"><span>Planners</span></a></li>
       <li><a href="https://www.youtube.com/@MrPepoRedDoor" target="_blank" rel="noopener"><img src="images/night-window-close.jpg" alt="" width="1350" height="1800"><span>Red Door</span></a></li>
@@ -4295,8 +4353,8 @@
 <a href="#free-stories">Free stories</a>
 <a href="#learn-at-home">Learn &amp; Make</a>
 <a href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener">YouTube</a>
-<details class="mk-dd"><summary>Explore ▾</summary><ul><li><a href="#spinner-title">Spinners</a></li><li><a href="#spinner-club-title">Spinner Club</a></li><li><a href="#flipbook-title">Flipbook</a></li><li><a href="#animation-title">Animation</a></li><li><a href="#physics-title">Physics</a></li><li><a href="#gadgets-title">Gadgets</a></li><li><a href="#printables">Printables</a></li><li><a href="#about-pepo-studios">About</a></li></ul></details>
-<details class="mk-dd"><summary>More ▾</summary><ul><li><a href="neurodiversity.html">Neurodiversity Awareness</a></li><li><a href="#printables">Free printables</a></li><li><a href="https://pepostudios.au/planners.html">Planners</a></li><li><a href="#mr-pepo-journal">Free journal</a></li><li><a href="https://www.youtube.com/@MrPepoLifeHacks">Grown-ups</a></li><li><a href="#support">Support flyer</a></li><li><a href="#web-pages">Web pages</a></li><li><a href="#book">Book a chat</a></li><li><a href="#work">Our work</a></li><li><a href="#kind-words">Kind words</a></li><li><a href="#prices">Prices</a></li></ul></details>
+<details class="mk-dd"><summary>Explore ▾</summary><ul><li><a href="summer-trip/">Summer Trip Vlog</a></li><li><a href="#spinner-title">Spinners</a></li><li><a href="#spinner-club-title">Spinner Club</a></li><li><a href="#flipbook-title">Flipbook</a></li><li><a href="#animation-title">Animation</a></li><li><a href="#physics-title">Physics</a></li><li><a href="#gadgets-title">Gadgets</a></li><li><a href="#printables">Printables</a></li><li><a href="#about-pepo-studios">About</a></li></ul></details>
+<details class="mk-dd"><summary>More ▾</summary><ul><li><a href="summer-trip/">Summer Trip Vlog</a></li><li><a href="neurodiversity.html">Neurodiversity Awareness</a></li><li><a href="#printables">Free printables</a></li><li><a href="https://pepostudios.au/planners.html">Planners</a></li><li><a href="#mr-pepo-journal">Free journal</a></li><li><a href="https://www.youtube.com/@MrPepoLifeHacks">Grown-ups</a></li><li><a href="#support">Support flyer</a></li><li><a href="#web-pages">Web pages</a></li><li><a href="#book">Book a chat</a></li><li><a href="#work">Our work</a></li><li><a href="#kind-words">Kind words</a></li><li><a href="#prices">Prices</a></li></ul></details>
 </nav>
 <details class="mk-dd mk-lang"><summary aria-label="Language"><svg class="lang-globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2.5 12h19M12 2.5c3 3.2 3 15.8 0 19M12 2.5c-3 3.2-3 15.8 0 19" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></summary><ul><li><a href="https://pepostudios.au/index.html#free-stories" hreflang="en" lang="en">English</a></li><li><a href="https://pepostudios.au/stories/es/not-so-spooky-night.html" hreflang="es" lang="es">Español</a></li><li><a href="https://pepostudios.au/stories/zh/not-so-spooky-night.html" hreflang="zh" lang="zh">中文</a></li><li><a href="https://pepostudios.au/stories/sk/not-so-spooky-night.html" hreflang="sk" lang="sk">Slovenčina</a></li><li><a href="https://pepostudios.au/stories/de/not-so-spooky-night.html" hreflang="de" lang="de">Deutsch</a></li><li><a href="https://pepostudios.au/stories/fr/not-so-spooky-night.html" hreflang="fr" lang="fr">Français</a></li><li><a href="https://pepostudios.au/stories/pl/not-so-spooky-night.html" hreflang="pl" lang="pl">Polski</a></li><li><a href="https://pepostudios.au/stories/ja/not-so-spooky-night.html" hreflang="ja" lang="ja">日本語</a></li></ul></details>
 </div>
@@ -4308,6 +4366,16 @@
       <li><img src="images/our-window.jpg" alt="The Pepo Studios window in the brick wall by day" width="1200" height="1600" loading="lazy" decoding="async"></li>
       <li><img src="images/workshop.jpg" alt="The Pepo Studios workshop desk" width="1200" height="900" loading="lazy" decoding="async"></li>
     </ul>
+    <section class="summer-trip-home" id="summer-trip" aria-labelledby="summer-trip-home-title">
+      <a class="summer-trip-home-card" href="summer-trip/">
+        <img src="images/summer-trip/mr-pepo-camper-starlink.jpg" alt="Mr. Pepo waving from a cream and green camper van with a Starlink dish on the roof, on a sunny Australian coast road" width="1152" height="864" loading="lazy" decoding="async">
+        <div>
+          <p class="summer-trip-kicker">It's happening!</p>
+          <h2 id="summer-trip-home-title">Mr. Pepo's Summer Trip Vlog</h2>
+          <p>December 2026 to February 2027 — a big adventure around Australia with Luna and Sakura. Come along for the ride.</p>
+        </div>
+      </a>
+    </section>
     <section class="amazon-books" id="amazon" aria-labelledby="amazon-title">
       <h2 id="amazon-title">Mr. Pepo books on Amazon</h2>
       <div class="amazon-covers">
@@ -5792,6 +5860,7 @@
         <a href="#printables">Free printables</a>
         <a href="https://pepostudios.au/planners.html">Planners</a>
         <a href="#support">Support flyer</a>
+        <a href="summer-trip/">Summer Trip Vlog</a>
         <a href="neurodiversity.html">Neurodiversity Awareness</a>
         <a href="#web-pages">Web pages</a>
         <a href="#book">Book a chat</a>
