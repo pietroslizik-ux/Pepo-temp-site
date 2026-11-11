@@ -5826,5 +5826,23 @@
     <button type="button" class="overlay-close" aria-label="Close">×</button>
     <img src="https://pepostudios.au/assets/flyer/i-support-mr-pepo-flyer.png" alt="I support Mr. Pepo. Pepo Studios. Scan to visit webpage.">
   </div>
+<!-- GoatCounter: free, privacy-friendly visit counter (no cookies) -->
+<script>
+window.goatcounter = {
+  path: function(p) {
+    var src = new URLSearchParams(location.search).get('src');
+    return location.pathname + (src ? '?src=' + encodeURIComponent(src) : '');
+  }
+};
+document.addEventListener('click', function(e) {
+  var a = e.target.closest && e.target.closest('a[href]');
+  if (!a || !window.goatcounter || !window.goatcounter.count) return;
+  var h = a.getAttribute('href');
+  if (/\.pdf($|\?)/i.test(h) || a.hasAttribute('download')) {
+    window.goatcounter.count({ path: 'download: ' + h.split('/').pop(), title: a.textContent.trim(), event: true });
+  }
+});
+</script>
+<script data-goatcounter="https://pepostudios.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

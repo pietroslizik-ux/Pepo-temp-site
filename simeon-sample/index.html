@@ -439,4 +439,22 @@ L.onclick=()=>setLang(!en);if(location.hash==='#en')setLang(true);
 document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
  document.querySelectorAll('.beers .beer').forEach(c=>{const i=+c.dataset.ibu;c.style.display=(b.dataset.f==='all'||(b.dataset.f==='light'?i<=35:i>35))?'':'none'})});
 </script>
+<!-- GoatCounter: free, privacy-friendly visit counter (no cookies) -->
+<script>
+window.goatcounter = {
+  path: function(p) {
+    var src = new URLSearchParams(location.search).get('src');
+    return location.pathname + (src ? '?src=' + encodeURIComponent(src) : '');
+  }
+};
+document.addEventListener('click', function(e) {
+  var a = e.target.closest && e.target.closest('a[href]');
+  if (!a || !window.goatcounter || !window.goatcounter.count) return;
+  var h = a.getAttribute('href');
+  if (/\.pdf($|\?)/i.test(h) || a.hasAttribute('download')) {
+    window.goatcounter.count({ path: 'download: ' + h.split('/').pop(), title: a.textContent.trim(), event: true });
+  }
+});
+</script>
+<script data-goatcounter="https://pepostudios.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body></html>

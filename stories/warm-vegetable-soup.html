@@ -53,5 +53,23 @@
 <p class="support-line">Pay what you want. There's no upper limit.</p>
 </main>
 <footer class="site-footer"><a href="../index.html">pepostudios.au</a></footer>
+<!-- GoatCounter: free, privacy-friendly visit counter (no cookies) -->
+<script>
+window.goatcounter = {
+  path: function(p) {
+    var src = new URLSearchParams(location.search).get('src');
+    return location.pathname + (src ? '?src=' + encodeURIComponent(src) : '');
+  }
+};
+document.addEventListener('click', function(e) {
+  var a = e.target.closest && e.target.closest('a[href]');
+  if (!a || !window.goatcounter || !window.goatcounter.count) return;
+  var h = a.getAttribute('href');
+  if (/\.pdf($|\?)/i.test(h) || a.hasAttribute('download')) {
+    window.goatcounter.count({ path: 'download: ' + h.split('/').pop(), title: a.textContent.trim(), event: true });
+  }
+});
+</script>
+<script data-goatcounter="https://pepostudios.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
