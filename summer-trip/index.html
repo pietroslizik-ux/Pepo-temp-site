@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mr. Pepo's Summer Trip Vlog | Pepo Studios</title>
+  <meta name="description" content="It's happening! Follow Mr. Pepo's summer trip around Australia, December 2026 to February 2027, with Luna the robot and Sakura the dog. Family-friendly stories, videos, and free printable travel activity packs.">
+  <link rel="canonical" href="https://pepostudios.au/summer-trip/">
+  <meta property="og:title" content="Mr. Pepo's Summer Trip Vlog">
+  <meta property="og:description" content="December 2026 to February 2027: a big camper van adventure around Australia with Luna the robot and Sakura the dog.">
+  <meta property="og:image" content="https://pepostudios.au/images/summer-trip/mr-pepo-camper-starlink.jpg">
+  <meta property="og:url" content="https://pepostudios.au/summer-trip/">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#fff4dc">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 140'%3E%3Ctext x='64' y='86' text-anchor='middle' font-size='72' font-family='serif' fill='%233a2a14'%3EP%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&amp;family=Pacifico&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --yellow: #ffe56a;
+      --ink: #3a2a14;
+      --button: #e07a1f;
+      --button-hover: #c86612;
+      --cream: #fff4dc;
+      --paper: #fffaf1;
+      --sage: #6b8a6e;
+      --sage-deep: #3f5a45;
+      --sage-soft: #e4efe6;
+      --sage-mid: #9bb59a;
+      --line: #a85a12;
+      --title: "Pacifico", "Segoe Script", "Comic Sans MS", cursive;
+      --hand: "Kalam", "Segoe Print", "Comic Sans MS", cursive;
+      --sans: "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--cream);
+      color: var(--ink);
+    }
+
+    body {
+      font-family: var(--sans);
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    a { color: #0b4f9c; }
+
+    a:focus-visible {
+      outline: 3px solid var(--ink);
+      outline-offset: 3px;
+    }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: var(--yellow);
+      border-bottom: 3px solid #e2b63a;
+    }
+
+    .nav-wrap {
+      width: min(860px, calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 8px 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      text-decoration: none;
+      font-family: var(--title);
+      font-size: 1.45rem;
+      line-height: 1;
+    }
+
+    .brand svg { width: 40px; height: auto; display: block; }
+
+    .home-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 10px 16px;
+      background: var(--paper);
+      color: var(--ink);
+      font-weight: 800;
+      text-decoration: none;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+    }
+
+    .home-link:hover { background: #fff; }
+
+    main {
+      width: min(860px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 22px 0 36px;
+    }
+
+    .intro {
+      margin: 0 0 28px;
+      padding: 20px 18px 18px;
+      background: var(--paper);
+      border: 3px solid var(--sage);
+      border-radius: 24px;
+      box-shadow: 0 5px 0 var(--sage-deep);
+    }
+
+    .kicker {
+      display: inline-block;
+      margin: 0 0 8px;
+      padding: 4px 14px;
+      background: var(--yellow);
+      color: var(--ink);
+      font-family: var(--hand);
+      font-weight: 700;
+      font-size: 1.05rem;
+      border-radius: 999px;
+      border: 2px solid var(--ink);
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: clamp(2.1rem, 7vw, 3.15rem);
+      line-height: 1.18;
+    }
+
+    .dates {
+      margin: 0 0 14px;
+      font-family: var(--hand);
+      font-size: clamp(1.15rem, 2.6vw, 1.4rem);
+      line-height: 1.3;
+    }
+
+    .hero-pic {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 0 16px;
+      border-radius: 18px;
+      border: 3px solid var(--sage-deep);
+      background: var(--sage-soft);
+    }
+
+    .intro p { margin: 0 0 10px; }
+    .intro p:last-child { margin-bottom: 0; }
+
+    .timeline-head { margin: 0 0 16px; }
+
+    h2 {
+      margin: 0 0 6px;
+      font-family: var(--hand);
+      font-size: clamp(1.45rem, 3vw, 1.85rem);
+      line-height: 1.2;
+    }
+
+    .timeline-lead { margin: 0; font-weight: 700; }
+
+    .timeline {
+      list-style: none;
+      margin: 0 0 28px;
+      padding: 0 0 0 18px;
+      border-left: 4px solid var(--sage-mid);
+      display: grid;
+      gap: 22px;
+    }
+
+    .ep {
+      position: relative;
+      margin: 0;
+      padding: 14px 14px 16px;
+      background: var(--paper);
+      border: 3px solid var(--sage);
+      border-radius: 22px;
+      box-shadow: 0 4px 0 var(--sage-deep);
+    }
+
+    .ep::before {
+      content: "";
+      position: absolute;
+      left: -28px;
+      top: 28px;
+      width: 16px;
+      height: 16px;
+      background: var(--yellow);
+      border: 3px solid var(--sage-deep);
+      border-radius: 50%;
+    }
+
+    .ep-live { border-color: var(--button); box-shadow: 0 4px 0 #8d420c; }
+    .ep-live::before { background: var(--button); }
+
+    .thumb {
+      position: relative;
+      display: block;
+      aspect-ratio: 16 / 9;
+      margin: 0 0 12px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 3px solid var(--ink);
+      background: var(--sage-soft);
+    }
+
+    .thumb img,
+    .thumb svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .play {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      pointer-events: none;
+    }
+
+    .play span {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(255, 244, 220, 0.94);
+      border: 3px solid var(--ink);
+      box-shadow: 0 3px 0 var(--sage-deep);
+      display: grid;
+      place-items: center;
+    }
+
+    .play span::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      margin-left: 4px;
+      border-style: solid;
+      border-width: 12px 0 12px 20px;
+      border-color: transparent transparent transparent var(--sage-deep);
+    }
+
+    .coming-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 1;
+      padding: 4px 10px;
+      background: var(--yellow);
+      color: var(--ink);
+      font-family: var(--hand);
+      font-size: 0.9rem;
+      font-weight: 700;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+    }
+
+    .ep-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      margin: 0 0 6px;
+      font-weight: 800;
+      font-size: 0.92rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .ep-meta .when { color: var(--sage-deep); text-transform: none; letter-spacing: 0; font-weight: 700; }
+
+    h3 {
+      margin: 0 0 8px;
+      font-family: var(--hand);
+      font-size: clamp(1.25rem, 2.6vw, 1.55rem);
+      line-height: 1.25;
+    }
+
+    .ep p { margin: 0 0 10px; }
+    .ep p:last-child { margin-bottom: 0; }
+
+    .yt {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 8px 14px;
+      background: var(--sage-soft);
+      color: var(--ink);
+      font-weight: 800;
+      text-decoration: none;
+      border: 3px solid var(--sage-deep);
+      border-radius: 999px;
+    }
+
+    .yt:hover { background: #fff; }
+
+    .partner, .follow {
+      margin: 0 0 18px;
+      padding: 18px 16px 16px;
+      background: var(--paper);
+      border: 3px solid var(--button);
+      border-radius: 22px;
+    }
+
+    .follow { border-color: var(--sage); }
+
+    .partner p, .follow p { margin: 0 0 10px; }
+    .partner p:last-child, .follow p:last-child { margin-bottom: 0; }
+
+    .mail {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      margin-top: 6px;
+      padding: 10px 16px;
+      background: var(--button);
+      color: var(--ink);
+      font-weight: 800;
+      text-decoration: none;
+      border: 3px solid #8d420c;
+      border-radius: 999px;
+      box-shadow: 0 3px 0 #8d420c;
+    }
+
+    .mail:hover { background: var(--button-hover); }
+
+    .follow-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .follow-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 8px 14px;
+      background: var(--cream);
+      color: var(--ink);
+      font-weight: 800;
+      text-decoration: none;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+    }
+
+    .follow-links a:hover { background: #fff; }
+
+    .back-row { margin: 8px 0 0; }
+
+    .back-row a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 48px;
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    footer {
+      padding: 8px 16px 28px;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 700px) {
+      .nav-wrap { align-items: flex-start; }
+      .brand { font-size: 1.2rem; }
+      .brand svg { width: 32px; }
+      .timeline { padding-left: 16px; }
+      .ep::before { left: -26px; width: 14px; height: 14px; }
+      .play span { width: 52px; height: 52px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-nav">
+    <div class="nav-wrap">
+      <a class="brand" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 140" aria-hidden="true">
+          <g transform="rotate(14 64 72)">
+            <polygon points="52,96 64,122 76,96" fill="#f0b429"/>
+            <polygon points="56,96 64,112 72,96" fill="#ffe56a"/>
+            <polygon points="42,78 16,112 48,94" fill="#f0b429"/>
+            <polygon points="42,78 26,104 48,94" fill="#e07a1f"/>
+            <polygon points="86,78 112,112 80,94" fill="#c86612"/>
+            <polygon points="86,78 102,104 80,94" fill="#e07a1f"/>
+            <polygon points="46,42 64,42 61,98 48,98" fill="#ffd23f"/>
+            <polygon points="64,42 82,42 80,98 64,98" fill="#e07a1f"/>
+            <polygon points="46,42 64,42 64,54 48,54" fill="#ffe56a"/>
+            <polygon points="64,8 84,44 64,38" fill="#f0b429"/>
+            <polygon points="64,8 44,44 64,38" fill="#e08a2a"/>
+            <g fill="none" stroke="#3a2a14" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
+              <polygon points="64,8 84,44 82,42 80,98 76,96 64,122 52,96 48,98 46,42 44,44"/>
+              <polyline points="44,44 64,38 84,44"/>
+              <line x1="64" y1="38" x2="64" y2="98"/>
+              <polygon points="42,78 16,112 48,94"/>
+              <polygon points="86,78 112,112 80,94"/>
+              <line x1="26" y1="104" x2="48" y2="94"/>
+              <line x1="102" y1="104" x2="80" y2="94"/>
+            </g>
+            <circle cx="64" cy="66" r="13" fill="#fff4c4" stroke="#3a2a14" stroke-width="2.4"/>
+            <text x="64" y="72" text-anchor="middle" font-family="Pacifico" font-size="18" fill="#3a2a14">P</text>
+          </g>
+        </svg>
+        <span>Pepo Studios</span>
+      </a>
+      <a class="home-link" href="../index.html">Home</a>
+    </div>
+  </header>
+  <main>
+    <article class="intro" aria-labelledby="trip-title">
+      <p class="kicker">It's happening!</p>
+      <h1 id="trip-title">Mr. Pepo's Summer Trip Vlog</h1>
+      <p class="dates">December 2026 to February 2027</p>
+      <img class="hero-pic" src="../images/summer-trip/mr-pepo-camper-starlink.jpg" width="1152" height="864" alt="Mr. Pepo waving from a cream and green camper van with a Starlink dish on the roof, on a sunny Australian coast road">
+      <p>I'm so ready for this! This summer I'm hitting the road for a big adventure around Australia in a cream and green camper van, with a Starlink dish on the roof so we can share every moment from anywhere.</p>
+      <p>Luna the robot and Sakura the dog are coming right beside me!</p>
+      <p>The dream is a big loop: start in Sydney, up the east coast to Queensland, across the Top End, down the west coast, across the south, and home again. That's the idea — the exact road may wander, and that's part of the fun.</p>
+      <p>Along the way we'll make brand-new family-friendly stories and videos, plus FREE printable travel activity packs for families on the road.</p>
+    </article>
+
+    <section class="timeline-head" aria-labelledby="vlog-title">
+      <h2 id="vlog-title">The vlog</h2>
+      <p class="timeline-lead">Episode 0 is up. The road episodes are on their way — I'll add them here as we go.</p>
+    </section>
+
+    <ol class="timeline">
+      <li class="ep ep-live">
+        <div class="thumb">
+          <img src="../images/summer-trip/mr-pepo-camper-starlink.jpg" width="1152" height="864" alt="Mr. Pepo waving from the cream and green camper van with a Starlink dish on the roof">
+          <div class="play" aria-hidden="true"><span></span></div>
+        </div>
+        <p class="ep-meta"><span>Episode 0</span><span class="when">11 November 2026</span></p>
+        <h3>It's happening!</h3>
+        <p>We're getting ready! Luna the robot and Sakura the dog are packed for the adventure, and I'm looking for a camper partner so we can hit the road this summer.</p>
+      </li>
+
+      <li class="ep">
+        <div class="thumb" aria-hidden="true">
+          <span class="coming-badge">Coming soon</span>
+          <svg viewBox="0 0 320 180" role="img" aria-label="Coming soon placeholder: a camper van leaving home under a morning sun">
+            <rect width="320" height="180" fill="#e4efe6"/>
+            <rect y="126" width="320" height="54" fill="#9bb59a"/>
+            <circle cx="250" cy="42" r="22" fill="#ffe56a" stroke="#3a2a14" stroke-width="3"/>
+            <rect x="28" y="86" width="46" height="40" rx="4" fill="#fffaf1" stroke="#3f5a45" stroke-width="3"/>
+            <polygon points="22,86 51,62 80,86" fill="#6b8a6e" stroke="#3f5a45" stroke-width="3" stroke-linejoin="round"/>
+            <rect x="110" y="88" width="130" height="48" rx="10" fill="#fff4dc" stroke="#3f5a45" stroke-width="3"/>
+            <rect x="150" y="98" width="36" height="24" rx="4" fill="#cfe0d2" stroke="#3f5a45" stroke-width="2"/>
+            <rect x="198" y="98" width="28" height="24" rx="4" fill="#cfe0d2" stroke="#3f5a45" stroke-width="2"/>
+            <circle cx="138" cy="138" r="12" fill="#3a2a14"/>
+            <circle cx="138" cy="138" r="5" fill="#fff4dc"/>
+            <circle cx="222" cy="138" r="12" fill="#3a2a14"/>
+            <circle cx="222" cy="138" r="5" fill="#fff4dc"/>
+          </svg>
+          <div class="play"><span></span></div>
+        </div>
+        <p class="ep-meta"><span>Episode 1</span><span class="when">December 2026</span></p>
+        <h3>Sydney and the start</h3>
+        <p>The van is packed, the maps are out, and the adventure begins at home.</p>
+        <p><a class="yt" href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener noreferrer">Watch on YouTube when it's live</a></p>
+      </li>
+
+      <li class="ep">
+        <div class="thumb" aria-hidden="true">
+          <span class="coming-badge">Coming soon</span>
+          <svg viewBox="0 0 320 180" role="img" aria-label="Coming soon placeholder: sunny waves along the east coast">
+            <rect width="320" height="180" fill="#e4efe6"/>
+            <circle cx="56" cy="40" r="20" fill="#ffe56a" stroke="#3a2a14" stroke-width="3"/>
+            <path d="M0 108 Q40 88 80 108 T160 108 T240 108 T320 108 V180 H0 Z" fill="#9bb59a"/>
+            <path d="M0 128 Q40 112 80 128 T160 128 T240 128 T320 128 V180 H0 Z" fill="#6b8a6e"/>
+            <rect x="200" y="86" width="86" height="36" rx="8" fill="#fff4dc" stroke="#3f5a45" stroke-width="3"/>
+            <circle cx="216" cy="126" r="9" fill="#3a2a14"/>
+            <circle cx="264" cy="126" r="9" fill="#3a2a14"/>
+          </svg>
+          <div class="play"><span></span></div>
+        </div>
+        <p class="ep-meta"><span>Episode 2</span><span class="when">Coming soon</span></p>
+        <h3>East Coast and Queensland</h3>
+        <p>Up the coast we go — sunshine, big skies, and stories along the way.</p>
+        <p><a class="yt" href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener noreferrer">Watch on YouTube when it's live</a></p>
+      </li>
+
+      <li class="ep">
+        <div class="thumb" aria-hidden="true">
+          <span class="coming-badge">Coming soon</span>
+          <svg viewBox="0 0 320 180" role="img" aria-label="Coming soon placeholder: a wide warm road under a big sun">
+            <rect width="320" height="180" fill="#f3ead0"/>
+            <circle cx="160" cy="44" r="28" fill="#ffe56a" stroke="#3a2a14" stroke-width="3"/>
+            <rect y="118" width="320" height="62" fill="#cbb98a"/>
+            <polygon points="146,118 174,118 200,180 120,180" fill="#8a7a55"/>
+            <rect x="148" y="128" width="8" height="18" fill="#fff4dc"/>
+            <rect x="148" y="154" width="8" height="18" fill="#fff4dc"/>
+            <circle cx="52" cy="102" r="18" fill="#6b8a6e"/>
+            <rect x="48" y="102" width="8" height="22" fill="#3f5a45"/>
+            <circle cx="268" cy="100" r="16" fill="#6b8a6e"/>
+            <rect x="264" y="100" width="8" height="24" fill="#3f5a45"/>
+          </svg>
+          <div class="play"><span></span></div>
+        </div>
+        <p class="ep-meta"><span>Episode 3</span><span class="when">Coming soon</span></p>
+        <h3>The Top End</h3>
+        <p>A long stretch north, where the days get warmer and the road feels wide open.</p>
+        <p><a class="yt" href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener noreferrer">Watch on YouTube when it's live</a></p>
+      </li>
+
+      <li class="ep">
+        <div class="thumb" aria-hidden="true">
+          <span class="coming-badge">Coming soon</span>
+          <svg viewBox="0 0 320 180" role="img" aria-label="Coming soon placeholder: a camper on the west coast beside the ocean">
+            <rect width="320" height="180" fill="#e4efe6"/>
+            <rect y="70" width="320" height="110" fill="#9bb59a"/>
+            <path d="M0 96 Q50 80 100 96 T200 96 T320 96 V180 H0 Z" fill="#6b8a6e"/>
+            <circle cx="64" cy="40" r="18" fill="#ffe56a" stroke="#3a2a14" stroke-width="3"/>
+            <rect x="40" y="108" width="100" height="34" rx="8" fill="#fff4dc" stroke="#3f5a45" stroke-width="3"/>
+            <rect x="70" y="116" width="28" height="16" rx="3" fill="#cfe0d2" stroke="#3f5a45" stroke-width="2"/>
+            <circle cx="62" cy="144" r="9" fill="#3a2a14"/>
+            <circle cx="118" cy="144" r="9" fill="#3a2a14"/>
+          </svg>
+          <div class="play"><span></span></div>
+        </div>
+        <p class="ep-meta"><span>Episode 4</span><span class="when">Coming soon</span></p>
+        <h3>The West Coast</h3>
+        <p>All the way over to the west, following the ocean down.</p>
+        <p><a class="yt" href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener noreferrer">Watch on YouTube when it's live</a></p>
+      </li>
+
+      <li class="ep">
+        <div class="thumb" aria-hidden="true">
+          <span class="coming-badge">Coming soon</span>
+          <svg viewBox="0 0 320 180" role="img" aria-label="Coming soon placeholder: a camper van heading home">
+            <rect width="320" height="180" fill="#e4efe6"/>
+            <rect y="124" width="320" height="56" fill="#9bb59a"/>
+            <circle cx="260" cy="38" r="18" fill="#ffe56a" stroke="#3a2a14" stroke-width="3"/>
+            <path d="M236 86 C236 70 256 62 268 76 C280 62 300 70 300 86 C300 108 268 126 268 126 C268 126 236 108 236 86 Z" fill="#e07a1f" stroke="#3a2a14" stroke-width="3" stroke-linejoin="round"/>
+            <rect x="48" y="92" width="120" height="42" rx="9" fill="#fff4dc" stroke="#3f5a45" stroke-width="3"/>
+            <rect x="78" y="100" width="30" height="18" rx="3" fill="#cfe0d2" stroke="#3f5a45" stroke-width="2"/>
+            <circle cx="72" cy="136" r="11" fill="#3a2a14"/>
+            <circle cx="72" cy="136" r="4" fill="#fff4dc"/>
+            <circle cx="144" cy="136" r="11" fill="#3a2a14"/>
+            <circle cx="144" cy="136" r="4" fill="#fff4dc"/>
+          </svg>
+          <div class="play"><span></span></div>
+        </div>
+        <p class="ep-meta"><span>Episode 5</span><span class="when">By February 2027</span></p>
+        <h3>The South and the road home</h3>
+        <p>Across the south and back again, with a van full of stories for families on the road.</p>
+        <p><a class="yt" href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener noreferrer">Watch on YouTube when it's live</a></p>
+      </li>
+    </ol>
+
+    <section class="partner" aria-labelledby="partner-title">
+      <h2 id="partner-title">Looking for a partner</h2>
+      <p>I'm looking for a partner to provide the camper van and cover the hire, insurance and running costs, with no bond and nothing to pay. Starlink on board would be amazing, so we can share every moment from anywhere!</p>
+      <p>Here's what my partner gets: the whole series, regular posts all summer long, their logo on every printable, and their name right there on the van!</p>
+      <p>If that sounds like you, please get in touch.</p>
+      <p><a class="mail" href="mailto:mr.pepo.au@gmail.com">mr.pepo.au@gmail.com</a></p>
+    </section>
+
+    <section class="follow" aria-labelledby="follow-title">
+      <h2 id="follow-title">Come along for the ride</h2>
+      <p>Families: follow along, share this page, and let's make it happen!</p>
+      <ul class="follow-links">
+        <li><a href="https://www.instagram.com/pepo_studios/" target="_blank" rel="noopener noreferrer">Instagram @pepo_studios</a></li>
+        <li><a href="https://www.facebook.com/pepo_studios" target="_blank" rel="noopener noreferrer">Facebook @pepo_studios</a></li>
+        <li><a href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener noreferrer">YouTube: Mr Pepo Stories</a></li>
+      </ul>
+    </section>
+
+    <p class="back-row"><a href="../index.html">Back to the Pepo Studios homepage</a></p>
+  </main>
+  <footer>Pepo Studios · pepostudios.au</footer>
+<!-- GoatCounter: free, privacy-friendly visit counter (no cookies) -->
+<script>
+window.goatcounter = {
+  path: function(p) {
+    var src = new URLSearchParams(location.search).get('src');
+    return location.pathname + (src ? '?src=' + encodeURIComponent(src) : '');
+  }
+};
+document.addEventListener('click', function(e) {
+  var a = e.target.closest && e.target.closest('a[href]');
+  if (!a || !window.goatcounter || !window.goatcounter.count) return;
+  var h = a.getAttribute('href');
+  if (/\.pdf($|\?)/i.test(h) || a.hasAttribute('download')) {
+    window.goatcounter.count({ path: 'download: ' + h.split('/').pop(), title: a.textContent.trim(), event: true });
+  }
+});
+</script>
+<script data-goatcounter="https://pepostudios.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
