@@ -4198,6 +4198,15 @@
 .brick-col img{width:42px;height:42px}
 .window-brand{left:12%;right:10%;font-size:clamp(1rem,3.8vw,1.35rem);top:55%}
 }
+.home-greeting{position:relative;z-index:2;margin:0;padding:14px 20px 16px;background:var(--cream);border-bottom:3px solid #e2b63a;text-align:center}
+.home-greeting-langs,.home-greeting-motto{margin:0 auto;max-width:52rem;color:var(--ink);font-family:var(--hand),"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Meiryo","PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;font-weight:700}
+.home-greeting-langs{font-size:clamp(0.95rem,1.8vw,1.2rem);line-height:1.75}
+.home-greeting-langs span{white-space:nowrap}
+.home-greeting-motto{margin-top:6px;font-size:clamp(0.95rem,1.6vw,1.15rem);line-height:1.4}
+@media(max-width:800px){
+.home-greeting{padding:12px 16px 14px}
+.home-greeting-langs{font-size:0.98rem;line-height:1.85}
+}
 </style>
 </head>
 <body id="top">
@@ -4228,6 +4237,11 @@
       <li><a href="#support"><img src="images/made-by-mr-pepo-window.jpg" alt="" width="1200" height="1600"><span>Support flyer</span></a></li>
     </ul>
   </nav>
+  </div>
+
+  <div class="home-greeting">
+    <p class="home-greeting-langs"><span lang="sk">Ahoj</span> · <span lang="en">Hello</span> · <span lang="es">Hola</span> · <span lang="ja">こんにちは</span> · <span lang="de">Hallo</span> · <span lang="fr">Bonjour</span> · <span lang="pl">Cześć</span> · <span lang="pt">Olá</span> · <span lang="zh-Hans">你好</span> · <span lang="ko">안녕하세요</span></p>
+    <p class="home-greeting-motto">Look and think before you speak.</p>
   </div>
 
   <span class="pepo-signature" aria-hidden="true">Pepo Studios</span>
