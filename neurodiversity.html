@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Neurodiversity Awareness | Pepo Studios</title>
-  <meta name="description" content="Neurodiversity Awareness from Pepo Studios. Peter's writing about a neurodiverse day, plus two phone lines if you would like to talk with someone.">
+  <title>Neurodiverse Hub | Neurodiversity Awareness | Pepo Studios</title>
+  <meta name="description" content="Neurodiverse Hub. Neurodiversity Awareness from Pepo Studios. Peter's writing about a neurodiverse day, plus two phone lines if you would like to talk with someone.">
   <link rel="canonical" href="https://pepostudios.au/neurodiversity.html">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 140'%3E%3Ctext x='64' y='86' text-anchor='middle' font-size='72' font-family='serif' fill='%233a2a14'%3EP%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -260,6 +260,72 @@
       font-size: 0.95rem;
     }
 
+
+    .hub-intro {
+      margin: 0 0 18px;
+      padding: 18px 16px 16px;
+      background: var(--paper);
+      border: 3px solid #a85a12;
+      border-radius: 22px;
+    }
+
+    .hub-intro .page-head { margin: 0 0 14px; }
+
+    .hub-intro blockquote {
+      margin: 0;
+      padding: 0;
+    }
+
+    .hub-intro blockquote::before {
+      content: "\201C";
+      display: block;
+      margin: 0 0 2px;
+      font-family: var(--title);
+      font-size: 2.4rem;
+      line-height: 0.7;
+      color: #a85a12;
+    }
+
+    .hub-intro h2 {
+      margin: 18px 0 10px;
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: clamp(1.5rem, 3.2vw, 2rem);
+      line-height: 1.2;
+    }
+
+    .hub-sign {
+      margin: 10px 0 0;
+      text-align: right;
+      font-family: var(--hand);
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+
+    .hub-soon {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 16px 0 0;
+    }
+
+    .hub-card {
+      margin: 0;
+      padding: 14px 14px 12px;
+      background: var(--cream);
+      border: 3px solid var(--ink);
+      border-radius: 16px;
+    }
+
+    .hub-card h2 {
+      margin: 0;
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+      line-height: 1.25;
+    }
+
     @media (max-width: 700px) {
       .aware-split,
       .aware-split.flip { grid-template-columns: 1fr; }
@@ -269,6 +335,7 @@
       .nav-wrap { align-items: flex-start; }
       .brand { font-size: 1.2rem; }
       .brand svg { width: 32px; }
+      .hub-soon { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -308,6 +375,31 @@
     </div>
   </header>
   <main>
+    <section class="hub-intro" id="neurodiverse-hub" aria-labelledby="hub-title">
+      <header class="page-head">
+        <h1 id="hub-title">Neurodiverse Hub</h1>
+      </header>
+      <blockquote>
+        <p>From what I've seen, people like me, neurodiverse people, usually get put into one of two boxes by the world. Either we're called the scum of the earth, for all sorts of reasons, or we're called the leaders of humanity. There isn't much in between. Same kind of brain, two very different labels, and often it comes down to whether someone understood us early or not.</p>
+      </blockquote>
+      <p class="hub-sign">&mdash; Peter</p>
+      <h2 id="why-title">Why I'm doing this</h2>
+      <blockquote>
+        <p>Most of the people with this kind of ability, as I like to say, not disability, are suffering greatly, and lots of them I see are called the scum of the earth now. And lots of them are the masters who control the earth.</p>
+        <p>Because these minds can either be super incredible and do super things, or can very easily wind down on a bad path. So that's what I would like to point out.</p>
+      </blockquote>
+      <p class="hub-sign">&mdash; Peter</p>
+      <div class="hub-soon">
+        <article class="hub-card">
+          <p class="aware-kicker">Coming soon</p>
+          <h2>My story (found out at 40, focus and overwhelm, my special ability)</h2>
+        </article>
+        <article class="hub-card">
+          <p class="aware-kicker">Coming soon</p>
+          <h2>Free printable helpers for neurodiverse kids and families</h2>
+        </article>
+      </div>
+    </section>
     <header class="page-head">
       <h1>Neurodiversity Awareness</h1>
     </header>
