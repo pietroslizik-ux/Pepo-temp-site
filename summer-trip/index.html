@@ -293,6 +293,76 @@
       line-height: 1.25;
     }
 
+
+    .ep-shots {
+      margin: 0 0 12px;
+    }
+    .ep-shots figure {
+      margin: 0;
+    }
+    .ep-shots img {
+      display: block;
+      width: min(100%, 420px);
+      height: auto;
+      border-radius: 16px;
+      border: 3px solid var(--ink);
+      background: var(--sage-soft);
+    }
+    .ep-shots figcaption {
+      margin: 8px 0 0;
+      max-width: 420px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    .ep-shots-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .ep-shots-grid figure:first-child {
+      grid-row: span 2;
+    }
+    .ep-shots-grid figure:nth-child(4) {
+      grid-column: 1 / -1;
+    }
+    .ep-shots-grid img {
+      width: 100%;
+      height: 220px;
+      max-width: none;
+      object-fit: cover;
+    }
+    .ep-shots-grid figure:first-child img {
+      height: 100%;
+      min-height: 452px;
+      object-position: 72% 52%;
+    }
+    .ep-shots-grid figure:nth-child(4) img {
+      height: 240px;
+      object-position: center;
+    }
+    .ep-shots-grid figcaption {
+      max-width: none;
+      font-size: 0.88rem;
+    }
+    @media (max-width: 640px) {
+      .ep-shots-grid {
+        grid-template-columns: 1fr;
+      }
+      .ep-shots-grid figure:first-child,
+      .ep-shots-grid figure:nth-child(4) {
+        grid-row: auto;
+        grid-column: auto;
+      }
+      .ep-shots-grid img,
+      .ep-shots-grid figure:first-child img,
+      .ep-shots-grid figure:nth-child(4) img {
+        height: auto;
+        min-height: 0;
+        max-height: 460px;
+        object-fit: contain;
+        background: var(--sage-soft);
+      }
+    }
     .ep p { margin: 0 0 10px; }
     .ep p:last-child { margin-bottom: 0; }
 
@@ -528,10 +598,37 @@
 
     <section class="timeline-head" aria-labelledby="vlog-title">
       <h2 id="vlog-title">The vlog</h2>
+      <p class="timeline-lead">New on 21 November 2026: decluttering and getting the Ranger ready.</p>
       <p class="timeline-lead">Episode 0 is up. The road episodes are on their way — I'll add them here as we go.</p>
     </section>
 
     <ol class="timeline">
+
+      <li class="ep ep-live" id="ranger-21-nov">
+        <div class="ep-shots ep-shots-grid">
+          <figure>
+            <img src="photos/sakura-in-the-ford-ranger.jpg" width="1080" height="1920" alt="Looking in through the open back door of a white Ford Ranger. Sakura, a black dog with a grey muzzle, is curled up asleep on grey and plaid blankets. A green checked shirt, hanging jackets, a white sheet and a blue and black toolbox are packed in around her. Diesel only is printed on the door, and a roof rack sits above.">
+            <figcaption>Sakura curled up for a nap in the back of the Ford Ranger, among the blankets, a green shirt, hanging jackets and a toolbox.</figcaption>
+          </figure>
+          <figure>
+            <img src="photos/garage-gifts-for-neighbours.jpg" width="1280" height="960" alt="The open garage is filled with free gifts for neighbours: two patterned chairs piled with games, books, a ukulele, blue hand weights and a bag, a pink stool, a grey fishing box, plants, a bike, a big red rose and many more household treasures.">
+            <figcaption>Free gifts set out in the garage for neighbours, from games and a ukulele to chairs, plants and a fishing box.</figcaption>
+          </figure>
+          <figure>
+            <img src="photos/items-by-the-garage-wall.jpg" width="1280" height="960" alt="A wooden dresser with an open top drawer, a pink child's chair, a white trolley and a small white cabinet with a kettle and kitchen bits, set out along the brick wall by the garage.">
+            <figcaption>A wooden dresser, a pink child's chair, a white trolley and kitchen bits set out by the garage wall, ready for a new home.</figcaption>
+          </figure>
+          <figure>
+            <img src="photos/chairs-and-gifts-in-the-garage.jpg" width="1280" height="960" alt="Two pink children's chairs, a snake plant in a rattan stand, a Connect 4 game on the floor, a Guess Who game on a white cabinet, and a tall Good morning sign with Mr. Pepo, set out in the garage.">
+            <figcaption>Pink children's chairs, a snake plant, games and a Good morning sign from Mr. Pepo, set out as free gifts.</figcaption>
+          </figure>
+        </div>
+        <p class="ep-meta"><span>Getting ready</span><span class="when">21 November 2026</span></p>
+        <h3>Decluttering and getting the Ranger ready</h3>
+        <p>At Pepo Studios in Campsie, Peter is clearing out the house and garage, and giving things away free to neighbours. Only what fits in the Ford Ranger will come along on the road.</p>
+        <p>The Pepo Studios summer trip starts in early December. For now the back of the ute is filling with blankets, a toolbox and hanging clothes, and Sakura has already claimed her nap spot.</p>
+      </li>
+
       <li class="ep ep-live">
         <div class="thumb">
           <img src="../images/summer-trip/mr-pepo-camper-starlink.jpg" width="1152" height="864" alt="Mr. Pepo waving from the cream and green camper van with a Starlink dish on the roof">
