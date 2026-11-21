@@ -4289,8 +4289,13 @@
 .home-greeting-langs{font-size:0.98rem;line-height:1.85}
 }
 .first-screen{display:flex;flex-direction:column;height:100svh;min-height:100svh;background:var(--cream)}
-.home-hero{flex:0 0 auto;background:var(--cream);color:var(--ink);border-bottom:3px solid #6b8f71;padding:10px 22px 12px;text-align:center;position:relative;z-index:3}
-.home-hero-inner{margin:0 auto;max-width:54rem}
+.home-hero{flex:0 0 auto;background:#fff4dc;color:var(--ink);border-bottom:3px solid #6b8f71;padding:10px 22px 78px;text-align:center;position:relative;z-index:3;overflow:hidden;isolation:isolate}
+.home-hero-art,.home-hero-sun,.home-hero-tree,.home-hero-camper{position:absolute;pointer-events:none;z-index:0}
+.home-hero-art{inset:0;width:100%;height:100%;display:block}
+.home-hero-sun{right:7%;top:6%;width:108px;height:108px}
+.home-hero-tree{left:2.5%;bottom:10px;width:86px;height:132px}
+.home-hero-camper{left:15%;bottom:8px;width:132px;height:70px}
+.home-hero-inner{margin:0 auto;max-width:54rem;position:relative;z-index:1;background:rgba(255,244,220,.92);border-radius:28px;padding:8px 20px 10px;box-shadow:0 0 34px 30px rgba(255,244,220,.86)}
 .home-hero h1{margin:0;font-family:"Pacifico","Segoe Script","Comic Sans MS",cursive;font-size:clamp(1.4rem,3.1vw,2.3rem);font-weight:400;line-height:1.15;color:var(--ink)}
 .home-hero-sub,.home-hero-mission,.home-hero-belief{margin:0;font-family:"Nunito","Trebuchet MS","Segoe UI",sans-serif;color:var(--ink)}
 .home-hero-sub{margin-top:4px;font-size:clamp(1.02rem,1.9vw,1.28rem);font-weight:700;line-height:1.25;color:#4d6b4a}
@@ -4298,7 +4303,11 @@
 .home-hero-belief{margin-top:8px;font-size:clamp(.9rem,1.5vw,1.1rem);font-weight:700;line-height:1.35;color:#3a2a14}
 .first-screen .opening-stage{flex:1 1 auto;height:auto;min-height:0}
 @media(max-width:800px){
-.home-hero{padding:8px 12px 9px}
+.home-hero{padding:8px 12px 70px}
+.home-hero-inner{padding:6px 12px 8px;border-radius:22px;box-shadow:0 0 26px 20px rgba(255,244,220,.88)}
+.home-hero-sun{right:3%;top:4%;width:58px;height:58px}
+.home-hero-tree{left:1%;bottom:6px;width:48px;height:76px}
+.home-hero-camper{left:50%;bottom:6px;width:108px;height:58px;transform:translateX(-50%)}
 .home-hero h1{font-size:clamp(1.18rem,5.8vw,1.5rem)}
 .home-hero-sub{font-size:1rem;margin-top:2px}
 .home-hero-mission{margin-top:6px;font-size:.8rem;line-height:1.32}
@@ -4307,7 +4316,11 @@
 .first-screen .brick-right{padding-bottom:72px}
 }
 @media(max-height:800px){
-.home-hero{padding:8px 18px 9px}
+.home-hero{padding:8px 18px 70px}
+.home-hero-inner{padding:6px 16px 8px}
+.home-hero-sun{width:88px;height:88px;top:4%;right:6%}
+.home-hero-tree{width:72px;height:112px;bottom:8px}
+.home-hero-camper{width:118px;height:62px;bottom:6px}
 .home-hero h1{font-size:clamp(1.25rem,2.6vw,1.85rem)}
 .home-hero-sub{margin-top:2px}
 .home-hero-mission{margin-top:6px}
@@ -4323,7 +4336,69 @@
 <body id="top">
   <div class="first-screen">
     <section class="home-hero" aria-labelledby="home-hero-title">
-      <div class="home-hero-inner">
+      <svg class="home-hero-art" viewBox="0 0 1440 320" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="homeDawnSky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#fff7e8"/>
+            <stop offset="38%" stop-color="#fde4c6"/>
+            <stop offset="72%" stop-color="#f6cba6"/>
+            <stop offset="100%" stop-color="#efbf92"/>
+          </linearGradient>
+          <linearGradient id="homeRoad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#a48a74"/>
+            <stop offset="100%" stop-color="#8c7360"/>
+          </linearGradient>
+        </defs>
+        <rect width="1440" height="320" fill="url(#homeDawnSky)"/>
+        <path d="M0 216C180 198 310 228 470 204C640 178 790 214 960 196C1140 176 1290 206 1440 190V320H0Z" fill="#c5cbb4" opacity=".8"/>
+        <path d="M0 244C150 226 300 252 470 234C650 214 820 246 1000 228C1180 210 1320 238 1440 226V320H0Z" fill="#d2b08a"/>
+        <path d="M980 248C1006 214 1058 196 1142 194C1228 192 1288 214 1316 248C1324 260 1300 266 1144 268C1010 268 970 260 980 248Z" fill="#c48a66"/>
+        <path d="M0 268C220 254 400 278 620 264C860 248 1080 272 1280 258C1360 252 1410 262 1440 258V320H0Z" fill="#c18462"/>
+        <path d="M0 294C260 284 560 302 860 292C1140 282 1300 298 1440 290V320H0Z" fill="url(#homeRoad)"/>
+        <path d="M0 306C260 296 560 314 860 304C1140 294 1300 310 1440 302" fill="none" stroke="#c4b09a" stroke-width="2" opacity=".35"/>
+      </svg>
+      <svg class="home-hero-sun" viewBox="0 0 108 108" aria-hidden="true" focusable="false">
+        <defs>
+          <radialGradient id="homeSunGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ffe9a8" stop-opacity=".8"/>
+            <stop offset="55%" stop-color="#ffe9a8" stop-opacity=".28"/>
+            <stop offset="100%" stop-color="#ffe9a8" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="54" cy="54" r="54" fill="url(#homeSunGlow)"/>
+        <circle cx="54" cy="54" r="22" fill="#ffe8a8" opacity=".8"/>
+      </svg>
+      <svg class="home-hero-tree" viewBox="0 0 86 132" aria-hidden="true" focusable="false">
+        <path d="M40 132C41 96 37 70 42 42C43 34 47 34 48 42C53 70 48 98 52 132Z" fill="#6a5a40" opacity=".7"/>
+        <path d="M44 56C22 46 8 40 12 30" fill="none" stroke="#6a5a40" stroke-width="2.4" stroke-linecap="round" opacity=".7"/>
+        <path d="M46 50C62 40 78 32 74 24" fill="none" stroke="#6a5a40" stroke-width="2.2" stroke-linecap="round" opacity=".7"/>
+        <path d="M44 70C18 68 6 78 10 86" fill="none" stroke="#6a5a40" stroke-width="2.2" stroke-linecap="round" opacity=".7"/>
+        <path d="M48 66C68 62 82 54 80 48" fill="none" stroke="#6a5a40" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+        <g fill="#5f6d4e" opacity=".58">
+          <ellipse cx="16" cy="28" rx="16" ry="10"/>
+          <ellipse cx="36" cy="18" rx="18" ry="11"/>
+          <ellipse cx="58" cy="24" rx="16" ry="10"/>
+          <ellipse cx="72" cy="30" rx="11" ry="8"/>
+          <ellipse cx="12" cy="82" rx="12" ry="8"/>
+          <ellipse cx="74" cy="50" rx="10" ry="7"/>
+        </g>
+      </svg>
+      <svg class="home-hero-camper" viewBox="0 0 152 70" aria-hidden="true" focusable="false">
+        <ellipse cx="70" cy="64" rx="64" ry="6" fill="#5a4538" opacity=".22"/>
+        <rect x="8" y="18" width="108" height="34" rx="6" fill="#fff8ec" stroke="#d7c4a8" stroke-width="1.2"/>
+        <path d="M116 28H138C146 28 152 34 152 40V52H116Z" fill="#fff8ec" stroke="#d7c4a8" stroke-width="1.2"/>
+        <path d="M120 30H136C142 30 146 34 146 38V42H120Z" fill="#d5e4dc"/>
+        <rect x="18" y="24" width="22" height="14" rx="2.5" fill="#d5e4dc"/>
+        <rect x="46" y="24" width="22" height="14" rx="2.5" fill="#d5e4dc"/>
+        <rect x="74" y="24" width="22" height="14" rx="2.5" fill="#d5e4dc"/>
+        <rect x="10" y="40" width="104" height="4" fill="#8aa184" opacity=".55"/>
+        <circle cx="34" cy="54" r="8" fill="#3a2a14"/>
+        <circle cx="34" cy="54" r="3.2" fill="#efe0c8"/>
+        <circle cx="118" cy="54" r="8" fill="#3a2a14"/>
+        <circle cx="118" cy="54" r="3.2" fill="#efe0c8"/>
+        <rect x="22" y="14" width="78" height="3" rx="1" fill="#c4b49a" opacity=".8"/>
+      </svg>
+            <div class="home-hero-inner">
         <h1 id="home-hero-title">Free games you print at home</h1>
         <p class="home-hero-sub">Print it. Cut it. Play it together.</p>
         <p class="home-hero-mission">Hi, I'm Mr. Pepo. My brain works differently, and that's my special ability. I make free games and paper fun for every family, especially families who can't buy games from a shop. Less screen time. More hands, more table, more together.</p>
