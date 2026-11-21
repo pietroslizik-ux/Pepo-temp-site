@@ -4319,11 +4319,144 @@
 .first-screen .brick-right{padding-bottom:52px}
 }
 </style>
+
+<style id="header-bg-draft">
+/* Draft only: Option A, torn-paper hills. Not published. Option B is in index-header-b.html. */
+.home-hero {
+  background-color: #fff4dc;
+  background-image: url("images/header-bg-a.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center bottom;
+  border-bottom: 0;
+  padding: 16px 22px 52px;
+}
+.home-hero-kicker {
+  margin: 0 0 4px;
+  font-family: "Nunito","Trebuchet MS","Segoe UI",sans-serif;
+  font-size: clamp(0.92rem, 1.5vw, 1.08rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #3f5a45;
+}
+@media (max-width: 800px) {
+  .home-hero { padding: 14px 12px 44px; }
+  .home-hero-kicker { font-size: 0.88rem; }
+}
+@media (max-height: 800px) {
+  .home-hero { padding: 12px 18px 44px; }
+}
+.find-here {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 22px 20px 26px;
+  background: #fffaf1;
+  border-bottom: 3px solid #6b8a6e;
+  text-align: center;
+}
+.find-here-inner { margin: 0 auto; max-width: 58rem; }
+.find-here h2 {
+  margin: 0 0 6px;
+  font-family: "Kalam","Segoe Print","Comic Sans MS",cursive;
+  font-size: clamp(1.45rem, 3vw, 1.9rem);
+  font-weight: 700;
+  color: #3a2a14;
+  line-height: 1.2;
+}
+.find-here-free {
+  margin: 0 0 16px;
+  font-family: "Nunito","Trebuchet MS","Segoe UI",sans-serif;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  font-weight: 700;
+  color: #3f5a45;
+  line-height: 1.4;
+}
+.find-here-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.find-here-grid a {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: #fff4dc;
+  color: #3a2a14;
+  text-decoration: none;
+  border: 3px solid #3a2a14;
+  border-radius: 18px;
+  box-shadow: 0 3px 0 #6b8a6e;
+  overflow: hidden;
+  min-height: 100%;
+}
+.find-here-grid a:hover { background: #ffe56a; }
+.find-here-grid a:focus-visible { outline: 3px solid #e07a1f; outline-offset: 3px; }
+.find-here-grid img {
+  display: block;
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  background: #fffaf1;
+}
+.find-here-grid h3 {
+  margin: 10px 12px 4px;
+  font-family: "Kalam","Segoe Print","Comic Sans MS",cursive;
+  font-size: 1.25rem;
+  line-height: 1.15;
+}
+.find-here-grid p {
+  margin: 0 12px 14px;
+  font-family: "Nunito","Trebuchet MS","Segoe UI",sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+.popup-home {
+  width: min(860px, calc(100% - 32px));
+  margin: 0 auto 28px;
+  padding: 20px 18px 18px;
+  background: #fffaf1;
+  border: 3px solid #6b8a6e;
+  border-radius: 24px;
+  box-shadow: 0 5px 0 #3f5a45;
+}
+.popup-home h2 {
+  margin: 0 0 8px;
+  font-family: "Kalam","Segoe Print","Comic Sans MS",cursive;
+  font-size: clamp(1.45rem, 3vw, 1.85rem);
+}
+.popup-home p { margin: 0 0 10px; }
+.popup-home p:last-child { margin-bottom: 0; }
+.popup-home a.flyer-like {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 10px 16px;
+  background: #ffe56a;
+  color: #3a2a14;
+  font-weight: 800;
+  text-decoration: none;
+  border: 3px solid #3a2a14;
+  border-radius: 999px;
+}
+.popup-home a.flyer-like:hover { background: #fff; }
+@media (max-width: 800px) {
+  .find-here { padding: 18px 14px 20px; }
+  .find-here-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .find-here-grid img { height: 110px; }
+  .find-here-grid h3 { font-size: 1.12rem; }
+}
+</style>
 </head>
 <body id="top">
   <div class="first-screen">
     <section class="home-hero" aria-labelledby="home-hero-title">
       <div class="home-hero-inner">
+        <p class="home-hero-kicker">Welcome to Pepo Studios, Mr. Pepo's paper workshop.</p>
         <h1 id="home-hero-title">Free games you print at home</h1>
         <p class="home-hero-sub">Print it. Cut it. Play it together.</p>
         <p class="home-hero-mission">Hi, I'm Mr. Pepo. My brain works differently, and that's my special ability. I make free games and paper fun for every family, especially families who can't buy games from a shop. Less screen time. More hands, more table, more together.</p>
@@ -4364,6 +4497,44 @@
     <p class="home-greeting-langs"><span lang="sk">Ahoj</span> · <span lang="en">Hello</span> · <span lang="es">Hola</span> · <span lang="ja">こんにちは</span> · <span lang="de">Hallo</span> · <span lang="fr">Bonjour</span> · <span lang="pl">Cześć</span> · <span lang="pt">Olá</span> · <span lang="zh-Hans">你好</span> · <span lang="ko">안녕하세요</span></p>
     <p class="home-greeting-motto">Look and think before you speak.</p>
   </div>
+
+  <section class="find-here" id="what-you-will-find" aria-labelledby="find-here-title">
+    <div class="find-here-inner">
+      <h2 id="find-here-title">What you'll find here</h2>
+      <p class="find-here-free">Everything in the Pepo Studios shop is free. You can also print stories and games at home on A5 paper.</p>
+      <ul class="find-here-grid">
+        <li>
+          <a href="free-board-games.html">
+            <img src="images/board-games/who-joins-the-crew.png" alt="" width="827" height="1170">
+            <h3>Games</h3>
+            <p>Free printable board games, including Aussie games. Print them, cut them out, and play at the table.</p>
+          </a>
+        </li>
+        <li>
+          <a href="#printables">
+            <img src="images/bunny-desk.jpg" alt="" width="1200" height="900">
+            <h3>Printables</h3>
+            <p>Colouring, journals, planners and paper crafts. Free to print at home.</p>
+          </a>
+        </li>
+        <li>
+          <a href="#popup-cards">
+            <img src="images/hero-models/19-pepo-spinner-three-arm.jpg" alt="" width="1200" height="900">
+            <h3>Pop-up cards</h3>
+            <p>Printable paper cards that stand up when you open them. Free in the Pepo Studios shop.</p>
+          </a>
+        </li>
+        <li>
+          <a href="#free-stories">
+            <img src="downloads/books/mr-pepo-warm-vegetable-soup-cover-800.jpg" alt="" width="800" height="800">
+            <h3>Stories</h3>
+            <p>Bedtime books and videos. Print a free A5 copy at home, watch on YouTube, or find them on Amazon.</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
 
   <span class="pepo-signature" aria-hidden="true">Pepo Studios</span>
   <div class="decor" aria-hidden="true">
@@ -4485,7 +4656,10 @@
       </a>
       <nav class="nav-links mk" aria-label="Primary">
 <a href="https://payhip.com/PepoStudios" target="_blank" rel="noopener">Shop</a>
+<a href="free-board-games.html">Games</a>
 <a href="#free-stories">Free stories</a>
+<a href="#printables">Printables</a>
+<a href="#popup-cards">Pop-up cards</a>
 <a href="#learn-at-home">Learn &amp; Make</a>
 <a href="https://www.youtube.com/@MrPepoStories" target="_blank" rel="noopener">YouTube</a>
 <details class="mk-dd"><summary>Explore ▾</summary><ul><li><a href="summer-trip/">Summer Trip Vlog</a></li><li><a href="#spinner-title">Spinners</a></li><li><a href="#spinner-club-title">Spinner Club</a></li><li><a href="#flipbook-title">Flipbook</a></li><li><a href="#animation-title">Animation</a></li><li><a href="#physics-title">Physics</a></li><li><a href="#gadgets-title">Gadgets</a></li><li><a href="#printables">Printables</a></li><li><a href="#about-pepo-studios">About</a></li></ul></details>
@@ -5737,7 +5911,14 @@
         </div>
       </div>
     </section>
-    <section class="printables" id="printables" aria-labelledby="printables-title">
+    
+    <section class="popup-home" id="popup-cards" aria-labelledby="popup-cards-title">
+      <h2 id="popup-cards-title">Pop-up cards</h2>
+      <p>Printable pop-up cards from Pepo Studios. Cut, fold and glue, then watch a little scene stand up when you open the card.</p>
+      <p>They are free in the shop, and you can print them at home, including on A5 paper.</p>
+      <p><a class="flyer-like" href="https://payhip.com/PepoStudios" target="_blank" rel="noopener">Get pop-up cards in the free shop</a></p>
+    </section>
+<section class="printables" id="printables" aria-labelledby="printables-title">
       <div class="wrap">
         <div class="section-head">
           <h2 id="printables-title">Free Pepos practical printable paper product</h2>
