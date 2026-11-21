@@ -3465,6 +3465,84 @@
       .summer-trip-home-card { grid-template-columns: 1fr; }
       .summer-trip-home-card img { height: 150px; }
     }
+
+    .future-transport-home {
+      margin: 0;
+      padding: 0 16px 16px;
+      scroll-margin-top: 11rem;
+      background: #e4efe6;
+      color: #3a2a14;
+    }
+    .future-transport-home-card {
+      display: grid;
+      grid-template-columns: minmax(140px, 320px) minmax(0, 1fr);
+      gap: 14px 18px;
+      align-items: start;
+      width: min(1100px, 100%);
+      margin: 0 auto;
+      padding: 16px;
+      background: #fffaf1;
+      border: 3px solid #3f5a45;
+      border-radius: 20px;
+      box-shadow: 0 4px 0 #3f5a45;
+    }
+    .future-transport-home figure { margin: 0; }
+    .future-transport-home img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      border: 2px solid #3f5a45;
+      background: #e4efe6;
+    }
+    .future-transport-home figcaption {
+      margin: 8px 0 0;
+      font-size: 0.92rem;
+      color: #3f5a45;
+    }
+    .future-transport-home .truck-name {
+      display: block;
+      margin: 0 0 4px;
+      color: #3f5a45;
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      line-height: 1.1;
+    }
+    .future-transport-home h2 {
+      margin: 0 0 10px;
+      color: #3f5a45;
+      font-family: var(--hand);
+      font-weight: 700;
+      font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+      line-height: 1.25;
+    }
+    .future-transport-home p { margin: 0 0 12px; font-weight: 700; }
+    .future-transport-home .isuzu-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      margin: 0 0 10px;
+      padding: 8px 16px;
+      background: #e07a1f;
+      color: #3a2a14;
+      font-weight: 800;
+      text-decoration: none;
+      border: 3px solid #8d420c;
+      border-radius: 999px;
+      box-shadow: 0 3px 0 #8d420c;
+    }
+    .future-transport-home .isuzu-link:hover { background: #c86612; }
+    .future-transport-home .sponsor-note {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    @media (max-width: 700px) {
+      .future-transport-home-card { grid-template-columns: 1fr; }
+    }
+
     .amazon-books {
       margin: 0;
       padding: 8px 16px 10px;
@@ -4390,6 +4468,22 @@
         </div>
       </a>
     </section>
+
+    <section class="future-transport-home" id="future-transport" aria-labelledby="future-transport-home-title">
+      <div class="future-transport-home-card">
+        <figure>
+          <img src="images/summer-trip/isuzu-nms-awd.jpg" width="1400" height="1289" alt="The Isuzu NMS AWD, a small white four wheel drive cab chassis truck" loading="lazy" decoding="async">
+          <figcaption>The Isuzu NMS AWD. Photo: Isuzu Australia</figcaption>
+        </figure>
+        <div>
+          <h2 id="future-transport-home-title"><span class="truck-name">ISUZU NMS AWD</span> This is our future transport. Coming soon!</h2>
+          <p>The Isuzu NMS 45-150 AWD is a small four wheel drive truck that Mr. Pepo, Sakura and little Howie will turn into a cosy camper for the road trip. And it can be driven on a normal car licence!</p>
+          <p><a class="isuzu-link" href="https://www.isuzu.com.au/our-range/applications/4x4-awd/" target="_blank" rel="noopener noreferrer">See the Isuzu NMS AWD</a></p>
+          <p class="sponsor-note">Pepo Studios isn't sponsored by Isuzu (yet!).</p>
+        </div>
+      </div>
+    </section>
+
     <section class="amazon-books" id="amazon" aria-labelledby="amazon-title">
       <h2 id="amazon-title">Mr. Pepo books on Amazon</h2>
       <div class="amazon-covers">
